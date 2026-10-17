@@ -77,7 +77,7 @@ If you see a name, date, phone or ID number that is NOT redacted, say so in note
 def fix(src: Path, out: Path) -> Path:
     fixed = out / f"{src.stem}.fixed.pdf"
     subprocess.run(
-        ["ocrmypdf", "--rotate-pages", "--deskew", "--optimize", "1", "--quiet",
+        ["ocrmypdf", "--rotate-pages", "--deskew", "--optimize", "1", "--quiet", "--skip-text",
          str(src), str(fixed)],
         check=True,
     )

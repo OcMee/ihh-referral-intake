@@ -333,6 +333,19 @@ main { padding-block-end: 150px }
 .login-card input { font: inherit; font-size: 16px; padding: 12px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--bg); color: var(--ink) }
 .login-card .btn.primary { min-height: 48px; font-size: 16px; font-weight: 700 }
 .l-err { color: var(--bad); font-size: 14px; margin: 0 }
+
+/* intake source labels */
+.src { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; background: var(--gray-bg); color: var(--ink); font-weight: 600 }
+.src.fax { background: #fde7cf; color: #8a4500 } .src.email { background: #e3ecfb; color: #234c8f } .src.portal { background: var(--ok-bg); color: var(--ok) } .src.folder { background: #efe8f7; color: #5b3a8a }
+.c-top .src { margin-right: auto; margin-left: 8px }
+.meta.arrival { margin-top: 4px } .intake .channels a { color: var(--brand-orange); font-weight: 600 }
+
+/* front-page recap */
+.recap { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 14px }
+.rc { font: inherit; font-size: 15px; font-weight: 600; display: flex; align-items: baseline; gap: 8px; padding: 10px 16px; border-radius: 14px; border: 1px solid #3a3a3a; background: #232323; color: #f3f1ec; cursor: pointer }
+.rc .num { font-size: 28px; font-weight: 600 } .rc:hover { border-color: var(--brand-orange) }
+.rc.fit .num { color: #4cc38a } .rc.nofit .num { color: #ff7a6e } .rc.info .num { color: var(--brand-amber) }
+.hero2 .lede .soon { color: var(--brand-amber) }
 </style>
 <header class="bar"><div class="bar-in gutter">
   <a class="logo" href="#/" style="text-decoration:none"><b>OCMEE</b><i>DESIGN</i><span>Referral Desk for Illumination Health + Home</span></a>
@@ -424,6 +437,19 @@ main { padding-block-end: 150px }
     const txt = m < 0 ? `overdue ${h ? h + "h " : ""}${mm}m` : `${h}h ${String(mm).padStart(2, "0")}m left`;
     return `<span class="clock ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="${p.uploaded ? "Time since upload" : "Simulated arrival time"}"><i></i>${txt}</span>`;
   }
+  const SRC = { upload: "Upload", fax: "Fax", folder: "Folder", email: "Email", portal: "Portal" };
+  const srcTag = p => p.uploaded ? `<span class="src ${esc(p.uploaded.source || "upload")}" title="How this referral arrived">${SRC[p.uploaded.source] || "Upload"}</span>` : "";
+  function arrival(p) {
+    const u = p.uploaded; if (!u) return "";
+    const bits = [`Arrived by <b>${SRC[u.source] || "Upload"}</b>`];
+    if (u.hospital) bits.push(`from ${esc(u.hospital)}`);
+    if (u.from) bits.push(`sender ${esc(u.from)}`);
+    if (u.contact) bits.push(`callback ${esc(u.contact)}`);
+    if (u.subject) bits.push(`“${esc(u.subject)}”`);
+    if (u.source === "portal") bits.push(u.declared_docs && u.declared_docs.length ? `hospital says it attached ${u.declared_docs.map(esc).join(", ")}` : "hospital ticked no documents");
+    if (u.dry_run) bits.push("dry run");
+    return `<div class="meta arrival">${bits.join(" · ")}</div>`;
+  }
   const pill = p => `<span class="pill ${p.fit.band}">${p.fit.score}</span>`;
   const pg = (page, quote, label) => page == null ? "" :
     `<button class="pg" data-page="${page}" data-quote="${esc(quote || "")}" title="Open page ${page}">${label || "p" + page}</button>`;
@@ -457,12 +483,22 @@ main { padding-block-end: 150px }
     const used = Math.min(1, Math.max(0, (SLA - m) / SLA));
     const bl = p.fit.blockers;
     return `<button class="card2 ${p.fit.band} ${d ? "decided" : ""}" data-open="${p.id}">
-      <span class="c-top"><span class="id">${p.id}</span>${clock(p)}</span>
+      <span class="c-top"><span class="id">${p.id}</span>${srcTag(p)}${clock(p)}</span>
       <span class="c-main">${dial(p.fit.score, p.fit.band)}<span class="c-who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span></span>
       <span class="c-bl">${bl.length ? bl.slice(0, 3).map(x => `<span class="tagx">${esc(x)}</span>`).join("") + (bl.length > 3 ? `<span class="tagx more">+${bl.length - 3}</span>` : "") : `<span class="calm">No hard stop</span>`}</span>
       <span class="c-foot"><span class="sla ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="Share of the 2-hour window used"><i style="width:${(used * 100).toFixed(0)}%"></i></span>
         <span class="num lbl">${p.pages} pp${ui.showIhh && p.ihh ? ` · IHH ${p.ihh}` : ""}</span></span>
     </button>`;
+  }
+  function recap() {
+    const d = decisions(), open_ = P.filter(p => !d[p.id]);
+    const n = k => open_.filter(p => p.fit.band === k).length;
+    const soon = open_.filter(p => minsLeft(p) < 30).length;
+    if (!open_.length) return `<h1>All caught up.</h1><p class="lede">Every referral has a decision. New ones appear here as they arrive.</p>`;
+    const go = (k, num, label) => `<button class="rc ${k}" data-filter="${k}"><span class="num">${num}</span>${label}</button>`;
+    return `<h1>${open_.length} ${open_.length === 1 ? "referral needs" : "referrals need"} your review.</h1>
+      <div class="recap">${go("fit", n("fit"), "look like a fit")}${go("nofit", n("nofit"), "do not fit")}${go("info", n("info"), "need more info or your call")}</div>
+      <p class="lede">${soon ? `<b class="soon">${soon} under 30 minutes left on the 2-hour reply.</b> ` : ""}Each finding links to the page it came from. You decide; nothing is sent from here.</p>`;
   }
   function inbox() {
     const d = decisions();
@@ -480,8 +516,7 @@ main { padding-block-end: 150px }
     }).join("");
     return `<section class="hero2">
         <div class="h-copy">${whoBar()}
-          <h1>Every referral on one page, answered inside two hours.</h1>
-          <p class="lede">Faxed packets are read page by page and checked against IHH’s admission rules. Each finding links to the page it came from.</p></div>
+          ${recap()}</div>
         <div class="pipe">
           <div><small class="step">[01] Read</small><span class="num">${pages}</span><small>faxed pages</small></div>
           <div><small class="step">[02] Check</small><span class="num">${P.length}</span><small>one-page reviews</small></div>
@@ -504,29 +539,37 @@ main { padding-block-end: 150px }
     const s = ui.server; if (!s) return "";
     const jobs = (ui.jobs || []).slice().reverse().map(j => {
       const at = j.steps.indexOf(j.stage);
-      return `<div class="job ${j.state}"><div class="j-top"><b>${esc(j.id)}</b><span>${esc(j.name)}</span>${j.dry_run ? `<span class="tagx">dry run</span>` : ""}
+      return `<div class="job ${j.state}"><div class="j-top"><b>${esc(j.id)}</b><span class="src">${esc(j.source)}</span><span>${esc(j.name)}</span>${j.dry_run ? `<span class="tagx">dry run</span>` : ""}
           ${j.state === "done" ? `<button class="btn" data-open="${j.id}">Open ${j.id}</button>` : ""}</div>
         <ol class="j-steps">${j.steps.map((k, i) => `<li class="${j.state === "done" || i < at ? "ok" : i === at ? (j.state === "error" ? "bad" : "now") : ""}">${STEP_NAMES[k]}</li>`).join("")}</ol>
         <p class="lbl">${esc(j.msg || "")}</p></div>`;
     }).join("");
-    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" hidden>
-        <b>Drop a new referral PDF here</b><small>or click to choose a file. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
+    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" multiple hidden>
+        <b>Drop new referral PDFs here</b><small>or click to choose. One or more files, each becomes a referral. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
+      <p class="lbl channels">Also arriving here: <b>Fax</b> (fax service webhook) · <b>Email</b> to ${esc(s.email || "the intake address")} · <b>Folder</b> (files saved in the intake folder) · <b>Hospital portal</b> <a href="/portal" target="_blank" rel="noopener">open /portal</a></p>
       ${s.key ? "" : `<p class="lbl warn">No API key: start the server with ANTHROPIC_API_KEY set.</p>`}
       ${ui.uploadError ? `<p class="lbl warn">${esc(ui.uploadError)}</p>` : ""}${jobs}</section>`;
   }
-  async function upload(file) {
+  async function upload(list) {
+    const files = [...(list || [])], errs = [];
     ui.uploadError = null;
-    if (!file || !/\.pdf$/i.test(file.name)) { ui.uploadError = "Choose a PDF file."; return render() }
-    try {
-      const r = await fetch("/api/upload", { method: "POST", headers: { "Content-Type": "application/pdf", "X-Filename": encodeURIComponent(file.name) }, body: file });
-      const j = await r.json(); if (!r.ok) ui.uploadError = j.error || "Upload failed";
-    } catch (e) { ui.uploadError = "The local server is not answering." }
+    if (!files.length) return;
+    for (const file of files) {
+      if (!/\.pdf$/i.test(file.name)) { errs.push(`${file.name}: not a PDF`); continue }
+      try {
+        const r = await fetch("/api/upload", { method: "POST", headers: { "Content-Type": "application/pdf", "X-Filename": encodeURIComponent(file.name) }, body: file });
+        const j = await r.json(); if (!r.ok) errs.push(`${file.name}: ${j.error || "upload failed"}`);
+      } catch (e) { errs.push("The local server is not answering."); break }
+    }
+    ui.uploadError = errs.join(" · ") || null;
+    if (errs.length) render();
     poll();
   }
   async function poll() {
     try { ui.jobs = await (await fetch("/api/jobs", { cache: "no-store" })).json() } catch (e) { return }
     const fresh = ui.jobs.find(j => j.state === "done" && !byId[j.id]);
-    if (fresh) { location.hash = "#/" + fresh.id; return location.reload() }  // new packet is in the rebuilt page
+    const busy = ui.jobs.some(j => j.state === "running");
+    if (fresh && !busy) { location.hash = "#/" + fresh.id; return location.reload() }  // new packets are in the rebuilt page
     if (!route()) { const y = scrollY; render(); scrollTo(0, y) }
     if (ui.jobs.some(j => j.state === "running")) setTimeout(poll, 1500);
   }
@@ -535,7 +578,7 @@ main { padding-block-end: 150px }
   }
   document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over") } });
   document.addEventListener("dragleave", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) d.classList.remove("over") });
-  document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); upload(e.dataTransfer.files[0]) } });
+  document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); upload(e.dataTransfer.files) } });
 
   // ---------- review ----------
   function chip(r) {
@@ -572,7 +615,7 @@ main { padding-block-end: 150px }
     const cf = p.claude_fit || {};
     const reasons = (p.fit.reasons || []).map(r => `<li>${r.points} ${esc(r.why)}</li>`).join("");
     return `<div class="title band-${p.fit.band}"><div><p class="eyebrow">${esc(p.id)} · ${p.pages} faxed pages · ${esc(p.fit.label)}</p><h1>${esc(p.id)} · ${esc(p.patient.summary)}</h1>
-        <div class="meta">${p.pages} pages · ${esc(p.patient.insurance || "")} · Housing: ${esc(p.patient.housing || "")} · Admitted for: ${esc(p.patient.admit_reason || "")} ${(p.patient.pages || []).map(x => pg(x)).join(" ")}</div></div>
+        <div class="meta">${p.pages} pages · ${esc(p.patient.insurance || "")} · Housing: ${esc(p.patient.housing || "")} · Admitted for: ${esc(p.patient.admit_reason || "")} ${(p.patient.pages || []).map(x => pg(x)).join(" ")}</div>${arrival(p)}</div>
         <div class="meta">${clock(p)} ${ui.showIhh && p.ihh ? `<span class="ihh">· IHH decided: ${p.ihh}</span>` : ""}</div></div>
       <div class="grid3">
         <div class="card"><h2>Key facts <small>click a page to see it</small></h2><ul class="facts">${facts}</ul></div>
@@ -704,7 +747,7 @@ main { padding-block-end: 150px }
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { ui.sort = e.target.value; render() }
     if (e.target.id === "ihh") { ui.showIhh = e.target.checked; render() }
-    if (e.target.id === "file") upload(e.target.files[0]);
+    if (e.target.id === "file") { upload(e.target.files); e.target.value = "" }
   });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }

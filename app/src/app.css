@@ -329,3 +329,16 @@ main { padding-block-end: 150px }
 .login-card input { font: inherit; font-size: 16px; padding: 12px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--bg); color: var(--ink) }
 .login-card .btn.primary { min-height: 48px; font-size: 16px; font-weight: 700 }
 .l-err { color: var(--bad); font-size: 14px; margin: 0 }
+
+/* intake source labels */
+.src { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; background: var(--gray-bg); color: var(--ink); font-weight: 600 }
+.src.fax { background: #fde7cf; color: #8a4500 } .src.email { background: #e3ecfb; color: #234c8f } .src.portal { background: var(--ok-bg); color: var(--ok) } .src.folder { background: #efe8f7; color: #5b3a8a }
+.c-top .src { margin-right: auto; margin-left: 8px }
+.meta.arrival { margin-top: 4px } .intake .channels a { color: var(--brand-orange); font-weight: 600 }
+
+/* front-page recap */
+.recap { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 14px }
+.rc { font: inherit; font-size: 15px; font-weight: 600; display: flex; align-items: baseline; gap: 8px; padding: 10px 16px; border-radius: 14px; border: 1px solid #3a3a3a; background: #232323; color: #f3f1ec; cursor: pointer }
+.rc .num { font-size: 28px; font-weight: 600 } .rc:hover { border-color: var(--brand-orange) }
+.rc.fit .num { color: #4cc38a } .rc.nofit .num { color: #ff7a6e } .rc.info .num { color: var(--brand-amber) }
+.hero2 .lede .soon { color: var(--brand-amber) }

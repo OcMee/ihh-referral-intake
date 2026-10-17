@@ -87,6 +87,16 @@ every quote. Quotes not found on their page go back to Claude once to correct; a
 127.0.0.1 only. Untested with the live API at the event (no key in our build environment); the dry run
 tests every other step.
 
+**Five ways a referral arrives** (all feed one inbox; each card shows its source; the same file twice is refused):
+
+| Channel | Today (prototype, nothing real connected) | Real version adds |
+|---|---|---|
+| Upload | Drag one or more PDFs on the inbox | – |
+| Fax | `POST /api/intake/fax`; `python src/simulate_intake.py fax app/pdf/F03.pdf` plays the fax service | A HIPAA cloud fax service's webhook |
+| Folder | Any PDF saved in `intake/` (git ignored) is picked up | Fax software saving to that folder |
+| Email | Any `.eml` in `intake/` is read (sender, subject, PDF attachments); intake address office@ocmeed.com (`DESK_INTAKE_EMAIL`) | A mailbox connector on a HIPAA-covered mailbox |
+| Hospital portal | `http://127.0.0.1:8000/portal`: files plus IHH's DOC-1..10 checklist, warns on missing documents | Hosting and hospital staff logins |
+
 **Full pipeline on the real packets (local only):**
 
 ```bash

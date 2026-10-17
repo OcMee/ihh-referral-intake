@@ -1,4 +1,4 @@
-"""Run Referral Desk on this computer with drag-and-drop intake of new referral PDFs.
+"""Run Referral Desk on this computer, with five ways for a referral to arrive.
 
   export ANTHROPIC_API_KEY=...        (never put it in the repo)
   python src/desk_server.py           then open http://127.0.0.1:8000
@@ -10,13 +10,27 @@ verify every quote and score (src/score.py), then the inbox rebuilds and shows i
 The server listens on 127.0.0.1 only, so nothing is reachable from other machines. Uploaded packets
 are patient data: do not run this on a shared or public host.
 
+Intake channels (all feed the same pipeline and inbox; every card shows its source):
+  Upload   drag and drop one or more PDFs on the inbox            POST /api/upload
+  Fax      a cloud fax service would POST each fax PDF here      POST /api/intake/fax
+           (prototype: src/simulate_intake.py fax plays that service; nothing real is connected)
+  Folder   any PDF saved in intake/ is picked up within seconds  (point fax software's save folder here)
+  Email    any .eml saved in intake/ is read: sender, subject, PDF attachments
+           (a mailbox connector would save mail here; src/simulate_intake.py email makes a fictional one)
+  Portal   /portal: a hospital sends files and ticks IHH's DOC-1..10 checklist first
+The same file arriving twice (same bytes) is refused and named as a duplicate.
+
   python src/desk_server.py --dry-run   test the plumbing without the API: accepts only the
-                                        fictional app/pdf/F0X.pdf files and reuses their prepared
-                                        transcript and check. Every step is logged as a dry run.
+                                        fictional app/pdf/F0X.pdf files (recognized by content) and
+                                        reuses their prepared transcript and check.
 """
 
 import argparse
+import base64
 import contextlib
+import email
+import email.policy
+import hashlib
 import io
 import json
 import os
@@ -33,12 +47,105 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "src"))
 sys.path.insert(0, str(REPO / "demo"))
 OUT = REPO / "output"
+INTAKE = REPO / "intake"  # watched folder (git ignored): PDFs and .eml emails
+# address hospitals send referrals to; a mailbox connector would save its mail into intake/ (not connected here)
+INTAKE_EMAIL = os.environ.get("DESK_INTAKE_EMAIL", "office@ocmeed.com")
 MAX_BYTES = 60 * 1024 * 1024
 STEPS = ["fix", "transcribe", "check", "score", "build"]
 
 JOBS: dict = {}
 LOCK = threading.Lock()  # one packet at a time: the API calls are the slow part
 DRY = False
+SOURCES = {"upload": "Upload", "fax": "Fax", "folder": "Folder", "email": "Email", "portal": "Portal"}
+
+
+def sha(b: bytes) -> str:
+    return hashlib.sha256(b).hexdigest()
+
+
+def fictional(body: bytes):
+    """Dry run: which fictional packet is this, by content (works whatever the channel renamed it to)."""
+    h = sha(body)
+    return next((f.stem for f in sorted((REPO / "app/pdf").glob("F0[1-9].pdf")) if sha(f.read_bytes()) == h), None)
+
+
+def merge(pdfs: list) -> bytes:
+    import pymupdf
+    if len(pdfs) == 1:
+        return pdfs[0]
+    out = pymupdf.open()
+    for b in pdfs:
+        with pymupdf.open(stream=b, filetype="pdf") as d:
+            out.insert_pdf(d)
+    return out.tobytes()
+
+
+ACCEPT = threading.Lock()
+
+
+def accept(body: bytes, name: str, source: str, meta: dict = None) -> dict:
+    """Every channel ends here. Returns {"id"} or {"error"}."""
+    if not body.startswith(b"%PDF"):
+        return {"error": "That file is not a PDF"}
+    fict = fictional(body) if DRY else None
+    if DRY and not fict:
+        return {"error": "Dry run accepts only the fictional F01.pdf to F09.pdf from app/pdf/"}
+    h = sha(body)
+    with ACCEPT:
+        for r in OUT.glob("U[0-9][0-9]/received.json"):
+            try:
+                if json.loads(r.read_text()).get("sha256") == h:
+                    return {"error": f"Duplicate: this exact file already arrived as {r.parent.name}", "duplicate": r.parent.name}
+            except ValueError:
+                pass
+        pid = next_id()
+        folder = OUT / pid
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / f"{pid}.pdf").write_bytes(body)
+        (folder / "received.json").write_text(json.dumps({"at": time.time(), "name": name, "dry_run": DRY, "sha256": h,
+                                                          "source": source, **(meta or {})}))
+        job = {"id": pid, "name": name, "source": SOURCES.get(source, source), "fict": fict, "state": "running",
+               "stage": "queued", "msg": "Waiting for the previous packet", "steps": STEPS, "log": [], "dry_run": DRY}
+        JOBS[pid] = job
+    threading.Thread(target=process, args=(job,), daemon=True).start()
+    return {"id": pid}
+
+
+def read_eml(raw: bytes):
+    msg = email.message_from_bytes(raw, policy=email.policy.default)
+    pdfs = [part.get_content() for part in msg.iter_attachments()
+            if part.get_content_type() == "application/pdf" or (part.get_filename() or "").lower().endswith(".pdf")]
+    return pdfs, {"from": str(msg.get("From", ""))[:120], "subject": str(msg.get("Subject", ""))[:160]}
+
+
+def watch() -> None:
+    """Pick up PDFs and .eml files saved in intake/; move each to intake/done/ (or intake/rejected/)."""
+    INTAKE.mkdir(exist_ok=True)
+    for d in ("done", "rejected"):
+        (INTAKE / d).mkdir(exist_ok=True)
+    seen = {}
+    while True:
+        for f in sorted(INTAKE.iterdir()):
+            if not f.is_file() or f.suffix.lower() not in (".pdf", ".eml"):
+                continue
+            size = f.stat().st_size
+            if seen.get(f) != size:  # wait until the file stops growing (fax software still writing)
+                seen[f] = size
+                continue
+            seen.pop(f, None)
+            try:
+                raw = f.read_bytes()
+                if f.suffix.lower() == ".eml":
+                    pdfs, meta = read_eml(raw)
+                    res = accept(merge(pdfs), f.name, "email", meta) if pdfs else {"error": "email has no PDF attachment"}
+                else:
+                    res = accept(raw, f.name, "folder")
+            except Exception as e:
+                res = {"error": f"{type(e).__name__}: {e}"}
+            dest = INTAKE / ("done" if "id" in res else "rejected") / f"{time.strftime('%H%M%S')}-{f.name}"
+            shutil.move(str(f), dest)
+            print(f"intake folder: {f.name} -> {res.get('id') or res.get('error')}")
+        time.sleep(2)
 
 
 def next_id() -> str:
@@ -87,8 +194,8 @@ def process(job: dict) -> None:
 
             step(job, "transcribe")
             if DRY:
-                print(f"DRY RUN: reusing the prepared transcript of fictional {job['source']}")
-                pages = json.loads((REPO / f"demo/fictional/{job['source']}/{job['source']}.pages.json").read_text())
+                print(f"DRY RUN: reusing the prepared transcript of fictional {job['fict']}")
+                pages = json.loads((REPO / f"demo/fictional/{job['fict']}/{job['fict']}.pages.json").read_text())
                 pages["packet_id"] = pid
                 pages_json.write_text(json.dumps(pages, indent=2))
             else:
@@ -100,8 +207,8 @@ def process(job: dict) -> None:
 
             step(job, "check")
             if DRY:
-                print(f"DRY RUN: reusing the prepared criteria check of fictional {job['source']}")
-                check = json.loads((REPO / f"demo/fictional/{job['source']}/{job['source']}.json").read_text())
+                print(f"DRY RUN: reusing the prepared criteria check of fictional {job['fict']}")
+                check = json.loads((REPO / f"demo/fictional/{job['fict']}/{job['fict']}.json").read_text())
                 check["packet_id"] = pid
                 (folder / f"{pid}.json").write_text(json.dumps(check, indent=2))
             else:
@@ -153,8 +260,11 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_header("Location", "/output/app/index.html")
             self.end_headers()
             return
+        if path == "/portal":
+            self.path = "/app/portal.html"
+            return super().do_GET()
         if path == "/api/ping":
-            return self.send_json({"ok": True, "dry_run": DRY, "key": DRY or bool(os.environ.get("ANTHROPIC_API_KEY"))})
+            return self.send_json({"ok": True, "dry_run": DRY, "email": INTAKE_EMAIL, "key": DRY or bool(os.environ.get("ANTHROPIC_API_KEY"))})
         if path == "/api/jobs":
             return self.send_json([{k: v for k, v in j.items() if k != "log"} | {"log": j["log"][-6:]} for j in JOBS.values()])
         if re.search(r"(^|/)\.(env|git)", path):
@@ -162,29 +272,37 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
-        if self.path != "/api/upload":
-            return self.send_error(404)
-        n = int(self.headers.get("Content-Length") or 0)
-        if not 0 < n <= MAX_BYTES:
-            return self.send_json({"error": "PDF missing or over 60 MB"}, 400)
-        body = self.rfile.read(n)
-        if not body.startswith(b"%PDF"):
-            return self.send_json({"error": "That file is not a PDF"}, 400)
         from urllib.parse import unquote
-        name = Path(unquote(self.headers.get("X-Filename") or "upload.pdf")).name[:120]
-        source = Path(name).stem.upper()
-        if DRY and not re.fullmatch(r"F0[1-9]", source):
-            return self.send_json({"error": "Dry run accepts only the fictional F01.pdf to F09.pdf from app/pdf/"}, 400)
-        pid = next_id()
-        folder = OUT / pid
-        folder.mkdir(parents=True, exist_ok=True)
-        (folder / f"{pid}.pdf").write_bytes(body)
-        (folder / "received.json").write_text(json.dumps({"at": time.time(), "name": name, "dry_run": DRY}))
-        job = {"id": pid, "name": name, "source": source, "state": "running", "stage": "queued", "msg": "Waiting for the previous packet",
-               "steps": STEPS, "log": [], "dry_run": DRY}
-        JOBS[pid] = job
-        threading.Thread(target=process, args=(job,), daemon=True).start()
-        return self.send_json({"id": pid})
+        path = self.path.split("?")[0]
+        n = int(self.headers.get("Content-Length") or 0)
+        limit = MAX_BYTES * 2 if path == "/api/intake/portal" else MAX_BYTES  # base64 adds a third
+        if not 0 < n <= limit:
+            return self.send_json({"error": "File missing or over 60 MB"}, 400)
+        body = self.rfile.read(n)
+        if path == "/api/upload":
+            name = Path(unquote(self.headers.get("X-Filename") or "upload.pdf")).name[:120]
+            res = accept(body, name, "upload")
+        elif path == "/api/intake/fax":
+            # the shape a fax service webhook would use: raw PDF body, sender's fax number in a header
+            sender = unquote(self.headers.get("X-Fax-From") or "unknown")[:40]
+            res = accept(body, f"fax from {sender}", "fax", {"from": sender})
+        elif path == "/api/intake/portal":
+            try:
+                form = json.loads(body)
+                pdfs = [base64.b64decode(f["b64"]) for f in form.get("files", [])][:20]
+                if not pdfs:
+                    return self.send_json({"error": "Attach at least one PDF"}, 400)
+                if not all(b.startswith(b"%PDF") for b in pdfs):
+                    return self.send_json({"error": "Every attached file must be a PDF"}, 400)
+                clip = lambda k, n=120: str(form.get(k) or "")[:n]
+                meta = {"from": clip("sender"), "hospital": clip("hospital"), "contact": clip("contact"),
+                        "declared_docs": [d for d in form.get("docs", []) if re.fullmatch(r"DOC-\d{1,2}", str(d))]}
+                res = accept(merge(pdfs), f"portal: {meta['hospital'] or 'hospital'}", "portal", meta)
+            except (ValueError, KeyError, TypeError) as e:
+                return self.send_json({"error": f"Could not read the form ({type(e).__name__})"}, 400)
+        else:
+            return self.send_error(404)
+        return self.send_json(res, 200 if "id" in res else 409 if res.get("duplicate") else 400)
 
 
 def main() -> None:
@@ -210,6 +328,8 @@ def main() -> None:
     if args.open:
         import webbrowser
         threading.Timer(0.5, webbrowser.open, [url]).start()
+    threading.Thread(target=watch, daemon=True).start()
+    print(f"Watching {INTAKE} for PDFs and .eml emails. Hospital portal: {url}/portal")
     srv.serve_forever()
 
 

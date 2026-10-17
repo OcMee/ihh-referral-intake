@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send a Referral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+:root { --ink: #1a1a1a; --mute: #5c5f66; --line: #e2dfd8; --bg: #f4f2ee; --surface: #fff; --orange: #ff8710; --ok: #17734a; --ok-bg: #e4f2ea; --bad: #b3261e; --bad-bg: #fbe8e6; --warn: #9a5b00; --warn-bg: #fcefd9 }
+@media (prefers-color-scheme: dark) { :root { --ink: #f3f1ec; --mute: #b5b2ab; --line: #3a3a3a; --bg: #141414; --surface: #1f1f1f; --ok-bg: #173226; --bad-bg: #3a1c1a; --warn-bg: #352713 } }
+* { box-sizing: border-box } body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 Montserrat, system-ui, sans-serif }
+header { background: #1a1a1a; color: #f3f1ec; border-bottom: 3px solid var(--orange); padding: 14px 16px }
+header b { color: var(--orange); letter-spacing: .12em } header span { opacity: .8; margin-left: 10px; font-size: 13px }
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px }
+.note { background: var(--warn-bg); color: var(--warn); border-radius: 12px; padding: 10px 14px; font-size: 13.5px; font-weight: 600 }
+h1 { font-size: 28px; margin: 18px 0 4px } .lede { color: var(--mute); margin: 0 0 18px }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-bottom: 14px }
+.card h2 { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 12px; font-family: "IBM Plex Mono", monospace; color: var(--orange) }
+label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; margin-bottom: 10px }
+input[type=text] { font: inherit; font-size: 15px; padding: 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); width: 100% }
+.docs { display: grid; gap: 6px } .doc { display: flex; gap: 10px; align-items: center; font-weight: 500; margin: 0 } .doc small { color: var(--mute) }
+.drop { display: grid; place-items: center; text-align: center; border: 2px dashed var(--orange); border-radius: 14px; padding: 20px; cursor: pointer }
+.drop.over { background: var(--warn-bg) } .files { margin: 10px 0 0; padding-left: 18px; font-size: 13.5px }
+.missing { background: var(--warn-bg); color: var(--warn); border-radius: 10px; padding: 10px 12px; font-size: 13.5px; margin: 12px 0 0 }
+button { font: inherit; font-weight: 700; font-size: 17px; border: 0; border-radius: 12px; padding: 14px 22px; background: var(--orange); color: #1a1a1a; cursor: pointer; min-height: 52px }
+button:disabled { opacity: .5; cursor: wait }
+.res { border-radius: 12px; padding: 12px 14px; margin-top: 14px; font-weight: 600 } .res.ok { background: var(--ok-bg); color: var(--ok) } .res.bad { background: var(--bad-bg); color: var(--bad) }
+</style></head>
+<body>
+<header><b>OCMEE DESIGN</b><span>Referral Desk · hospital referral portal (prototype)</span></header>
+<main>
+  <p class="note">Prototype running on this computer. Use fictional files and names only. A real portal would be hosted with logins for hospital staff.</p>
+  <h1>Send a recuperative care referral</h1>
+  <p class="lede">For hospital case managers. Attach the packet and tick what is included. Complete packets get a faster answer.</p>
+  <form id="f">
+    <div class="card"><h2>From</h2>
+      <label>Hospital<input type="text" id="hospital" maxlength="120" required></label>
+      <label>Case manager<input type="text" id="sender" maxlength="120" required></label>
+      <label>Callback phone or email<input type="text" id="contact" maxlength="120"></label>
+      <p class="lede" style="margin:0;font-size:13px">Do not type the patient's name here. Patient details go in the attached documents.</p></div>
+    <div class="card"><h2>IHH's required documents</h2><div class="docs" id="docs">Loading IHH's checklist…</div><div id="missing"></div></div>
+    <div class="card"><h2>Files</h2>
+      <label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" multiple hidden><b>Drop PDFs here or click to choose</b><small>One or more PDFs; they are joined into one packet in this order.</small></label>
+      <ol class="files" id="list"></ol></div>
+    <button type="submit" id="send">Send referral to IHH</button>
+    <div id="res"></div>
+  </form>
+</main>
+<script>
+(function () {
+  const $ = s => document.querySelector(s), esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const OPTIONAL = new Set(["DOC-5", "DOC-9", "DOC-10"]); // "if needed", or not something the packet can prove
+  let files = [], items = [];
+  fetch("/challenges/1-referral-intake/criteria/admission-criteria.json").then(r => r.json()).then(d => {
+    items = d.referral_checklist.items;
+    $("#docs").innerHTML = items.map(x => `<label class="doc"><input type="checkbox" value="${x.id}"> <span>${esc(x.text)} <small>${x.id}${OPTIONAL.has(x.id) ? " · if needed" : ""}</small></span></label>`).join("");
+    missing();
+  }).catch(() => { $("#docs").textContent = "Could not load IHH's checklist. Is the Referral Desk server running?" });
+  function missing() {
+    const ticked = new Set([...document.querySelectorAll("#docs input:checked")].map(x => x.value));
+    const miss = items.filter(x => !OPTIONAL.has(x.id) && !ticked.has(x.id));
+    $("#missing").innerHTML = miss.length ? `<p class="missing">Not ticked: ${miss.map(x => esc(x.text)).join(", ")}. You can still send, but IHH will likely ask for these before deciding.</p>` : "";
+  }
+  document.addEventListener("change", e => { if (e.target.closest("#docs")) missing(); if (e.target.id === "file") add(e.target.files) });
+  function add(list) { files = files.concat([...list].filter(f => /\.pdf$/i.test(f.name))); $("#list").innerHTML = files.map(f => `<li>${esc(f.name)} (${(f.size / 1048576).toFixed(1)} MB)</li>`).join("") }
+  const drop = $("#drop");
+  drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over") });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over"); add(e.dataTransfer.files) });
+  const b64 = f => new Promise((ok, no) => { const r = new FileReader(); r.onload = () => ok(r.result.split(",")[1]); r.onerror = no; r.readAsDataURL(f) });
+  $("#f").addEventListener("submit", async e => {
+    e.preventDefault(); const res = $("#res");
+    if (!files.length) { res.innerHTML = `<p class="res bad">Attach at least one PDF.</p>`; return }
+    $("#send").disabled = true; res.innerHTML = "";
+    try {
+      const body = { hospital: $("#hospital").value, sender: $("#sender").value, contact: $("#contact").value,
+        docs: [...document.querySelectorAll("#docs input:checked")].map(x => x.value), files: await Promise.all(files.map(async f => ({ name: f.name, b64: await b64(f) }))) };
+      const r = await fetch("/api/intake/portal", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const j = await r.json();
+      res.innerHTML = j.id ? `<p class="res ok">Received as referral ${esc(j.id)}. The IHH referral coordinator has it now.</p>` : `<p class="res bad">${esc(j.error || "Not sent")}</p>`;
+      if (j.id) { files = []; $("#list").innerHTML = "" }
+    } catch (err) { res.innerHTML = `<p class="res bad">Could not reach Referral Desk.</p>` }
+    $("#send").disabled = false;
+  });
+})();
+</script>
+</body></html>

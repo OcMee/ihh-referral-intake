@@ -30,3 +30,6 @@ challenges/1-referral-intake/packets/*
 
 # engine output from real packets
 output/
+
+# intake channels drop real referrals here (local only)
+intake/

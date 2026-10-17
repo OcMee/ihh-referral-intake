@@ -91,7 +91,7 @@ def real(checklist: dict) -> list:
         if (here / "received.json").exists():  # real arrival time for uploads
             r = json.loads((here / "received.json").read_text())
             p["received_min"] = round((time.time() - r["at"]) / 60)
-            p["uploaded"] = {"name": r.get("name"), "dry_run": r.get("dry_run", False)}
+            p["uploaded"] = {k: v for k, v in r.items() if k not in ("at", "sha256")}  # source, from, subject, hospital...
         packets.append(p)
     return packets
 
