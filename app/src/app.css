@@ -382,3 +382,9 @@ main { padding-block-end: 150px }
 .rb span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap } .rb i { height: 10px; border-radius: 99px; background: var(--brand-orange); display: block } .rb b { text-align: right }
 .mx { width: 100%; border-collapse: collapse; font-size: 14px } .mx th, .mx td { border: 1px solid var(--line); padding: 6px 8px; text-align: center } .mx th:first-child { text-align: left }
 .mx td.agree { background: var(--ok-bg); font-weight: 700 } .mx td.off { background: var(--bad-bg); font-weight: 700 }
+
+/* reviewer name, large */
+.who-big { margin-bottom: 10px } .who-big .eyebrow.who { margin-bottom: 2px }
+.who-name { font-size: 34px; font-weight: 800; line-height: 1.1; margin: 0; color: #ffffff; letter-spacing: -.01em }
+.who-role { margin: 2px 0 0; font-size: 15px; font-weight: 600; color: #faac23 }
+@media (max-width: 520px) { .who-name { font-size: 26px } }

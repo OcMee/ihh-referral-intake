@@ -73,7 +73,8 @@
   });
   const sign = () => `${who.name}, ${who.role}\nIllumination Health + Home`;
   function whoBar() {
-    if (!ui.editWho) return `<p class="eyebrow who">Welcome back, ${esc(who.name)} · ${esc(who.role)} <button class="who-edit" data-who>Change</button><button class="who-edit" data-signout>Sign out</button></p>`;
+    if (!ui.editWho) return `<div class="who-big"><p class="eyebrow who">Welcome back <button class="who-edit" data-who>Change</button><button class="who-edit" data-signout>Sign out</button></p>
+      <p class="who-name">${esc(who.name)}</p><p class="who-role">${esc(who.role)}</p></div>`;
     return `<div class="who-form"><input id="who-name" value="${esc(who.name)}" aria-label="Your name" placeholder="Your name">
       <select id="who-role" aria-label="Your role">${ROLES.map(r => `<option ${r === who.role ? "selected" : ""}>${r}</option>`).join("")}</select>
       <button class="btn primary" data-whosave>Save</button></div>`;
@@ -192,7 +193,7 @@
     if (!s) {  // website: drag and check works for the demo files; new files are checked live on the local version
       const c = ui.check;
       return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept=".pdf,.docx" hidden>
-          <b>Drag a referral here to check it</b><small>On this website: the demo packets (PDF or Word, F01 to F20) are checked against prepared, verified results. Any new file is read by Claude on the local version (start-desk.bat), so packets never pass through this website. <a href="pdf/F12.pdf" download>Download a demo packet to try</a>.</small></label>
+          <b>Drag a referral here to check it</b><small>On this website: the demo packets (PDF or Word, F01 to F20) are checked against prepared, verified results. Any new file is read by Claude on the local version (start-desk.bat), so packets never pass through this website. ${APP.meta.artifact ? "" : `<a href="pdf/F12.pdf" download>Download a demo packet to try</a>.`}</small></label>
         ${c ? `<div class="job ${c.state}"><div class="j-top"><b>${esc(c.id || "")}</b><span>${esc(c.name)}</span>${c.state === "done" ? `<button class="btn" data-open="${c.id}">Open ${c.id}</button>` : ""}</div>
           ${c.state === "error" ? "" : `<ol class="j-steps">${STEPS_WEB.map((k, i) => `<li class="${c.state === "done" || i < c.step ? "ok" : i === c.step ? "now" : ""}">${k}</li>`).join("")}</ol>`}
           <p class="lbl">${esc(c.msg)}</p></div>` : ""}</section>`;
@@ -479,6 +480,10 @@
     if ("next" in t.dataset && p) {
       const d = decisions(), open_ = P.filter(x => !d[x.id] && x.id !== p.id).sort((a, b) => minsLeft(a) - minsLeft(b));
       return open_.length ? open(open_[0].id) : (location.hash = "#/");
+    }
+    if ("reset" in t.dataset) {
+      if (!confirm("Reset demo: delete the decisions saved in this browser? The record file on the local version (output/decisions.jsonl) is not touched.")) return;
+      store.set({}); try { localStorage.removeItem("referral-desk") } catch (e) { /* ok */ } return render();
     }
     if ("theme" in t.dataset) { const r = document.documentElement, cur = r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); r.dataset.theme = cur === "dark" ? "light" : "dark"; return }
     if ("who" in t.dataset) { ui.editWho = true; render(); const n = $("#who-name"); if (n) n.focus(); return }
