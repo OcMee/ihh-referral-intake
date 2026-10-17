@@ -1,0 +1,246 @@
+<title>Referral Intake Summaries</title><meta name="claude:viewport-fit-sides" content="cover"><style>
+:root{--bg:#f4f5f7;--card:#fff;--ink:#17202b;--mute:#5f6b7a;--line:#e2e6eb;--soft:#f7f8fa;
+--ok:#1b7a47;--okbg:#e5f3eb;--warn:#a86400;--warnbg:#fdf1dc;--bad:#b42318;--badbg:#fbe9e7;
+--gray:#6b7280;--graybg:#eef0f3;--accent:#1f5f9e}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1318;--card:#171c23;--ink:#e7eaee;
+--mute:#9aa4b1;--line:#29313b;--soft:#1d232b;--ok:#5fd08f;--okbg:#14301f;--warn:#f0b54a;--warnbg:#33270f;
+--bad:#ff8577;--badbg:#3a1a17;--gray:#a0a8b3;--graybg:#232a33;--accent:#7db4ee;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1318;--card:#171c23;--ink:#e7eaee;
+--mute:#9aa4b1;--line:#29313b;--soft:#1d232b;--ok:#5fd08f;--okbg:#14301f;--warn:#f0b54a;--warnbg:#33270f;
+--bad:#ff8577;--badbg:#3a1a17;--gray:#a0a8b3;--graybg:#232a33;--accent:#7db4ee;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;color:var(--ink);background:var(--bg);font:13px/1.42 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.top h1{font-size:20px;margin:0}.top .sub{color:var(--mute)}
+.links a{margin-left:12px;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 250px 1fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card h2{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 8px}
+.ringbox{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ring text{font-family:inherit}
+.band{font-weight:700;font-size:15px;margin-top:4px}
+.claude{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);width:100%;font-size:12px;color:var(--mute)}
+.claude b{color:var(--ink)}
+.facts{list-style:none;margin:0;padding:0}.facts li{padding:5px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}.facts .lab{display:inline-block;min-width:92px;color:var(--mute);font-size:11px;font-weight:600}
+.pg{font-size:11px;white-space:nowrap}.chk{font-size:10px;color:var(--warn);font-weight:700;margin-left:3px}
+.vf{font-size:10px;color:var(--ok);margin-left:2px}
+.block{background:var(--badbg);border:1px solid var(--bad);border-radius:8px;padding:8px 10px;margin-bottom:8px}
+.block b{color:var(--bad)}.possible{background:var(--warnbg);border-color:var(--warn)}.possible b{color:var(--warn)}
+.none{color:var(--ok);font-weight:600}
+.conf{padding:6px 0;border-bottom:1px solid var(--line)}.conf:last-child{border:0}
+.conf .t{font-weight:600}.q{color:var(--mute);font-style:italic}
+.crit{margin-top:12px}.legend{float:right;font-size:11px;color:var(--mute);text-transform:none;letter-spacing:0}
+.sec{display:grid;grid-template-columns:120px 1fr;gap:6px;padding:5px 0;border-top:1px solid var(--line)}
+.sec .n{color:var(--mute);font-size:11px;font-weight:600;padding-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:12px;font-size:11.5px;border:1px solid transparent;cursor:default}
+.chip .id{font-weight:700;font-size:10.5px;opacity:.85}
+.s-met{background:var(--okbg);color:var(--ok)}.s-not_met{background:var(--badbg);color:var(--bad);border-color:var(--bad)}
+.s-unknown{background:var(--warnbg);color:var(--warn)}.s-cant_tell{background:var(--graybg);color:var(--gray)}
+.bottom{display:grid;grid-template-columns:1fr 1.4fr;gap:12px;margin-top:12px}
+.miss span{display:inline-block;background:var(--graybg);border-radius:6px;padding:2px 7px;margin:0 4px 4px 0;font-size:12px}
+ol{margin:0;padding-left:18px}ol li{margin-bottom:3px}
+button{font:inherit;font-size:11px;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:6px;padding:3px 8px;cursor:pointer;float:right}
+.foot{color:var(--mute);font-size:11px;margin-top:10px}
+@media screen and (max-width:900px){.grid,.bottom{grid-template-columns:1fr}.sec{grid-template-columns:1fr}}
+@page{size:letter;margin:8mm}
+.printnote{display:none}
+@media print{html,body{background:#fff}.wrap{padding:0;max-width:none;zoom:.8}.links,button{display:none}
+body{font-size:9.5px;line-height:1.3}.card{padding:6px 8px;border-radius:6px;break-inside:avoid}
+.grid{grid-template-columns:1fr 150px 1fr;gap:6px}.bottom{gap:6px;margin-top:6px}.crit{margin-top:6px}
+.top{margin-bottom:6px}.top h1{font-size:14px}.ring{width:120px;height:120px}.band{font-size:12px}
+.claude .why{display:none}.facts li{padding:2px 0}.facts li:nth-child(n+7){display:none}
+.confs .conf:nth-child(n+4){display:none}.block{padding:4px 6px;margin-bottom:4px}.block .q{display:none}
+.chip{font-size:8.5px;padding:0 5px}.s-met{display:none}.sec{padding:2px 0}.sec:not(:has(.chip:not(.s-met))){display:none}
+#qs li:nth-child(n+7){display:none}.printnote{display:block}.foot{font-size:8.5px;margin-top:4px}}
+
+table{width:100%;border-collapse:collapse;background:var(--card)}th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.pill{display:inline-block;min-width:34px;text-align:center;color:var(--card);border-radius:12px;padding:1px 8px;font-weight:700}
+.dec{display:none}body.show .dec{display:table-cell}section{display:none}section.on{display:block}</style>
+<div class="wrap" style="padding-block:10px 0"><div class="block possible"><b>Fictional demo cases. These patients are invented to show how the tool works. No real patient data is on this page.</b></div></div><section id="index"><div class="wrap">
+<div class="top"><div><h1>Referral intake</h1><div class="sub">3 referrals · packet data, local only</div></div>
+<label class="sub"><input type="checkbox" onchange="document.body.classList.toggle('show',this.checked)"> show IHH decision</label></div>
+<div class="card"><table><tr><th>Packet</th><th>Patient</th><th>Pages</th><th>Fit score</th><th>Claude's read</th><th>Blockers</th><th class="dec">IHH decision</th></tr><tr><td><a href="#D01"><b>D01</b></a></td>
+<td>52M (fictional), right forearm cellulitis, finishing on oral antibiotics, unhoused</td><td>5</td>
+<td><span class="pill" style="background:var(--ok)">100</span> Likely fit</td>
+<td>85 · approve</td>
+<td>–</td><td class="dec">?</td></tr><tr><td><a href="#D02"><b>D02</b></a></td>
+<td>68F (fictional), pneumonia on IV antibiotics and 2L oxygen, unhoused</td><td>4</td>
+<td><span class="pill" style="background:var(--warn)">57</span> Needs info</td>
+<td>55 · needs info</td>
+<td>–</td><td class="dec">?</td></tr><tr><td><a href="#D03"><b>D03</b></a></td>
+<td>81M (fictional), hip fracture after a fall, confused, unhoused</td><td>3</td>
+<td><span class="pill" style="background:var(--bad)">15</span> Likely not a fit</td>
+<td>10 · deny</td>
+<td>MOB-4, MOB-3, ADL-3, COG-2, FORM-X1</td><td class="dec">?</td></tr></table></div>
+<div class="foot">Fit score is rule-based. Weights were hand-tuned after comparing with these 11 IHH decisions, so agreement here is in-sample. The coordinator decides.</div></div></section><section id="D01"><div class="wrap">
+<div class="top"><div><h1>D01 · 52M (fictional), right forearm cellulitis, finishing on oral antibiotics, unhoused</h1>
+<div class="sub">5 pages · Medi-Cal (fictional) · Housing: Currently unhoused · Admitted for: Right forearm cellulitis <span class="pg">p1, p2</span></div></div>
+<div class="links"><a href="#index">All referrals</a></div></div>
+
+<div class="grid">
+<div class="card"><h2>Key facts</h2><ul class="facts"><li><span class="lab">Infection</span>Switching to oral cephalexin for 7 days at discharge. <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Mobility</span>Walks 300 ft independently, no device. <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Cognition</span>Alert and oriented x4. <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Wounds</span>Forearm wound; home health RN accepted for dressing changes. <span class="pg">p5<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Infection</span>MRSA and COVID swabs negative. <span class="pg">p4<span class="vf" title="quote found on cited page">✓</span></span></li></ul></div>
+<div class="card ringbox"><svg class="ring" width="170" height="170" viewBox="0 0 160 160" role="img" aria-label="Fit score 100 of 100">
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--line)" stroke-width="14"/>
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--ok)" stroke-width="14" stroke-linecap="round"
+ stroke-dasharray="389.6 389.6" transform="rotate(-90 80 80)"/>
+<text x="80" y="84" text-anchor="middle" font-size="40" font-weight="700" fill="var(--ink)">100</text>
+<text x="80" y="106" text-anchor="middle" font-size="12" fill="var(--mute)">fit score / 100</text></svg>
+<div class="band" style="color:var(--ok)">Likely fit</div>
+<div class="claude">Claude's read: <b>85/100 · approve</b><br><span class="why">Meets housing, mobility, cognition and ADL rules with documents; wound care is arranged. Only the COVID test timing needs confirming.</span></div></div>
+<div class="card"><h2>Blockers</h2><div class="none">No verified blockers found</div><h2 style="margin-top:10px">Form vs chart</h2><div class="confs"><div class="muted">None found</div></div></div>
+</div>
+
+<div class="card crit"><h2>Criteria check
+<span class="legend">✓ met 12 · ✕ not met 0 · ? unknown 0 · ⌛ can't tell (redacted) 1 · 0 not applicable hidden · hover a chip for the finding</span></h2>
+<div class="sec"><div class="n">General</div><div class="chips"><span class="chip s-met" title="GEN-1: Homeless/at risk of homelessness and too ill or frail to recover from illness or injury
+
+Unhoused and recovering from cellulitis.">✓ <span class="id">GEN-1</span>Unhoused and too ill to recover<span class="pg"> p1</span></span></div></div><div class="sec"><div class="n">ADLs</div><div class="chips"><span class="chip s-met" title="ADL-1: Able to complete all Activities of Daily Living (ADLs) independently including personal hygiene
+
+Independent with ADLs per PT.">✓ <span class="id">ADL-1</span>Independent ADLs<span class="pg"> p3</span></span></div></div><div class="sec"><div class="n">Mobility</div><div class="chips"><span class="chip s-met" title="MOB-2: PT/OT notes must be sent for review
+
+PT evaluation sent.">✓ <span class="id">MOB-2</span>PT/OT notes sent<span class="pg"> p3</span></span><span class="chip s-met" title="MOB-3: Patient must be able to ambulate at least 100 ft (rest breaks are acceptable) at modified independence if not wheelchair dependent
+
+Walks 300 ft.">✓ <span class="id">MOB-3</span>Walks 100 ft<span class="pg"> p3</span></span></div></div><div class="sec"><div class="n">Mental Health</div><div class="chips"><span class="chip s-met" title="MH-2: No suicidal ideation
+
+Denies SI.">✓ <span class="id">MH-2</span>No suicidal ideation<span class="pg"> p2</span></span><span class="chip s-met" title="MH-3: No commanding auditory or visual hallucinations
+
+No hallucinations.">✓ <span class="id">MH-3</span>No command hallucinations<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Cognition</div><div class="chips"><span class="chip s-met" title="COG-1: Must be capable of self-administering medications (must confirm that patient can self-administer insulin) and receiving medical education
+
+Self-administers meds per form.">✓ <span class="id">COG-1</span>Self-administers meds<span class="pg"> p1</span></span><span class="chip s-met" title="COG-2: AOx4
+
+AOx4 in H&amp;P.">✓ <span class="id">COG-2</span>AOx4<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Other Factors</div><div class="chips"><span class="chip s-met" title="OTH-1: Ineligible if client is verbally or physically aggressive towards staff or other patients
+
+Calm and cooperative.">✓ <span class="id">OTH-1</span>Not aggressive<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Infection Control</div><div class="chips"><span class="chip s-cant_tell" title="INF-2: Covid swab (rapid swab acceptable) documented negative within 24 hours of recuperative care admission if coming from inpatient admission
+
+COVID negative; test date not shown on the page.">⌛ <span class="id">INF-2</span>COVID swab within 24h<span class="pg"> p4</span></span><span class="chip s-met" title="INF-1: MRSA swab, documented negative prior to recuperative care admission if coming from inpatient hospitalization
+
+MRSA negative.">✓ <span class="id">INF-1</span>MRSA swab negative<span class="pg"> p4</span></span></div></div><div class="sec"><div class="n">Infection</div><div class="chips"><span class="chip s-met" title="ID-2: The patient should be able to administer oral antibiotics independently
+
+Oral antibiotic plan at discharge.">✓ <span class="id">ID-2</span>Takes oral antibiotics<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Integumentary</div><div class="chips"><span class="chip s-met" title="INT-E2: Wound care to be coordinated with home health agency prior to arrival at recuperative care and should coincide with the frequency of dressing changes or wound monitoring. If a patient should have a dressing change or wound check within 24 hours of discharge from the hospital, wound care should be arranged to arrive to recuperative care within 24 hours. Additionally, all wounds in hard-to-reach areas (coccyx, back of thighs, back, perineum) will require at least one visit from wound care in the recuperative care setting regardless of patient&#x27;s ability to change the dressing in a hospital setting.
+
+Wound care arranged with home health.">✓ <span class="id">INT-E2</span>Wound care to be coordinated with home...<span class="pg"> p5</span></span></div></div></div>
+
+<div class="bottom">
+<div class="card"><h2>Missing from packet</h2><div class="miss"><span class="none">Nothing from the checklist</span></div></div>
+<div class="card"><h2>Ask the hospital <button onclick="navigator.clipboard.writeText(document.getElementById('qs').innerText).then(()=>this.textContent='Copied').catch(()=>getSelection().selectAllChildren(document.getElementById('qs')))">Copy</button></h2>
+<ol id="qs"><li>Please confirm the COVID test was within 24 hours of discharge.</li></ol></div>
+</div>
+
+<div class="foot"><span class="printnote">Printed view is trimmed: met criteria, extra facts, conflicts and questions are on the screen version.</span>AI-prepared summary for a coordinator. The coordinator decides. Ring = rule-based score. Weights hand-tuned after comparing with IHH's 11 past decisions (in-sample, not validated; see score.py).
+✓ = quote found on the cited page (13/13 criteria quotes verified). "check" = not found, read the page. Page links open the original scan.</div>
+</div></section><section id="D02"><div class="wrap">
+<div class="top"><div><h1>D02 · 68F (fictional), pneumonia on IV antibiotics and 2L oxygen, unhoused</h1>
+<div class="sub">4 pages · Medi-Cal (fictional) · Housing: Currently unhoused · Admitted for: Community acquired pneumonia <span class="pg">p1, p2</span></div></div>
+<div class="links"><a href="#index">All referrals</a></div></div>
+
+<div class="grid">
+<div class="card"><h2>Key facts</h2><ul class="facts"><li><span class="lab">Meds/IV/O2</span>Still on 2L oxygen; form says no oxygen. <span class="pg">p3, p1<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Infection</span>IV ceftriaxone; oral step-down not decided. <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Mobility</span>PT evaluation still pending. <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Cognition</span>Alert and oriented x4. <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></li></ul></div>
+<div class="card ringbox"><svg class="ring" width="170" height="170" viewBox="0 0 160 160" role="img" aria-label="Fit score 57 of 100">
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--line)" stroke-width="14"/>
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--warn)" stroke-width="14" stroke-linecap="round"
+ stroke-dasharray="222.0 389.6" transform="rotate(-90 80 80)"/>
+<text x="80" y="84" text-anchor="middle" font-size="40" font-weight="700" fill="var(--ink)">57</text>
+<text x="80" y="106" text-anchor="middle" font-size="12" fill="var(--mute)">fit score / 100</text></svg>
+<div class="band" style="color:var(--warn)">Needs info</div>
+<div class="claude">Claude's read: <b>55/100 · needs info</b><br><span class="why">No hard stop, but oxygen and IV plans (RESP-3, ID-3) and PT (MOB-2) are open. Approvable if the hospital answers.</span></div></div>
+<div class="card"><h2>Blockers</h2><div class="none">No verified blockers found</div><h2 style="margin-top:10px">Form vs chart</h2><div class="confs"><div class="conf"><span class="t">Oxygen</span> · Form says no oxygen, progress note says 2L at rest. Chart wins. <span class="pg">p1<span class="vf" title="quote found on cited page">✓</span></span> <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></div></div></div>
+</div>
+
+<div class="card crit"><h2>Criteria check
+<span class="legend">✓ met 4 · ✕ not met 2 · ? unknown 10 · ⌛ can't tell (redacted) 0 · 0 not applicable hidden · hover a chip for the finding</span></h2>
+<div class="sec"><div class="n">General</div><div class="chips"><span class="chip s-met" title="GEN-1: Homeless/at risk of homelessness and too ill or frail to recover from illness or injury
+
+Unhoused and recovering from pneumonia.">✓ <span class="id">GEN-1</span>Unhoused and too ill to recover<span class="pg"> p1</span></span></div></div><div class="sec"><div class="n">ADLs</div><div class="chips"><span class="chip s-unknown" title="ADL-1: Able to complete all Activities of Daily Living (ADLs) independently including personal hygiene
+
+ADLs not documented.">? <span class="id">ADL-1</span>Independent ADLs<span class="pg"></span></span><span class="chip s-unknown" title="ADL-3: Able to toilet independently and/or change briefs/diapers independently
+
+Toileting not documented.">? <span class="id">ADL-3</span>Independent toileting<span class="pg"></span></span></div></div><div class="sec"><div class="n">Mobility</div><div class="chips"><span class="chip s-not_met" title="MOB-2: PT/OT notes must be sent for review
+
+PT/OT notes not sent; PT pending.">✕ <span class="id">MOB-2</span>PT/OT notes sent<span class="pg"> p3</span></span><span class="chip s-unknown" title="MOB-3: Patient must be able to ambulate at least 100 ft (rest breaks are acceptable) at modified independence if not wheelchair dependent
+
+Walking distance not documented.">? <span class="id">MOB-3</span>Walks 100 ft<span class="pg"></span></span><span class="chip s-unknown" title="MOB-1: If using DME (wheelchair, walker, etc) must be able to use independently
+
+Uses a walker per form; independence with it not documented.">? <span class="id">MOB-1</span>Uses DME independently<span class="pg"></span></span></div></div><div class="sec"><div class="n">Mental Health</div><div class="chips"><span class="chip s-unknown" title="MH-2: No suicidal ideation
+
+No suicide screen in packet.">? <span class="id">MH-2</span>No suicidal ideation<span class="pg"></span></span><span class="chip s-unknown" title="MH-1: Patient must be mentally stable on medications
+
+Mental health not documented.">? <span class="id">MH-1</span>Mentally stable on meds<span class="pg"></span></span></div></div><div class="sec"><div class="n">Cognition</div><div class="chips"><span class="chip s-unknown" title="COG-1: Must be capable of self-administering medications (must confirm that patient can self-administer insulin) and receiving medical education
+
+Not stated whether she manages her own meds.">? <span class="id">COG-1</span>Self-administers meds<span class="pg"></span></span><span class="chip s-met" title="COG-2: AOx4
+
+AOx4.">✓ <span class="id">COG-2</span>AOx4<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Other Factors</div><div class="chips"><span class="chip s-unknown" title="OTH-4: Cannot accept patients on isolation unless isolation status is cleared prior to admission to recuperative care
+
+Isolation status not stated.">? <span class="id">OTH-4</span>Not on isolation<span class="pg"></span></span></div></div><div class="sec"><div class="n">Infection Control</div><div class="chips"><span class="chip s-not_met" title="INF-1: MRSA swab, documented negative prior to recuperative care admission if coming from inpatient hospitalization
+
+No MRSA swab in packet.">✕ <span class="id">INF-1</span>MRSA swab negative<span class="pg"></span></span><span class="chip s-met" title="INF-2: Covid swab (rapid swab acceptable) documented negative within 24 hours of recuperative care admission if coming from inpatient admission
+
+COVID PCR negative.">✓ <span class="id">INF-2</span>COVID swab within 24h<span class="pg"> p4</span></span></div></div><div class="sec"><div class="n">Infection</div><div class="chips"><span class="chip s-unknown" title="ID-3: If IV antibiotics are required, home health care should be ordered before admission to recuperative care to maintain IV and administer antibiotics
+
+IV antibiotics; home health or oral switch not confirmed.">? <span class="id">ID-3</span>IV abx: home health ordered<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Respiratory Illness</div><div class="chips"><span class="chip s-unknown" title="RESP-3: If O2 is required, the hospital must order it and have the tank ready to be sent to the site the day before the client arrives at the recuperative care site
+
+On 2L O2; home oxygen order not arranged yet.">? <span class="id">RESP-3</span>O2 ordered + tank ready<span class="pg"> p3</span></span><span class="chip s-met" title="RESP-1: Chest imaging should be sent (Chest XR, CT, MRI) when available
+
+Chest X-ray sent.">✓ <span class="id">RESP-1</span>Chest imaging sent<span class="pg"> p4</span></span></div></div></div>
+
+<div class="bottom">
+<div class="card"><h2>Missing from packet</h2><div class="miss"><span>PT/OT or Nursing Notes</span></div></div>
+<div class="card"><h2>Ask the hospital <button onclick="navigator.clipboard.writeText(document.getElementById('qs').innerText).then(()=>this.textContent='Copied').catch(()=>getSelection().selectAllChildren(document.getElementById('qs')))">Copy</button></h2>
+<ol id="qs"><li>Will she go home on oxygen? If so, please send the order and confirm a tank will come with her.</li><li>Will she switch to oral antibiotics before discharge, or is home health arranged for IV?</li><li>Please send the PT evaluation when done, including walking distance with her walker.</li><li>Please send an MRSA swab result.</li></ol></div>
+</div>
+
+<div class="foot"><span class="printnote">Printed view is trimmed: met criteria, extra facts, conflicts and questions are on the screen version.</span>AI-prepared summary for a coordinator. The coordinator decides. Ring = rule-based score. Weights hand-tuned after comparing with IHH's 11 past decisions (in-sample, not validated; see score.py).
+✓ = quote found on the cited page (7/7 criteria quotes verified). "check" = not found, read the page. Page links open the original scan.</div>
+</div></section><section id="D03"><div class="wrap">
+<div class="top"><div><h1>D03 · 81M (fictional), hip fracture after a fall, confused, unhoused</h1>
+<div class="sub">3 pages · Medicare (fictional) · Housing: Currently unhoused · Admitted for: Left hip fracture, surgically repaired <span class="pg">p1, p2</span></div></div>
+<div class="links"><a href="#index">All referrals</a></div></div>
+
+<div class="grid">
+<div class="card"><h2>Key facts</h2><ul class="facts"><li><span class="lab">Cognition</span>Oriented to self only; form leaves cognitive impairment unchecked. <span class="pg">p2, p1<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Mobility</span>Needs moderate assist of 2 for transfers; walks 10 ft. <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></li><li><span class="lab">Other</span>PT recommends a skilled nursing facility. <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></li></ul></div>
+<div class="card ringbox"><svg class="ring" width="170" height="170" viewBox="0 0 160 160" role="img" aria-label="Fit score 15 of 100">
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--line)" stroke-width="14"/>
+<circle cx="80" cy="80" r="62" fill="none" stroke="var(--bad)" stroke-width="14" stroke-linecap="round"
+ stroke-dasharray="58.4 389.6" transform="rotate(-90 80 80)"/>
+<text x="80" y="84" text-anchor="middle" font-size="40" font-weight="700" fill="var(--ink)">15</text>
+<text x="80" y="106" text-anchor="middle" font-size="12" fill="var(--mute)">fit score / 100</text></svg>
+<div class="band" style="color:var(--bad)">Likely not a fit</div>
+<div class="claude">Claude's read: <b>10/100 · deny</b><br><span class="why">Needs hands-on help with transfers and toileting (MOB-4, ADL-3) and is not oriented (COG-2). PT recommends a skilled nursing facility.</span></div></div>
+<div class="card"><h2>Blockers</h2><div class="block"><b>⛔ MOB-4 · Transfers independently</b><br>Cannot transfer independently.<br><span class="q">"Transfers: moderate assist x2"</span> <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></div><div class="block"><b>⛔ MOB-3 · Walks 100 ft</b><br>Walks 10 ft with assist, not 100 ft.<br><span class="q">"Ambulation: 10 ft with front wheeled walker"</span> <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></div><div class="block"><b>⛔ ADL-3 · Independent toileting</b><br>Needs assist with toileting.<br><span class="q">"Needs moderate assist with lower body dressing and toileting"</span> <span class="pg">p3<span class="vf" title="quote found on cited page">✓</span></span></div><div class="block"><b>⛔ COG-2 · AOx4</b><br>Oriented to self only.<br><span class="q">"Oriented to self only"</span> <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></div><div class="block"><b>⛔ FORM-X1 · Not cognitively impaired</b><br>Chart shows confusion; form leaves cognitive impairment unchecked.<br><span class="q">"Confused, follows simple commands"</span> <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></div><h2 style="margin-top:10px">Form vs chart</h2><div class="confs"><div class="conf"><span class="t">Cognition</span> · Form leaves cognitive impairment unchecked; H&amp;P says oriented to self only. Chart wins. <span class="pg">p1<span class="vf" title="quote found on cited page">✓</span></span> <span class="pg">p2<span class="vf" title="quote found on cited page">✓</span></span></div></div></div>
+</div>
+
+<div class="card crit"><h2>Criteria check
+<span class="legend">✓ met 1 · ✕ not met 6 · ? unknown 1 · ⌛ can't tell (redacted) 0 · 0 not applicable hidden · hover a chip for the finding</span></h2>
+<div class="sec"><div class="n">General</div><div class="chips"><span class="chip s-met" title="GEN-1: Homeless/at risk of homelessness and too ill or frail to recover from illness or injury
+
+Unhoused, recovering from surgery.">✓ <span class="id">GEN-1</span>Unhoused and too ill to recover<span class="pg"> p1</span></span></div></div><div class="sec"><div class="n">ADLs</div><div class="chips"><span class="chip s-not_met" title="ADL-3: Able to toilet independently and/or change briefs/diapers independently
+
+Needs assist with toileting.">✕ <span class="id">ADL-3</span>Independent toileting<span class="pg"> p3</span></span></div></div><div class="sec"><div class="n">Mobility</div><div class="chips"><span class="chip s-not_met" title="MOB-4: Wheelchair dependent patients must be able to transfer independently
+
+Cannot transfer independently.">✕ <span class="id">MOB-4</span>Transfers independently<span class="pg"> p3</span></span><span class="chip s-not_met" title="MOB-3: Patient must be able to ambulate at least 100 ft (rest breaks are acceptable) at modified independence if not wheelchair dependent
+
+Walks 10 ft with assist, not 100 ft.">✕ <span class="id">MOB-3</span>Walks 100 ft<span class="pg"> p3</span></span></div></div><div class="sec"><div class="n">Mental Health</div><div class="chips"><span class="chip s-unknown" title="MH-2: No suicidal ideation
+
+No suicide screen in packet.">? <span class="id">MH-2</span>No suicidal ideation<span class="pg"></span></span></div></div><div class="sec"><div class="n">Cognition</div><div class="chips"><span class="chip s-not_met" title="COG-2: AOx4
+
+Oriented to self only.">✕ <span class="id">COG-2</span>AOx4<span class="pg"> p2</span></span></div></div><div class="sec"><div class="n">Infection Control</div><div class="chips"><span class="chip s-not_met" title="INF-1: MRSA swab, documented negative prior to recuperative care admission if coming from inpatient hospitalization
+
+No MRSA swab in packet.">✕ <span class="id">INF-1</span>MRSA swab negative<span class="pg"></span></span></div></div><div class="sec"><div class="n">Referral form</div><div class="chips"><span class="chip s-not_met" title="FORM-X1: Cognitively impaired (i.e., dementia, Alzheimer&#x27;s)
+
+Chart shows confusion; form leaves cognitive impairment unchecked.">✕ <span class="id">FORM-X1</span>Not cognitively impaired<span class="pg"> p2</span></span></div></div></div>
+
+<div class="bottom">
+<div class="card"><h2>Missing from packet</h2><div class="miss"><span>Updated Vitals (last 24 hours)</span><span>Medication List</span></div></div>
+<div class="card"><h2>Ask the hospital <button onclick="navigator.clipboard.writeText(document.getElementById('qs').innerText).then(()=>this.textContent='Copied').catch(()=>getSelection().selectAllChildren(document.getElementById('qs')))">Copy</button></h2>
+<ol id="qs"><li>Has a skilled nursing facility been considered, as PT recommends?</li></ol></div>
+</div>
+
+<div class="foot"><span class="printnote">Printed view is trimmed: met criteria, extra facts, conflicts and questions are on the screen version.</span>AI-prepared summary for a coordinator. The coordinator decides. Ring = rule-based score. Weights hand-tuned after comparing with IHH's 11 past decisions (in-sample, not validated; see score.py).
+✓ = quote found on the cited page (6/6 criteria quotes verified). "check" = not found, read the page. Page links open the original scan.</div>
+</div></section><script>
+function go(){const id=(location.hash||'#index').slice(1);document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));setTimeout(()=>scrollTo(0,0))}
+addEventListener('hashchange',go);go();</script>

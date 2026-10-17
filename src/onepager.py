@@ -29,11 +29,14 @@ CSS = """
 --gray:#6b7280;--graybg:#eef0f3;--accent:#1f5f9e}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1318;--card:#171c23;--ink:#e7eaee;
 --mute:#9aa4b1;--line:#29313b;--soft:#1d232b;--ok:#5fd08f;--okbg:#14301f;--warn:#f0b54a;--warnbg:#33270f;
---bad:#ff8577;--badbg:#3a1a17;--gray:#a0a8b3;--graybg:#232a33;--accent:#7db4ee}}
+--bad:#ff8577;--badbg:#3a1a17;--gray:#a0a8b3;--graybg:#232a33;--accent:#7db4ee;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1318;--card:#171c23;--ink:#e7eaee;
+--mute:#9aa4b1;--line:#29313b;--soft:#1d232b;--ok:#5fd08f;--okbg:#14301f;--warn:#f0b54a;--warnbg:#33270f;
+--bad:#ff8577;--badbg:#3a1a17;--gray:#a0a8b3;--graybg:#232a33;--accent:#7db4ee;color-scheme:dark}
 *{box-sizing:border-box}html{background:var(--bg)}
 body{margin:0;color:var(--ink);background:var(--bg);font:13px/1.42 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1180px;margin:0 auto;padding:16px}
+.wrap{max-width:1180px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .top h1{font-size:20px;margin:0}.top .sub{color:var(--mute)}
 .links a{margin-left:12px;font-size:12px}
@@ -186,7 +189,7 @@ def render(d: dict, checklist: dict) -> str:
 
 <div class="bottom">
 <div class="card"><h2>Missing from packet</h2><div class="miss">{missing or '<span class="none">Nothing from the checklist</span>'}</div></div>
-<div class="card"><h2>Ask the hospital <button onclick="navigator.clipboard.writeText(document.getElementById('qs').innerText)">Copy</button></h2>
+<div class="card"><h2>Ask the hospital <button onclick="navigator.clipboard.writeText(document.getElementById('qs').innerText).then(()=>this.textContent='Copied').catch(()=>getSelection().selectAllChildren(document.getElementById('qs')))">Copy</button></h2>
 <ol id="qs">{''.join(f'<li>{e(q)}</li>' for q in qs) or '<li>No questions</li>'}</ol></div>
 </div>
 
@@ -209,7 +212,7 @@ def index(scored: list, decisions: dict) -> str:
 <title>Referral Intake Summaries</title><style>{CSS}
 table{{width:100%;border-collapse:collapse;background:var(--card)}}th,td{{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}}
 th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05em}}
-.pill{{display:inline-block;min-width:34px;text-align:center;color:#fff;border-radius:12px;padding:1px 8px;font-weight:700}}
+.pill{{display:inline-block;min-width:34px;text-align:center;color:var(--card);border-radius:12px;padding:1px 8px;font-weight:700}}
 .dec{{display:none}}body.show .dec{{display:table-cell}}.card{{overflow-x:auto}}</style></head><body><div class="wrap">
 <div class="top"><div><h1>Referral intake</h1><div class="sub">{len(scored)} referrals · packet data, local only</div></div>
 <label class="sub"><input type="checkbox" onchange="document.body.classList.toggle('show',this.checked)"> show IHH decision</label></div>
@@ -217,27 +220,30 @@ th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05
 <div class="foot">Fit score is rule-based. Weights were hand-tuned after comparing with these 11 IHH decisions, so agreement here is in-sample. The coordinator decides.</div></div></body></html>"""
 
 
-def bundle(scored: list, decisions: dict, checklist: dict) -> str:
+def bundle(scored: list, decisions: dict, checklist: dict, artifact: bool = False, banner: str = "") -> str:
     """Index + every summary in one file, for viewing without the output/ folder."""
     import re
     def body(h):
         h = h[h.index('<div class="wrap">'):h.rindex("</body>")]
         h = re.sub(r'<a href="pages/p-\d+\.png" target="_blank">(p\d+)</a>', r"\1", h)
         return h.replace('href="../index.html"', 'href="#index"').replace('target="_blank"', "")
-    idx = body(index(scored, decisions)).replace('href="R', 'href="#R').replace(".summary.html", "")
-    idx = re.sub(r'href="#(R\d\d)/R\d\d"', r'href="#\1"', idx)
+    idx = re.sub(r'href="([A-Z]\d\d)/[A-Z]\d\d\.summary\.html"', r'href="#\1"', body(index(scored, decisions)))
     secs = f'<section id="index">{idx}</section>' + "".join(
         f'<section id="{d["packet_id"]}">{body(render(d, checklist))}</section>' for d in scored)
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>Referral Intake Summaries</title>
-<style>{CSS}
+    head = ('<title>Referral Intake Summaries</title><meta name="claude:viewport-fit-sides" content="cover"><style>' if artifact else
+            '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Referral Intake Summaries</title><style>')
+    if artifact:
+        secs = re.sub(r'<a href="[A-Z]\d\d\.readable\.pdf"[^>]*>Readable packet</a>', "", secs)
+    if banner:
+        secs = f'<div class="wrap" style="padding-block:10px 0"><div class="block possible"><b>{e(banner)}</b></div></div>' + secs
+    return f"""{head}{CSS}
 table{{width:100%;border-collapse:collapse;background:var(--card)}}th,td{{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}}
 th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05em}}
-.pill{{display:inline-block;min-width:34px;text-align:center;color:#fff;border-radius:12px;padding:1px 8px;font-weight:700}}
-.dec{{display:none}}body.show .dec{{display:table-cell}}section{{display:none}}section.on{{display:block}}</style></head>
-<body>{secs}<script>
-function go(){{const id=(location.hash||'#index').slice(1);document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));scrollTo(0,0)}}
-addEventListener('hashchange',go);go();</script></body></html>"""
+.pill{{display:inline-block;min-width:34px;text-align:center;color:var(--card);border-radius:12px;padding:1px 8px;font-weight:700}}
+.dec{{display:none}}body.show .dec{{display:table-cell}}section{{display:none}}section.on{{display:block}}</style>{'' if artifact else '</head><body>'}
+{secs}<script>
+function go(){{const id=(location.hash||'#index').slice(1);document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));setTimeout(()=>scrollTo(0,0))}}
+addEventListener('hashchange',go);go();</script>{'' if artifact else '</body></html>'}"""
 
 
 def main(argv: list[str]) -> None:
