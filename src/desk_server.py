@@ -367,7 +367,7 @@ class Handler(SimpleHTTPRequestHandler):
         if path == "/api/decisions":
             try:
                 e = json.loads(body)
-                assert re.fullmatch(r"[A-Z]\d\d", str(e.get("id"))) and e.get("decision") in ("approve", "info", "deny")
+                assert re.fullmatch(r"[A-Z]\d\d", str(e.get("id"))) and e.get("decision") in ("approve", "info", "deny", "replied", "arrived")
             except (ValueError, AssertionError):
                 return self.send_json({"error": "bad decision record"}, 400)
             OUT.mkdir(exist_ok=True)

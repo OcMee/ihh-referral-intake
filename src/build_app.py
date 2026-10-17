@@ -93,6 +93,8 @@ def public(checklist: dict, pre: str = "") -> list:
         received = 560 - j * 42                      # minutes ago
         took = [38, 72, 55, 104, 47, 131, 66, 29, 88, 59, 93][j % 11]   # minutes to first decision
         seed = [{"decision": KIND[intended[pid]], "min": received - took, "by": BY}]
+        if pid in ("F10", "F16", "F19", "F24"):  # accepted earlier and already arrived at IHH
+            seed.append({"decision": "arrived", "min": received - took - 150, "by": BY})
         if pid == "F14":  # example revision: the hospital sent the missing swab results
             seed.append({"decision": "approve", "min": received - took - 95, "by": BY,
                          "reason": "Demo: hospital faxed negative MRSA and COVID swab results (INF-1, INF-2)."})

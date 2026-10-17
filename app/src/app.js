@@ -28,7 +28,17 @@
     const seeded = p && p.seed ? p.seed.map(s => ({ decision: s.decision, at: LOADED - s.min * 60000, by: s.by, reason: s.reason || "", seeded: true })) : [];
     return [...seeded, ...(log[id] || [])].sort((a, b) => a.at - b.at).map((e, i) => ({ ...e, rev: i + 1 }));
   }
-  const decisions = () => Object.fromEntries(P.map(p => [p.id, history(p.id).slice(-1)[0]]).filter(x => x[1]));
+  const DEC = new Set(["approve", "info", "deny"]);
+  const decisions = () => Object.fromEntries(P.map(p => [p.id, history(p.id).filter(e => DEC.has(e.decision)).slice(-1)[0]]).filter(x => x[1]));
+  // status per referral: New -> Waiting on hospital -> Hospital replied -> Accepted -> Arrived, or Declined
+  const STATUS = { new: "New", waiting: "Waiting on hospital", replied: "Hospital replied", accepted: "Accepted", arrived: "Arrived", declined: "Declined" };
+  function statusOf(p) {
+    const h = history(p.id); if (!h.length) return "new";
+    const last = h[h.length - 1].decision;
+    if (last === "arrived") return "arrived"; if (last === "replied") return "replied";
+    return { approve: "accepted", info: "waiting", deny: "declined" }[last] || "new";
+  }
+  const isOpen = p => ["new", "replied"].includes(statusOf(p));
   function addEvent(id, e) {
     store.set({ ...log, [id]: [...(log[id] || []), e] });
     if (ui.server) fetch("/api/decisions", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, ...e }) }).catch(() => {});
@@ -84,6 +94,7 @@
   function minsLeft(p) { return SLA - p.received_min - (Date.now() - LOADED) / 60000 }
   function clock(p) {
     const d = decisions()[p.id];
+    if (d && statusOf(p) === "replied") return `<span class="st replied">Hospital replied</span>`;
     if (d) return `<span class="done ${d.decision}">${{ approve: "Approved", info: "Asked for info", deny: "Denied" }[d.decision]}</span>`;
     const m = minsLeft(p), a = Math.abs(m), h = Math.floor(a / 60), mm = Math.floor(a % 60);
     const txt = m < 0 ? `overdue ${h ? h + "h " : ""}${mm}m` : `${h}h ${String(mm).padStart(2, "0")}m left`;
@@ -135,7 +146,7 @@
     const d = decisions()[p.id], m = minsLeft(p);
     const used = Math.min(1, Math.max(0, (SLA - m) / SLA));
     const bl = p.fit.blockers;
-    return `<button class="card2 ${p.fit.band} ${d ? "decided" : ""}" data-open="${p.id}">
+    return `<button class="card2 ${p.fit.band} ${d && !isOpen(p) ? "decided" : ""}" data-open="${p.id}">
       <span class="c-top"><span class="id">${p.id}</span>${srcTag(p)}${clock(p)}</span>
       <span class="c-main">${dial(p.fit.score, p.fit.band)}<span class="c-who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span></span>
       <span class="c-bl">${bl.length ? bl.slice(0, 3).map(x => `<span class="tagx">${esc(x)}</span>`).join("") + (bl.length > 3 ? `<span class="tagx more">+${bl.length - 3}</span>` : "") : `<span class="calm">No hard stop</span>`}</span>
@@ -144,7 +155,7 @@
     </button>`;
   }
   function recap() {
-    const d = decisions(), open_ = P.filter(p => !d[p.id]);
+    const d = decisions(), open_ = P.filter(isOpen);
     const n = k => open_.filter(p => p.fit.band === k).length;
     const soon = open_.filter(p => minsLeft(p) < 30).length;
     if (!open_.length) return `<h1>All caught up.</h1><p class="lede">Every referral has a decision. New ones appear here as they arrive.</p>`;
@@ -155,7 +166,7 @@
   }
   function inbox() {
     const d = decisions();
-    let list = P.filter(p => ui.filter === "all" ? true : ui.filter === "open" ? !d[p.id] : ui.filter === "done" ? !!d[p.id] : p.fit.band === ui.filter && !d[p.id]);
+    let list = P.filter(p => ui.filter === "all" ? true : ui.filter === "open" ? isOpen(p) : ui.filter === "done" ? !!d[p.id] : p.fit.band === ui.filter && isOpen(p));
     if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + (p.patient.admit_reason || "") + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
     const sorters = { deadline: (a, b) => (d[a.id] ? 1 : 0) - (d[b.id] ? 1 : 0) || minsLeft(a) - minsLeft(b), score: (a, b) => a.fit.score - b.fit.score, id: (a, b) => a.id.localeCompare(b.id) };
     list.sort(sorters[ui.sort]);
@@ -263,10 +274,11 @@
 
   // ---------- decision record ----------
   const KIND = { approve: "Approve", info: "Ask for info", deny: "Deny" };
+  const EVT = { replied: "Hospital replied", arrived: "Arrived at IHH" };
   function record(p) {
     const h = history(p.id); if (!h.length) return "";
     return `<section class="card record" id="record"><p class="eyebrow">Decision record · ${h.length} ${h.length === 1 ? "entry" : "entries"}</p>
-      <ol>${h.map(e => `<li class="${e.decision}"><b>Rev ${e.rev} · ${KIND[e.decision]}</b> <span>${new Date(e.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })} · ${esc(e.by || "unknown")}</span>${e.seeded ? ` <span class="tagx">demo history</span>` : ""}${e.reason ? `<div class="lbl">Reason: ${esc(e.reason)}</div>` : ""}</li>`).join("")}</ol>
+      <ol>${h.map(e => `<li class="${e.decision}"><b>Rev ${e.rev} · ${KIND[e.decision] || EVT[e.decision]}</b> <span>${new Date(e.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })} · ${esc(e.by || "unknown")}</span>${e.seeded ? ` <span class="tagx">demo history</span>` : ""}${e.reason ? `<div class="lbl">Reason: ${esc(e.reason)}</div>` : ""}</li>`).join("")}</ol>
       <p class="lbl">Append-only: a revision adds an entry; the original decision is never changed or deleted.${ui.server ? " Also saved on this computer in output/decisions.jsonl." : " Saved in this browser."}</p></section>`;
   }
   async function mergeServer() {
@@ -283,17 +295,21 @@
     const d = decisions(), done = P.filter(p => d[p.id]).sort((a, b) => d[b.id].at - d[a.id].at);
     const BANDN = { fit: "Likely fit", info: "Needs info", nofit: "Not a fit" }, AGREE = { fit: "approve", info: "info", nofit: "deny" };
     const q = (ui.dq || "").toLowerCase();
-    const rows = done.filter(p => !q || (p.id + " " + p.patient.summary + " " + d[p.id].by + " " + KIND[d[p.id].decision]).toLowerCase().includes(q));
+    const sf = ui.sf || "all", cnt = k => done.filter(p => statusOf(p) === k).length;
+    const tabs = [["all", "All", done.length], ...["waiting", "replied", "accepted", "arrived", "declined"].map(k => [k, STATUS[k], cnt(k)])];
+    const rows = done.filter(p => sf === "all" || statusOf(p) === sf).filter(p => !q || (p.id + " " + p.patient.summary + " " + d[p.id].by + " " + KIND[d[p.id].decision]).toLowerCase().includes(q));
     return `<section class="report"><p class="eyebrow">Decisions · ${done.length} referrals decided</p><h1>Decisions</h1>
       <p class="lbl">Every decision is on record. A revision adds an entry with its reason; the first decision is never changed.</p>
+      <div class="seg" role="tablist" style="margin-top:10px">${tabs.map(([k, l, n]) => `<button data-sf="${k}" class="${sf === k ? "on" : ""}">${l} <span class="num">${n}</span></button>`).join("")}</div>
       <input class="search" id="dq" type="search" placeholder="Search ID, patient, reviewer or decision" value="${esc(ui.dq || "")}" aria-label="Search decisions" style="margin:10px 0 12px;max-width:420px">
-      <div class="dtable"><table class="mx dec"><tr><th>Referral</th><th>Patient</th><th>Tool said</th><th>Decision</th><th>By</th><th>When</th><th>Record</th></tr>
-      ${rows.map(p => { const h = history(p.id), e = h[h.length - 1], over = AGREE[p.fit.band] !== h[0].decision;
+      <div class="dtable"><table class="mx dec"><tr><th>Referral</th><th>Patient</th><th>Tool said</th><th>Decision</th><th>Status</th><th>By</th><th>When</th><th>Record</th></tr>
+      ${rows.map(p => { const h = history(p.id), e = d[p.id], st = statusOf(p), over = AGREE[p.fit.band] !== h[0].decision;
         return `<tr data-open="${p.id}" class="click"><td><b>${p.id}</b> ${srcTag(p)}</td><td class="pt">${esc(p.patient.summary)}</td>
           <td><span class="pill ${p.fit.band}">${p.fit.score}</span> ${BANDN[p.fit.band]}</td>
           <td class="dd ${e.decision}"><b>${KIND[e.decision]}</b>${over ? ` <span class="tagx" title="First decision differed from the tool">override</span>` : ""}</td>
+          <td><span class="st ${st}">${STATUS[st]}</span></td>
           <td>${esc(e.by || "")}</td><td>${new Date(e.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}</td>
-          <td>${h.length > 1 ? `${h.length} entries · revised` : "1 entry"}${h.some(x => x.seeded) ? ` <span class="tagx">demo history</span>` : ""}</td></tr>` }).join("") || `<tr><td colspan="7">Nothing decided yet.</td></tr>`}</table></div></section>`;
+          <td>${h.length > 1 ? `${h.length} entries · revised` : "1 entry"}${h.some(x => x.seeded) ? ` <span class="tagx">demo history</span>` : ""}</td></tr>` }).join("") || `<tr><td colspan="8">Nothing decided yet.</td></tr>`}</table></div></section>`;
   }
 
   // ---------- report ----------
@@ -441,12 +457,14 @@
     const d = decisions()[p.id], k = ui.drawer || (d && d.decision);
     const text = ui.drawer ? (ui.draftText ?? draft(p, ui.drawer)) : d ? (d.text || draft(p, d.decision)) : "";
     return `<div class="decide"><div class="decide-in gutter">
-        <span class="lead">${d ? `Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${d.by ? ` · by ${esc(d.by)}` : ""}${d.rev > 1 ? ` · revision ${d.rev}` : ""} · <a href="#record">record</a>` : "Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
+        <span class="lead">${d ? `<span class="st ${statusOf(p)}">${STATUS[statusOf(p)]}</span> · Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${d.by ? ` · by ${esc(d.by)}` : ""}${d.rev > 1 ? ` · revision ${d.rev}` : ""} · <a href="#record">record</a>` : "Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
         <button class="btn approve ${k === "approve" ? "on" : ""}" data-decide="approve">Approve</button>
         <button class="btn info ${k === "info" ? "on" : ""}" data-decide="info">Ask for info</button>
         <button class="btn deny ${k === "deny" ? "on" : ""}" data-decide="deny">Deny</button>
+        ${statusOf(p) === "waiting" ? `<button class="btn step" data-evt="replied" title="The hospital sent the missing information">Hospital replied</button>` : ""}
+        ${statusOf(p) === "accepted" ? `<button class="btn step" data-evt="arrived" title="The patient is at IHH">Mark arrived</button>` : ""}
         <button class="btn" data-next>Next ▸</button></div>
-      ${ui.drawer ? `<div class="drawer gutter">${d ? `<input id="reason" class="reason ${ui.needReason ? "need" : ""}" value="${esc(ui.reason || "")}" placeholder="Reason for the revision (required). The earlier decision stays on record." aria-label="Reason for revision">` : ""}<textarea id="reply" aria-label="Reply to hospital">${esc(text)}</textarea>
+      ${ui.drawer ? `<div class="drawer gutter">${d && statusOf(p) !== "replied" ? `<input id="reason" class="reason ${ui.needReason ? "need" : ""}" value="${esc(ui.reason || "")}" placeholder="Reason for the revision (required). The earlier decision stays on record." aria-label="Reason for revision">` : ""}<textarea id="reply" aria-label="Reply to hospital">${esc(text)}</textarea>
         <div class="row2"><span class="hint">Edit as needed, then copy it into your fax or email system.</span>
           <button class="btn" data-copy>Copy reply</button><button class="btn primary" data-save>${d ? "Save revision" : "Save decision"}</button><button class="btn" data-cancel>Cancel</button></div></div>` : ""}</div>`;
   }
@@ -491,20 +509,23 @@
       return;
     }
     if ("save" in t.dataset && p) {
-      const prior = history(p.id).length, reason = (ui.reason || "").trim();
+      const h0 = history(p.id), prior = h0.length, afterReply = prior && h0[prior - 1].decision === "replied";
+      const reason = (ui.reason || "").trim() || (afterReply ? "Re-reviewed after the hospital replied" : "");
       if (prior && !reason) { ui.needReason = true; render(); const r = $("#reason"); if (r) r.focus(); return }
       addEvent(p.id, { decision: ui.drawer, text: $("#reply").value, at: Date.now(), by: `${who.name} (${who.role})`, reason });
       ui.drawer = null; ui.reason = ""; ui.needReason = false; ui.draftText = null; return render();
     }
     if (false) { const v = {}; store.set(v); ui.drawer = null; return render() }
     if ("next" in t.dataset && p) {
-      const d = decisions(), open_ = P.filter(x => !d[x.id] && x.id !== p.id).sort((a, b) => minsLeft(a) - minsLeft(b));
+      const d = decisions(), open_ = P.filter(x => isOpen(x) && x.id !== p.id).sort((a, b) => minsLeft(a) - minsLeft(b));
       return open_.length ? open(open_[0].id) : (location.hash = "#/");
     }
     if ("reset" in t.dataset) {
       if (!confirm("Reset demo: delete the decisions saved in this browser? The record file on the local version (output/decisions.jsonl) is not touched.")) return;
       store.set({}); try { localStorage.removeItem("referral-desk") } catch (e) { /* ok */ } return render();
     }
+    if (t.dataset.evt && p) { addEvent(p.id, { decision: t.dataset.evt, at: Date.now(), by: `${who.name} (${who.role})`, reason: "" }); return render() }
+    if (t.dataset.sf) { ui.sf = t.dataset.sf; return render() }
     if ("theme" in t.dataset) { const r = document.documentElement, cur = r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); r.dataset.theme = cur === "dark" ? "light" : "dark"; return }
     if ("who" in t.dataset) { ui.editWho = true; render(); const n = $("#who-name"); if (n) n.focus(); return }
     if ("whosave" in t.dataset) {

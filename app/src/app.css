@@ -393,3 +393,10 @@ main { padding-block-end: 150px }
 .crumb a { margin-right: 14px; color: #e6e6e6; text-decoration: none; font-weight: 600 } .crumb a.on { color: #ff860f; border-bottom: 2px solid #ff860f; padding-bottom: 2px }
 .dtable { overflow-x: auto } .mx.dec td, .mx.dec th { text-align: left; vertical-align: top } .mx.dec tr.click { cursor: pointer } .mx.dec tr.click:hover td { background: var(--surface-2) }
 .mx.dec .pt { min-width: 260px } .dd.approve b { color: var(--ok) } .dd.deny b { color: var(--bad) } .dd.info b { color: var(--warn) }
+
+/* referral status */
+.st { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 99px; background: var(--gray-bg); color: var(--ink); white-space: nowrap }
+.st.waiting { background: var(--warn-bg); color: var(--warn) } .st.replied { background: #fde7cf; color: #8a4500 } .st.accepted { background: var(--ok-bg); color: var(--ok) }
+.st.arrived { background: var(--ok); color: #fff } .st.declined { background: var(--bad-bg); color: var(--bad) }
+.decide .btn.step { border-color: var(--brand-orange); background: #fff4e6; color: #8a4500 }
+.record li.replied { border-left-color: #ff860f } .record li.arrived { border-left-color: var(--ok); background: var(--ok-bg) }
