@@ -1,0 +1,105 @@
+{
+  "packet_id": "F01",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor View Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Janet Okafor, RN CM\nPhone: 555-0110\nDate: 03/05/2026 09:20\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\nReferral for recuperative care for 46F, LLE cellulitis, improving on PO abx.\nAnticipated d/c 03/05 PM. Home health (Coastline Home Health) SOC 03/06 for wound checks.\nPlease call CM with questions.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harbor View Medical Center (fictional)\nDepartment/Floor: 4 West Med-Surg\nSocial Worker/Case Manager/Nurse: Janet Okafor, RN CM\nPhone: 555-0110\nEmail: jokafor@harborview.example\nNursing Station: 555-0111\nAuthorized By: Dr. P. Lindqvist\n## Patient Information\nName: Rosa Doe\nMRN: HV-0048213\nBirth Date: 08/14/1979\nGender: F\nEthnicity: Hispanic/Latina\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Cellulitis L lower leg\nAdmit Date: 03/02/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [X] No [ ]\nPPD/TB Test or Chest X-Ray: Date: 03/02/2026  Result: CXR neg - no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  cellulitis on PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Rosa Doe\nDOB: 08/14/1979\nMember ID: OCH-77120456\n## Referring Provider\nFacility: Harbor View Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Cellulitis of left lower limb\nICD-10: L03.116\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 03/05/2026\nRequested Days: 14\nClinical summary: Cellulitis LLE improving on PO antibiotics. Independent ADLs.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor View Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Rosa Doe\nMRN: HV-0048213\nAccount #: 99048213\nDOB: 08/14/1979\nSex: Female\nPreferred Language: Spanish / English (bilingual)\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 03/02/2026 16:48\nAdmit Type: Inpatient\nUnit/Bed: 4W-412B\nAttending: Priya Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 03/02/2026\nAttending: Priya Lindqvist, MD (Hospital Medicine)\n## Chief Complaint\n\"My left leg is red and swollen\" x 4 days\n## HPI\n46 y/o F experiencing homelessness (sleeps in vehicle-less encampment near riverbed) with no significant PMH presents with 4 days of progressive erythema, warmth and pain of the L anterior shin after a scrape on a fence. Subjective fevers/chills x 2 days. Denies IVDU. No prior MRSA infection known. In ED: T 101.2F, HR 108, WBC 14.2. Received vancomycin 1.5 g IV x1 and cefazolin 2 g IV.\n## PMH\n- Seasonal allergies\n- No DM, no HTN\n## PSH\n- C-section 2008\n## Social History\nHomeless x 18 months. Tobacco 1/2 ppd x 20 yrs. EtOH: social, last drink 1 wk ago. Denies drug use.\n## Allergies\nNKDA\n## Home Medications\nNone\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 100.8F, HR 102, BP 128/76, RR 18, SpO2 98% RA\nGen: NAD, AOx4\nCV: RRR, no m/r/g\nLungs: CTAB\nSkin: L anterior shin erythema approx 14 x 9 cm, marked with pen, warm, tender. Central superficial open area 2.0 x 1.5 cm, minimal serous drainage, no fluctuance. No crepitus.\nExt: 1+ edema LLE, DP pulses 2+ bilat\nNeuro: grossly intact\n## Assessment / Plan\n46F with non-purulent cellulitis L lower leg with small superficial ulceration, mild SIRS on arrival.\n1. Cellulitis LLE - IV cefazolin 2 g q8h; LE venous duplex to r/o DVT; elevate; wound care consult; blood cx x2\n2. MRSA nares PCR, COVID per protocol\n3. Tobacco use - nicotine patch 14 mg offered\n4. Dispo - CM consult; homeless, anticipate recuperative care referral\nDVT ppx: enoxaparin 40 mg SC daily\nCode status: Full\nElectronically signed: Priya Lindqvist, MD 03/02/2026 21:14\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "wound_note",
+      "title": "Wound care nurse note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## WOUND CARE CONSULT NOTE\nDate: 03/04/2026 11:05\nWound #1: L anterior shin, superficial open area within cellulitis\nSize: 1.8 cm L x 1.2 cm W x 0.1 cm D (improved from 2.0 x 1.5)\nWound bed: 90% pink granulation, 10% yellow slough\nDrainage: scant serous. Odor: none\nPeriwound: erythema receding, now inside marked borders\n## Treatment\n- Cleanse with NS, apply hydrogel, cover with foam dressing\n- Change dressing every other day and PRN\n## Education\nPt return-demonstrated dressing change independently x2. Verbalized s/s of worsening infection.\n## Recommendation\nHome health RN for wound check 2x/week x 2 weeks.\nSigned: L. Ferreira, RN CWOCN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note and CM note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#4\nDate: 03/05/2026 07:40\nS: Pain 2/10, ambulating halls independently. No fevers x 48h.\nO: T 98.4F HR 78 BP 122/74 RR 16 SpO2 99% RA\nErythema markedly receding. Duplex 03/03 neg for DVT.\nBlood cx 03/02 x2: no growth at 72h.\nA/P: Cellulitis LLE improving.\n- Transition to PO cephalexin 500 mg QID + TMP-SMX DS 1 tab BID to complete 7 days total\n- Medically stable for d/c to recuperative care today\n## CASE MANAGEMENT NOTE\nDate: 03/05/2026 08:55\nPt AOx4, independent with ADLs and ambulation (no device). Pt agreeable to recuperative care.\nHome health referral accepted by Coastline Home Health (fictional), 555-0131; RN SOC visit scheduled 03/06/2026 for wound check, then 2x/week.\nAbx script to be filled at bedside pharmacy (30-day supply policy n/a; 7-day course).\nSigned: Janet Okafor, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "vitals",
+      "title": "Vital signs flowsheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n03/03 20:00 | 99.1 | 88 | 126/78 | 18 | 98% | RA\n03/04 08:00 | 98.6 | 84 | 124/76 | 16 | 99% | RA\n03/04 16:00 | 98.7 | 80 | 120/72 | 16 | 98% | RA\n03/05 00:00 | 98.2 | 76 | 118/70 | 16 | 99% | RA\n03/05 07:40 | 98.4 | 78 | 122/74 | 16 | 99% | RA\nPain 2/10 L shin. Ambulating independently.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABORATORY RESULTS\nCollected | Test | Result | Ref\n03/02 14:30 | WBC | 14.2 H | 4.0-11.0 K/uL\n03/04 05:00 | WBC | 9.1 | 4.0-11.0 K/uL\n03/04 05:00 | Hgb | 12.8 | 12.0-16.0 g/dL\n03/04 05:00 | Plt | 288 | 150-400 K/uL\n03/04 05:00 | Creatinine | 0.7 | 0.5-1.1 mg/dL\n03/04 05:00 | Glucose | 96 | 70-99 mg/dL\n03/02 14:30 | Lactate | 1.4 | 0.5-2.0 mmol/L\n## MICROBIOLOGY\n03/02 Blood culture x2: No growth at 72 hours (final pending 5 days)\n03/03 06:15 MRSA nares PCR: NEGATIVE\n03/05 06:10 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n03/02 CXR PA/Lat: No acute cardiopulmonary process\n03/03 LLE venous duplex: No DVT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION RECONCILIATION\nPatient: Rosa Doe  MRN: HV-0048213\n## New Medications\n- Cephalexin 500 mg PO four times daily x 4 more days (last dose 03/08)\n- Sulfamethoxazole-trimethoprim 800-160 mg (DS) 1 tab PO twice daily x 4 more days\n- Acetaminophen 650 mg PO every 6 hours PRN pain (max 3 g/day)\n- Nicotine patch 14 mg/24h, apply daily\n## Wound Supplies\n- Hydrogel, foam dressings 4x4 (10 count), NS\n## Stopped\n- Cefazolin IV (inpatient only)\n- Enoxaparin (inpatient only)\nPatient able to self-administer all medications: Yes\nReviewed with patient by: M. Tran, PharmD 03/05/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

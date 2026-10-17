@@ -1,0 +1,123 @@
+{
+  "packet_id": "F08",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Oaks Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Brian Castillo, RN CM\nPhone: 555-0190\nDate: 08/14/2026 11:30\nPages (including cover): 13\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n79F s/p L hip IMN 08/11, WBAT. Pt independent with ADLs.\nPt prefers recuperative care over SNF. Please review.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Canyon Oaks Medical Center (fictional)\nDepartment/Floor: 4 Ortho\nSocial Worker/Case Manager/Nurse: Brian Castillo, RN CM\nPhone: 555-0190\nEmail: bcastillo@canyonoaks.example\nNursing Station: 555-0191\nAuthorized By: Dr. T. Iwata (Ortho)\n## Patient Information\nName: Eleanor Doe\nMRN: CO-3398420\nBirth Date: 03/09/1947\nGender: F\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal/Medicare\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: L hip fracture s/p ORIF\nAdmit Date: 08/10/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: 1 - L lateral hip incisions x2 with staples\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 08/10/2026  Result: CXR neg\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 30\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nIndependent w/ ADLs. Ambulating with PT. Staple removal 08/25 ortho clinic.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Eleanor Doe\nDOB: 03/09/1947\nMember ID: OCH-11908326\n## Referring Provider\nFacility: Canyon Oaks Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Intertrochanteric fracture of left femur, s/p fixation\nICD-10: S72.142D\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 08/15/2026\nRequested Days: 30\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Oaks Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Eleanor Doe\nMRN: CO-3398420\nAccount #: 99398420\nDOB: 03/09/1947\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 08/10/2026 15:40\nAdmit Type: Inpatient\nUnit/Bed: 4OR-412\nAttending: Takeshi Iwata, MD (Orthopedics)\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 08/10/2026\n## CC\nL hip pain after fall\n## HPI\n79 y/o F, unhoused (lives in her car, car towed 07/2026, now at bus shelter), tripped on curb at bus stop and fell onto L side. Unable to bear weight. No LOC, no head strike. XR: L intertrochanteric femur fracture, closed.\nPrior level of function: independent ambulation with single-point cane, independent ADLs.\n## PMH\n- HTN\n- Osteoporosis\n- Hypothyroidism\n- Chronic kidney disease stage 3a\n## Meds PTA\n- Lisinopril 10 mg daily\n- Levothyroxine 75 mcg daily\n## Allergies\nNKDA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.2F HR 92 BP 158/84 RR 18 SpO2 97% RA\nL LE shortened and externally rotated, NV intact distally\nAOx4\n## Assessment/Plan\n1. Closed L intertrochanteric fracture - ortho to OR 08/11 for IMN; pain control; NPO after MN\n2. HTN - continue lisinopril\n3. CKD 3a - renally dose meds\n4. Osteoporosis - post-op calcium/vit D, bone health f/u\n5. Dispo - PT/OT post-op; likely SNF\nSigned: Takeshi Iwata, MD 08/10/2026 18:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "other",
+      "title": "Operative note (brief)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## BRIEF OPERATIVE NOTE\nDate: 08/11/2026\nProcedure: Cephalomedullary nail fixation, L intertrochanteric femur fracture (closed)\nIncisions: L lateral hip (2), staples\nEBL 150 mL. Complications: none\nPost-op: WBAT LLE, posterior hip precautions not required\nVTE ppx: enoxaparin 40 mg SC daily x 28 days\nStaple removal: Ortho clinic 08/25/2026\nSurgeon: Takeshi Iwata, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Ortho progress note POD3",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ORTHOPEDIC PROGRESS NOTE - POD#3\nDate: 08/14/2026 07:00\nS: Pain 5/10 with movement, 2/10 at rest. Nauseated with oxycodone yesterday.\nO: T 98.6F HR 86 BP 134/76. Incision C/D/I, staples intact. NV intact.\nHgb 9.1 (from 12.4 pre-op), stable x 24h.\nA/P: POD3 s/p IMN L hip.\n- WBAT, PT/OT BID\n- PT recommends SNF; CM working on SNF referrals. Pt reluctant, requesting recuperative care.\n- Medically stable for d/c to appropriate level of care.\nSigned: A. Kowalski, PA-C\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy re-evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY - POD3 RE-EVALUATION\nDate: 08/13/2026 14:15\nBed mobility: supine->sit Mod A x1, assist for LLE management\nSit<>stand from bed: Mod A x1 with FWW, verbal cues for hand placement\nBed->chair stand-pivot: Mod A x2 (08/12); Min-Mod A x1 (08/13)\nGait: 15 ft with FWW, Mod A x1, w/c follow; limited by pain and fatigue, knee buckling x1\nToilet transfer: Mod A x1-2\nBalance: poor dynamic standing, high fall risk\n## Assessment\nPt is significantly below baseline (PLOF independent with cane). Requires 1-2 person assist for transfers and toileting.\n## Recommendation\nSNF for continued rehab. Not safe for d/c to unsupervised setting at this time.\nSigned: M. Delgado, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 08/13/2026 10:00\nGrooming: Set-up, seated\nUB dressing: Min A\nLB dressing: Max A (unable to reach feet, no AE training yet)\nToileting hygiene: Max A\nToilet transfer: Mod A x1 with grab bar\nShower: not attempted; anticipate Mod A with tub bench\nCognition: AOx4, good safety awareness\n## Recommendation\nSNF. Will need AE training (reacher, sock aid) and toileting retraining.\nSigned: K. Huang, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 08/14/2026 06:45\nNight shift: pt up to bedside commode x2 with 2-person assist and FWW. Unable to perform own peri-care; RN assisted.\nEpisode of urinary incontinence 03:00 before assistance arrived - linen change. External female catheter (PureWick) placed overnight per pt request.\nPain 6/10 with transfers, oxycodone 2.5 mg given 03:15.\nBed alarm on, fall precautions.\nSigned: R. Oyelaran, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n08/13 08:00 | 98.7 | 90 | 138/78 | 18 | 96% | RA\n08/13 16:00 | 99.0 | 88 | 132/74 | 18 | 96% | RA\n08/13 23:00 | 98.4 | 84 | 128/72 | 16 | 97% | RA\n08/14 04:00 | 98.3 | 86 | 130/74 | 16 | 96% | RA\n08/14 07:00 | 98.6 | 86 | 134/76 | 16 | 97% | RA\n## LABS\n08/10 | Hgb 12.4 | Plt 228 | Cr 1.2 | eGFR 46 | TSH 3.4\n08/13 | Hgb 9.0 L | Cr 1.1\n08/14 | Hgb 9.1 L | Cr 1.1 | Na 137 | K 4.3\n08/10 MRSA nares PCR: Negative\n08/14 05:00 SARS-CoV-2 rapid antigen: Negative\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST (DRAFT)\nPatient: Eleanor Doe  MRN: CO-3398420\n- Enoxaparin 40 mg SC daily through 09/08/2026 (pt has not yet self-injected)\n- Acetaminophen 1000 mg PO every 8 hours (max 3 g/day)\n- Oxycodone 2.5 mg PO every 6 hours PRN severe pain\n- Docusate 100 mg PO BID\n- Senna 8.6 mg 2 tabs PO HS PRN\n- Calcium carbonate 600 mg + vitamin D3 800 IU PO BID\n- Lisinopril 10 mg PO daily\n- Levothyroxine 75 mcg PO daily\nDME: FWW, bedside commode, tub transfer bench (per OT)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

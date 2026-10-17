@@ -1,0 +1,96 @@
+{
+  "packet_id": "F06",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Larkspur Valley Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Paul Jennings, RN CM\nPhone: 555-0170\nDate: 06/10/2026 10:15\nPages (including cover): 10\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n58F uncontrolled T2DM, glucose improving. Planned d/c 06/10/2026 ~15:00.\nPlease review for same-day acceptance.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Larkspur Valley Medical Center (fictional)\nDepartment/Floor: Medical Observation Unit\nSocial Worker/Case Manager/Nurse: Paul Jennings, RN CM\nPhone: 555-0170\nEmail: pjennings@larkspur.example\nNursing Station: 555-0171\nAuthorized By: Dr. R. Adeyemi\n## Patient Information\nName: Grace Doe\nMRN: LV-0827716\nBirth Date: 07/30/1967\nGender: F\nEthnicity: Pacific Islander (Samoan)\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Hyperglycemia / uncontrolled DM2\nAdmit Date: 06/08/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 06/08/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [X] No [ ]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [X] No [ ]  metformin\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Grace Doe\nDOB: 07/30/1967\nMember ID: OCH-90021564\n## Referring Provider\nFacility: Larkspur Valley Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Type 2 diabetes mellitus with hyperglycemia\nICD-10: E11.65\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 06/10/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Larkspur Valley Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Grace Doe\nMRN: LV-0827716\nAccount #: 99827716\nDOB: 07/30/1967\nSex: Female\nPreferred Language: English / Samoan\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 06/08/2026 21:30\nAdmit Type: Inpatient\nUnit/Bed: OBS-14\nAttending: Rachel Adeyemi, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 06/08/2026 22:10\n## CC\nPolyuria, polydipsia, blurred vision x 2 weeks\n## HPI\n58 y/o F with T2DM dx 2019, previously on metformin, off all meds x ~6 months after losing housing (now staying in car of a friend / shelter waitlist). Presents with 2 wks polyuria, polydipsia, 10 lb wt loss, blurry vision. ED glucose 486. No N/V, no abdominal pain. No confusion.\n## PMH\n- T2DM\n- HTN\n- Obesity, BMI 36\n## Meds PTA\nNone currently (prior metformin 500 mg BID, lisinopril 10 mg daily)\n## Allergies\nSulfa (hives)\n## Social\nUnhoused x 7 months. No tobacco. No EtOH. No drugs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.1F HR 98 BP 152/90 RR 16 SpO2 98% RA\nGen: AOx4, dry mucous membranes\nFeet: intact skin, monofilament decreased bilat toes\n## Data\nGlucose 486, Na 132 (corrected 138), K 4.4, CO2 24, AG 13, BHB 0.4 mmol/L (neg), VBG pH 7.38\nSerum osm 302. UA: glucose 3+, ketones neg\nA1c 11.8%\n=> Hyperglycemia WITHOUT DKA or HHS\n## Assessment/Plan\n1. Uncontrolled T2DM - IVF, insulin lispro correction scale; restart metformin; likely needs basal insulin given A1c 11.8%; DM education\n2. HTN - restart lisinopril 10 mg daily\n3. Dispo - homeless, CM for recuperative care\nSigned: Rachel Adeyemi, MD 06/08/2026 23:05\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE\nDate: 06/10/2026 08:20\nS: Thirst improved. No hypoglycemic sx.\nO: T 98.0F HR 84 BP 138/84 RR 16 SpO2 98% RA. AOx4.\nGlucose trend: see nursing flowsheet (some checks missed 06/09-06/10).\nA/P:\n1. T2DM uncontrolled, A1c 11.8%\n- Metformin 500 mg PO BID started 06/09 08:00 (titrate to 1000 BID in 1 wk)\n- Insulin glargine 10 units SC at bedtime STARTED 06/09/2026 21:00 (first dose). Plan to titrate by 2 units q3 days to fasting <130.\n- Lispro correction scale while inpatient\n- Diabetes educator session scheduled 06/10 13:00 for insulin pen teaching; pt has not yet self-injected\n2. HTN - lisinopril 10 mg daily\nDispo: anticipate d/c to recuperative care 06/10 ~15:00 if accepted.\nSigned: Rachel Adeyemi, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Glucose flowsheet and MAR",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## POINT-OF-CARE GLUCOSE FLOWSHEET\nDate/Time | Glucose (mg/dL) | Insulin | Initials\n06/08 23:30 | 412 | lispro 8 units (correction) | AT\n06/09 06:00 | 312 | lispro 6 units | AT\n06/09 11:30 | -- not obtained (pt off unit, ophthalmology exam) | -- | --\n06/09 16:30 | 268 | lispro 4 units | JL\n06/09 21:00 | 241 | glargine 10 units SC (FIRST DOSE, RN administered) + lispro 2 units | JL\n06/10 06:00 | -- not documented -- | -- | --\n06/10 07:40 | 198 | lispro 2 units | MS\n## NURSING NOTE 06/10/2026 09:00\nFasting POC glucose missed at 06:00 (pt sleeping, recheck at 07:40). All insulin doses to date administered by RN.\nPt states she \"is scared of needles\" but willing to learn. Teaching not yet started.\nPt ambulating independently in hallway, showering independently.\nSigned: M. Salas, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "labs",
+      "title": "Laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n06/08 20:40 | Glucose 486 H | Na 132 L | K 4.4 | Cl 95 | CO2 24 | AG 13 | BUN 22 | Cr 1.0\n06/08 20:40 | Beta-hydroxybutyrate 0.4 (ref <0.6) | VBG pH 7.38 | Serum osm 302\n06/08 20:40 | HbA1c 11.8% H\n06/10 05:00 | Glucose 214 H | Na 137 | K 4.1 | CO2 25 | Cr 0.8 | Mg 1.9\n06/08 MRSA nares PCR: Negative\n06/10 05:00 SARS-CoV-2 rapid antigen: Negative\n06/08 CXR: no acute process\n## VITALS (last 3)\n06/09 16:00 | T 98.2 | HR 88 | BP 142/86 | RR 16 | SpO2 98% RA\n06/09 23:00 | T 98.0 | HR 86 | BP 140/84 | RR 16 | SpO2 98% RA\n06/10 08:20 | T 98.0 | HR 84 | BP 138/84 | RR 16 | SpO2 98% RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "med_list",
+      "title": "Discharge medication list (pending)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST - PENDING PROVIDER SIGNATURE\nPatient: Grace Doe  MRN: LV-0827716\n- Insulin glargine (pen) 10 units SC at bedtime (NEW 06/09/2026)\n- Metformin 500 mg PO twice daily with meals (NEW)\n- Lisinopril 10 mg PO daily (RESUMED)\n- Glucometer, test strips, lancets, pen needles (NEW)\n## Hypoglycemia plan\n- If glucose <70: 15 g fast carbs, recheck 15 min\n- Hold glargine if bedtime glucose <100 and call PCP\n## Follow up\n- PCP: Example Community Clinic (fictional) 06/16/2026, 555-0175\nPt self-administration of insulin: NOT YET CONFIRMED (educator session 06/10 13:00)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "packet_id": "F03",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Ridgeline Regional Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Teresa Alvarado, RN CM\nPhone: 555-0140\nDate: 05/09/2026 13:40\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n68M COPD exacerbation, resolved. PT/OT/RT notes attached.\nDischarge ready 05/10 AM.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Ridgeline Regional Medical Center (fictional)\nDepartment/Floor: 5 North Telemetry\nSocial Worker/Case Manager/Nurse: Teresa Alvarado, RN CM\nPhone: 555-0140\nEmail: talvarado@ridgeline.example\nNursing Station: 555-0141\nAuthorized By: Dr. S. Brennan\n## Patient Information\nName: Harold Doe\nMRN: RR-0391574\nBirth Date: 12/20/1957\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal/Medicare\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [X]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: COPD exacerbation\nAdmit Date: 05/04/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 05/04/2026  Result: CXR hyperinflation, no infiltrate\n## History of Health & Living Situation\nO2: Yes [X] No [ ]  2L NC\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 21\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Harold Doe\nDOB: 12/20/1957\nMember ID: OCH-30218847\n## Referring Provider\nFacility: Ridgeline Regional Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: COPD with acute exacerbation\nICD-10: J44.1\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 05/10/2026\nRequested Days: 21\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Ridgeline Regional Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Harold Doe\nMRN: RR-0391574\nAccount #: 99391574\nDOB: 12/20/1957\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 05/04/2026 11:22\nAdmit Type: Inpatient\nUnit/Bed: 5N-517\nAttending: Sean Brennan, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 05/04/2026\n## CC\nSOB, productive cough x 5 days\n## HPI\n68 y/o M w/ COPD (GOLD 3, FEV1 42% predicted 2025), 40 pk-yr former smoker (quit 2024), homeless living in park near Example Ave, presents with increased dyspnea, sputum purulence and wheeze x 5 days after running out of inhalers 2 weeks ago. EMS SpO2 84% RA. No home O2 at baseline. Last exacerbation 11/2025 (ED only).\n## PMH\n- COPD\n- HTN\n- Hyperlipidemia\n- BPH\n## Meds PTA (not taking x 2 wks)\n- Tiotropium 18 mcg inh daily\n- Albuterol HFA PRN\n- Amlodipine 5 mg daily\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 99.0F HR 112 BP 148/88 RR 26 SpO2 87% RA -> 93% on 2L NC\nGen: tripoding, speaking short sentences\nLungs: diffuse expiratory wheeze, prolonged exp phase, no crackles\nCV: tachy, regular\nNeuro: AOx4\n## Data\nVBG pH 7.36, pCO2 52 (baseline unknown)\nCXR: hyperinflation, flattened diaphragms, no infiltrate, no PTX\nCOVID/flu/RSV PCR negative\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 3",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Assessment/Plan\n68M with acute exacerbation of COPD, likely viral/bacterial bronchitis trigger, medication nonadherence due to lost inhalers.\n1. AECOPD - duonebs q4h, prednisone 40 mg PO daily x 5 days, doxycycline 100 mg PO BID x 5 days. Titrate O2 to SpO2 88-92%. No BiPAP needed.\n2. HTN - continue amlodipine\n3. Tobacco - former smoker, congratulated\n4. Dispo - RT, PT/OT eval; CM for recuperative care\nCode: Full. DVT ppx: heparin 5000 units SC q8h\nSigned: Sean Brennan, MD 05/04/2026 14:02\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Respiratory therapy note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## RESPIRATORY THERAPY NOTE\nDate: 05/09/2026 09:00\nBreath sounds: scattered end-exp wheeze, improved\nO2: Room air since 05/07/2026 08:00 (weaned from 2L NC)\nSpO2 RA at rest: 92-93%. With ambulation 150 ft: nadir 90%, recovered within 1 min\nPt reports baseline SpO2 \"around 91-92\" per prior clinic - consistent\nTreatments: transitioned from duonebs to MDI. Tiotropium 18 mcg daily + fluticasone/salmeterol 250/50 1 puff BID + albuterol MDI PRN\nMDI technique with spacer: correct on teach-back x2\nNo home O2 qualification (ambulatory sat >88%).\nSigned: D. Park, RRT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 05/08/2026 10:30\nDx: AECOPD, deconditioning\n## Prior Level of Function\nIndependent ambulation without device, lives unhoused.\n## Assessment\nBed mobility: Independent\nSit<>stand: Modified independent (uses armrests)\nTransfers: Modified independent\nGait: 150 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break, SpO2 90-93% RA, RPE 4/10\nStairs: 4 steps with rail, SBA\nBalance: static standing good, dynamic fair+\n## Plan / Recommendation\nPt safe for d/c to recuperative care with FWW. DME: FWW issued 05/08.\nNo SNF needs. Continue HEP.\nSigned: R. Malik, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 05/08/2026 14:00\n## ADLs\nGrooming: Independent (standing at sink)\nUB dressing: Independent\nLB dressing: Modified independent (seated)\nToileting: Independent\nShower: Modified independent with shower chair; gathers own supplies\nEnergy conservation education provided; pt verbalized pursed-lip breathing.\nCognition: AOx4, follows multi-step commands, manages own meds (pillbox demo)\n## Recommendation\nD/c to recuperative care. No further acute OT needs.\nSigned: E. Sato, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n05/08 08:00 | 98.4 | 92 | 136/82 | 18 | 92% | RA\n05/08 16:00 | 98.6 | 90 | 134/80 | 18 | 93% | RA\n05/09 00:00 | 98.1 | 86 | 130/78 | 16 | 93% | RA\n05/09 08:00 | 98.3 | 88 | 132/80 | 18 | 92% | RA\n05/09 12:00 | 98.5 | 84 | 128/78 | 16 | 93% | RA\n## LABS\n05/04 | WBC 11.8 | Hgb 15.1 | BNP 62 | Troponin <0.01 x1\n05/08 | WBC 12.6 (on steroids) | Na 139 | K 4.0 | Cr 0.9 | Glu 142\n05/04 MRSA nares PCR: Negative\n05/09 06:00 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n05/04 CXR PA/Lat: hyperinflation c/w COPD. No focal consolidation, effusion or pneumothorax.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Harold Doe  MRN: RR-0391574\n- Prednisone 40 mg PO daily - last dose 05/08 (course COMPLETE)\n- Doxycycline 100 mg PO BID - last dose 05/08 (course COMPLETE)\n- Tiotropium 18 mcg inhaled daily\n- Fluticasone/salmeterol 250/50 mcg 1 inhalation BID (NEW) - rinse mouth after\n- Albuterol HFA 90 mcg 2 puffs q4-6h PRN SOB, with spacer\n- Amlodipine 5 mg PO daily\n- Tamsulosin 0.4 mg PO daily\nDME: front-wheeled walker, spacer\nHome O2: Not required\n30-day supply dispensed from outpatient pharmacy: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

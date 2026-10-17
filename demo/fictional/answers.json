@@ -1,0 +1,94 @@
+[
+  {
+    "packet_id": "F01",
+    "intended": "fit",
+    "why": "Uncomplicated LLE cellulitis on oral antibiotics (INT-E1, ID-2) with 5 afebrile vital sets (ID-1), MRSA and COVID negative (INF-1, INF-2), AOx4 and independent (COG-2, ADL-1), and home health wound visits scheduled for 03/06 (INT-E2).",
+    "traps": [
+      "Referral form p2 says Any Wounds: No, but H&P p6 and wound note p7 document a 1.8 x 1.2 cm open area on the L shin needing dressing changes",
+      "Referral form p2 Preferred Language: English vs face sheet p4 Spanish / English (bilingual)"
+    ]
+  },
+  {
+    "packet_id": "F02",
+    "intended": "fit",
+    "why": "Post-abdominal surgery (GI-E1) with staples and removal appointment confirmed 04/22 (INT-E5); diabetic on oral meds only with 5 consecutive improving glucose readings and no DKA (DM-1, DM-2, END-E1, DM-5); independent and AOx4 (ADL-1, COG-2); MRSA/COVID negative (INF-1, INF-2).",
+    "traps": [
+      "Referral form p2 checks Insulin: Yes, but progress note p9 and med list p12 show sliding-scale insulin was inpatient only and discontinued 04/15; discharge is oral agents only (so DM-3 does not apply)",
+      "Referral form p2 Admit Date 04/11/2026 vs face sheet p5 inpatient admit 04/12/2026 03:15 (04/11 was ED arrival)"
+    ]
+  },
+  {
+    "packet_id": "F03",
+    "intended": "fit",
+    "why": "COPD exacerbation resolved, on room air since 05/07 with stable SpO2 92-93% consistent with baseline (RSP-E3, RESP-2), chest X-ray and RT note sent (RESP-1, RESP-4), PT/OT notes show 150 ft with FWW modified independent and independent ADLs (MOB-1, MOB-2, MOB-3, ADL-1).",
+    "traps": [
+      "Referral form p2 checks O2: Yes (2L NC), but RT note p8 and med list p12 show weaned to room air 05/07 and home O2 not required",
+      "Referral form p2 Assistive Device: No, but PT eval p9 shows he uses a front-wheeled walker (issued 05/08)"
+    ]
+  },
+  {
+    "packet_id": "F04",
+    "intended": "fit",
+    "why": "Hospice patient eligible under EOL-1: Sunrise Hospice election signed, admission visit confirmed, and patient and sister told RC staff cannot administer meds (p6); independent ADLs and 220 ft gait (ADL-1, MOB-3); AOx4 (COG-2); MRSA/COVID negative (INF-1, INF-2).",
+    "traps": [
+      "Referral form is the LAST page (p12) instead of near the front",
+      "Referral form p12 checks Hospice: No, but CalAIM form p3, palliative note p6, progress note p9 and med list p11 all document hospice enrollment",
+      "Comfort-kit medications on med list p11 are hospice-administered; a tool should not read that as failing self-administration (COG-1)"
+    ]
+  },
+  {
+    "packet_id": "F05",
+    "intended": "needs_info",
+    "why": "IV cefazolin via PICC is allowed only once home health/infusion is established to maintain the line and give the drug (OTH-3, ID-3, INT-E3), and the CM note shows no agency has accepted; PT eval is pending so MOB-2/MOB-3 cannot be checked; wound packing self-care not established (INT-E2).",
+    "traps": [
+      "Referral form p2 checks Home Health Ordered: Yes and comments 'HH arranged', but CM note p8 says referrals only sent, no agency acceptance, administration TBD",
+      "Referral form p2 Independent with Wound Care: Yes, but nursing note p9 says RN does the packing and patient has not been taught",
+      "Referral form p2 Ambulatory: Yes, but progress note p8 says PT consult ordered 06/07 and not yet seen; no PT/OT note in packet",
+      "Fax cover p1 says 'Home health arranged'"
+    ]
+  },
+  {
+    "packet_id": "F06",
+    "intended": "needs_info",
+    "why": "Insulin glargine first dose 06/09/2026 21:00 and planned discharge 06/10 ~15:00 is under 24 hours (DM-3); glucose log has missed checks so 5 consecutive readings showing stabilization are not cleanly documented (DM-1, END-E1); insulin self-administration not yet confirmed (COG-1, DM-6). Not DKA (DM-2 satisfied).",
+    "traps": [
+      "Referral form p2 checks Insulin: No and Oral Meds: Yes (metformin), but progress note p7, flowsheet p8 and med list p10 show glargine started 06/09 21:00",
+      "Referral form p2 Self Administer All Meds: Yes, but nursing note p8 says all insulin given by RN and teaching not started; med list p10 says self-administration NOT YET CONFIRMED",
+      "Glucose flowsheet p8 has two missing checks (06/09 11:30, 06/10 06:00)"
+    ]
+  },
+  {
+    "packet_id": "F07",
+    "intended": "needs_info",
+    "why": "Admitted with acute alcohol intoxication so a 72-hour hold with CIWA-Ar <8 is required (MH-4): ED arrival 07/18 02:10 means 72h is reached 07/21 02:10 (or 07/21 09:45 if counted from the inpatient admit order), last lorazepam 07/20 04:00; patient declined detox and did not commit to abstinence (FORM-X5); no IHH referral form in packet (DOC-1).",
+    "traps": [
+      "No IHH referral form in the packet; fax cover p1 says it will follow",
+      "Fax cover p1 says '72 hr hold complete' but at the fax time (07/20 18:30) only ~64h have passed since ED arrival 07/18 02:10 (ED note p4)",
+      "CalAIM form p2 Admit Date 07/17/2026 vs face sheet p3 and ED note p4 showing arrival 07/18/2026 02:10, admit order 07/18 09:45",
+      "CalAIM form p2 says 'detox completed' but SW note p9 shows residential treatment declined and no outpatient appointment",
+      "CIWA flowsheet p7: score was 8 (treated) at 07/20 04:00; <8 only since 07/20 10:00"
+    ]
+  },
+  {
+    "packet_id": "F08",
+    "intended": "not_fit",
+    "why": "Needs Mod A x1-2 for transfers and toileting, gait only 15 ft with Mod A, PT and OT both recommend SNF (ADL-1, ADL-3, MOB-1, MOB-3, FORM-X2, FORM-X3).",
+    "traps": [
+      "Referral form p2 comments 'Independent w/ ADLs' and fax cover p1 says 'independent with ADLs', but PT p9, OT p10 and nursing p11 show 1-2 person assist for transfers, toileting and peri-care",
+      "Referral form p2 Assistive Device: No, but PT p9 and med list p13 show FWW, bedside commode, tub bench",
+      "Referral form p2 Continent: Yes, but nursing note p11 documents urinary incontinence and PureWick overnight",
+      "Med list p13: enoxaparin injections, patient has not yet self-injected (COG-1)"
+    ]
+  },
+  {
+    "packet_id": "F09",
+    "intended": "not_fit",
+    "why": "Verbal and physical aggression toward nursing staff with security called 09/03 and again 09/04 (OTH-1, FORM-X7) plus command auditory hallucinations to harm others and not yet stable on medications (MH-3, MH-1, FORM-M2).",
+    "traps": [
+      "Referral form p2 Behavioral: No, Mental Health DX: No, Other: None, but H&P p5 lists schizophrenia, nursing note p7 documents tray thrown at RN and Code Gray, psych consult p8 documents command AH",
+      "Fax cover p1 says 'Ambulatory, independent. Ready for discharge today' with no mention of 1:1 sitter",
+      "Face sheet p4 carries a behavioral alert and security flag",
+      "COVID swab not collected (labs p10, pt refused) - INF-2 also unmet"
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "packet_id": "F07",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Pacific Crest Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Lena Fischer, MSW\nPhone: 555-0180\nDate: 07/20/2026 18:30\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n41M admitted for alcohol intoxication/withdrawal. 72 hr hold complete, CIWA now <8.\nReferral form to follow (online portal down). Hoping for d/c 07/21 AM.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Marcus Doe\nDOB: 01/25/1985\nMember ID: OCH-21175409\n## Referring Provider\nFacility: Pacific Crest Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Alcohol dependence with withdrawal, uncomplicated\nICD-10: F10.230\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 07/21/2026\nRequested Days: 14\nAdmit Date: 07/17/2026\nClinical summary: detox completed, medically stable, independent ADLs.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Pacific Crest Hospital (fictional) - PATIENT FACE SHEET\nPatient: Marcus Doe\nMRN: PC-4450961\nAccount #: 99450961\nDOB: 01/25/1985\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 07/18/2026 09:45 (ED arrival 07/18/2026 02:10)\nAdmit Type: Inpatient\nUnit/Bed: 3E-330\nAttending: Owen Gallagher, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "other",
+      "title": "Emergency department note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## EMERGENCY DEPARTMENT PROVIDER NOTE\nArrival: 07/18/2026 02:10 via EMS (found down at bus bench, arousable)\n## HPI\n41 y/o M, unhoused, h/o alcohol use disorder, brought in intoxicated. Pt slurring, admits drinking \"a fifth\" of vodka today. Daily drinker ~1 pint/day x 10 yrs. Hx withdrawal seizure 2023. No head strike per EMS.\n## Exam\nT 97.6F HR 104 BP 146/92 RR 16 SpO2 96% RA\nSomnolent but arousable, ataxic gait, nystagmus. No signs of head trauma.\n## Data\nBAL 312 mg/dL (02:40)\nGlucose 92, Na 135, K 3.3 L, CO2 22, AG 12\nCT head non-contrast: no acute intracranial abnormality\n## ED Course / MDM\nAcute alcohol intoxication. Monitored. By 08:00 BAL 168, pt tremulous, CIWA 12 -> lorazepam 2 mg PO.\nHigh risk of complicated withdrawal (prior seizure) -> admit to medicine.\nSigned: J. Ortega, MD 07/18/2026 08:50\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nAdmit order: 07/18/2026 09:45\n## CC\nAlcohol intoxication, now withdrawal\n## HPI\n41 y/o M with severe alcohol use disorder, prior withdrawal seizure 2023, presented to ED 07/18 02:10 intoxicated (BAL 312). Developing withdrawal sx in ED. Last drink ~01:00 07/18. Has never completed residential treatment. Unhoused x 3 yrs, sleeps near Example Ave transit center.\n## PMH\n- Alcohol use disorder, severe\n- Alcohol withdrawal seizure (2023)\n- Hypertension (untreated)\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nEtOH as above. Tobacco 1 ppd. Denies IVDU; occasional cannabis.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.9F HR 108 BP 152/94 RR 18\nTremor bilat UE, diaphoretic, anxious, AOx4. No hallucinations reported.\n## Assessment/Plan\n1. Alcohol withdrawal, high risk (prior seizure) - CIWA-Ar q4h-q8h, lorazepam per symptom-triggered protocol (CIWA >= 8), seizure precautions\n2. Thiamine 100 mg IV daily x 3 days then PO, folic acid, MVI\n3. Hypokalemia - K repletion\n4. Alcoholic ketoacidosis? - BHB ordered\n5. Addiction medicine + SW consult\nSigned: Owen Gallagher, MD 07/18/2026 11:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "nursing_note",
+      "title": "CIWA-Ar flowsheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CIWA-Ar FLOWSHEET\nDate/Time | CIWA-Ar | Lorazepam given | RN\n07/18 08:00 (ED) | 12 | 2 mg PO | JO\n07/18 14:00 | 16 | 2 mg PO | KB\n07/18 22:00 | 18 | 2 mg PO | KB\n07/19 06:00 | 13 | 1 mg PO | TR\n07/19 14:00 | 11 | 1 mg PO | TR\n07/19 22:00 | 9 | 1 mg PO | AL\n07/20 04:00 | 8 | 1 mg PO (LAST DOSE) | AL\n07/20 10:00 | 6 | none | TR\n07/20 16:00 | 5 | none | TR\nProtocol: lorazepam for CIWA >= 8. No seizure activity. No hallucinations documented.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#3\nDate: 07/20/2026 17:00\nS: Mild tremor, sleeping better, eating. Wants to leave tomorrow.\nO: T 98.4F HR 88 BP 136/84 RR 16 SpO2 97% RA. Fine tremor at rest, no diaphoresis. AOx4.\nCIWA 6 at 10:00, 5 at 16:00. Last lorazepam 07/20 04:00.\nA/P: Alcohol withdrawal improving.\n- Continue CIWA monitoring overnight; if CIWA remains <8 off benzodiazepines, d/c AM 07/21\n- Thiamine/folate/MVI PO\n- Started amlodipine 5 mg daily for HTN\n- Naltrexone discussed, pt considering\nSigned: Owen Gallagher, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK / ADDICTION MEDICINE NOTE\nDate: 07/20/2026 11:15\nPt engaged, AOx4, no SI/HI, no psychosis.\nOffered residential treatment referral (Example Recovery Center, fictional) - pt DECLINED: \"I'm not doing a program right now.\"\nPt states he will \"try to cut back\" and \"maybe\" go to outpatient group; did not commit to abstinence.\nOutpatient IOP intake info given (phone 555-0185); no appointment scheduled.\nPt interested in recuperative care for housing. Explained most programs require sobriety.\nSigned: Lena Fischer, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Labs and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n07/18 02:40 | BAL 312 mg/dL | Glu 92 | Na 135 | K 3.3 L | CO2 22 | AG 12\n07/18 12:00 | Beta-hydroxybutyrate 0.3 (neg) | Mg 1.6 L | Phos 2.8\n07/18 12:00 | AST 98 H | ALT 54 H | T bili 1.0 | Alb 3.8 | INR 1.0 | Lipase 40\n07/20 05:00 | K 4.0 | Mg 2.0 | Cr 0.8 | Plt 142 L\n07/18 MRSA nares PCR: Negative\n07/20 06:00 SARS-CoV-2 rapid antigen: Negative\n07/18 CXR: no acute disease\n07/18 RUQ US: hepatic steatosis, no cirrhotic morphology, no ascites\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n07/19 14:00 | 98.8 | 98 | 144/90 | 18 | 97% | RA\n07/19 22:00 | 98.6 | 94 | 140/88 | 16 | 97% | RA\n07/20 04:00 | 98.7 | 92 | 138/86 | 16 | 96% | RA\n07/20 10:00 | 98.3 | 86 | 134/82 | 16 | 97% | RA\n07/20 16:00 | 98.4 | 88 | 136/84 | 16 | 97% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CURRENT / ANTICIPATED DISCHARGE MEDICATIONS\nPatient: Marcus Doe  MRN: PC-4450961\n- Thiamine 100 mg PO daily\n- Folic acid 1 mg PO daily\n- Multivitamin 1 tab PO daily\n- Amlodipine 5 mg PO daily (NEW 07/20)\n- Nicotine patch 21 mg/24h daily\n- Naltrexone 50 mg PO daily - PENDING pt decision\n## Inpatient only\n- Lorazepam per CIWA protocol (last dose 07/20 04:00) - not for discharge\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

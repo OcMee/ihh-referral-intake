@@ -1,0 +1,114 @@
+{
+  "packet_id": "F02",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## St. Brigid Community Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Monique Barrett, MSW\nPhone: 555-0120\nDate: 04/16/2026 10:05\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n34M POD4 open appendectomy, staples in place. Removal appt booked.\nT2DM on oral agents. Glucose log attached.\nRequesting placement today or tomorrow.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: St. Brigid Community Hospital (fictional)\nDepartment/Floor: 3 South Surgical\nSocial Worker/Case Manager/Nurse: Monique Barrett, MSW\nPhone: 555-0120\nEmail: mbarrett@stbrigid.example\nNursing Station: 555-0121\nAuthorized By: Dr. A. Haddad (Surgery)\n## Patient Information\nName: Samuel Doe\nMRN: SB-2210937\nBirth Date: 11/03/1991\nGender: M\nEthnicity: Black/African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Perforated appendicitis s/p appendectomy\nAdmit Date: 04/11/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: 1 - RLQ surgical incision ~8 cm, staples\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 04/11/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [X] No [ ]\nInsulin: Yes [X] No [ ]\nDiabetes Oral Meds: Yes [X] No [ ]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nStaple removal 04/22 at St. Brigid Surgery Clinic.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Samuel Doe\nDOB: 11/03/1991\nMember ID: OCH-55031288\n## Referring Provider\nFacility: St. Brigid Community Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Acute appendicitis with perforation, s/p appendectomy\nICD-10: K35.32\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 04/16/2026\nRequested Days: 14\nSecondary Dx: Type 2 diabetes mellitus without complications (E11.9)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM authorization - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM AUTHORIZATION REQUEST - PAGE 2\n## Attestation\nMember meets Community Supports eligibility for recuperative care [X]\nMember does not require SNF level of care [X]\nRequesting Clinician: Monique Barrett, MSW\nPhone: 555-0120\nSignature: on file   Date: 04/16/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## St. Brigid Community Hospital (fictional) - PATIENT FACE SHEET\nPatient: Samuel Doe\nMRN: SB-2210937\nAccount #: 99210937\nDOB: 11/03/1991\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 04/12/2026 03:15 (ED arrival 04/11/2026 23:40)\nAdmit Type: Inpatient\nUnit/Bed: 3S-308A\nAttending: Amir Haddad, MD (General Surgery)\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SURGICAL HISTORY AND PHYSICAL\nDate: 04/12/2026 02:30\n## CC\nRLQ abdominal pain x 2 days\n## HPI\n34 y/o M with T2DM (dx 2022, on metformin) presents with 2 days periumbilical pain migrating to RLQ, anorexia, emesis x3. Lives in a shelter (Example Shelter, Santa Ana). CT A/P: perforated appendicitis with small localized fluid, no drainable abscess. POC glucose in ED 248, anion gap 12, serum ketones negative - not in DKA.\n## PMH\n- T2DM, last A1c 7.4% (01/2026, per outside records)\n- Obesity, BMI 33\n## Meds\n- Metformin 1000 mg PO BID\n- Glipizide 5 mg PO daily\n## Allergies\nPenicillin (rash as child)\n## Social\nHomeless, staying at shelter x 4 months. Works day labor. Denies tobacco/drugs. EtOH rare.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 100.9F HR 104 BP 134/82 RR 18 SpO2 97% RA\nAbd: tender RLQ with guarding, + rebound\nAOx4, NAD otherwise\n## Assessment/Plan\nPerforated appendicitis.\n- NPO, IVF\n- Abx: ceftriaxone 2 g IV daily + metronidazole 500 mg IV q8h (PCN allergy low risk, tolerated cephalosporin previously)\n- OR for laparoscopic appendectomy, possible open\n- Hold metformin/glipizide while NPO; insulin lispro sliding scale AC/HS while inpatient\nSigned: Amir Haddad, MD 04/12/2026 02:58\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "other",
+      "title": "Operative note (brief)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## BRIEF OPERATIVE NOTE\nDate of Surgery: 04/12/2026\nProcedure: Laparoscopic converted to open appendectomy\nReason for conversion: dense inflammation, perforated base\nFindings: perforated gangrenous appendix, localized purulent fluid, irrigated\nClosure: fascia with 0 PDS; skin with staples\nIncision: RLQ, approx 8 cm\nEBL: 50 mL. Drains: none. Complications: none\nDisposition: to PACU, stable\nSurgeon: Amir Haddad, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Surgery progress note POD4",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SURGERY PROGRESS NOTE - POD#4\nDate: 04/16/2026 07:15\nS: Tolerating regular diet, +flatus, +BM 04/15. Pain 3/10 controlled on PO meds. Ambulating halls independently multiple times/day.\nO: T 98.6F HR 82 BP 126/80 RR 16 SpO2 98% RA\nIncision: RLQ, staples intact, C/D/I, no erythema or drainage\nWBC 8.4 (from 16.1)\nA/P: POD4 s/p open appendectomy, recovering well.\n- Transition to PO abx (PCN allergy): ciprofloxacin 500 mg PO BID + metronidazole 500 mg PO TID to complete 7 days total abx (through 04/18)\n- Insulin sliding scale DISCONTINUED 04/15 PM; resumed home metformin + glipizide 04/15\n- Staple removal: St. Brigid Surgery Clinic 04/22/2026 at 09:30 (appointment confirmed)\n- Keep incision dry x 48h then may shower; pt independent with incision care\n- Medically stable for d/c\nSigned: K. Nguyen, PA-C / Amir Haddad, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "vitals",
+      "title": "Glucose log and vital signs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## POINT-OF-CARE GLUCOSE - LAST 5 CONSECUTIVE\nDate/Time | Glucose (mg/dL) | Insulin given\n04/14 21:00 | 182 | lispro 2 units per SSI\n04/15 07:00 | 165 | lispro 2 units per SSI\n04/15 11:30 | 148 | none\n04/15 21:00 | 139 | none (SSI d/c'd)\n04/16 07:00 | 132 | none\nNo hypoglycemia this admission.\nPt demonstrates independent glucometer use (teach-back 04/15, RN S. Kim).\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n04/15 08:00 | 98.9 | 88 | 130/82 | 16 | 98% | RA\n04/15 12:00 | 98.7 | 86 | 128/80 | 16 | 97% | RA\n04/15 20:00 | 98.4 | 84 | 124/78 | 16 | 98% | RA\n04/16 00:00 | 98.2 | 80 | 122/76 | 16 | 98% | RA\n04/16 07:15 | 98.6 | 82 | 126/80 | 16 | 98% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LAB RESULTS\n04/12 01:10 | WBC 16.1 H | Hgb 14.2 | Plt 310\n04/12 01:10 | Na 136 | K 4.1 | Cl 101 | CO2 23 | AG 12 | BUN 14 | Cr 0.9 | Glu 248 H\n04/12 01:10 | Beta-hydroxybutyrate 0.2 (neg) | Lipase 32\n04/16 05:00 | WBC 8.4 | Hgb 13.1 | Plt 295 | Cr 0.8 | Glu 128\n## MICRO\n04/12 Peritoneal fluid cx: E. coli, pan-sensitive\n04/12 MRSA nares PCR: Negative\n04/16 05:30 SARS-CoV-2 PCR: Not detected\n## IMAGING\n04/11 CXR: clear lungs, no free air\n04/11 CT A/P w/ contrast: perforated appendicitis, no drainable abscess\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATIONS\nPatient: Samuel Doe  MRN: SB-2210937\n- Ciprofloxacin 500 mg PO BID through 04/18/2026\n- Metronidazole 500 mg PO TID through 04/18/2026\n- Metformin 1000 mg PO BID with meals (home med - resume)\n- Glipizide 5 mg PO daily with breakfast (home med - resume)\n- Acetaminophen 650 mg PO q6h PRN pain\n- Ibuprofen 400 mg PO q8h PRN pain, with food\n- Docusate 100 mg PO BID PRN constipation\n## DISCONTINUED\n- Insulin lispro sliding scale (inpatient only)\n- IV ceftriaxone / IV metronidazole\n## Supplies\n- Glucometer, strips, lancets (pt has own)\nNo insulin at discharge.\nPharmacist: R. Osei, PharmD 04/16/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

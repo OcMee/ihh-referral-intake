@@ -1,0 +1,105 @@
+{
+  "packet_id": "F09",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Seaside Community Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Alicia Romero, MSW\nPhone: 555-0195\nDate: 09/05/2026 09:50\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n24M L forearm lac w/ cellulitis, on PO abx. Ambulatory, independent.\nReady for discharge today.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Seaside Community Medical Center (fictional)\nDepartment/Floor: 5 Medical\nSocial Worker/Case Manager/Nurse: Alicia Romero, MSW\nPhone: 555-0195\nEmail: aromero@seaside.example\nNursing Station: 555-0196\nAuthorized By: Dr. F. Nakamura\n## Patient Information\nName: Kevin Doe\nMRN: SC-5072218\nBirth Date: 02/17/2002\nGender: M\nEthnicity: Hispanic/Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [X]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: L forearm laceration with cellulitis\nAdmit Date: 09/01/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: 1 - L dorsal forearm laceration 6 cm, sutured\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/01/2026  Result: CXR neg\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  cellulitis - PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: None\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nSuture removal 09/11 at Seaside Wound Clinic (fictional).\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Kevin Doe\nDOB: 02/17/2002\nMember ID: OCH-73300195\n## Referring Provider\nFacility: Seaside Community Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Laceration of left forearm with cellulitis\nICD-10: S51.812A, L03.114\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/05/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Seaside Community Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Kevin Doe\nMRN: SC-5072218\nAccount #: 99072218\nDOB: 02/17/2002\nSex: Male\nPreferred Language: English\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/01/2026 04:20\nAdmit Type: Inpatient\nUnit/Bed: 5M-509\nAttending: Fumiko Nakamura, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## Alerts\nBehavioral alert: YES (added 09/03/2026)\nSecurity flag: YES\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 09/01/2026\n## CC\nCut on L arm, now red and swollen\n## HPI\n24 y/o M, unhoused, reports he fell onto a broken bottle 3 days ago. Wound not cleaned. Now erythema, swelling and purulent drainage. Pt is guarded, gives limited history. Reports he \"used to take a pill for my head\" (prior risperidone per outside med list), stopped ~3 months ago.\n## PMH\n- Schizophrenia (per outside records, dx 2021; prior psych hospitalization x2)\n## Meds PTA\n- None (prior risperidone 2 mg BID - not taking)\n## Allergies\nNKDA\n## Social\nUnhoused since age 19, multiple episodes. Cannabis daily, methamphetamine \"sometimes\" (last 1 wk ago). EtOH occasional.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 100.6F HR 106 BP 132/80 RR 18 SpO2 99% RA\nL dorsal forearm: 6 cm laceration with purulent drainage, surrounding erythema 8 cm, no foreign body on XR, tendons intact\nPsych: guarded, internally preoccupied at times, AOx4\n## Assessment/Plan\n1. Infected L forearm laceration with cellulitis - irrigation and debridement at bedside, delayed primary closure 09/02, IV cefazolin then PO\n2. Schizophrenia, off meds - psych consult if behavioral concerns\n3. Substance use - UDS, SW consult\nSigned: Fumiko Nakamura, MD 09/01/2026 07:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "nursing_note",
+      "title": "Nursing note - behavioral event",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE - BEHAVIORAL EVENT\nDate/Time: 09/03/2026 23:15\nPt became agitated when asked to return to room after being found in another pt's room. Pt yelled profanities and threats at RN (\"I'll f--- you up\"), threw meal tray toward RN (missed, struck wall). Code Gray called; security to bedside 23:18.\nPt stated voices were \"telling me you're poisoning me.\"\nCharge RN and MD notified. Olanzapine 5 mg IM x1 given 23:35 per order. Pt calmed by 00:10.\n1:1 sitter initiated. Behavioral alert placed in chart.\nIncident report filed.\nSigned: D. Achebe, RN / Charge RN P. Lyons\n## NURSING NOTE 09/04/2026 14:00\nPt verbally aggressive toward CNA during vitals, refused, security on standby. Remains on 1:1.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "psych_consult",
+      "title": "Psychiatry consult",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PSYCHIATRY CONSULTATION\nDate: 09/04/2026 10:30\nReason: agitation, aggression toward staff 09/03, hx schizophrenia off meds\n## Interview\nPt guarded, intermittently responding to internal stimuli. Endorses auditory hallucinations x weeks: male voices that \"tell me to hurt people who are trying to poison me\", including staff. Reports he sometimes \"has to listen.\" Denies SI. Denies plan to harm specific person \"right now.\" Poor insight.\nMSE: disheveled, psychomotor restless, speech pressured, mood \"annoyed\", affect irritable, thought process tangential, + paranoid delusions, + command AH, cognition grossly intact, AOx4. Judgment/insight poor.\n## Assessment\nSchizophrenia, acute exacerbation in setting of medication nonadherence and methamphetamine use. Command auditory hallucinations to harm others. Aggression toward staff 09/03 and 09/04.\n## Recommendations\n- Restart risperidone 1 mg PO BID, titrate to 2 mg BID\n- Olanzapine 5 mg IM/PO q6h PRN severe agitation\n- Continue 1:1 sitter\n- 5150 evaluation: does not meet criteria at this exact time; reassess daily; low threshold\n- Recommend psychiatric stabilization before discharge to any congregate setting\nSigned: G. Iqbal, MD (Psychiatry)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 09/05/2026 07:50\nS: Pt slept 4 hrs. Took risperidone last night. Refused AM labs.\nO: T 98.4F HR 88 BP 128/78. Wound: sutures intact, erythema resolved to 2 cm. AOx4. Remains on 1:1.\nA/P:\n1. Cellulitis L forearm - improved, cephalexin 500 mg PO QID through 09/08\n2. Schizophrenia exacerbation - per psych, risperidone started 09/04; continue 1:1\n3. Dispo - medically stable from infection standpoint. CM pursuing recuperative care.\nSigned: Fumiko Nakamura, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/03 20:00 | 98.6 | 96 | 136/84 | 18 | 99% | RA\n09/04 08:00 | 98.2 | 92 | 130/80 | 16 | 99% | RA\n09/04 14:00 | -- | -- | -- | -- | -- | refused\n09/04 20:00 | 98.5 | 90 | 128/76 | 16 | 98% | RA\n09/05 07:50 | 98.4 | 88 | 128/78 | 16 | 99% | RA\n## LABS\n09/01 | WBC 15.2 H | Hgb 14.6 | Plt 260 | Cr 0.9\n09/03 | WBC 9.4\n09/01 UDS: + cannabinoids, + amphetamines\n09/01 Wound cx: Strep pyogenes (GAS), pan-sensitive\n09/01 MRSA nares PCR: Negative\n09/05 SARS-CoV-2 rapid antigen: Not collected (pt refused 09/05 AM)\n09/01 L forearm XR: no foreign body, no fracture\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CURRENT MEDICATIONS / ANTICIPATED DISCHARGE\nPatient: Kevin Doe  MRN: SC-5072218\n- Cephalexin 500 mg PO four times daily through 09/08/2026\n- Risperidone 1 mg PO BID (NEW 09/04/2026), titration per psychiatry\n- Acetaminophen 650 mg PO q6h PRN pain\n## Inpatient PRN\n- Olanzapine 5 mg IM/PO q6h PRN severe agitation (given 09/03 23:35)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

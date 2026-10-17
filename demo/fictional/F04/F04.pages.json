@@ -1,0 +1,114 @@
+{
+  "packet_id": "F04",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Juniper Hill Memorial Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Carla Mendez, LCSW\nPhone: 555-0150\nDate: 05/26/2026 08:45\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n72F metastatic pancreatic CA, symptoms controlled, enrolled with Sunrise Hospice (fictional).\nReferral form at end of packet. Hospice admission visit set for day of discharge.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Juniper Hill Memorial Hospital (fictional) - PATIENT FACE SHEET\nPatient: Linda Doe\nMRN: JH-6604182\nAccount #: 99604182\nDOB: 09/02/1953\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 05/20/2026 19:05\nAdmit Type: Inpatient\nUnit/Bed: 6E-603\nAttending: Helen Cho, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## Advance Directive\nPOLST on file: DNR / Comfort-focused treatment (05/24/2026)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Linda Doe\nDOB: 09/02/1953\nMember ID: OCH-18840231\n## Referring Provider\nFacility: Juniper Hill Memorial Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Malignant neoplasm of pancreas, metastatic to liver\nICD-10: C25.9, C78.7\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 05/26/2026\nRequested Days: 30\nHospice election: Yes - Sunrise Hospice (fictional), effective 05/25/2026\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 05/20/2026\n## CC\nAbdominal pain, nausea, unable to keep food down x 3 days\n## HPI\n72 y/o F with pancreatic adenocarcinoma (dx 01/2026) with liver metastases, declined further chemotherapy after 2 cycles (03/2026) due to toxicity. Homeless since 2024, previously staying in friend's garage, asked to leave 04/2026, now sleeping at bus terminal. Presents with worsening epigastric pain radiating to back (8/10) and nausea/emesis, poor PO intake. No hematemesis, no melena.\n## PMH\n- Pancreatic adenocarcinoma, stage IV\n- Hypothyroidism\n- Osteoarthritis knees\n## Meds PTA\n- Levothyroxine 50 mcg daily\n- Oxycodone 5 mg q6h PRN (ran out 1 wk ago)\n## Allergies\nCodeine (nausea)\n## Social\nSister in Anaheim (cannot house pt). Never smoker. No EtOH/drugs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.9F HR 96 BP 112/68 RR 18 SpO2 96% RA\nGen: cachectic, uncomfortable\nAbd: epigastric tenderness, no rebound, no ascites on exam, liver edge palpable\nSkin: no jaundice\nNeuro: AOx4, decisional\n## Data\nCT A/P: pancreatic head mass 4.1 cm, multiple hepatic mets (progressed), no obstruction, no ascites\nT bili 0.9, Lipase 48\n## Assessment/Plan\n1. Cancer-related pain and nausea - IV hydromorphone PRN, transition to PO regimen; ondansetron; palliative care consult\n2. Goals of care - pt prefers comfort-focused care, no further chemo. Discuss hospice.\n3. Hypothyroidism - continue levothyroxine\nSigned: Helen Cho, MD 05/20/2026 22:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "other",
+      "title": "Palliative care consult and hospice coordination",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PALLIATIVE CARE CONSULT / HOSPICE COORDINATION\nDate: 05/24/2026, addendum 05/25/2026\nGOC: Pt elects hospice. POLST completed: DNR, comfort-focused treatment. Prognosis estimated weeks to few months.\nPain now 2-3/10 on PO regimen x 72h. Nausea controlled, eating 50-75% of meals.\n## Hospice Arrangement (addendum 05/25)\n- Hospice agency: Sunrise Hospice (fictional), intake RN 555-0151\n- Hospice election signed 05/25/2026\n- Hospice RN admission visit at recuperative care site 05/26/2026 at 16:00 (confirmed)\n- RN visits 2x/week + PRN, hospice aide 2x/week for bathing support if needed, 24/7 on-call line 555-0152\n- Comfort kit to be delivered by hospice pharmacy to site 05/26\n## Education\nDiscussed with patient and sister (by phone) that recuperative care staff cannot administer medications; hospice staff will manage and administer comfort kit medications. Both verbalized understanding.\nSigned: N. Abara, NP (Palliative Care)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 05/25/2026 15:20\nPt AOx4, calm, pleasant, clear about wishes. Denies SI, no psych hx.\nHousing: unhoused, sister unable to house. Pt agreeable to recuperative care while hospice enrolled.\nPt has CA ID, Medi-Cal active. No car. No service animal.\nPt independent with ADLs, toileting and showering per nursing and PT.\nPlan: referral to Illumination Health + Home recuperative care; hospice to follow at site.\nSigned: Carla Mendez, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 05/23/2026\nBed mobility: Independent\nTransfers: Independent\nGait: 220 ft without assistive device, independent, steady; 1 seated rest due to fatigue\nStairs: 6 steps with rail, independent\nEndurance: fair, fatigue with prolonged activity\nFall risk: low-moderate\n## Recommendation\nNo skilled PT needs. Safe for d/c to community setting. No DME needed.\nSigned: J. Whitfield, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#6\nDate: 05/26/2026 07:30\nS: Pain 2/10, slept well, no emesis x 72h. Eating breakfast.\nO: T 98.2F HR 84 BP 114/70 RR 16 SpO2 96% RA. AOx4.\nA/P: Stage IV pancreatic CA, symptoms controlled on PO regimen. Hospice enrolled (Sunrise Hospice, admission visit today 16:00 at recuperative care).\n- Pt self-administers scheduled PO meds (levothyroxine, oxycodone IR PRN, ondansetron PRN, bowel regimen) - demonstrated pillbox use\n- Comfort kit meds (hospice-administered only)\nStable for discharge to recuperative care today.\nSigned: Helen Cho, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n05/24 08:00 | 98.4 | 88 | 116/72 | 16 | 96% | RA\n05/24 20:00 | 98.6 | 86 | 110/68 | 16 | 97% | RA\n05/25 08:00 | 98.1 | 82 | 112/70 | 16 | 96% | RA\n05/25 20:00 | 98.3 | 86 | 118/72 | 16 | 96% | RA\n05/26 07:30 | 98.2 | 84 | 114/70 | 16 | 96% | RA\n## LABS\n05/21 | WBC 7.2 | Hgb 10.4 L | Plt 210 | Na 134 L | K 3.9 | Cr 0.8 | Alb 2.9 L | T bili 0.9 | TSH 2.1\n05/21 MRSA nares PCR: Negative\n05/25 18:00 SARS-CoV-2 rapid antigen: Negative\n05/20 CXR: no acute process\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Linda Doe  MRN: JH-6604182\n## Self-administered by patient\n- Levothyroxine 50 mcg PO daily before breakfast\n- Oxycodone 5 mg PO every 4 hours PRN moderate-severe pain (#30, hospice to resupply)\n- Ondansetron 4 mg ODT every 8 hours PRN nausea\n- Senna 8.6 mg 2 tabs PO at bedtime\n- Polyethylene glycol 17 g PO daily PRN constipation\n## Hospice comfort kit (hospice staff administer only)\n- Morphine oral solution, lorazepam, haloperidol, atropine drops - per Sunrise Hospice orders\nPt verbalizes understanding that RC staff do not administer meds.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Juniper Hill Memorial Hospital (fictional)\nDepartment/Floor: 6 East Oncology\nSocial Worker/Case Manager/Nurse: Carla Mendez, LCSW\nPhone: 555-0150\nEmail: cmendez@juniperhill.example\nNursing Station: 555-0153\nAuthorized By: Dr. H. Cho\n## Patient Information\nName: Linda Doe\nMRN: JH-6604182\nBirth Date: 09/02/1953\nGender: F\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Pancreatic cancer w/ liver mets - pain/nausea control\nAdmit Date: 05/20/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 05/20/2026  Result: CXR negative\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 30\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}
