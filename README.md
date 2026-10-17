@@ -70,6 +70,7 @@ in parallel sub-agents, and wrote the fictional demo cases.
 ```bash
 pip install pymupdf anthropic reportlab pydantic
 export ANTHROPIC_API_KEY=...           # Windows PowerShell: $env:ANTHROPIC_API_KEY="..."
+export ANTHROPIC_WORKSPACE_ID=wrkspc_...   # only if the key is not scoped to a workspace
 python src/desk_server.py              # open http://127.0.0.1:8000, drop a PDF on the inbox
 python src/desk_server.py --dry-run    # no API: accepts the fictional app/pdf/F01-F09.pdf only
 ```

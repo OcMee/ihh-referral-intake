@@ -20,7 +20,7 @@ from pydantic import BaseModel
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "src"))
 import score  # noqa: E402
-from clean import MODEL  # noqa: E402
+from clean import MODEL, client as api_client  # noqa: E402
 
 CRIT = REPO / "challenges/1-referral-intake/criteria"
 
@@ -176,8 +176,7 @@ def failing(check: dict, pages: dict) -> list:
 
 
 def run(pages_json: Path, log=print) -> Path:
-    import anthropic
-    client = anthropic.Anthropic()
+    client = api_client()
     pages = json.loads(pages_json.read_text())
     pid = pages["packet_id"]
     log(f"checking {pid} against IHH criteria with {MODEL}")

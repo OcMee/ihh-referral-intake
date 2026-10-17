@@ -34,6 +34,14 @@ REPO = Path(__file__).resolve().parent.parent
 OUT_ROOT = REPO / "output"
 MODEL = "claude-opus-5-5"
 
+
+def client():
+    """Claude API client. Key from ANTHROPIC_API_KEY; a key not scoped to a workspace also needs
+    ANTHROPIC_WORKSPACE_ID (Console > Settings > Workspaces)."""
+    import anthropic
+    ws = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+    return anthropic.Anthropic(default_headers={"anthropic-workspace-id": ws} if ws else None)
+
 DOC_TYPES = Literal[
     "fax_cover", "referral_form", "calaim_auth", "face_sheet", "h_and_p", "progress_note",
     "nursing_note", "pt_eval", "ot_eval", "labs", "imaging", "ecg", "med_list", "med_record",
@@ -89,13 +97,11 @@ def render(pdf: Path, out: Path, dpi: int = 110) -> list[Path]:
 
 
 def transcribe(images: list[Path], packet_id: str, pages_json: Path) -> None:
-    import anthropic
-
-    client = anthropic.Anthropic()
+    api = client()
     results = []
     for i, img in enumerate(images, start=1):
         data = base64.standard_b64encode(img.read_bytes()).decode()
-        resp = client.messages.parse(
+        resp = api.messages.parse(
             model=MODEL,
             max_tokens=16000,
             output_config={"effort": "medium"},
