@@ -67,6 +67,9 @@ in parallel sub-agents, and wrote the fictional demo cases.
 
 **Drop in a new referral (local only):** runs the whole pipeline on one PDF from the browser.
 
+On Windows: download the repo ZIP, extract it, double-click `start-desk.bat` (installs the packages, asks for
+the key, opens the browser). `start-desk.bat --dry-run` tests without a key.
+
 ```bash
 pip install pymupdf anthropic reportlab pydantic
 export ANTHROPIC_API_KEY=...           # Windows PowerShell: $env:ANTHROPIC_API_KEY="..."

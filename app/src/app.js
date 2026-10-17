@@ -22,6 +22,18 @@
 
   const ui = { filter: "all", sort: "deadline", q: "", showIhh: false, panel: null, drawer: null };
 
+  // who is reviewing: kept in this browser only, stamped on every saved decision and reply
+  const ROLES = ["Referral coordinator", "RN", "LVN", "Medical director", "Case manager"];
+  let who = { name: "Cornel", role: "Referral coordinator" };
+  try { who = { ...who, ...JSON.parse(localStorage.getItem("referral-desk-user") || "{}") } } catch (e) { /* keep default */ }
+  const sign = () => `${who.name}, ${who.role}\nIllumination Health + Home`;
+  function whoBar() {
+    if (!ui.editWho) return `<p class="eyebrow who">Welcome back, ${esc(who.name)} · ${esc(who.role)} <button class="who-edit" data-who>Change</button></p>`;
+    return `<div class="who-form"><input id="who-name" value="${esc(who.name)}" aria-label="Your name" placeholder="Your name">
+      <select id="who-role" aria-label="Your role">${ROLES.map(r => `<option ${r === who.role ? "selected" : ""}>${r}</option>`).join("")}</select>
+      <button class="btn primary" data-whosave>Save</button></div>`;
+  }
+
   // ---------- helpers ----------
   function minsLeft(p) { return SLA - p.received_min - (Date.now() - LOADED) / 60000 }
   function clock(p) {
@@ -86,7 +98,7 @@
         <div class="cards">${items.map(card).join("") || `<div class="empty">Nothing here</div>`}</div></section>`;
     }).join("");
     return `<section class="hero2">
-        <div class="h-copy"><p class="eyebrow">Referral Desk · Illumination Health + Home</p>
+        <div class="h-copy">${whoBar()}
           <h1>Every referral on one page, answered inside two hours.</h1>
           <p class="lede">Faxed packets are read page by page and checked against IHH’s admission rules. Each finding links to the page it came from.</p></div>
         <div class="pipe">
@@ -236,15 +248,15 @@
     const qs = (p.questions || []).map((q, i) => `${i + 1}. ${q}`).join("\n");
     if (kind === "deny") return head + "We are not able to accept this patient at this time, based on:\n" +
       (p.fit.blockers.filter((id, _, all) => !(id.startsWith("FORM-") && all.some(x => !x.startsWith("FORM-")))).map(id => `- ${(rules[id] || {}).short || id}${(rules[id] && rules[id].evidence[0]) ? ` (packet p${rules[id].evidence[0].page})` : ""}`).join("\n") || "- [reason]") +
-      "\n\nIf the patient's status has changed, please send updated notes and we will review again.\n\nIHH Referral Coordinator";
-    if (kind === "info") return head + "To finish our review we need the following:\n" + (qs || "1. [question]") + "\n\nWe will reply as soon as we receive them.\n\nIHH Referral Coordinator";
-    return head + "We can accept this patient for recuperative care." + (qs ? "\n\nBefore discharge, please confirm:\n" + qs : "") + "\n\nPlease call to arrange transport and arrival time.\n\nIHH Referral Coordinator";
+      "\n\nIf the patient's status has changed, please send updated notes and we will review again.\n\n" + sign();
+    if (kind === "info") return head + "To finish our review we need the following:\n" + (qs || "1. [question]") + "\n\nWe will reply as soon as we receive them.\n\n" + sign();
+    return head + "We can accept this patient for recuperative care." + (qs ? "\n\nBefore discharge, please confirm:\n" + qs : "") + "\n\nPlease call to arrange transport and arrival time.\n\n" + sign();
   }
   function decideBar(p) {
     const d = decisions()[p.id], k = ui.drawer || (d && d.decision);
     const text = ui.drawer ? (ui.draftText ?? draft(p, ui.drawer)) : d ? d.text : "";
     return `<div class="decide"><div class="decide-in gutter">
-        <span class="lead">${d ? `Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}` : "Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
+        <span class="lead">${d ? `Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${d.by ? ` · by ${esc(d.by)}` : ""}` :"Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
         <button class="btn approve ${k === "approve" ? "on" : ""}" data-decide="approve">Approve</button>
         <button class="btn info ${k === "info" ? "on" : ""}" data-decide="info">Ask for info</button>
         <button class="btn deny ${k === "deny" ? "on" : ""}" data-decide="deny">Deny</button>
@@ -288,13 +300,19 @@
       try { navigator.clipboard.writeText(ta.value).then(done, () => { ta.select(); t.textContent = "Press Ctrl+C" }) } catch (err) { ta.select(); t.textContent = "Press Ctrl+C" }
       return;
     }
-    if ("save" in t.dataset && p) { const v = { ...decisions() }; v[p.id] = { decision: ui.drawer, text: $("#reply").value, at: Date.now() }; store.set(v); ui.drawer = null; return render() }
+    if ("save" in t.dataset && p) { const v = { ...decisions() }; v[p.id] = { decision: ui.drawer, text: $("#reply").value, at: Date.now(), by: `${who.name} (${who.role})` }; store.set(v); ui.drawer = null; return render() }
     if ("next" in t.dataset && p) {
       const d = decisions(), open_ = P.filter(x => !d[x.id] && x.id !== p.id).sort((a, b) => minsLeft(a) - minsLeft(b));
       return open_.length ? open(open_[0].id) : (location.hash = "#/");
     }
     if ("theme" in t.dataset) { const r = document.documentElement, cur = r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); r.dataset.theme = cur === "dark" ? "light" : "dark"; return }
     if ("reset" in t.dataset) { store.set({}); return render() }
+    if ("who" in t.dataset) { ui.editWho = true; render(); const n = $("#who-name"); if (n) n.focus(); return }
+    if ("whosave" in t.dataset) {
+      who = { name: ($("#who-name").value.trim() || "Staff").slice(0, 60), role: $("#who-role").value };
+      try { localStorage.setItem("referral-desk-user", JSON.stringify(who)) } catch (e) { /* private mode: keep in memory */ }
+      ui.editWho = false; return render();
+    }
   });
   document.addEventListener("input", e => {
     if (e.target.id === "q") { ui.q = e.target.value; const pos = e.target.selectionStart; render(); const q = $("#q"); q.focus(); q.setSelectionRange(pos, pos) }
