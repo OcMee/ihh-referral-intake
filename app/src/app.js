@@ -278,7 +278,7 @@
     const v = p.verification, files = !APP.meta.artifact;
     const link = (href, name, sub) => href && files ? `<a class="pf" href="${href}" target="_blank" rel="noopener"><b>${name}</b><small>${sub}</small></a>` : "";
     return `<div class="proof"><p class="eyebrow">Proof behind the score</p>
-      <div class="pf-row">${link(p.pdf, "Original PDF", `${p.pages} pages as faxed`)}${link(p.readable, "Readable PDF", "each page beside its transcript")}${link(p.fitlist, "Fit checklist", "every IHH rule, status and page")}${link(p.criteria, "IHH criteria", "IHH’s own admission rules")}${link(p.docx, "Word copy", "compact, in the form styles")}</div>
+      <div class="pf-row"><button class="pf here" data-page="1"><b>View original here</b><small>page by page, beside this summary</small></button>${link(p.pdf, "Original PDF", `${p.pages} pages as faxed`)}${link(p.readable, "Readable PDF", "each page beside its transcript")}${link(p.fitlist, "Fit checklist", "every IHH rule, status and page")}${link(p.criteria, "IHH criteria", "IHH’s own admission rules")}${link(p.docx, "Word copy", "compact, in the form styles")}</div>
       ${files ? "" : `<p class="lbl">The files open in the GitHub Pages or local version of this app.</p>`}
       <p class="pf-check"><span class="vf">✓</span> ${v.verified}/${v.quotes} quotes found on the page they cite</p></div>`;
   }
@@ -294,9 +294,9 @@
       text = text.replace(new RegExp(q, "i"), m => `<mark id="hit">${m}</mark>`);
     }
     text = text.replace(/^## (.*)$/gm, "<b>$1</b>").replace(/^- /gm, "• ");
-    const img = p.img ? p.img.replace("{nn}", String(pageObj.page).padStart(2, "0")) : null;
+    const img = p.imgs ? p.imgs[pageObj.page - 1] : p.img ? p.img.replace("{nn}", String(pageObj.page).padStart(2, "0")) : null;
     const pdf = p.pdf && !APP.meta.artifact ? p.pdf : null;
-    const tabs = [pdf && ["pdf", "Original PDF"], img && ["scan", "Scan image"], ["text", "Transcript"]].filter(Boolean);
+    const tabs = [pdf && ["pdf", "Original PDF"], img && ["scan", "Original page"], ["text", "Transcript"]].filter(Boolean);
     const tab = s.tab && tabs.some(t => t[0] === s.tab) ? s.tab : tabs[0][0];
     const r = s.rule ? p.rules.find(x => x.rule_id === s.rule) : null;
     return `<aside class="panel" aria-label="Evidence">

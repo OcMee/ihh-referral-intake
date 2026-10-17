@@ -42,6 +42,14 @@ def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=
 def html(data: dict, artifact: bool) -> str:
     shell = (SRC / "shell.html").read_text()
     data = {**data, "meta": {**data["meta"], "artifact": artifact}}
+    if artifact and not data["meta"].get("real"):  # the artifact cannot load files: inline the fictional page images
+        import base64
+        pk = []
+        for p in data["packets"]:
+            imgs = [f"data:image/jpeg;base64,{base64.b64encode((REPO / 'app' / p['img'].replace('{nn}', f'{n:02d}')).read_bytes()).decode()}"
+                    for n in range(1, p["pages"] + 1)] if p.get("img") else None
+            pk.append({**p, "imgs": imgs})
+        data = {**data, "packets": pk}
     blob = json.dumps(data, separators=(",", ":")).replace("</", "<\\/")
     page = (shell.replace("<!--STYLE-->", f"<style>{(SRC / 'app.css').read_text()}</style>")
                  .replace("<!--DATA-->", f"<script>window.APP={blob};</script>")
@@ -50,6 +58,16 @@ def html(data: dict, artifact: bool) -> str:
         return page
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' + page + "</html>")
+
+
+def page_images(pdf: Path, dest: Path) -> int:
+    """Fictional originals as page images, so the original shows inside the app (PDF frames are blocked in some viewers)."""
+    import pymupdf
+    dest.mkdir(parents=True, exist_ok=True)
+    with pymupdf.open(pdf) as doc:
+        for i, pg in enumerate(doc, start=1):
+            pg.get_pixmap(dpi=80).save(dest / f"p-{i:02d}.jpg", jpg_quality=70)
+        return len(doc)
 
 
 def public(checklist: dict) -> list:
@@ -66,7 +84,8 @@ def public(checklist: dict) -> list:
         d = score.score_packet(check, pages, rules)
         pid = d["packet_id"]
         checklist_pdf.make(d, checklist, out_dir / f"{pid}.checklist.pdf", fictional=True)
-        packets.append(pack(d, pages, checklist, i, pdf=f"pdf/{pid}.pdf", readable=f"pdf/{pid}.readable.pdf",
+        page_images(out_dir / f"{pid}.pdf", out_dir / "pages" / pid)
+        packets.append(pack(d, pages, checklist, i, pdf=f"pdf/{pid}.pdf", img=f"pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"pdf/{pid}.readable.pdf",
                             docx=f"pdf/{pid}.docx", fitlist=f"pdf/{pid}.checklist.pdf", criteria="pdf/ihh-admission-criteria.pdf"))
     return packets
 

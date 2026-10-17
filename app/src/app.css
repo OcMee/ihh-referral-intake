@@ -342,3 +342,4 @@ main { padding-block-end: 150px }
 .rc .num { font-size: 28px; font-weight: 600 } .rc:hover { border-color: var(--brand-orange) }
 .rc.fit .num { color: #4cc38a } .rc.nofit .num { color: #ff7a6e } .rc.info .num { color: var(--brand-amber) }
 .hero2 .lede .soon { color: var(--brand-amber) }
+.pf.here { font: inherit; text-align: left; cursor: pointer; border-left-color: var(--ink); background: var(--warn-bg) } .pf.here:hover { border-color: var(--brand-orange) }
