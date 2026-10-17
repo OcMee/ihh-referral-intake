@@ -118,7 +118,14 @@ def process(job: dict) -> None:
             build_app.main(["--real"])
             job.update(stage="done", state="done", msg="Added to the inbox")
         except Exception as e:
-            job.update(state="error", msg=f"{type(e).__name__}: {e}")
+            raw = f"{type(e).__name__}: {e}"
+            hints = [("workspace", "The API key needs a valid workspace ID (wrkspc_...), or use a key created inside a workspace. Restart start-desk.bat."),
+                     ("authentication", "The API key was not accepted. Check it in console.anthropic.com and restart start-desk.bat."),
+                     ("credit", "The API account is out of credits. Claim or add credits in console.anthropic.com."),
+                     ("rate_limit", "Too many requests right now. Wait a minute and drop the PDF again."),
+                     ("Connection", "Could not reach the Claude API. Check the internet connection and drop the PDF again.")]
+            hint = next((h for k, h in hints if k.lower() in raw.lower()), None)
+            job.update(state="error", msg=f"{hint}  [{raw[:200]}]" if hint else raw)
             job["log"].append(traceback.format_exc(limit=3))
 
 
