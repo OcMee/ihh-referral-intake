@@ -97,3 +97,16 @@ are shown.
 - Respite evidence is mostly observational. The strongest effects are for frequently admitted patients; overall readmission effects are mixed.
 - Vendor figures (WellSky, Aidin, Ensocare, LeadingReach) are marketing claims.
 - All figures were read from search extracts because direct page fetches were blocked. Open each URL before quoting.
+
+## Verification pass (extended search, Oct 17 2026, ~1:20 PM)
+
+Second, independent search per figure. Page downloads were still blocked, so "confirmed" means two or
+more independent sources or the publisher's own page agree. Open the URL before quoting on a slide.
+
+| Figure | Status | Correct wording | Source |
+|---|---|---|---|
+| $4,471 per adjusted inpatient day, California, 2023 | Confirmed (KFF table: 4,470.70) | "Hospital expenses per adjusted inpatient day, an estimate of expenses, not charges or payments" | https://www.kff.org/health-costs/state-indicator/expenses-per-inpatient-day/ |
+| 30-day readmission 17.3% homeless vs 14.0% housed | Confirmed (Khatana et al., JGIM 2020;35(9):2576-2583) | "Florida, Massachusetts and New York, 2010-2015; higher after adjustment" | https://link.springer.com/article/10.1007/s11606-020-05946-4 |
+| 3.7 vs 8.3 hospital days over 12 months, respite vs usual care | Confirmed in abstract (Buchanan et al., AJPH 2006;96(7):1278-1281). An NHCHC brief cites 3.4 vs 8.1: use the abstract's numbers | "Chicago cohort; no difference in ED or outpatient visits" | https://pmc.ncbi.nlm.nih.gov/articles/PMC1483848/ |
+| 6,321 people homeless in Orange County, Jan 2026 (3,256 sheltered, 3,065 unsheltered), down 13.7% from 2024 | Confirmed (County of Orange press release and 2026 PIT report) | as stated | https://www.ocgov.com/press/county-orange-announces-2026-point-time-count-results |
+| Recuperative care rules change Jan 1 2027 | Partly confirmed: DHCS says a revised recuperative care definition takes effect Jan 1 2027, with a plan to sunset short-term post-hospitalization housing and an updated room and board policy | Do NOT say "room and board comes out" or "stricter supervision": the actual wording was not found | https://www.dhcs.ca.gov/news/stakeholder-news-october-5-2026/ |
