@@ -190,7 +190,7 @@ def render(d: dict, checklist: dict) -> str:
 <ol id="qs">{''.join(f'<li>{e(q)}</li>' for q in qs) or '<li>No questions</li>'}</ol></div>
 </div>
 
-<div class="foot"><span class="printnote">Printed view is trimmed: met criteria, extra facts, conflicts and questions are on the screen version.</span>AI-prepared summary for a coordinator. The coordinator decides. Ring = rule-based score (hand-set weights, not fitted; see score.py).
+<div class="foot"><span class="printnote">Printed view is trimmed: met criteria, extra facts, conflicts and questions are on the screen version.</span>AI-prepared summary for a coordinator. The coordinator decides. Ring = rule-based score. Weights hand-tuned after comparing with IHH's 11 past decisions (in-sample, not validated; see score.py).
 ✓ = quote found on the cited page ({v['verified']}/{v['quotes']} criteria quotes verified). "check" = not found, read the page. Page links open the original scan.</div>
 </div></body></html>"""
 
@@ -214,7 +214,7 @@ th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05
 <div class="top"><div><h1>Referral intake</h1><div class="sub">{len(scored)} referrals · packet data, local only</div></div>
 <label class="sub"><input type="checkbox" onchange="document.body.classList.toggle('show',this.checked)"> show IHH decision</label></div>
 <div class="card"><table><tr><th>Packet</th><th>Patient</th><th>Pages</th><th>Fit score</th><th>Claude's read</th><th>Blockers</th><th class="dec">IHH decision</th></tr>{rows}</table></div>
-<div class="foot">Fit score is rule-based with hand-set weights. The coordinator decides.</div></div></body></html>"""
+<div class="foot">Fit score is rule-based. Weights were hand-tuned after comparing with these 11 IHH decisions, so agreement here is in-sample. The coordinator decides.</div></div></body></html>"""
 
 
 def main(argv: list[str]) -> None:

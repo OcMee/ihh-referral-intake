@@ -7,14 +7,19 @@ Output: output/RXX/RXX.scored.json (same data + verified flags, blockers, fit sc
 The score is deliberately simple so every point can be explained:
   start 100
   verified blocker (exclusion applies / must-rule failed)  -> score capped at 15
-  unverified possible blocker                              -> -15, "check by hand"
-  conditional arrangement missing (not_met / unknown)      -> -10 / -4
-  key rule unknown or can't tell                           -> -8
-  other must/exclude rule unknown                          -> -2
-  form vs chart conflict                                   -> -5 (max 4 counted)
-  required document missing                                -> -3
+  unverified possible blocker                              -> -10, "check by hand"
+  conditional arrangement missing (not_met / unknown)      -> -6 / -3
+  key rule unknown or can't tell                           -> -4
+  other must/exclude rule unknown                          -> -1
+  form vs chart conflict                                   -> -3 (max 4 counted)
+  required document missing                                -> -2
+  no verified blocker                                      -> floor of 40 (needs info, never "not a fit")
 Bands: 70+ likely fit, 40-69 needs info, under 40 likely not a fit.
-Weights were set by hand, not fitted; 11 packets are too few to fit them.
+
+Calibration note: v1 weights (-8 per key unknown etc.) rated all 11 packets "not a fit".
+IHH approves packets with many unknowns and denies on documented hard stops, so v2 lowers
+the unknown penalties and adds the floor. v2 was tuned by hand AFTER seeing IHH's 11
+decisions: it is an in-sample fit, not a validated model.
 """
 
 import json
@@ -118,29 +123,31 @@ def score_packet(check: dict, pages: dict, rules: dict) -> dict:
         if st == "not_met" and kind in ("must", "exclude"):
             (blockers if r["verified"] else possible).append(rid)
         elif kind == "conditional" and st == "not_met":
-            hit(10, f"{rid} arrangement not in place")
+            hit(6, f"{rid} arrangement not in place")
         elif kind == "conditional" and st == "unknown":
-            hit(4, f"{rid} arrangement not confirmed")
+            hit(3, f"{rid} arrangement not confirmed")
         elif st in ("unknown", "cant_tell") and rid in KEY_RULES:
-            hit(8, f"{rid} {'unknown' if st == 'unknown' else 'can not tell (redacted)'}")
+            hit(4, f"{rid} {'unknown' if st == 'unknown' else 'can not tell (redacted)'}")
         elif st in ("unknown", "cant_tell") and kind in ("must", "exclude"):
-            hit(2, f"{rid} unknown")
+            hit(1, f"{rid} unknown")
 
     gen = [r for r in out["rules"] if r["kind"] == "general"]
     if gen and all(r["status"] == "not_met" and r["verified"] for r in gen):
         blockers.append("GEN")
 
     for rid in possible:
-        hit(15, f"{rid} may fail, evidence not verified")
+        hit(10, f"{rid} may fail, evidence not verified")
     for c in out.get("conflicts", [])[:4]:
-        hit(5, f"form vs chart: {c.get('topic', '')}")
+        hit(3, f"form vs chart: {c.get('topic', '')}")
     for d in out.get("documents", []):
         if d["present"] == "no" and d["doc_id"] not in DOC_SKIP:
-            hit(3, f"{d['doc_id']} missing")
+            hit(2, f"{d['doc_id']} missing")
 
     score = max(0, min(100, score))
     if blockers:
         score = min(score, 15)
+    else:
+        score = max(score, 40)
     band = "fit" if score >= 70 else "info" if score >= 40 else "nofit"
     out["fit"] = {
         "score": score,
