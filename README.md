@@ -166,6 +166,12 @@ Run blind: the checks never saw `eval/decisions.json`.
   so a packet can look better than it is. Found while writing F14 and F17.
 - **Fictional originals are partly typed.** Only the referral form page uses IHH's real layout; the
   H&P, notes and labs are typed pages with a scan look, so they are easier to read than real faxes.
+- **The form's "must meet" list is not checked.** The check covers IHH's referral-form exclusions
+  (FORM-X*) but not its must-meet list (FORM-M1 to M6). Psychiatric stability is still covered by
+  MH-1, but the "medically stable" half of FORM-M2 has no rule of its own yet.
+- **A rule can be stretched.** In one real packet the tool applied OTH-1 (aggression toward staff or
+  other patients) to threats made toward a family member. Another verified rule (MH-1) already
+  blocked the referral, but OTH-1 there should read "check by hand".
 - **Never trust it to approve on its own.** No packet scores "likely fit" without a coordinator's review.
 
 ## Next steps
