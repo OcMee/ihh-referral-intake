@@ -346,11 +346,20 @@ main { padding-block-end: 150px }
 .drop.off { cursor: default; border-style: solid; border-color: var(--line-strong); background: var(--surface-2) } .drop.off:hover { background: var(--surface-2) }
 
 /* softer shade: the near-black header and hero were hard on the eyes; same layout, mid-dark grey */
-:root { --shade: #3d4046; --shade-2: #494c53; --shade-line: #5c6068 }
+/* OCMEE brand greys, taken from ocmeed.com: #333333 dark, #5E5E5E mid, #ABABAB light; amber #FAAC23, orange #FF860F */
+:root { --shade: #333333; --shade-2: #262626; --shade-line: #5e5e5e; --mute: #5e5e5e }
+:root[data-theme="dark"] { --mute: #ababab }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --mute: #ababab } }
 .bar { background: var(--shade) }
 .bar .tag { border-color: var(--shade-line) }
-.hero2 { background: linear-gradient(135deg, #474a51 0%, var(--shade) 60%); box-shadow: 0 14px 32px rgba(0, 0, 0, .10) }
+.hero2 { background: var(--shade); box-shadow: 0 14px 32px rgba(0, 0, 0, .12) }
 .pipe > div, .pipe .hot { background: var(--shade-2); border-color: var(--shade-line) }
 .rc { background: var(--shade-2); border-color: var(--shade-line) }
 .seg button.on { background: var(--shade) }
 .who-form input, .who-form select { background: var(--shade-2); border-color: var(--shade-line) }
+
+/* full-strength accents on the dark grey (the pastel versions read as washed out) */
+.rc.fit .num { color: #2fd27a } .rc.nofit .num { color: #ff4d3d } .rc.info .num { color: #faac23 }
+.hero2 .lede .soon { color: #faac23 } .hero2 .eyebrow, .eyebrow.who { color: #ff860f }
+.hero2, .hero2 h1 { color: #ffffff } .hero2 .lede { color: #e6e6e6 }
+.pipe > div:first-child { background: linear-gradient(135deg, #ff860f, #faac23) }
