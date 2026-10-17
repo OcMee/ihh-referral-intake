@@ -29,11 +29,11 @@ CRIT_SRC = "challenges/1-referral-intake/criteria/source/ihh-recuperative-care-a
 
 
 def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=None, readable=None, docx=None,
-         fitlist=None, criteria=None) -> dict:
+         fitlist=None, criteria=None, seed=None) -> dict:
     keep = ("patient", "fit", "claude_fit", "verification", "key_facts", "rules", "conflicts", "questions_for_hospital")
     out = {k: d.get(k) for k in keep}
     out["questions"] = out.pop("questions_for_hospital") or []
-    out.update(id=d["packet_id"], uploaded=None, pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh, pdf=pdf, readable=readable, docx=docx, fitlist=fitlist, criteria=criteria,
+    out.update(id=d["packet_id"], uploaded=None, seed=seed, pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh, pdf=pdf, readable=readable, docx=docx, fitlist=fitlist, criteria=criteria,
                documents=[{**x, "name": checklist.get(x["doc_id"], x["doc_id"])} for x in d.get("documents", [])],
                page_list=[{"page": p["page"], "title": p["title"], "doc_type": p["doc_type"], "text": p["text"]} for p in pages["pages"]])
     return out
@@ -79,7 +79,28 @@ def public(checklist: dict) -> list:
     items = [(c, {"pages": p}) for c, p in ((make_demo.c1, make_demo.p1), (make_demo.c2, make_demo.p2), (make_demo.c3, make_demo.p3))]
     items += [(json.loads(f.read_text()), json.loads(f.with_name(f"{f.stem}.pages.json").read_text()))
               for f in sorted((REPO / "demo/fictional").glob("F0?/F0?.json"))]
+    # already reviewed earlier today: F10-F20 with a seeded decision record (labeled as demo history in the app)
+    hist = [(json.loads(f.read_text()), json.loads(f.with_name(f"{f.stem}.pages.json").read_text()))
+            for f in sorted((REPO / "demo/fictional").glob("F[12][0-9]/F[12][0-9].json"))]
+    intended = {a["packet_id"]: a["intended"] for a in json.loads((REPO / "demo/fictional/answers.json").read_text())}
+    KIND = {"fit": "approve", "needs_info": "info", "not_fit": "deny"}
+    BY = "Dr Cornel Manole (Referral coordinator)"
     packets = []
+    for j, (check, pages) in enumerate(hist):
+        d = score.score_packet(check, pages, rules)
+        pid = d["packet_id"]
+        received = 560 - j * 42                      # minutes ago
+        took = [38, 72, 55, 104, 47, 131, 66, 29, 88, 59, 93][j % 11]   # minutes to first decision
+        seed = [{"decision": KIND[intended[pid]], "min": received - took, "by": BY}]
+        if pid == "F14":  # example revision: the hospital sent the missing swab results
+            seed.append({"decision": "approve", "min": received - took - 95, "by": BY,
+                         "reason": "Demo: hospital faxed negative MRSA and COVID swab results (INF-1, INF-2)."})
+        checklist_pdf.make(d, checklist, out_dir / f"{pid}.checklist.pdf", fictional=True)
+        page_images(out_dir / f"{pid}.pdf", out_dir / "pages" / pid)
+        p = pack(d, pages, checklist, j, pdf=f"pdf/{pid}.pdf", img=f"pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"pdf/{pid}.readable.pdf",
+                 docx=f"pdf/{pid}.docx", fitlist=f"pdf/{pid}.checklist.pdf", criteria="pdf/ihh-admission-criteria.pdf", seed=seed)
+        p["received_min"] = received
+        packets.append(p)
     for i, (check, pages) in enumerate(items):
         d = score.score_packet(check, pages, rules)
         pid = d["packet_id"]
@@ -124,8 +145,8 @@ def main(argv: list) -> None:
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html(data, artifact=False), encoding="utf-8")
     else:
-        data = {"meta": {"real": False, "banner": "Fictional demo cases. Every patient here is invented; no real patient data is on this page.",
-                         "note": "Fictional packets have transcripts but no scans."}, "packets": public(checklist)}
+        data = {"meta": {"real": False, "banner": "",
+                         "note": "All patients in this demo are invented."}, "packets": public(checklist)}
         (REPO / "app/index.html").write_text(html(data, artifact=False), encoding="utf-8")
         (REPO / "app/artifact.html").write_text(html(data, artifact=True), encoding="utf-8")
         dest = REPO / "app/index.html"

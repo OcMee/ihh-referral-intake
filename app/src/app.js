@@ -13,21 +13,37 @@
   const SLA = 120; // IHH answers hospitals within 2 hours
   const LOADED = Date.now();
 
+  // Decision record: append-only. Every decision and revision is kept; nothing is overwritten or deleted.
   const store = {
-    get() { try { return JSON.parse(localStorage.getItem("referral-desk") || "{}") } catch (e) { return {} } },
-    set(v) { try { localStorage.setItem("referral-desk", JSON.stringify(v)) } catch (e) { /* private mode: keep in memory */ } mem = v },
+    get() { try { return JSON.parse(localStorage.getItem("referral-desk-log") || "{}") } catch (e) { return {} } },
+    set(v) { try { localStorage.setItem("referral-desk-log", JSON.stringify(v)) } catch (e) { /* private mode: keep in memory */ } log = v },
   };
-  let mem = store.get();
-  const decisions = () => mem;
+  let log = store.get();
+  try { // carry over decisions saved before the record existed
+    const old = JSON.parse(localStorage.getItem("referral-desk") || "{}");
+    for (const [k, v] of Object.entries(old)) if (v && v.decision && !log[k]) log[k] = [v];
+  } catch (e) { /* none */ }
+  function history(id) {
+    const p = byId[id];
+    const seeded = p && p.seed ? p.seed.map(s => ({ decision: s.decision, at: LOADED - s.min * 60000, by: s.by, reason: s.reason || "", seeded: true })) : [];
+    return [...seeded, ...(log[id] || [])].sort((a, b) => a.at - b.at).map((e, i) => ({ ...e, rev: i + 1 }));
+  }
+  const decisions = () => Object.fromEntries(P.map(p => [p.id, history(p.id).slice(-1)[0]]).filter(x => x[1]));
+  function addEvent(id, e) {
+    store.set({ ...log, [id]: [...(log[id] || []), e] });
+    if (ui.server) fetch("/api/decisions", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, ...e }) }).catch(() => {});
+  }
 
-  const ui = { filter: "all", sort: "deadline", q: "", showIhh: false, panel: null, drawer: null };
+  const ui = { filter: "open", sort: "deadline", q: "", showIhh: false, panel: null, drawer: null };
 
   // who is reviewing: kept in this browser only, stamped on every saved decision and reply
   const ROLES = ["Referral coordinator", "RN", "LVN", "Medical director", "Case manager"];
   // Demo sign-in. The check runs in the browser, so it keeps casual viewers out and nothing more.
   // A real deployment would use IHH's own sign-in. Passwords are stored as salted SHA-256, not in plain text.
   const ACCOUNTS = [{ email: "cornel@ocmeed.com", name: "Dr Cornel Manole", role: "Referral coordinator", salt: "ihh-desk-demo-1",
-    hash: "039022d0783fe2c200f58e8038fbaffd1c648700f25a35290d6af7f2b20ed5e0" }];
+    hash: "039022d0783fe2c200f58e8038fbaffd1c648700f25a35290d6af7f2b20ed5e0" },
+    { email: "oana@ocmeed.com", name: "Oana Manole", role: "Referral coordinator", salt: "ihh-desk-demo-2",
+    hash: "c942c61d9ca23604ea689824926fdf1a59684339d218a50220faccab01c2af42" }];
   let session = null;
   try { session = JSON.parse(sessionStorage.getItem("referral-desk-session") || "null") } catch (e) { /* not signed in */ }
   let who = session ? { name: session.name, role: session.role } : { name: "", role: "Referral coordinator" };
@@ -138,14 +154,14 @@
   }
   function inbox() {
     const d = decisions();
-    let list = P.filter(p => ui.filter === "all" || ui.filter === "open" ? (ui.filter !== "open" || !d[p.id]) : p.fit.band === ui.filter);
+    let list = P.filter(p => ui.filter === "all" ? true : ui.filter === "open" ? !d[p.id] : ui.filter === "done" ? !!d[p.id] : p.fit.band === ui.filter && !d[p.id]);
     if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + (p.patient.admit_reason || "") + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
     const sorters = { deadline: (a, b) => (d[a.id] ? 1 : 0) - (d[b.id] ? 1 : 0) || minsLeft(a) - minsLeft(b), score: (a, b) => a.fit.score - b.fit.score, id: (a, b) => a.id.localeCompare(b.id) };
     list.sort(sorters[ui.sort]);
     const pages = P.reduce((s, p) => s + p.pages, 0);
     const decided = Object.keys(d).filter(k => byId[k]).length;
     const urgent = P.filter(p => !d[p.id] && minsLeft(p) < 30).length;
-    const lanes = LANES.filter(([k]) => ["all", "open"].includes(ui.filter) || ui.filter === k).map(([k, name, sub]) => {
+    const lanes = LANES.filter(([k]) => ["all", "open", "done"].includes(ui.filter) || ui.filter === k).map(([k, name, sub]) => {
       const items = list.filter(p => p.fit.band === k);
       return `<section class="lane ${k}"><header><i></i><div><b>${name}</b><small>${sub}</small></div><span class="num">${items.length}</span></header>
         <div class="cards">${items.map(card).join("") || `<div class="empty">Nothing here</div>`}</div></section>`;
@@ -159,7 +175,7 @@
           <div class="hot"><small class="step">[03] Decide</small><span class="num">${decided}<em>/${P.length}</em></span><small>${urgent} under 30 min left</small></div>
         </div></section>
       <div class="tools">
-        <div class="seg" role="tablist">${[["all", "All"], ["open", "Open"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
+        <div class="seg" role="tablist">${[["open", "To review"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"], ["done", "Reviewed"], ["all", "All"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
         <input class="search" id="q" type="search" placeholder="Search patient, diagnosis or rule ID" value="${esc(ui.q)}" aria-label="Search">
         <select class="sort" id="sort" aria-label="Sort">${[["deadline", "Sort: deadline"], ["score", "Sort: lowest score"], ["id", "Sort: packet ID"]].map(([k, l]) => `<option value="${k}" ${ui.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select>
         ${APP.meta.real ? `<label class="toggle"><input type="checkbox" id="ihh" ${ui.showIhh ? "checked" : ""}> show IHH decision</label>` : ""}
@@ -219,11 +235,72 @@
     if (ui.jobs.some(j => j.state === "running")) setTimeout(poll, 1500);
   }
   if (!APP.meta.artifact && location.protocol.startsWith("http") && APP.meta.real) {
-    fetch("/api/ping", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.ok) { ui.server = j; poll() } }).catch(() => {});
+    fetch("/api/ping", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.ok) { ui.server = j; poll(); mergeServer() } }).catch(() => {});
   }
   document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over") } });
   document.addEventListener("dragleave", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) d.classList.remove("over") });
   document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); upload(e.dataTransfer.files) } });
+
+  // ---------- decision record ----------
+  const KIND = { approve: "Approve", info: "Ask for info", deny: "Deny" };
+  function record(p) {
+    const h = history(p.id); if (!h.length) return "";
+    return `<section class="card record" id="record"><p class="eyebrow">Decision record · ${h.length} ${h.length === 1 ? "entry" : "entries"}</p>
+      <ol>${h.map(e => `<li class="${e.decision}"><b>Rev ${e.rev} · ${KIND[e.decision]}</b> <span>${new Date(e.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })} · ${esc(e.by || "unknown")}</span>${e.seeded ? ` <span class="tagx">demo history</span>` : ""}${e.reason ? `<div class="lbl">Reason: ${esc(e.reason)}</div>` : ""}</li>`).join("")}</ol>
+      <p class="lbl">Append-only: a revision adds an entry; the original decision is never changed or deleted.${ui.server ? " Also saved on this computer in output/decisions.jsonl." : " Saved in this browser."}</p></section>`;
+  }
+  async function mergeServer() {
+    try {
+      const rows = await (await fetch("/api/decisions", { cache: "no-store" })).json();
+      let changed = false; const next = { ...log };
+      for (const r of rows) { const { id, ...e } = r; const have = next[id] || []; if (!have.some(x => x.at === e.at)) { next[id] = [...have, e]; changed = true } }
+      if (changed) { store.set(next); render() }
+    } catch (e) { /* server has no record yet */ }
+  }
+
+  // ---------- report ----------
+  function report() {
+    const d = decisions(), done = P.filter(p => d[p.id]), open_ = P.filter(p => !d[p.id]);
+    const BANDN = { fit: "Likely fit", info: "Needs info", nofit: "Not a fit" }, AGREE = { fit: "approve", info: "info", nofit: "deny" };
+    const tally = arr => Object.entries(arr.reduce((o, k) => (o[k] = (o[k] || 0) + 1, o), {})).sort((a, b) => b[1] - a[1]);
+    const shortOf = id => { for (const p of P) { const r = p.rules.find(x => x.rule_id === id); if (r) return r.short } return "" };
+    const bars = rows => rows.length ? rows.slice(0, 8).map(([k, n]) => `<div class="rb"><span title="${esc(k)}">${esc(k)}</span><i style="width:${Math.round(100 * n / rows[0][1])}%"></i><b>${n}</b></div>`).join("") : `<p class="lbl">None.</p>`;
+    const first = id => history(id)[0];
+    const mins = done.map(p => p.received_min + (first(p.id).at - LOADED) / 60000).filter(x => x >= 0).sort((a, b) => a - b);
+    const med = mins.length ? Math.round(mins[Math.floor(mins.length / 2)]) : null, within = mins.filter(x => x <= 120).length;
+    const overrides = done.filter(p => AGREE[p.fit.band] !== first(p.id).decision);
+    const revised = P.filter(p => history(p.id).length > 1);
+    const cell = (b, k) => done.filter(p => p.fit.band === b && first(p.id).decision === k).length;
+    const quotes = P.reduce((s, p) => [s[0] + p.verification.verified, s[1] + p.verification.quotes], [0, 0]);
+    return `<section class="report">
+      <p class="eyebrow">Report · built from the ${P.length} referrals in this app</p><h1>Referral desk report</h1>
+      <p class="lbl">Figures update as decisions are made. Entries marked “demo history” were seeded for the demo.</p>
+      <div class="kpis">
+        <div><span class="num">${P.length}</span><small>referrals received</small></div>
+        <div><span class="num">${done.length}</span><small>reviewed</small></div>
+        <div><span class="num">${open_.length}</span><small>waiting for review</small></div>
+        <div><span class="num">${med == null ? "–" : med + "m"}</span><small>median time to first decision</small></div>
+        <div><span class="num">${mins.length ? within + "/" + mins.length : "–"}</span><small>answered inside 2 hours</small></div>
+        <div><span class="num">${quotes[0]}/${quotes[1]}</span><small>quotes found on their page</small></div>
+      </div>
+      <div class="rgrid">
+        <div class="card"><h2>Tool vs coordinator (first decision)</h2>
+          <table class="mx"><tr><th>Tool said</th><th>Approve</th><th>Ask for info</th><th>Deny</th></tr>
+            ${["fit", "info", "nofit"].map(b => `<tr><th>${BANDN[b]}</th>${["approve", "info", "deny"].map(k => `<td class="${AGREE[b] === k ? "agree" : cell(b, k) ? "off" : ""}">${cell(b, k)}</td>`).join("")}</tr>`).join("")}</table>
+          <p class="lbl">${done.length ? `Agreement ${done.length - overrides.length}/${done.length}.` : ""} ${overrides.length ? `Coordinator overrode the tool on: ${overrides.map(p => `<a href="#/${p.id}">${p.id}</a>`).join(", ")}. These are the cases to learn from.` : "No overrides yet."}</p></div>
+        <div class="card"><h2>Decisions and revisions</h2>
+          ${bars(tally(done.map(p => KIND[d[p.id].decision])))}
+          <p class="lbl">${revised.length ? `${revised.length} revised, original kept: ${revised.map(p => `<a href="#/${p.id}">${p.id}</a>`).join(", ")}.` : "No revisions."}</p></div>
+        <div class="card"><h2>Most common blockers</h2>${bars(tally(P.flatMap(p => p.fit.blockers)).map(([k, n]) => [`${k} · ${shortOf(k)}`, n]))}
+          <p class="lbl">Hard stops found with a verified quote. Frequent ones are worth raising with referring hospitals.</p></div>
+        <div class="card"><h2>Documents most often missing</h2>${bars(tally(P.flatMap(p => (p.documents || []).filter(x => x.present === "no").map(x => x.name))))}
+          <p class="lbl">From IHH’s DOC-1 to DOC-10 checklist. Each missing one usually means a call to the hospital.</p></div>
+        <div class="card"><h2>Form vs chart conflicts</h2>${bars(tally(P.flatMap(p => (p.conflicts || []).map(c => c.topic))))}
+          <p class="lbl">${P.filter(p => (p.conflicts || []).length).length} of ${P.length} referral forms disagreed with their own chart. The chart wins.</p></div>
+        <div class="card"><h2>Questions the packets left open</h2>${bars(tally(P.flatMap(p => p.rules.filter(r => ["unknown", "cant_tell"].includes(r.status) && r.kind !== "note").map(r => `${r.rule_id} · ${r.short}`))))}
+          <p class="lbl">Rules the packet did not answer, most frequent first.</p></div>
+      </div></section>`;
+  }
 
   // ---------- review ----------
   function chip(r) {
@@ -324,16 +401,16 @@
   }
   function decideBar(p) {
     const d = decisions()[p.id], k = ui.drawer || (d && d.decision);
-    const text = ui.drawer ? (ui.draftText ?? draft(p, ui.drawer)) : d ? d.text : "";
+    const text = ui.drawer ? (ui.draftText ?? draft(p, ui.drawer)) : d ? (d.text || draft(p, d.decision)) : "";
     return `<div class="decide"><div class="decide-in gutter">
-        <span class="lead">${d ? `Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${d.by ? ` · by ${esc(d.by)}` : ""}` :"Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
+        <span class="lead">${d ? `Decided: <b>${{ approve: "Approve", info: "Ask for info", deny: "Deny" }[d.decision]}</b> · ${new Date(d.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${d.by ? ` · by ${esc(d.by)}` : ""}${d.rev > 1 ? ` · revision ${d.rev}` : ""} · <a href="#record">record</a>` : "Your decision drafts the reply to the hospital. Nothing is sent from here."}</span>
         <button class="btn approve ${k === "approve" ? "on" : ""}" data-decide="approve">Approve</button>
         <button class="btn info ${k === "info" ? "on" : ""}" data-decide="info">Ask for info</button>
         <button class="btn deny ${k === "deny" ? "on" : ""}" data-decide="deny">Deny</button>
         <button class="btn" data-next>Next ▸</button></div>
-      ${ui.drawer ? `<div class="drawer gutter"><textarea id="reply" aria-label="Reply to hospital">${esc(text)}</textarea>
+      ${ui.drawer ? `<div class="drawer gutter">${d ? `<input id="reason" class="reason ${ui.needReason ? "need" : ""}" value="${esc(ui.reason || "")}" placeholder="Reason for the revision (required). The earlier decision stays on record." aria-label="Reason for revision">` : ""}<textarea id="reply" aria-label="Reply to hospital">${esc(text)}</textarea>
         <div class="row2"><span class="hint">Edit as needed, then copy it into your fax or email system.</span>
-          <button class="btn" data-copy>Copy reply</button><button class="btn primary" data-save>Save decision</button><button class="btn" data-cancel>Cancel</button></div></div>` : ""}</div>`;
+          <button class="btn" data-copy>Copy reply</button><button class="btn primary" data-save>${d ? "Save revision" : "Save decision"}</button><button class="btn" data-cancel>Cancel</button></div></div>` : ""}</div>`;
   }
 
   // ---------- render + routing ----------
@@ -341,10 +418,12 @@
   function render() {
     if (!session) { $("#crumb").innerHTML = ""; $("#main").innerHTML = loginView(); $("#dock").innerHTML = ""; return }
     const id = route(), p = id && byId[id];
-    $("#crumb").innerHTML = p ? `<a href="#/">Inbox</a> <span>›</span> <span>${p.id}</span>` : `<span>Inbox</span>`;
+    const rep = location.hash === "#/report";
+    $("#crumb").innerHTML = (p ? `<a href="#/">Inbox</a> <span>›</span> <span>${p.id}</span>` : rep ? `<a href="#/">Inbox</a>` : `<span>Inbox</span>`) + ` <span>·</span> ${rep ? "<span>Report</span>" : `<a href="#/report">Report</a>`}`;
+    if (rep) { $("#main").innerHTML = report(); $("#dock").innerHTML = ""; return }
     const main = $("#main");
     if (!p) { main.innerHTML = inbox(); $("#dock").innerHTML = ""; return }
-    main.innerHTML = `<div class="review ${ui.panel ? "withpanel" : ""}"><div>${review(p)}</div>${panel(p)}</div>`;
+    main.innerHTML = `<div class="review ${ui.panel ? "withpanel" : ""}"><div>${review(p)}${record(p)}</div>${panel(p)}</div>`;
     $("#dock").innerHTML = decideBar(p);
     const hit = document.getElementById("hit"); if (hit) hit.scrollIntoView({ block: "center" });
   }
@@ -371,13 +450,18 @@
       try { navigator.clipboard.writeText(ta.value).then(done, () => { ta.select(); t.textContent = "Press Ctrl+C" }) } catch (err) { ta.select(); t.textContent = "Press Ctrl+C" }
       return;
     }
-    if ("save" in t.dataset && p) { const v = { ...decisions() }; v[p.id] = { decision: ui.drawer, text: $("#reply").value, at: Date.now(), by: `${who.name} (${who.role})` }; store.set(v); ui.drawer = null; return render() }
+    if ("save" in t.dataset && p) {
+      const prior = history(p.id).length, reason = (ui.reason || "").trim();
+      if (prior && !reason) { ui.needReason = true; render(); const r = $("#reason"); if (r) r.focus(); return }
+      addEvent(p.id, { decision: ui.drawer, text: $("#reply").value, at: Date.now(), by: `${who.name} (${who.role})`, reason });
+      ui.drawer = null; ui.reason = ""; ui.needReason = false; ui.draftText = null; return render();
+    }
+    if (false) { const v = {}; store.set(v); ui.drawer = null; return render() }
     if ("next" in t.dataset && p) {
       const d = decisions(), open_ = P.filter(x => !d[x.id] && x.id !== p.id).sort((a, b) => minsLeft(a) - minsLeft(b));
       return open_.length ? open(open_[0].id) : (location.hash = "#/");
     }
     if ("theme" in t.dataset) { const r = document.documentElement, cur = r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); r.dataset.theme = cur === "dark" ? "light" : "dark"; return }
-    if ("reset" in t.dataset) { store.set({}); return render() }
     if ("who" in t.dataset) { ui.editWho = true; render(); const n = $("#who-name"); if (n) n.focus(); return }
     if ("whosave" in t.dataset) {
       who = { name: ($("#who-name").value.trim() || "Staff").slice(0, 60), role: $("#who-role").value };
@@ -389,6 +473,7 @@
   document.addEventListener("input", e => {
     if (e.target.id === "q") { ui.q = e.target.value; const pos = e.target.selectionStart; render(); const q = $("#q"); q.focus(); q.setSelectionRange(pos, pos) }
     if (e.target.id === "reply") ui.draftText = e.target.value;
+    if (e.target.id === "reason") ui.reason = e.target.value;
   });
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { ui.sort = e.target.value; render() }
@@ -399,6 +484,6 @@
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }
   });
   addEventListener("hashchange", () => { ui.panel = null; ui.drawer = null; render(); scrollTo(0, 0) });
-  setInterval(() => { if (!document.activeElement || !["q", "reply", "l-email", "l-pass", "who-name"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
+  setInterval(() => { if (!document.activeElement || !["q", "reply", "reason", "l-email", "l-pass", "who-name"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
   render();
 })();

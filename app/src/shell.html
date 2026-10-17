@@ -7,7 +7,6 @@
   <a class="logo" href="#/" style="text-decoration:none"><b>OCMEE</b><i>DESIGN</i><span>Referral Desk for Illumination Health + Home</span></a>
   <nav class="crumb" id="crumb"></nav><span class="sp"></span>
   <span class="tag" id="mode"></span>
-  <button class="iconbtn" data-reset title="Clear the decisions saved in this browser">Reset decisions</button>
   <button class="iconbtn" data-theme title="Switch light or dark">◐ Theme</button>
 </div></header>
 <div class="notice gutter" id="notice"></div>
@@ -16,7 +15,7 @@
 <!--DATA-->
 <script>
   (function () { var m = (window.APP && window.APP.meta) || {}; var t = document.getElementById("mode");
-    t.textContent = m.real ? "Real packets · local only" : "Fictional demo data"; if (m.real) t.classList.add("real");
+    if (m.real) { t.textContent = "Real packets · local only"; t.classList.add("real") } else t.remove();
     if (m.banner) document.getElementById("notice").innerHTML = "<div>" + m.banner + "</div>"; })();
 </script>
 <!--SCRIPT-->

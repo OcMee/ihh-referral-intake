@@ -346,6 +346,10 @@ class Handler(SimpleHTTPRequestHandler):
             return super().do_GET()
         if path == "/api/ping":
             return self.send_json({"ok": True, "dry_run": DRY, "email": INTAKE_EMAIL, "key": DRY or bool(os.environ.get("ANTHROPIC_API_KEY"))})
+        if path == "/api/decisions":  # append-only decision record on disk
+            f = OUT / "decisions.jsonl"
+            rows = [json.loads(x) for x in f.read_text().splitlines() if x.strip()] if f.exists() else []
+            return self.send_json(rows)
         if path == "/api/jobs":
             return self.send_json([{k: v for k, v in j.items() if k != "log"} | {"log": j["log"][-6:]} for j in JOBS.values()])
         if re.search(r"(^|/)\.(env|git)", path):
@@ -360,6 +364,16 @@ class Handler(SimpleHTTPRequestHandler):
         if not 0 < n <= limit:
             return self.send_json({"error": "File missing or over 60 MB"}, 400)
         body = self.rfile.read(n)
+        if path == "/api/decisions":
+            try:
+                e = json.loads(body)
+                assert re.fullmatch(r"[A-Z]\d\d", str(e.get("id"))) and e.get("decision") in ("approve", "info", "deny")
+            except (ValueError, AssertionError):
+                return self.send_json({"error": "bad decision record"}, 400)
+            OUT.mkdir(exist_ok=True)
+            with ACCEPT, open(OUT / "decisions.jsonl", "a", encoding="utf-8") as f:  # append only, never rewritten
+                f.write(json.dumps(e) + "\n")
+            return self.send_json({"ok": True})
         if path == "/api/upload":
             name = Path(unquote(self.headers.get("X-Filename") or "upload.pdf")).name[:120]
             try:

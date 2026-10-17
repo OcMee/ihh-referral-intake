@@ -364,3 +364,21 @@ main { padding-block-end: 150px }
 .hero2, .hero2 h1 { color: #ffffff } .hero2 .lede { color: #e6e6e6 }
 .pipe > div:first-child { background: linear-gradient(135deg, #ff860f, #faac23) }
 .lbl.fict { margin: 0 0 8px; padding: 6px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn) }
+
+/* decision record + report */
+.record ol { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 8px }
+.record li { border-left: 3px solid var(--line-strong); padding: 6px 10px; background: var(--surface-2); border-radius: 6px }
+.record li.approve { border-left-color: var(--ok) } .record li.deny { border-left-color: var(--bad) } .record li.info { border-left-color: var(--warn) }
+.record li span { color: var(--mute); font-size: 13px }
+.drawer .reason { width: 100%; font: inherit; padding: 10px; border-radius: 10px; border: 1px solid var(--line-strong); margin-bottom: 8px; background: var(--surface); color: var(--ink) }
+.drawer .reason.need { border: 2px solid var(--bad) }
+.report h1 { margin: 4px 0 6px }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0 }
+.kpis > div { background: var(--shade); color: #fff; border-radius: 14px; padding: 14px 16px; display: grid }
+.kpis .num { font-size: 30px; font-weight: 600; color: #faac23 } .kpis small { color: #e6e6e6 }
+.rgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px }
+.rgrid .card { padding: 16px } .rgrid h2 { font-size: 16px; margin: 0 0 10px }
+.rb { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 36px; gap: 8px; align-items: center; font-size: 13px; margin: 4px 0 }
+.rb span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap } .rb i { height: 10px; border-radius: 99px; background: var(--brand-orange); display: block } .rb b { text-align: right }
+.mx { width: 100%; border-collapse: collapse; font-size: 14px } .mx th, .mx td { border: 1px solid var(--line); padding: 6px 8px; text-align: center } .mx th:first-child { text-align: left }
+.mx td.agree { background: var(--ok-bg); font-weight: 700 } .mx td.off { background: var(--bad-bg); font-weight: 700 }
