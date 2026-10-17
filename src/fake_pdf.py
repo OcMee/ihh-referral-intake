@@ -25,7 +25,7 @@ def packets():
     import make_demo
     for c, p in ((make_demo.c1, make_demo.p1), (make_demo.c2, make_demo.p2), (make_demo.c3, make_demo.p3)):
         yield c["packet_id"], p
-    for f in sorted((REPO / "demo/fictional").glob("F0?/F0?.pages.json")):
+    for f in sorted((REPO / "demo/fictional").glob("F[0-9][0-9]/F[0-9][0-9].pages.json")):
         yield f.stem.split(".")[0], json.loads(f.read_text())["pages"]
 
 

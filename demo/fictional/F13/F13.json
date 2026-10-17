@@ -1,0 +1,829 @@
+{
+  "packet_id": "F13",
+  "patient": {
+    "summary": "45M, closed R ankle trimalleolar fracture after a fall, s/p ORIF, non-weight-bearing, unhoused",
+    "age": "45",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (vehicle lot / day shelter), no fixed address",
+    "admit_reason": "Broken right ankle after tripping on a curb; surgery to fix it",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mobility",
+      "text": "Non-weight-bearing on the right leg but walks 150 ft and transfers independently with a walker.",
+      "pages": [
+        8
+      ],
+      "quote": "Patient walks 150 ft and transfers independently with walker while maintaining NWB.",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "OT: independent with all ADLs, including seated showering and toileting.",
+      "pages": [
+        9
+      ],
+      "quote": "Patient independent with all ADLs including showering and toileting.",
+      "quote_page": 9
+    },
+    {
+      "label": "Wounds",
+      "text": "Staple removal at ortho clinic 07/26 10:30 is confirmed; no home health wound care needed.",
+      "pages": [
+        10
+      ],
+      "quote": "Staple removal: Ortho clinic 07/26/2026 10:30 (appointment confirmed with patient, card given)",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 07/12; COVID negative 07/16 08:30, about 5.5 hours before planned 14:00 discharge.",
+      "pages": [
+        12,
+        10
+      ],
+      "quote": "07/16 08:30 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 12
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Oral pain meds only, no IV access at discharge; self-administers and 30-day supply given.",
+      "pages": [
+        10,
+        13
+      ],
+      "quote": "Pain: acetaminophen and oxycodone PO PRN only. No IV medications.",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4, denies SI/HI and hallucinations, no psych history, no conservatorship or FSP.",
+      "pages": [
+        11
+      ],
+      "quote": "Denies auditory or visual hallucinations.",
+      "quote_page": 11
+    },
+    {
+      "label": "Other",
+      "text": "Outpatient PT first visit confirmed for 07/21 09:00.",
+      "pages": [
+        8
+      ],
+      "quote": "Outpatient PT referral placed; first visit scheduled 07/21/2026 09:00",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Referral form admit date 07/11 is the ED arrival; the inpatient admit on the face sheet is 07/12 01:40.",
+      "pages": [
+        2,
+        4
+      ],
+      "quote": "ED Arrival: 07/11/2026 22:15",
+      "quote_page": 4
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and non-weight-bearing on the right leg after ankle surgery.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "45 y/o M, unhoused (sleeping in a vehicle lot / day shelter)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "OT documents independence with all ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Patient independent with all ADLs including showering and toileting."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Independent seated shower on a bench and gathers own supplies.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Bathing: Independent seated shower on shower bench with cast cover; gathers own supplies using walker bag"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent toileting including hygiene; continent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Toileting: Independent, including hygiene and clothing management"
+        },
+        {
+          "page": 11,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "met",
+      "finding": "Uses a front-wheeled walker independently for transfers and gait.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transfers: sit-stand and bed-chair independent with front-wheeled walker (FWW), maintains NWB"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations are in the packet.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        },
+        {
+          "page": 9,
+          "quote": "OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 150 ft independently with walker, one rest break.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Gait: 150 ft with FWW, hop-to pattern, independent, maintains NWB RLE; 1 standing rest break"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; normal mood and affect.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No psychiatric history."
+        },
+        {
+          "page": 6,
+          "quote": "Psych: calm, appropriate, normal mood and affect"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Social work documents denial of SI/HI.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Pt AOx4, pleasant, future-oriented. Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Social work documents no hallucinations.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with intoxication; serum alcohol none detected.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Serum EtOH in ED: none detected."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "Social work documents no conservatorship or FSP history.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral meds and states dose and schedule; no insulin.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Self-administering oral meds with RN check; correctly states dose and schedule for each med."
+        },
+        {
+          "page": 13,
+          "quote": "All medications self-administered by patient."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, nursing and social work notes.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: NAD, AOx4"
+        },
+        {
+          "page": 11,
+          "quote": "Pt AOx4, calm and cooperative with care."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative; no aggression documented.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Pt AOx4, calm and cooperative with care."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form and social work: not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No IV access at discharge (PIV removed before d/c)."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "Nursing documents no isolation.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 07/12.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "07/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID rapid antigen negative 07/16 08:30; planned discharge 07/16 ~14:00, about 5.5 hours later.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "07/16 08:30 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 10,
+          "quote": "Medically stable for discharge to recuperative care today ~14:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile, HR 74-82, BP normal.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "07/16 07:45 | 98.2 | 78 | 124/76 | 16 | 98% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No antibiotics at discharge.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (pre-op CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV medications.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pain: acetaminophen and oxycodone PO PRN only. No IV medications."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "met",
+      "finding": "Incision needs no dressing change before the clinic visit and ortho states no home health wound care needed.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "no dressing change needed until clinic; no home health wound care needed"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "met",
+      "finding": "Staple removal appointment confirmed before discharge.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Staple removal: Ortho clinic 07/26/2026 10:30 (appointment confirmed with patient, card given)"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "not_applicable",
+      "finding": "No skin grafting; clean surgical incisions.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-E1",
+      "status": "met",
+      "finding": "Closed fracture.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Findings: closed trimalleolar fracture, anatomic reduction achieved"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E2",
+      "status": "met",
+      "finding": "Outpatient PT first visit scheduled and confirmed.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Outpatient PT referral placed; first visit scheduled 07/21/2026 09:00"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E3",
+      "status": "not_applicable",
+      "finding": "No rheumatoid arthritis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-E4",
+      "status": "not_applicable",
+      "finding": "No joint replacement.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X1",
+      "status": "met",
+      "finding": "Fracture is closed, not open.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "displaced trimalleolar fracture, closed"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X2",
+      "status": "not_applicable",
+      "finding": "No bone infection described; incisions clean without erythema or drainage.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X3",
+      "status": "met",
+      "finding": "Internal hardware only, no external fixator.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Implants: internal hardware only. No external fixator."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X4",
+      "status": "not_applicable",
+      "finding": "No amputation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X5",
+      "status": "not_applicable",
+      "finding": "No facial trauma.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Patient independent with all ADLs including showering and toileting."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Transfers and walks 150 ft with walker independently (superseded by MOB-3/MOB-4).",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Patient walks 150 ft and transfers independently with walker while maintaining NWB."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active MRSA, TB or C. diff; MRSA negative, CXR clear.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "07/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use; UDS negative.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies EtOH or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender per patient (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Pt AOx4, calm and cooperative with care."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Admit date",
+      "rule_ids": [],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Admit Date: 07/11/2026"
+        },
+        {
+          "page": 4,
+          "quote": "Admit Date/Time: 07/12/2026 01:40"
+        }
+      ],
+      "note": "Form says admitted 07/11, face sheet says inpatient admit 07/12 01:40 with ED arrival 07/11 22:15. Chart wins: the form date is the ED arrival. No rule depends on it."
+    }
+  ],
+  "questions_for_hospital": [
+    "Can you confirm the patient will arrive at our site on 07/16, so the 07/16 08:30 COVID test is within 24 hours?",
+    "Could the referral form admit date be corrected to the inpatient admit date (07/12/2026), or noted as the ED arrival date?"
+  ],
+  "claude_fit": {
+    "score": 92,
+    "recommendation": "approve",
+    "reason": "Meets ADL-1 to ADL-3, MOB-1 and MOB-3 with a walker, COG-1/COG-2, OTH-4, INF-1 and INF-2, and the conditional INT-E5 (staple removal) and MSK-E2 (outpatient PT) arrangements are confirmed. The only issue is the form's admit date, which is the ED arrival, not an eligibility problem."
+  }
+}

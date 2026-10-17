@@ -1,0 +1,132 @@
+{
+  "packet_id": "F10",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Lakeshore General Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Carla Mendes, RN CM\nPhone: 555-0150\nDate: 06/12/2026 08:45\nPages (including cover): 14\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n58M T2DM admitted for hyperglycemia, now controlled on oral agents.\nReady for d/c 06/12 PM. PT/OT, wound, SW notes and glucose log attached.\nPlease call CM with questions.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Lakeshore General Hospital (fictional)\nDepartment/Floor: 6 East Medical\nSocial Worker/Case Manager/Nurse: Carla Mendes, RN CM\nPhone: 555-0150\nEmail: cmendes@lakeshoregen.example\nNursing Station: 555-0151\nAuthorized By: Dr. N. Achterberg\n## Patient Information\nName: Daniel Doe\nMRN: LG-0572214\nBirth Date: 02/09/1968\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Hyperglycemia, uncontrolled T2DM\nAdmit Date: 06/08/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [X] No [ ]\nPPD/TB Test or Chest X-Ray: Date: 06/08/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [X] No [ ]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [X] No [ ]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [X] No [ ]  cane\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Daniel Doe\nDOB: 02/09/1968\nMember ID: OCH-61842097\n## Referring Provider\nFacility: Lakeshore General Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Type 2 diabetes mellitus with hyperglycemia\nICD-10: E11.65\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 06/12/2026\nRequested Days: 14\nSecondary Dx: Type 2 DM with foot ulcer (E11.621); non-pressure chronic ulcer R foot, limited to breakdown of skin (L97.511)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Lakeshore General Hospital (fictional) - PATIENT FACE SHEET\nPatient: Daniel Doe\nMRN: LG-0572214\nAccount #: 99572214\nDOB: 02/09/1968\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 06/08/2026 19:05 (ED arrival 06/08/2026 14:20)\nAdmit Type: Inpatient\nUnit/Bed: 6E-621A\nAttending: Nora Achterberg, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 06/08/2026\nAttending: Nora Achterberg, MD (Hospital Medicine)\n## Chief Complaint\n\"My sugar has been over 400 on the shelter meter\" x 1 week, polyuria, thirst\n## HPI\n58 y/o M with T2DM (dx 2019) experiencing homelessness (sleeps at Example Shelter, Santa Ana, x 8 months) presents with 1 week of polyuria, polydipsia and fatigue after running out of metformin 3 weeks ago. Also reports a sore on the bottom of his right foot x 3 weeks, painless, no drainage, no fever. In ED: POC glucose 438, anion gap 11, serum beta-hydroxybutyrate 0.3 (negative). Not in DKA. No HHS (serum osm 296).\n## PMH\n- T2DM, last A1c unknown prior to this admission\n- Peripheral neuropathy, bilateral feet\n- Hyperlipidemia\n## PSH\n- None\n## Social History\nHomeless x 8 months, staying at shelter. Former smoker (quit 2020). Denies alcohol or drug use.\n## Allergies\nSulfa (hives)\n## Home Medications\n- Metformin 1000 mg PO BID (not taking x 3 weeks)\n- Atorvastatin 20 mg PO daily\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 98.9F, HR 96, BP 132/80, RR 16, SpO2 98% RA\nGen: NAD, AOx4\nCV: RRR, no m/r/g\nLungs: CTAB\nSkin/Feet: R plantar 1st metatarsal head ulcer approx 1.6 x 1.3 cm, shallow, clean base, no erythema, no warmth, no drainage, no odor. Probe-to-bone negative. Decreased monofilament sensation bilat. DP pulses 2+ bilat.\nPsych: calm, cooperative, linear thought process\n## Assessment / Plan\n58M with uncontrolled T2DM with hyperglycemia without DKA, and non-infected neuropathic R plantar foot ulcer.\n1. Hyperglycemia - IVF, resume metformin, add sitagliptin; POC glucose AC/HS. No insulin planned unless persistent >300.\n2. R foot ulcer, non-infected - X-ray R foot to r/o osteomyelitis; wound care consult; offloading post-op shoe; no antibiotics indicated\n3. MRSA nares PCR per protocol\n4. Dispo - CM consult; homeless, anticipate recuperative care referral\nDVT ppx: enoxaparin 40 mg SC daily\nIsolation: None - standard precautions\nCode status: Full\nElectronically signed: Nora Achterberg, MD 06/08/2026 21:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "wound_note",
+      "title": "Wound care nurse note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## WOUND CARE CONSULT NOTE\nDate: 06/11/2026 10:20\nWound #1: R plantar foot, 1st metatarsal head, diabetic neuropathic ulcer, Wagner grade 1\nSize: 1.4 cm L x 1.1 cm W x 0.2 cm D (improved from 1.6 x 1.3 on 06/09)\nWound bed: 100% pink granulation. Drainage: scant serous. Odor: none\nPeriwound: callus trimmed, no erythema, no induration, no signs of infection\n## Treatment\n- Cleanse with NS, apply silver alginate, cover with bordered foam dressing\n- Change dressing every other day and PRN; last changed 06/11/2026 AM\n- Offloading: post-op shoe R foot at all times when walking\n## Education\nPt return-demonstrated dressing change independently x2 and daily foot self-inspection with mirror.\n## Recommendation\nHome health RN wound check 3x/week (to match every-other-day dressing changes). Podiatry follow-up in 1-2 weeks.\nSigned: G. Ilunga, RN CWOCN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 06/12/2026 07:30\nS: Feels well, thirst resolved. Walking halls with cane. No foot pain.\nO: T 98.2F HR 78 BP 124/76 RR 16 SpO2 98% RA\nGlucose 118-152 over last 48h on metformin + sitagliptin. No hypoglycemia this admission. No insulin given this admission.\nR foot X-ray 06/09: no osseous erosion, no osteomyelitis, no gas.\nR foot ulcer improving per wound RN, no signs of infection.\nA1c 9.6% (06/09).\nA/P:\n- T2DM with hyperglycemia, now controlled on oral agents. Continue metformin 1000 mg BID + sitagliptin 100 mg daily\n- R plantar diabetic foot ulcer, non-infected, healing - dressing every other day, home health wound RN, podiatry f/u\n- Medically stable for d/c to recuperative care today\nSigned: Nora Achterberg, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Case management and social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT / SOCIAL WORK NOTE\nDate: 06/12/2026 09:10\nPt AOx4, pleasant and cooperative throughout stay, no behavioral concerns per nursing.\nPsychosocial screen: denies depression. Denies suicidal ideation. Denies homicidal ideation. No hallucinations reported or observed. No psychiatric history. No history of conservatorship or FSP.\nSubstance use: denies alcohol and drug use; no withdrawal signs.\nPt agreeable to recuperative care.\n## Arrangements\nHome health referral accepted by Bayside Home Health (fictional), 555-0156; RN start of care visit scheduled 06/13/2026 for wound check and dressing change, then 3x/week.\nPodiatry appointment: Lakeshore Podiatry Clinic (fictional) 06/22/2026 at 10:00 (confirmed).\nPCP follow-up: Lakeshore Community Clinic (fictional) 06/18/2026 at 14:30 (confirmed) for diabetes.\nSigned: Carla Mendes, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 06/10/2026 13:00\nDx: R plantar foot ulcer, peripheral neuropathy\n## Prior Level of Function\nIndependent ambulation, used a single-point cane outdoors for the past year.\n## Assessment\nBed mobility: Independent\nSit<>stand: Independent\nTransfers: Independent\nGait: 150 ft with single-point cane in R post-op shoe, modified independent, no rest breaks, steady\nStairs: 6 steps with rail, modified independent\nBalance: static good, dynamic good-\n## Plan / Recommendation\nSafe for d/c to recuperative care with own cane and post-op shoe. Uses cane independently. No PT follow-up needs.\nSigned: H. Varga, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 06/10/2026 15:15\n## ADLs\nGrooming: Independent\nUB dressing: Independent\nLB dressing: Independent, dons post-op shoe independently\nToileting: Independent\nShower: Independent seated on shower bench, keeps R foot dressing dry with cast cover; gathers own supplies\nCognition: AOx4, follows multi-step commands, manages own meds with pill organizer\n## Recommendation\nD/c to recuperative care. No further OT needs.\nSigned: P. Okonkwo, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "vitals",
+      "title": "Glucose log and vital signs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## POINT-OF-CARE GLUCOSE - LAST 5 CONSECUTIVE\nDate/Time | Glucose (mg/dL) | Insulin given\n06/10 21:00 | 214 | none\n06/11 07:00 | 176 | none\n06/11 11:30 | 152 | none\n06/11 21:00 | 141 | none\n06/12 07:00 | 118 | none\nNo hypoglycemia this admission.\nPt checks own glucose with glucometer independently (teach-back 06/10, RN T. Lam).\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n06/11 08:00 | 98.4 | 82 | 128/78 | 16 | 98% | RA\n06/11 12:00 | 98.6 | 80 | 126/78 | 16 | 97% | RA\n06/11 20:00 | 98.3 | 76 | 122/74 | 16 | 98% | RA\n06/12 00:00 | 98.0 | 74 | 120/72 | 14 | 98% | RA\n06/12 07:30 | 98.2 | 78 | 124/76 | 16 | 98% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "labs",
+      "title": "Laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABORATORY RESULTS\nCollected | Test | Result | Ref\n06/08 14:40 | Glucose | 438 H | 70-99 mg/dL\n06/08 14:40 | Anion gap | 11 | 7-15\n06/08 14:40 | Beta-hydroxybutyrate | 0.3 | <0.6 mmol/L\n06/08 14:40 | WBC | 8.2 | 4.0-11.0 K/uL\n06/09 05:00 | Hemoglobin A1c | 9.6 H | <5.7 %\n06/11 05:00 | WBC | 7.4 | 4.0-11.0 K/uL\n06/11 05:00 | Creatinine | 0.9 | 0.7-1.3 mg/dL\n06/11 05:00 | CRP | 0.6 | <1.0 mg/dL\n## MICROBIOLOGY\n06/09 06:00 MRSA nares PCR: NEGATIVE\n06/12 06:15 SARS-CoV-2 rapid antigen: NEGATIVE\nNo wound culture sent (ulcer not clinically infected).\n## IMAGING\n06/08 CXR PA/Lat: No acute cardiopulmonary process\n06/09 R foot X-ray 3 views: No osteomyelitis. Soft tissue defect plantar 1st MT head.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 14,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION RECONCILIATION\nPatient: Daniel Doe  MRN: LG-0572214\n## Continue / Resume\n- Metformin 1000 mg PO twice daily with meals\n- Atorvastatin 20 mg PO daily\n## New Medications\n- Sitagliptin 100 mg PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n## Wound Supplies\n- Silver alginate, bordered foam dressings (10 count), NS, cast cover\n## DME\n- R post-op shoe (issued); own single-point cane\n## Stopped\n- Enoxaparin (inpatient only)\nNo insulin at discharge. No antibiotics.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\nReviewed with patient by: S. Iyer, PharmD 06/12/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

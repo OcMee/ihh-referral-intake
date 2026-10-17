@@ -1,0 +1,10 @@
+{
+  "packet_id": "F14",
+  "intended": "needs_info",
+  "why": "Healing abdominal wall abscess on oral antibiotics (INT-E1) but INF-1 is unknown (MRSA screen ordered, no result), INF-2 has no COVID swab, OTH-4 isolation is not stated, and INT-E2 home health is not yet accepted.",
+  "traps": [
+    "Referral form comment says 'MRSA: negative' but no MRSA lab result is in the packet (only 'MRSA nares screen ordered').",
+    "Wound culture grew Staph aureus with susceptibilities pending, so MRSA is not ruled out.",
+    "Referral form says Home Health Ordered: No, but case management sent a home health wound check referral that is awaiting acceptance."
+  ]
+}

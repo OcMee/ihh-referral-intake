@@ -1,0 +1,123 @@
+{
+  "packet_id": "F20",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Silver Mesa General Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Gary Nwosu, RN CM\nPhone: 555-0161\nDate: 10/06/2026 10:20\nPages (including cover): 13\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n76F admitted with E. coli UTI and delirium, delirium resolved. Now on oral antibiotics.\nCalAIM authorization submitted to plan 10/05, pending; will forward when received.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Silver Mesa General Hospital (fictional)\nDepartment/Floor: 3 North Medicine\nSocial Worker/Case Manager/Nurse: Gary Nwosu, RN CM\nPhone: 555-0161\nEmail: gnwosu@silvermesa.example\nNursing Station: 555-0162\nAuthorized By: Dr. L. Moreau\n## Patient Information\nName: Dolores Doe\nMRN: SM-2290415\nBirth Date: 11/30/1949\nGender: F\nEthnicity: Hispanic/Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal/Medicare\nPreferred Language: English, Spanish\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: UTI with acute metabolic encephalopathy (delirium)\nAdmit Date: 10/02/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/02/2026  Result: CXR neg\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  UTI - PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: None\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nPt AOx4, pleasant. Delirium resolved. Independent.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Silver Mesa General Hospital (fictional) - PATIENT FACE SHEET\nPatient: Dolores Doe\nMRN: SM-2290415\nAccount #: 99290415\nDOB: 11/30/1949\nSex: Female\nPreferred Language: Spanish\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/02/2026 13:15 (ED arrival 10/02/2026 08:50)\nAdmit Type: Inpatient\nUnit/Bed: 3N-318\nAttending: Louise Moreau, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## Alerts\nFall risk: YES\nDelirium precautions: YES (added 10/02/2026)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 10/02/2026\n## CC\nConfusion, fever\n## HPI\n76 y/o F, unhoused (staying at a church parking lot shelter program), brought in by shelter staff for 2 days of new confusion, fever and urinary frequency. Shelter staff report she is usually \"sharp\" and manages her own pill box. In ED T 101.4F, disoriented to place and time, UA grossly positive.\n## PMH\n- Hypertension\n- Hyperlipidemia\n- Osteoarthritis of knees\n- No prior diagnosis of dementia\n## Meds PTA (per shelter pill box)\n- Amlodipine 5 mg daily\n- Atorvastatin 20 mg daily\n## Allergies\nSulfa (rash)\n## Social\nNever smoker. No alcohol or drugs. No family contact listed.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 101.4F HR 104 BP 142/76 RR 18 SpO2 97% RA\nDrowsy, oriented to person only, inattentive (CAM positive). Suprapubic tenderness. No focal neuro deficit.\n## Data\nWBC 14.1 H, Cr 1.3 (baseline unknown), Na 133, Glu 112\nUA: + leukocyte esterase, + nitrite, >50 WBC\nCT head: no acute abnormality, mild age-appropriate atrophy\n## Assessment/Plan\n1. Acute cystitis/pyelonephritis with sepsis physiology - ceftriaxone 1 g IV daily, urine culture pending, IV fluids\n2. Acute metabolic encephalopathy (delirium) secondary to infection - delirium precautions, avoid sedatives, reorient\n3. HTN - hold amlodipine while on fluids\n4. Dispo - PT/OT when appropriate\nSigned: Louise Moreau, MD 10/02/2026 15:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "nursing_note",
+      "title": "Nursing note 10/04",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/04/2026 07:00 (night shift 10/03-10/04)\nPt pulled at PIV x1 around 01:00, redirected easily, calm, no aggression. Did not use call light; incontinent of urine x1 at 02:30, brief changed by CNA.\n## NURSING SHIFT NOTE\nDate: 10/04/2026 19:00 (day shift)\nPt AOx3 (person, place, situation); unable to state month or year.\nAfebrile. Ambulated to bathroom with RN standby. Ate 75% of meals.\nSigned: H. Castellanos, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "nursing_note",
+      "title": "Nursing note 10/05",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/05/2026 19:00 (day shift)\nPt AOx4 this shift. Pleasant, conversant.\nPt needed reminders at 09:00 and 13:00 to take scheduled meds; meds administered by RN.\nAmbulated in hallway with walker. Voiding in bathroom.\nSigned: M. Ferreira, RN\n## NURSING SHIFT NOTE\nDate: 10/06/2026 06:00 (night shift 10/05-10/06)\nPt woke at 03:00 and asked where she was; reoriented, went back to sleep. No agitation.\nSigned: K. Obi, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/05/2026 11:00\nPLOF (per shelter staff): independent ambulation, no device\nBed mobility: modified independent with rail\nTransfers: sit<>stand modified independent with FWW\nGait: 180 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break\nBalance: fair, mild unsteadiness without device\nRecommendation: FWW for community distances. No further acute PT needs. Discharge with FWW.\nSigned: S. Haddad, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 10/05/2026 14:30\nGrooming: independent seated at sink\nUB dressing: independent\nLB dressing: independent with extra time\nToilet transfer: modified independent with grab bar\nToileting hygiene: not observed this session\nShower: not assessed; pt declined, bed bath by CNA this AM\nMedication management: not assessed\nCognition: alert, follows 2-step commands, slowed processing; formal cognitive screen deferred until delirium fully clears\nRecommendation: re-assess shower and medication management before discharge.\nSigned: P. Lindgren, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 10/06/2026 08:15\nS: Feels \"much better.\" Eating well. Denies dysuria.\nO: T 98.1F HR 80 BP 134/78 RR 16 SpO2 97% RA. Alert, conversant, attention improved. Intermittent nighttime disorientation per nursing.\nUrine cx 10/02: E. coli, pan-sensitive except ampicillin.\nA/P:\n1. E. coli UTI - afebrile since 10/03; ceftriaxone 10/02-10/04, now cefpodoxime 200 mg PO BID through 10/09\n2. Delirium - resolving, not fully resolved; no psychiatric history; no SI. Outpatient cognitive screening once recovered.\n3. HTN - amlodipine resumed 10/05\nMedically stable for discharge. CM pursuing recuperative care.\nSigned: Louise Moreau, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "social_work",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 10/05/2026 16:00\nPt unhoused, staying at church shelter program, cannot return there while recovering (no daytime access).\nPt agreeable to recuperative care. No family involved. No conservatorship on file. No history of FSP per pt.\nShelter staff state pt managed her own pill box before admission.\nSigned: Gary Nwosu, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/05 08:00 | 98.4 | 84 | 138/80 | 16 | 97% | RA\n10/05 16:00 | 98.6 | 82 | 136/78 | 16 | 96% | RA\n10/05 23:00 | 98.2 | 78 | 130/74 | 16 | 97% | RA\n10/06 04:00 | 98.0 | 76 | 128/74 | 16 | 97% | RA\n10/06 08:15 | 98.1 | 80 | 134/78 | 16 | 97% | RA\n## LABS\n10/02 | WBC 14.1 H | Hgb 12.2 | Plt 240 | Cr 1.3 H | Na 133 L | Glu 112\n10/05 | WBC 7.9 | Cr 0.9 | Na 137 | K 4.1\n10/02 Urine cx: E. coli >100,000 CFU, pan-sensitive except ampicillin\n10/02 Blood cx x2: no growth at 72 hours\n10/02 MRSA nares PCR: Negative\n10/06 05:30 SARS-CoV-2 rapid antigen: Negative\n10/02 CXR: no acute disease\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST (DRAFT)\nPatient: Dolores Doe  MRN: SM-2290415\n- Cefpodoxime 200 mg PO twice daily through 10/09/2026\n- Amlodipine 5 mg PO daily\n- Atorvastatin 20 mg PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain\nDME: front-wheeled walker (ordered)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

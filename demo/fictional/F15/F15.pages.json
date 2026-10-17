@@ -1,0 +1,114 @@
+{
+  "packet_id": "F15",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Marigold Canyon Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Denise Park, RN CM\nPhone: 555-0192\nDate: 09/09/2026 13:30\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n61M admitted with colitis, improving on oral medication.\nIndependent, AOx4. Requesting d/c 09/10/2026.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Marigold Canyon Hospital (fictional)\nDepartment/Floor: 5 West Medical\nSocial Worker/Case Manager/Nurse: Denise Park, RN CM\nPhone: 555-0192\nEmail: dpark@marigoldcanyon.example\nNursing Station: 555-0193\nAuthorized By: Dr. V. Shah\n## Patient Information\nName: Walter Doe\nMRN: MC-2265098\nBirth Date: 11/27/1964\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Colitis / diarrhea - improving\nAdmit Date: 09/05/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/05/2026  Result: CXR negative\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nNo infections requiring isolation.\nPt independent, walks without device.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Walter Doe\nDOB: 11/27/1964\nMember ID: OCH-71502388\n## Referring Provider\nFacility: Marigold Canyon Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Enterocolitis due to Clostridioides difficile\nICD-10: A04.72\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/10/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Marigold Canyon Hospital (fictional) - PATIENT FACE SHEET\nPatient: Walter Doe\nMRN: MC-2265098\nAccount #: 99265098\nDOB: 11/27/1964\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/05/2026 11:45\nAdmit Type: Inpatient\nUnit/Bed: 5W-507\nAttending: Vikram Shah, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## Isolation\nIsolation status: CONTACT ENTERIC PRECAUTIONS (C. difficile) - ordered 09/05/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 09/05/2026 13:00\n## CC\nWatery diarrhea x 5 days, abdominal cramping\n## HPI\n61 y/o M, unhoused (sleeping at a bus shelter, uses day center showers), completed 10-day course of clindamycin for a dental abscess ending ~1 week ago. Now with 8-10 watery stools per day, lower abdominal cramping, low-grade fever, poor PO intake, lightheaded on standing. No blood in stool.\nED: T 100.6F, HR 108, BP 102/64, WBC 16.8, Cr 1.4 (baseline unknown).\n## PMH\n- HTN (not on meds)\n- Dental abscess 08/2026\n## Meds PTA\nClindamycin (completed)\n## Allergies\nNKDA\n## Social\nUnhoused x 3 years. Former smoker. Denies EtOH or drugs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nGen: tired, dry mucous membranes, AOx4\nAbd: soft, mild diffuse lower abdominal tenderness, no rebound, no distension, active bowel sounds\n## Data\nC. difficile PCR: POSITIVE. C. difficile toxin EIA: POSITIVE.\nCT A/P: mild colonic wall thickening consistent with colitis, no megacolon, no perforation\n## Assessment/Plan\n1. C. difficile infection, non-severe to moderate (WBC 16.8, Cr 1.4) after recent clindamycin\n- Oral vancomycin 125 mg PO four times daily x 10 days\n- CONTACT ENTERIC PRECAUTIONS - soap and water hand hygiene, dedicated bathroom\n2. AKI due to dehydration - IV fluids\n3. Dispo: unhoused, CM consult\nSigned: Vikram Shah, MD 09/05/2026 14:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 09/09/2026 08:30\nS: Cramping improved. Still having loose stools, 5 in the last 24 hours, watery to mushy. Eating 75% of meals.\nO: T 98.8F HR 88 BP 118/74 RR 16 SpO2 98% RA. AOx4. Abd soft, mild LLQ tenderness.\nLabs: WBC 10.9, Cr 0.9.\nA/P: C. difficile infection, improving but ongoing diarrhea.\n- Continue oral vancomycin 125 mg QID, day 5 of 10 (through 09/14/2026)\n- Remains on contact enteric precautions. Per infection prevention, precautions continue until no diarrhea for at least 48 hours.\n- AKI resolved\nDispo: CM exploring recuperative care; pt otherwise medically improving.\nSigned: Vikram Shah, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing note and stool log",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 09/09/2026 06:30\nIsolation: Contact Enteric Precautions sign on door. Pt using dedicated bathroom.\nPt AOx4, calm and cooperative. Denies SI.\nAmbulating independently in room. Toileting independently, one episode of urgency, made it to bathroom.\nSelf-administers oral vancomycin with RN observation.\n## STOOL LOG (last 48h)\nDate/Time | Consistency (Bristol) | Initials\n09/07 22:10 | 7 watery | KL\n09/08 04:30 | 6 loose | KL\n09/08 09:15 | 7 watery | TR\n09/08 13:40 | 6 loose | TR\n09/08 19:20 | 6 loose | TR\n09/09 01:05 | 6 loose | KL\n09/09 05:50 | 7 watery | KL\nSigned: K. Lim, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "other",
+      "title": "Infection prevention note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## INFECTION PREVENTION NOTE\nDate: 09/09/2026 11:00\nOrganism: Clostridioides difficile (PCR + / toxin +), collected 09/05/2026\nIsolation status: ACTIVE - Contact Enteric Precautions\nCriteria to discontinue: no diarrhea (fewer than 3 unformed stools in 24h) for at least 48 hours. Criteria NOT met as of 09/09/2026: 5 unformed stools in last 24h.\nRecommend continued precautions for remainder of stay and notification of any receiving facility.\nSigned: M. Ortega, RN, CIC (Infection Prevention)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 09/07/2026 (in isolation room / hallway with precautions)\nBed mobility: Independent\nTransfers: Independent\nGait: 300 ft without assistive device, independent, steady\nStairs: not tested\n## Recommendation\nNo skilled PT needs. No DME.\nSigned: E. Haas, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/07 20:00 | 99.0 | 92 | 116/72 | 16 | 98% | RA\n09/08 08:00 | 98.7 | 90 | 114/70 | 16 | 98% | RA\n09/08 16:00 | 98.9 | 88 | 120/76 | 16 | 97% | RA\n09/09 00:00 | 98.6 | 86 | 118/72 | 16 | 98% | RA\n09/09 08:30 | 98.8 | 88 | 118/74 | 16 | 98% | RA\n## LABS\n09/05 | WBC 16.8 H | Hgb 13.2 | Plt 301 | Na 134 L | K 3.3 L | Cr 1.4 H | Lactate 1.6\n09/09 | WBC 10.9 H | Hgb 12.7 | Na 138 | K 3.9 | Cr 0.9\n## MICRO\n09/05 C. difficile PCR: POSITIVE\n09/05 C. difficile toxin EIA: POSITIVE\n09/05 MRSA nares PCR: Negative\n09/09 07:00 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n09/05 CXR: no acute process\n09/05 CT A/P: colitis, no megacolon\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list (draft)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST - DRAFT\nPatient: Walter Doe  MRN: MC-2265098\n- Vancomycin 125 mg PO four times daily through 09/14/2026\n- Acetaminophen 650 mg PO every 6 hours PRN pain or fever\n## Avoid\n- Loperamide and other anti-diarrheals (C. difficile)\n## Stopped\n- IV fluids (09/08)\n## Follow up\n- PCP: Example Community Clinic (fictional) 555-0194, within 1 week of discharge\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

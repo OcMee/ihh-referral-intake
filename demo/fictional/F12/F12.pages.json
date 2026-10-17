@@ -1,0 +1,123 @@
+{
+  "packet_id": "F12",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Crest Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Denise Whitfield, RN CM\nPhone: 555-0170\nDate: 08/20/2026 14:15\nPages (including cover): 13\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n41M R forearm cellulitis, improved, on PO antibiotics.\nMedically ready for d/c. Requesting recuperative care.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Canyon Crest Hospital (fictional)\nDepartment/Floor: 3 West Med-Surg\nSocial Worker/Case Manager/Nurse: Denise Whitfield, RN CM\nPhone: 555-0170\nEmail: dwhitfield@canyoncrest.example\nNursing Station: 555-0171\nAuthorized By: Dr. L. Moreau\n## Patient Information\nName: Marcus Doe\nMRN: CC-0934178\nBirth Date: 05/30/1985\nGender: M\nEthnicity: Black/African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Cellulitis R forearm\nAdmit Date: 08/16/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 08/16/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  cellulitis, PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [ ] Yes [ ]\nMental Health DX: Yes [ ] No [ ]  Type: \nNon-compliant: Yes [ ] No [ ]\nCognitive Impairment: Yes [ ] No [ ]\nForgetful: Yes [ ] No [ ]\nRegistered Sex Offender: Yes [ ] No [ ]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Marcus Doe\nDOB: 05/30/1985\nMember ID: OCH-82750146\n## Referring Provider\nFacility: Canyon Crest Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Cellulitis of right upper limb\nICD-10: L03.113\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 08/20/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Crest Hospital (fictional) - PATIENT FACE SHEET\nPatient: Marcus Doe\nMRN: CC-0934178\nAccount #: 99934178\nDOB: 05/30/1985\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 08/16/2026 18:30\nAdmit Type: Inpatient\nUnit/Bed: 3W-316B\nAttending: Lucien Moreau, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 08/16/2026\nAttending: Lucien Moreau, MD (Hospital Medicine)\n## CC\nRight forearm redness and swelling x 3 days\n## HPI\n41 y/o M experiencing homelessness (sleeps at a bus shelter near Example Ave) presents with 3 days of spreading erythema and pain of the R forearm after a scratch while moving pallets. Fever at home per pt. Denies IVDU. In ED: T 100.9F, HR 104, WBC 13.6. Bedside US: no abscess.\n## PMH\n- Depression (per pt, untreated x 2 years)\n- Asthma, mild intermittent\n## Meds PTA\n- None\n## Allergies\nNKDA\n## Social\nHomeless x 1 year after job loss. Tobacco none. EtOH: 2-3 beers on weekends, last drink 5 days ago. Denies drugs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 100.6F HR 100 BP 130/82 RR 18 SpO2 98% RA\nGen: NAD, AOx4\nSkin: R volar forearm erythema 12 x 7 cm, warm, tender, no fluctuance, no lymphangitic streaking\nPsych: flat affect, limited eye contact\n## Assessment / Plan\n41M with non-purulent cellulitis R forearm.\n1. Cellulitis - cefazolin 2 g IV q8h, elevate, mark borders; blood cx x2\n2. MRSA nares PCR, COVID per protocol\n3. Depression, untreated - PHQ-9 by nursing; psychiatry consult if positive screen\n4. Dispo - CM consult; homeless, possible recuperative care\nDVT ppx: enoxaparin 40 mg SC daily\nCode: Full\nSigned: Lucien Moreau, MD 08/16/2026 22:05\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 08/17/2026 15:40\nPHQ-9 completed: score 22 (severe). Item 9 (thoughts of being better off dead or hurting yourself): \"nearly every day.\"\nColumbia (C-SSRS) screen positive - high risk.\nPt states he has been thinking about ending his life and has thought about how he would do it.\nCharge RN and Dr. Moreau notified 15:45. 1:1 sitter initiated 15:50. Room safety sweep completed, belongings searched per policy.\nPsychiatry consult ordered STAT.\nSigned: B. Osei, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "psych_consult",
+      "title": "Psychiatry consultation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PSYCHIATRY CONSULTATION\nDate: 08/17/2026 19:20\nConsultant: Ingrid Halvorsen, MD (Psychiatry)\nReason: Positive suicide screen\n## History\n41M with long-standing untreated depression, worsened since losing housing. Reports low mood, poor sleep, hopelessness x 2 months.\n## Suicide Risk Assessment\nPatient endorses active suicidal ideation with a plan to overdose on pills he would buy after discharge. States intent is \"maybe 50/50.\" No prior attempts. No firearms access.\nDenies homicidal ideation. Denies auditory or visual hallucinations.\n## Assessment\nMajor depressive disorder, single episode, severe, without psychotic features. High acute suicide risk.\n## Plan\n- Continue 1:1 sitter\n- Start sertraline 50 mg PO daily\n- Not psychiatrically stable for discharge to an unsupervised setting\n- Recommend inpatient psychiatric admission once medically cleared\nSigned: Ingrid Halvorsen, MD 08/17/2026 20:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 08/20/2026 08:05\nS: Forearm pain 1/10. Eating well. Remains low in mood.\nO: T 98.3F HR 80 BP 124/78 RR 16 SpO2 99% RA\nR forearm erythema receding well inside marked borders, no fluctuance.\nBlood cx 08/16 x2: no growth at 96h.\nA/P:\n- Cellulitis R forearm, improved. Transition to cephalexin 500 mg PO QID to complete 7 days total (last dose 08/22).\n- Medically stable for discharge.\n- MDD with suicidal ideation - psychiatry following, 1:1 sitter continues.\nSigned: Lucien Moreau, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "psych_consult",
+      "title": "Psychiatry follow-up note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PSYCHIATRY FOLLOW-UP NOTE\nDate: 08/20/2026 10:30\nPt seen with sitter at bedside. Mood \"the same.\" Continues to endorse suicidal ideation with the same plan to overdose; intent unchanged. Tolerating sertraline day 3.\nNo hallucinations. Calm, cooperative, no aggression.\nAssessment: MDD severe, ongoing high suicide risk.\nPlan: Continue 1:1. Recommend transfer to inpatient psychiatry when bed available. Not appropriate for an unsupervised or low-supervision setting at this time.\nSigned: Ingrid Halvorsen, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy screen",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY SCREEN\nDate: 08/18/2026 11:15\nBed mobility, transfers, gait: Independent\nGait: 300+ ft without device, independent, steady\nADLs per nursing: independent grooming, dressing, toileting, showering\nNo skilled PT needs. Sign off.\nSigned: M. Delacroix, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n08/19 08:00 | 98.6 | 84 | 126/78 | 16 | 98% | RA\n08/19 16:00 | 98.4 | 82 | 122/76 | 16 | 99% | RA\n08/20 00:00 | 98.1 | 76 | 120/74 | 14 | 98% | RA\n08/20 04:00 | 98.2 | 78 | 120/76 | 16 | 99% | RA\n08/20 08:05 | 98.3 | 80 | 124/78 | 16 | 99% | RA\n## LABS\n08/16 | WBC 13.6 H | Hgb 14.8 | Plt 276 | Cr 1.0\n08/19 | WBC 8.1 | Hgb 14.1 | Cr 0.9 | Glu 92\n## MICROBIOLOGY\n08/16 Blood cx x2: no growth at 96h\n08/17 MRSA nares PCR: Negative\n08/20 06:00 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n08/16 CXR: clear lungs\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST (PENDING)\nPatient: Marcus Doe  MRN: CC-0934178\n- Cephalexin 500 mg PO QID through 08/22/2026\n- Sertraline 50 mg PO daily (NEW)\n- Albuterol HFA 90 mcg 2 puffs q4-6h PRN wheeze\n- Acetaminophen 650 mg PO q6h PRN pain\n## Stopped\n- Cefazolin IV, enoxaparin (inpatient only)\nPatient able to self-administer all medications: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "packet_id": "F19",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Willowbrook Bay Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Teresa Valdez, LCSW\nPhone: 555-0141\nDate: 09/25/2026 08:15\nPages (including cover): 14\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n48M admitted with acute alcoholic pancreatitis, now resolved and tolerating diet.\nCompleted inpatient withdrawal monitoring. Requesting recuperative care start 09/25/2026.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Willowbrook Bay Medical Center (fictional)\nDepartment/Floor: 6 West Medicine\nSocial Worker/Case Manager/Nurse: Teresa Valdez, LCSW\nPhone: 555-0141\nEmail: tvaldez@willowbrookbay.example\nNursing Station: 555-0142\nAuthorized By: Dr. N. Okafor\n## Patient Information\nName: Raymond Doe\nMRN: WB-6613027\nBirth Date: 05/14/1978\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute alcoholic pancreatitis, alcohol use disorder\nAdmit Date: 09/22/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/22/2026  Result: CXR neg\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [ ] Yes [X]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: Alcohol use disorder. Refusing detox: Yes [X] No [ ]\n## Length of Stay Authorized\nDays: 21\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nPancreatitis resolved, eating low-fat diet. Oral meds only. Independent ADLs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Raymond Doe\nDOB: 05/14/1978\nMember ID: OCH-40217736\n## Referring Provider\nFacility: Willowbrook Bay Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Alcohol-induced acute pancreatitis without necrosis or infection\nICD-10: K85.20, F10.20\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/25/2026\nRequested Days: 21\nAdmit Date: 09/22/2026\nClinical summary: pancreatitis resolved, tolerating diet, independent ADLs, oral meds only.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Willowbrook Bay Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Raymond Doe\nMRN: WB-6613027\nAccount #: 99613027\nDOB: 05/14/1978\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/22/2026 04:30 (ED arrival 09/21/2026 23:40)\nAdmit Type: Inpatient\nUnit/Bed: 6W-614\nAttending: Nnamdi Okafor, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "other",
+      "title": "Emergency department note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## EMERGENCY DEPARTMENT PROVIDER NOTE\nArrival: 09/21/2026 23:40 via EMS (called by outreach worker)\n## HPI\n48 y/o M, unhoused, with alcohol use disorder, presents with severe epigastric pain radiating to back x 1 day, nausea, vomiting. Pt intoxicated on arrival. Reports drinking about 12 beers daily; last drink 09/21/2026 around 22:00.\n## Exam\nT 99.1F HR 112 BP 148/90 RR 20 SpO2 96% RA\nAlert, smells of alcohol, slurred speech. Epigastric tenderness, no rebound. No jaundice.\n## Data\nBAL 228 mg/dL (09/22 00:10)\nLipase 1,240 U/L H, AST 88 H, ALT 46 H, T bili 0.9, Glu 138, Ca 9.0, TG 210\nCT abdomen with contrast: acute interstitial edematous pancreatitis, no necrosis, no fluid collection; no gallstones; liver without cirrhotic morphology\n## ED Course / MDM\nAcute alcoholic pancreatitis and acute alcohol intoxication. IV fluids, IV analgesia, antiemetic. Admit to medicine with CIWA monitoring.\nSigned: P. Lindqvist, MD 09/22/2026 03:55\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nAdmit order: 09/22/2026 04:30\n## CC\nEpigastric pain, alcohol intoxication\n## HPI\n48 y/o M with alcohol use disorder, presented 09/21 23:40 intoxicated (BAL 228) with acute pancreatitis (lipase 1,240). First episode of pancreatitis. No prior withdrawal seizures or DTs. Unhoused x 2 yrs, sleeps in a park in Example City.\n## PMH\n- Alcohol use disorder, moderate\n- No psychiatric history\n- No diabetes\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nEtOH as above. Tobacco 1/2 ppd. Denies drug use.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 99.0F HR 108 BP 144/88 RR 18 SpO2 96% RA\nMild tremor, not diaphoretic. AOx4. Abdomen tender epigastrium.\n## Assessment/Plan\n1. Acute alcoholic pancreatitis, mild (no necrosis) - NPO, IV LR, IV analgesia, advance diet as tolerated\n2. Acute alcohol intoxication, at risk for withdrawal - CIWA-Ar q4h, lorazepam symptom-triggered (CIWA >= 8)\n3. Thiamine, folic acid, multivitamin\n4. Transaminitis, likely alcohol related - RUQ US\n5. Addiction medicine and SW consult\nSigned: Nnamdi Okafor, MD 09/22/2026 06:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "CIWA-Ar flowsheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CIWA-Ar FLOWSHEET\nDate/Time | CIWA-Ar | Lorazepam given | RN\n09/22 04:00 (ED) | 9 | 1 mg IV | PL\n09/22 12:00 | 10 | 1 mg IV | MS\n09/22 20:00 | 8 | 1 mg PO (LAST DOSE) | MS\n09/23 04:00 | 6 | none | RB\n09/23 12:00 | 5 | none | MS\n09/23 20:00 | 4 | none | MS\n09/24 04:00 | 3 | none | RB\n09/24 12:00 | 2 | none | MS\n09/24 20:00 | 2 | none | MS\n09/25 04:00 | 1 | none | RB\nProtocol: lorazepam for CIWA >= 8. CIWA-Ar below 8 on every check since 09/23 04:00. No seizure activity. No hallucinations.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#4\nDate: 09/25/2026 07:30\nS: No abdominal pain. Ate full low-fat breakfast and dinner yesterday, no nausea. Sleeping well.\nO: T 98.2F HR 78 BP 128/80 RR 16 SpO2 98% RA. No tremor, no diaphoresis. AOx4. Abdomen soft, non-tender.\nLipase 09/24: 96. CIWA-Ar 1 at 04:00. No benzodiazepines since 09/22 20:00.\nA/P:\n1. Acute alcoholic pancreatitis - resolved; tolerating low-fat diet; no IV fluids since 09/23\n2. Alcohol withdrawal - none since 09/23; more than 72 hours since last drink (09/21 22:00)\n3. AUD - acamprosate started 09/24; pt accepted outpatient treatment\n4. All meds now oral. No IV access needed; PIV removed 09/24.\nMedically stable for discharge to recuperative care today.\nSigned: Nnamdi Okafor, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "pt_eval",
+      "title": "Physical and occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 09/24/2026 10:30\nBed mobility: independent\nTransfers: independent, no device\nGait: 400 ft independent, no assistive device, steady, no loss of balance\nStairs: 12 steps independent with rail\nRecommendation: no PT needs, no DME. Safe for discharge.\nSigned: J. Whitaker, PT, DPT\n## OCCUPATIONAL THERAPY EVALUATION\nDate: 09/24/2026 13:00\nGrooming, UB/LB dressing: independent\nToileting and toilet transfer: independent\nShower: independent, gathered own supplies, stood for shower\nCognition: AOx4, follows multi-step commands, good safety awareness\nRecommendation: independent with all ADLs. No OT needs.\nSigned: R. Banerjee, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK / ADDICTION MEDICINE NOTE\nDate: 09/24/2026 15:20\nPt calm and cooperative, AOx4. Denies SI/HI. No psychosis. No psychiatric history.\nNo conservatorship. Not enrolled in FSP.\nPt states he wants to stop drinking after this hospitalization. Residential treatment offered; pt prefers outpatient.\nPt ACCEPTED outpatient program: Example Bay Outpatient Recovery (fictional) IOP, intake appointment 09/29/2026 10:00, phone 555-0147.\nPt agrees to abstain from alcohol while in recuperative care and to attend outpatient follow-up.\nPt interested in recuperative care; understands sober-living expectations.\nSigned: Teresa Valdez, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 09/25/2026 06:30\nNight uneventful. Pt slept, ambulated in hallway independently x3.\nSelf-administered meds with RN observation (teach-back for acamprosate and thiamine done; pt verbalized dose and schedule).\nContinent of bowel and bladder, toileting independently. Showered independently 09/24 evening.\nCalm and cooperative with staff. No isolation precautions.\nSigned: R. Bautista, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "labs",
+      "title": "Labs and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n09/22 00:10 | BAL 228 mg/dL | Lipase 1,240 H | AST 88 H | ALT 46 H | Glu 138 | Ca 9.0\n09/22 06:00 | Beta-hydroxybutyrate 0.2 (neg) | Mg 1.8 | Phos 3.0 | INR 1.0 | Alb 3.9\n09/24 05:00 | Lipase 96 | AST 42 | ALT 38 | Glu 94 | Cr 0.8 | WBC 7.6 | Hgb 13.8\n09/24 HbA1c: 5.4%\n09/22 MRSA nares PCR: Negative\n09/25 05:30 SARS-CoV-2 rapid antigen: Negative\n09/22 CXR: no acute disease\n09/22 RUQ US: mild hepatic steatosis, no cirrhosis, no ascites, no gallstones\n09/22 EKG: normal sinus rhythm, rate 96, normal intervals\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/24 08:00 | 98.4 | 82 | 130/82 | 16 | 98% | RA\n09/24 16:00 | 98.6 | 80 | 126/78 | 16 | 98% | RA\n09/24 20:00 | 98.3 | 76 | 124/78 | 16 | 97% | RA\n09/25 04:00 | 98.1 | 74 | 122/76 | 14 | 98% | RA\n09/25 07:30 | 98.2 | 78 | 128/80 | 16 | 98% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 14,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Raymond Doe  MRN: WB-6613027\nAll oral. No injectables. No controlled substances.\n- Acamprosate 666 mg PO three times daily (started 09/24)\n- Thiamine 100 mg PO daily\n- Folic acid 1 mg PO daily\n- Multivitamin 1 tab PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain (max 3 g/day)\n- Nicotine patch 14 mg/24h daily\n30-day supply of all medications filled by inpatient pharmacy (meds to beds) 09/25/2026.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

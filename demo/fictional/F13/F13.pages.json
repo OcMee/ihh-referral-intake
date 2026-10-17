@@ -1,0 +1,123 @@
+{
+  "packet_id": "F13",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Bluewater Bay Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Teresa Nguyen, RN CM\nPhone: 555-0181\nDate: 07/16/2026 08:50\nPages (including cover): 13\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n45M s/p R ankle ORIF after fall. NWB RLE, independent with walker per PT/OT.\nStaple removal appointment confirmed. Planned d/c 07/16/2026 ~14:00.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Bluewater Bay Medical Center (fictional)\nDepartment/Floor: 4 North Orthopedics\nSocial Worker/Case Manager/Nurse: Teresa Nguyen, RN CM\nPhone: 555-0181\nEmail: tnguyen@bluewaterbay.example\nNursing Station: 555-0182\nAuthorized By: Dr. S. Okoro\n## Patient Information\nName: Marcus Doe\nMRN: BB-4410273\nBirth Date: 04/18/1981\nGender: M\nEthnicity: Black / African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: R ankle trimalleolar fracture s/p ORIF\nAdmit Date: 07/11/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: 1 - R lateral ankle surgical incision 9 cm, staples, dry dressing\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 07/12/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]  NWB RLE with front-wheeled walker\nAssistive Device: Yes [X] No [ ]  front-wheeled walker (issued)\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 21\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nStaple removal at ortho clinic 07/26/2026 10:30 (confirmed).\nOutpatient PT scheduled. Walker issued, goes with patient.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Marcus Doe\nDOB: 04/18/1981\nMember ID: OCH-55310984\n## Referring Provider\nFacility: Bluewater Bay Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Trimalleolar fracture of right ankle, closed, s/p ORIF\nICD-10: S82.851A\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 07/16/2026\nRequested Days: 21\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Bluewater Bay Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Marcus Doe\nMRN: BB-4410273\nAccount #: 99410273\nDOB: 04/18/1981\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 07/12/2026 01:40\nAdmit Type: Inpatient\nUnit/Bed: 4N-412\nAttending: Samuel Okoro, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## ED Encounter\nED Arrival: 07/11/2026 22:15\nED Disposition: Admit to inpatient, order written 07/12/2026 01:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL (ORTHOPAEDIC SURGERY)\nDate: 07/12/2026 02:30\n## CC\nR ankle pain and deformity after fall\n## HPI\n45 y/o M, unhoused (sleeping in a vehicle lot / day shelter), tripped on a curb at night while walking on 07/11/2026 and inverted R ankle. Immediate pain, unable to bear weight. Brought to ED by bystander. No head strike, no LOC. Skin intact.\nED XR R ankle: displaced trimalleolar fracture, closed. Reduced and splinted in ED.\n## PMH\n- None significant\n## PSH\n- None\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nUnhoused x 1 year after job loss. Tobacco 1/2 ppd. Denies EtOH or drug use. Serum EtOH in ED: none detected. UDS negative.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.4F HR 92 BP 132/80 RR 16 SpO2 98% RA\nGen: NAD, AOx4\nR ankle: splint in place, toes warm, cap refill <2 s, sensation intact, compartments soft\nSkin: no open wounds\nPsych: calm, appropriate, normal mood and affect\n## Assessment/Plan\nClosed R trimalleolar ankle fracture, mechanical fall.\n1. ORIF R ankle today (consent obtained)\n2. Pain: acetaminophen scheduled, oxycodone PRN\n3. VTE ppx post-op per ortho protocol\n4. PT/OT post-op\n5. Dispo: unhoused, CM consult for recuperative care\nSigned: Samuel Okoro, MD 07/12/2026 03:05\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "other",
+      "title": "Operative note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OPERATIVE NOTE\nDate of surgery: 07/12/2026\nSurgeon: Samuel Okoro, MD\nProcedure: Open reduction internal fixation (ORIF) R ankle - lateral plate and screws, medial malleolus screws x2\nFindings: closed trimalleolar fracture, anatomic reduction achieved\nImplants: internal hardware only. No external fixator.\nClosure: staples to lateral and medial incisions, sterile dry dressing, posterior splint\nEBL: 50 mL. Complications: none.\nPost-op orders: non-weight-bearing (NWB) RLE x 6 weeks. Elevate. Keep splint/dressing clean and dry.\nSigned: Samuel Okoro, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 07/14/2026\nPrecautions: NWB RLE\nBed mobility: Independent\nTransfers: sit-stand and bed-chair independent with front-wheeled walker (FWW), maintains NWB\nToilet transfer: Independent with FWW\nGait: 150 ft with FWW, hop-to pattern, independent, maintains NWB RLE; 1 standing rest break\nStairs: 2 steps with rail and FWW, supervision (not required at discharge site)\nFall risk: moderate, educated\n## Recommendation\nPatient walks 150 ft and transfers independently with walker while maintaining NWB.\nSafe for discharge to community setting with FWW. FWW issued to patient.\nOutpatient PT referral placed; first visit scheduled 07/21/2026 09:00 at Bluewater Bay Outpatient Rehab (fictional), 555-0183 (confirmed).\nSigned: K. Albright, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 07/14/2026\nPrecautions: NWB RLE\nGrooming: Independent (standing at sink with FWW / seated)\nUpper body dressing: Independent\nLower body dressing: Independent seated, dons/doffs pants over splint\nToileting: Independent, including hygiene and clothing management\nBathing: Independent seated shower on shower bench with cast cover; gathers own supplies using walker bag\nPatient independent with all ADLs including showering and toileting.\n## Recommendation\nNo further OT needs. Shower bench appropriate. Cast cover provided.\nSigned: R. Feld, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "progress_note",
+      "title": "Orthopaedic progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ORTHOPAEDIC PROGRESS NOTE - POD#4\nDate: 07/16/2026 07:45\nS: Pain 3/10 on oral meds. Slept well. No numbness. Ambulating in hall with walker.\nO: T 98.2F HR 78 BP 124/76 RR 16 SpO2 98% RA. AOx4.\nR ankle: incisions clean, dry, intact; staples in place; no erythema or drainage. Dressing changed today.\nA/P: Closed R trimalleolar fx s/p ORIF 07/12.\n- NWB RLE x 6 weeks with FWW\n- Pain: acetaminophen and oxycodone PO PRN only. No IV medications. No IV access at discharge (PIV removed before d/c).\n- VTE ppx: aspirin 81 mg PO BID x 4 weeks\n- Incision: keep dry dressing on; no dressing change needed until clinic; no home health wound care needed\n- Staple removal: Ortho clinic 07/26/2026 10:30 (appointment confirmed with patient, card given)\n- Outpatient PT 07/21/2026 09:00 (confirmed)\nMedically stable for discharge to recuperative care today ~14:00.\nSigned: Samuel Okoro, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "nursing_note",
+      "title": "Nursing and social work notes",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 07/16/2026 06:30\nIsolation: none. Standard precautions only.\nPt AOx4, calm and cooperative with care. Showered independently on bench last evening.\nSelf-administering oral meds with RN check; correctly states dose and schedule for each med.\nContinent of bowel and bladder. Toileting independently with walker.\nSigned: A. Morales, RN\n## SOCIAL WORK NOTE\nDate: 07/15/2026 14:10\nPt AOx4, pleasant, future-oriented. Denies SI/HI. Denies auditory or visual hallucinations.\nNo psychiatric history. No history of conservatorship or FSP.\nNot a registered sex offender per pt. Has CA ID, Medi-Cal active. No car. No service animal.\nPlan: recuperative care at Illumination Health + Home; pt agreeable.\nSigned: L. Haddad, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "labs",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n07/14 20:00 | 98.6 | 82 | 128/78 | 16 | 98% | RA\n07/15 08:00 | 98.3 | 76 | 122/74 | 16 | 98% | RA\n07/15 16:00 | 98.7 | 80 | 126/78 | 16 | 97% | RA\n07/15 23:00 | 98.1 | 74 | 120/72 | 16 | 98% | RA\n07/16 07:45 | 98.2 | 78 | 124/76 | 16 | 98% | RA\n## LABS\n07/12 | WBC 8.1 | Hgb 13.9 | Plt 244 | Na 139 | K 4.2 | Cr 0.9 | Glucose 96\n07/15 | Hgb 12.6 L | Cr 0.8\n07/12 MRSA nares PCR: Negative\n07/16 08:30 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n07/12 CXR (pre-op): no acute process\n07/12 XR R ankle post-op: ORIF hardware in good position, anatomic alignment\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Marcus Doe  MRN: BB-4410273\nAll medications self-administered by patient. 30-day supply filled by inpatient pharmacy (meds to beds) and given to patient.\n- Acetaminophen 650 mg PO every 6 hours PRN pain (max 3 g/day)\n- Oxycodone 5 mg PO every 6 hours PRN severe pain (#20)\n- Aspirin 81 mg PO twice daily x 4 weeks (blood clot prevention)\n- Senna 8.6 mg 2 tabs PO at bedtime while taking oxycodone\n- Nicotine patch 14 mg/24h daily\n## DME\n- Front-wheeled walker (issued), shower bench recommended, cast cover (given)\n## Follow up\n- Ortho clinic staple removal 07/26/2026 10:30 - Bluewater Bay Ortho Clinic (fictional) 555-0184\n- Outpatient PT 07/21/2026 09:00 - 555-0183\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

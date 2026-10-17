@@ -644,7 +644,7 @@ main { padding-block-end: 150px }
     const v = p.verification, files = !APP.meta.artifact;
     const link = (href, name, sub) => href && files ? `<a class="pf" href="${href}" target="_blank" rel="noopener"><b>${name}</b><small>${sub}</small></a>` : "";
     return `<div class="proof"><p class="eyebrow">Proof behind the score</p>
-      <div class="pf-row"><button class="pf here" data-page="1"><b>View original here</b><small>page by page, beside this summary</small></button>${link(p.pdf, "Original PDF", `${p.pages} pages as faxed`)}${link(p.readable, "Readable PDF", "each page beside its transcript")}${link(p.fitlist, "Fit checklist", "every IHH rule, status and page")}${link(p.criteria, "IHH criteria", "IHH’s own admission rules")}${link(p.docx, "Word copy", "compact, in the form styles")}</div>
+      <div class="pf-row"><button class="pf here" data-page="1"><b>View original here</b><small>page by page, beside this summary</small></button>${link(p.pdf, "Original PDF", `${p.pages} pages as faxed`)}${link(p.readable, "Readable PDF", "each page beside its transcript")}${link(p.fitlist, "Fit checklist", "every IHH rule, status and page")}${link(p.criteria, "IHH criteria", "IHH’s own admission rules")}</div>
       ${files ? "" : `<p class="lbl">The files open in the GitHub Pages or local version of this app.</p>`}
       <p class="pf-check"><span class="vf">✓</span> ${v.verified}/${v.quotes} quotes found on the page they cite</p></div>`;
   }

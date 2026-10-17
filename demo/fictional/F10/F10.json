@@ -1,0 +1,715 @@
+{
+  "packet_id": "F10",
+  "patient": {
+    "summary": "58M, T2DM hyperglycemia (no DKA) with healing non-infected R foot ulcer, unhoused (shelter)",
+    "age": "58",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, staying at a shelter x 8 months",
+    "admit_reason": "High blood sugar from running out of diabetes pills; foot sore",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Wounds",
+      "text": "Non-infected diabetic ulcer on the R sole, Wagner 1, shrinking, X-ray shows no osteomyelitis (form says no wounds).",
+      "pages": [
+        6,
+        7,
+        13
+      ],
+      "quote": "diabetic neuropathic ulcer, Wagner grade 1",
+      "quote_page": 7
+    },
+    {
+      "label": "Home health",
+      "text": "Bayside Home Health wound RN start of care 06/13, then 3x/week, matching every-other-day dressings.",
+      "pages": [
+        9
+      ],
+      "quote": "RN start of care visit scheduled 06/13/2026 for wound check and dressing change",
+      "quote_page": 9
+    },
+    {
+      "label": "Diabetes",
+      "text": "Oral agents only, no insulin this admission; last 5 glucose readings fall from 214 to 118; no hypoglycemia.",
+      "pages": [
+        8,
+        12
+      ],
+      "quote": "No insulin given this admission.",
+      "quote_page": 8
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 150 ft with his own cane in a post-op shoe, modified independent.",
+      "pages": [
+        10
+      ],
+      "quote": "Gait: 150 ft with single-point cane in R post-op shoe, modified independent",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "Social work screen: denies SI/HI, no hallucinations, no psychiatric history, no conservatorship/FSP.",
+      "pages": [
+        9
+      ],
+      "quote": "Denies suicidal ideation.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 06/09; rapid COVID negative 06/12 06:15, discharge 06/12 PM.",
+      "pages": [
+        13
+      ],
+      "quote": "06/12 06:15 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 13
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4 and manages own meds; 30-day supply dispensed.",
+      "pages": [
+        11,
+        14
+      ],
+      "quote": "Cognition: AOx4, follows multi-step commands, manages own meds with pill organizer",
+      "quote_page": 11
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (shelter) and needs a place to heal a foot ulcer with offloading and wound care.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "experiencing homelessness (sleeps at Example Shelter, Santa Ana, x 8 months)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "He is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "OT documents independent grooming, dressing and toileting.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "LB dressing: Independent, dons post-op shoe independently"
+        },
+        {
+          "page": 11,
+          "quote": "UB dressing: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently seated on a bench and gathers his own supplies.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Shower: Independent seated on shower bench"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "OT: toileting independent; form says continent.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "met",
+      "finding": "Uses his own cane independently.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Uses cane independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations are included.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "## PHYSICAL THERAPY EVALUATION"
+        },
+        {
+          "page": 11,
+          "quote": "## OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 150 ft with a cane, modified independent, no rest breaks.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 150 ft with single-point cane in R post-op shoe, modified independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "met",
+      "finding": "Not wheelchair dependent; transfers independent.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Safe for d/c to recuperative care with own cane and post-op shoe."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history and no mental health concerns documented.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Social work screen documents he denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "No hallucinations reported or observed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No hallucinations reported or observed."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; denies alcohol use.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use; no withdrawal signs"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "SW documents no history of conservatorship or FSP.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers all meds (oral only) and returned demonstration of dressing changes.",
+      "evidence": [
+        {
+          "page": 14,
+          "quote": "Patient able to self-administer all medications: Yes"
+        },
+        {
+          "page": 7,
+          "quote": "Pt return-demonstrated dressing change independently x2"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 in H&P, OT and SW notes.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, pleasant and cooperative throughout stay"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Pleasant and cooperative, no behavioral concerns per nursing.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge; all oral medications.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "No isolation; standard precautions.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 06/09.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "06/09 06:00 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 06/12 06:15 with discharge planned 06/12 PM, within 24 hours.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "06/12 06:15 SARS-CoV-2 rapid antigen: NEGATIVE"
+        },
+        {
+          "page": 1,
+          "quote": "Ready for d/c 06/12 PM."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "met",
+      "finding": "Five consecutive readings 214, 176, 152, 141, 118 show improvement and stabilization.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "06/10 21:00 | 214 | none"
+        },
+        {
+          "page": 12,
+          "quote": "06/12 07:00 | 118 | none"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "met",
+      "finding": "ED documented he was not in DKA (anion gap 11, ketones negative).",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Not in DKA."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "No insulin started; discharged on oral agents only.",
+      "evidence": [
+        {
+          "page": 14,
+          "quote": "No insulin at discharge. No antibiotics."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Referred after inpatient stay, not directly from the ED; PCP follow-up 06/18 is booked anyway.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "PCP follow-up: Lakeshore Community Clinic (fictional) 06/18/2026 at 14:30 (confirmed) for diabetes."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "met",
+      "finding": "Uses glucometer independently on teach-back.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Pt checks own glucose with glucometer independently"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not on insulin.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "met",
+      "finding": "No insulin, no pump.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No insulin given this admission."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "met",
+      "finding": "Yes: metformin 1000 mg BID and sitagliptin 100 mg daily.",
+      "evidence": [
+        {
+          "page": 14,
+          "quote": "Metformin 1000 mg PO twice daily with meals"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "met",
+      "finding": "A1c 9.6% on 06/09.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "Hemoglobin A1c | 9.6 H"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "met",
+      "finding": "Home health wound RN starts 06/13, the day the every-other-day dressing is next due, then 3x/week; plantar foot is not a hard-to-reach area.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "RN start of care visit scheduled 06/13/2026 for wound check and dressing change"
+        },
+        {
+          "page": 7,
+          "quote": "Change dressing every other day and PRN; last changed 06/11/2026 AM"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E4",
+      "status": "met",
+      "finding": "Uncomplicated wound: clean granulating ulcer with no signs of infection.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Periwound: callus trimmed, no erythema, no induration, no signs of infection"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "met",
+      "finding": "No skin grafting needed; ulcer healing with dressings.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "R plantar diabetic foot ulcer, non-infected, healing"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "No abscess.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "no erythema, no warmth, no drainage, no odor"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X2",
+      "status": "met",
+      "finding": "Foot X-ray shows no osteomyelitis; probe-to-bone negative.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "R foot X-ray 3 views: No osteomyelitis."
+        },
+        {
+          "page": 6,
+          "quote": "no drainage, no odor. Probe-to-bone negative."
+        }
+      ]
+    },
+    {
+      "rule_id": "END-E1",
+      "status": "met",
+      "finding": "Glucose improving and stable on oral treatment over 5 readings.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Glucose 118-152 over last 48h on metformin + sitagliptin."
+        }
+      ]
+    },
+    {
+      "rule_id": "END-X3",
+      "status": "met",
+      "finding": "Not in DKA.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Not in DKA."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Cognition: AOx4, follows multi-step commands"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Performs ADLs independently.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "D/c to recuperative care. No further OT needs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4, which are met.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Safe for d/c to recuperative care with own cane and post-op shoe."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no TB or C. diff concern; CXR clear.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "06/09 06:00 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "No substance use or detox issue.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use; no withdrawal signs"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender per form (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "No aggressive behavior.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Wounds",
+      "rule_ids": [
+        "INT-E2",
+        "INT-E4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Any Wounds: Yes [ ] No [X]"
+        },
+        {
+          "page": 7,
+          "quote": "diabetic neuropathic ulcer, Wagner grade 1"
+        }
+      ],
+      "note": "Form says no wounds, chart documents a R plantar diabetic foot ulcer with every-other-day dressings. Chart wins; wound care is arranged, so INT-E2 is met."
+    }
+  ],
+  "questions_for_hospital": [
+    "The referral form says no wounds, but the wound note documents a right plantar foot ulcer. Can you confirm the wound care orders and that Bayside Home Health has the dressing supplies list?",
+    "Can you send the post-op shoe instructions and podiatry contact for the 06/22 appointment?"
+  ],
+  "claude_fit": {
+    "score": 90,
+    "recommendation": "approve",
+    "reason": "Meets ADL, mobility, cognition and mental health rules (ADL-2, MOB-3, COG-2, MH-2 met), swabs are negative and timely (INF-1, INF-2), and glucose is stable on oral agents (DM-1, DM-2). The form's 'no wounds' is wrong, but the chart shows a clean healing ulcer with home health starting 06/13, so INT-E2 is met."
+  }
+}

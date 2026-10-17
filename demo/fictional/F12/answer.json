@@ -1,0 +1,8 @@
+{
+  "packet_id": "F12",
+  "intended": "not_fit",
+  "why": "Psychiatry documents active suicidal ideation with a plan on 08/17 and again on 08/20 (MH-2 exclusion applies) and says he is not stable for an unsupervised setting (MH-1), although he is otherwise medically stable.",
+  "traps": [
+    "Referral form leaves every behavioral and mental health box unchecked; the SI is only in the nursing note and psychiatry notes."
+  ]
+}

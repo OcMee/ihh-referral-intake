@@ -1,0 +1,123 @@
+{
+  "packet_id": "F18",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Mesa Verde General Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Danielle Okafor, RN CM\nPhone: 555-0176\nDate: 10/13/2026 10:00\nPages (including cover): 13\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n67M heart failure, cardiac stable. Independent with ADLs.\nLooking for d/c 10/14 to recuperative care. Please review.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Mesa Verde General Hospital (fictional)\nDepartment/Floor: 4 Cardiac Step-Down\nSocial Worker/Case Manager/Nurse: Danielle Okafor, RN CM\nPhone: 555-0176\nEmail: dokafor@mesaverde.example\nNursing Station: 555-0177\nAuthorized By: Dr. A. Haddad\n## Patient Information\nName: Walter Doe\nMRN: MV-7731094\nBirth Date: 11/21/1958\nGender: M\nEthnicity: Black/African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal/Medicare\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Heart failure exacerbation\nAdmit Date: 10/09/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/09/2026  Result: CXR - no TB findings\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 21\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nCardiac: stable. Ready for discharge 10/14.\nIndependent, ambulating in hall.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Walter Doe\nDOB: 11/21/1958\nMember ID: OCH-62049981\n## Referring Provider\nFacility: Mesa Verde General Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Acute on chronic systolic heart failure\nICD-10: I50.23\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/14/2026\nRequested Days: 21\nAdmit Date: 10/09/2026\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Mesa Verde General Hospital (fictional) - PATIENT FACE SHEET\nPatient: Walter Doe\nMRN: MV-7731094\nAccount #: 99731094\nDOB: 11/21/1958\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/09/2026 20:10 (ED arrival 10/09/2026 14:35)\nAdmit Type: Inpatient\nUnit/Bed: 4CSD-407\nAttending: Amira Haddad, MD (Cardiology)\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 10/09/2026\n## CC\nShortness of breath, unable to lie flat\n## HPI\n67 y/o M, unhoused x 4 yrs (sleeps at Example Park), with nonischemic cardiomyopathy (HFrEF), HTN and CKD 3b, presents with 10 days of worsening dyspnea, orthopnea, 12 lb weight gain and abdominal swelling. Ran out of meds 1 month ago. Third HF admission in 6 months.\n## PMH\n- Nonischemic cardiomyopathy, HFrEF (LVEF 30% on outside echo 2025)\n- Hypertension\n- CKD stage 3b\n- No history of MI. Cath 2024: no obstructive CAD (per pt)\n## Meds PTA\n- Furosemide 40 mg BID, carvedilol 6.25 mg BID, sacubitril-valsartan 24/26 mg BID, spironolactone 25 mg daily (none taken x 1 month)\n## Allergies\nNKDA\n## Social\nFormer smoker. EtOH none x 5 yrs. Denies drug use.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 97.8F HR 112 BP 186/104 RR 26 SpO2 88% RA -> 94% 4L NC\nJVD to ear, S3 gallop, bibasilar crackles to mid-lung fields, 3+ edema to thighs, ascites\nAOx4\n## Assessment/Plan\n1. Acute on chronic systolic HF, decompensated - furosemide 80 mg IV BID, nitroglycerin infusion for afterload/BP, strict I/O, daily weights\n2. Hypertensive urgency - IV nitroglycerin, add hydralazine\n3. CKD 3b - monitor Cr with diuresis\n4. TTE, cardiology consult\nSigned: Amira Haddad, MD 10/09/2026 21:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "echo",
+      "title": "Echocardiogram report",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 10/10/2026\nIndication: decompensated heart failure\n## Findings\nLeft ventricle: severely dilated (LVIDd 7.1 cm). Severe global hypokinesis.\nLVEF (biplane Simpson): 15%\nRight ventricle: moderately reduced function, TAPSE 12 mm\nModerate-severe functional mitral regurgitation\nEstimated RVSP 58 mmHg\nSmall pericardial effusion, no tamponade\n## Conclusion\nSeverely reduced LV systolic function, LVEF 15%. Decline from LVEF 30% (outside echo 2025).\nRead by: S. Lindgren, MD (Cardiology)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Cardiology progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CARDIOLOGY PROGRESS NOTE - HD#4\nDate: 10/13/2026 08:30\nS: Breathing better but still orthopneic (2 pillows). Uop 2.1 L/24h.\nO: T 98.0F HR 96 BP 158/92 RR 20 SpO2 94% RA. Wt 88.2 kg (admit 93.6 kg). JVD 12 cm, crackles bases, 2+ edema to knees. AOx4.\nCr 2.1 (admit 1.8).\nA/P:\n1. Acute on chronic HFrEF, LVEF 15% (new decline from 30%) - remains volume overloaded. Furosemide infusion 15 mg/hr continues (started 10/11 after inadequate response to IV bolus). Not yet ready to transition to PO diuretic.\n2. HTN - nitroglycerin infusion weaned off 10/12 16:00. Hydralazine 10 mg IV x1 given 10/13 02:10 for SBP 184. Uptitrating PO hydralazine/isosorbide dinitrate.\n3. Advanced HF team consult for LVEF 15% - evaluation for advanced therapies; GDMT limited by Cr.\n4. Dispo - NOT medically ready for discharge. Anticipate at least 3-5 more days.\nSigned: Amira Haddad, MD (Cardiology)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "mar",
+      "title": "Medication administration record (excerpt)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## MEDICATION ADMINISTRATION RECORD - IV MEDICATIONS\nPatient: Walter Doe  MRN: MV-7731094\nFurosemide 80 mg IV BID | 10/09 22:00 - 10/11 10:00 | DISCONTINUED 10/11 (changed to infusion)\nFurosemide infusion 10-15 mg/hr IV continuous | Start 10/11 14:00 | Rate increased to 15 mg/hr 10/12 08:00 | RUNNING as of 10/13 08:00\nNitroglycerin infusion 10-80 mcg/min IV | Start 10/09 21:45 | Weaned off 10/12 16:00\nHydralazine 10 mg IV PRN SBP > 180 | Given 10/13 02:10 (SBP 184)\n## PO\nHydralazine 25 mg PO TID | Start 10/12 18:00\nIsosorbide dinitrate 20 mg PO TID | Start 10/12 18:00\nCarvedilol - HELD (low output concern per cardiology)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/13/2026 06:45\nPt AOx4, calm, cooperative. Independent with ADLs at bedside, ambulating to bathroom with IV pole (furosemide drip infusing at 15 mg/hr).\n02:00 SBP 184/102, MD notified, hydralazine 10 mg IV given 02:10, recheck 03:00 SBP 152/90.\nTelemetry: sinus tachycardia 100-110, runs of NSVT x2 (5 beats) overnight, MD aware.\nUop 2.1 L/24h via urinal. Daily wt 88.2 kg.\nSigned: P. Nwosu, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "ecg",
+      "title": "ECG report",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## 12-LEAD ECG REPORT\nDate/Time: 10/09/2026 14:50\nRate 112 bpm. Rhythm: sinus tachycardia\nPR 182 ms, QRS 134 ms (LBBB), QTc 488 ms\nLeft bundle branch block, unchanged from 2025 outside tracing per pt records\nNo acute ST elevation\nRead by: S. Lindgren, MD (Cardiology)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "labs",
+      "title": "Labs and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n10/09 | BNP 3,980 H | Na 131 L | K 4.4 | Cr 1.8 H | Hgb 11.4 L\nTroponin I (hs): 10/09 15:00 12 ng/L | 10/09 18:00 13 ng/L | 10/10 06:00 11 ng/L (ref <17; negative x3)\n10/12 | Na 133 L | K 3.8 | Cr 2.0 H\n10/13 | Na 132 L | K 3.7 | Cr 2.1 H | Mg 1.9\n10/09 MRSA nares PCR: Negative\n10/13 06:00 SARS-CoV-2 rapid antigen: Negative\n10/09 CXR: cardiomegaly, pulmonary edema, bilat pleural effusions\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/12 08:00 | 98.1 | 104 | 168/96 | 22 | 93% | RA\n10/12 16:00 | 98.3 | 102 | 162/94 | 20 | 93% | RA\n10/13 02:00 | 98.0 | 108 | 184/102 | 22 | 92% | RA\n10/13 03:00 | 98.0 | 100 | 152/90 | 20 | 93% | RA\n10/13 08:30 | 98.0 | 96 | 158/92 | 20 | 94% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "med_list",
+      "title": "Medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CURRENT MEDICATIONS\nPatient: Walter Doe  MRN: MV-7731094\n## IV\n- Furosemide infusion 15 mg/hr IV continuous\n- Hydralazine 10 mg IV PRN SBP > 180\n## PO\n- Hydralazine 25 mg PO TID\n- Isosorbide dinitrate 20 mg PO TID\n- Spironolactone 25 mg PO daily\n- Potassium chloride 20 mEq PO daily\n## Held\n- Carvedilol, sacubitril-valsartan (held for Cr / low output)\nDischarge medication list: not yet prepared\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

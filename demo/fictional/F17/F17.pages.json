@@ -1,0 +1,114 @@
+{
+  "packet_id": "F17",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Lakeside Valley Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Gregory Ambrose, MSW\nPhone: 555-0171\nDate: 09/30/2026 10:05\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n63F CHF exacerbation, diuresed, now on PO diuretic. Independent.\nAnticipated d/c 10/01. Please review.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Lakeside Valley Hospital (fictional)\nDepartment/Floor: 5 Telemetry\nSocial Worker/Case Manager/Nurse: Gregory Ambrose, MSW\nPhone: 555-0171\nEmail: gambrose@lakesidevalley.example\nNursing Station: 555-0172\nAuthorized By: Dr. N. Ferreira\n## Patient Information\nName: Rosa Doe\nMRN: LV-2287415\nBirth Date: 06/03/1963\nGender: F\nEthnicity: Hispanic/Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: Spanish/English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute on chronic heart failure exacerbation\nAdmit Date: 09/26/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/26/2026  Result: CXR - pulm edema, no TB findings\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nCardiac: EF normal. Troponin negative x3.\nDiuresed 6 L, on PO furosemide. Needs low-sodium diet and daily weights.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Rosa Doe\nDOB: 06/03/1963\nMember ID: OCH-40877152\n## Referring Provider\nFacility: Lakeside Valley Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Acute on chronic heart failure, unspecified\nICD-10: I50.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/01/2026\nRequested Days: 14\nAdmit Date: 09/26/2026\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Lakeside Valley Hospital (fictional) - PATIENT FACE SHEET\nPatient: Rosa Doe\nMRN: LV-2287415\nAccount #: 99287415\nDOB: 06/03/1963\nSex: Female\nPreferred Language: Spanish (fluent English)\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/26/2026 16:30 (ED arrival 09/26/2026 11:20)\nAdmit Type: Inpatient\nUnit/Bed: 5T-522\nAttending: Nuno Ferreira, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "other",
+      "title": "Emergency department note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## EMERGENCY DEPARTMENT PROVIDER NOTE\nArrival: 09/26/2026 11:20, walk-in\n## HPI\n63 y/o F, unhoused (staying in car of friend, now outside), with \"heart failure\" diagnosed 2024 at outside hospital (records not available). Ran out of furosemide ~3 wks ago. Leg swelling, orthopnea, DOE x 1 wk.\n## Exam\nT 98.1F HR 98 BP 162/94 RR 22 SpO2 91% RA -> 95% 2L NC\nJVD to angle of jaw, bibasilar crackles, 3+ pitting edema bilat LE to knees\n## Data\nBNP 1,640 pg/mL H\nTroponin I (hs) 11:45: 14 ng/L (ref <17)\nNa 134, K 3.9, Cr 1.1\nECG: sinus rhythm 96, LVH, no acute ST changes\nCXR: cardiomegaly, interstitial edema, small bilat effusions\n## ED Course\nFurosemide 40 mg IV x1. Admit to telemetry.\nSigned: L. Brandt, MD 09/26/2026 15:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 09/26/2026\n## CC\nLeg swelling and shortness of breath\n## HPI\n63 y/o F with heart failure (type and EF unknown - outside records requested, not yet received), HTN, presents with volume overload after running out of furosemide. No chest pain. Single hs-troponin in ED within normal limits.\n## PMH\n- Heart failure (dx 2024, outside hospital)\n- Hypertension\n- Hyperlipidemia\n## Meds PTA\n- Furosemide 40 mg daily (not taking x 3 wks)\n- Lisinopril 10 mg daily (not taking x 3 wks)\n## Allergies\nSulfa (rash)\n## Social\nNever smoker. No EtOH or drug use.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.4F HR 94 BP 158/90 RR 20 SpO2 95% 2L NC\nJVD +, crackles bilat bases, 3+ edema bilat LE\nAOx4\n## Assessment/Plan\n1. Acute on chronic HF exacerbation, EF unknown - furosemide 40 mg IV BID, strict I/O, daily weights, fluid restriction 1.5 L, 2 g Na diet\n2. TTE ordered to evaluate EF\n3. HTN - resume lisinopril when Cr stable\n4. Outside records request (prior echo)\nSigned: Nuno Ferreira, MD 09/26/2026 18:00\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 09/30/2026 08:15\nS: Breathing at baseline, sleeping flat. Edema much better.\nO: T 98.2F HR 76 BP 128/78 RR 16 SpO2 96% RA. Wt 71.4 kg (admit 77.6 kg). Trace LE edema. AOx4.\nA/P:\n1. Acute on chronic HF exacerbation - euvolemic. Last IV furosemide 09/28 18:00. Transitioned to furosemide 40 mg PO daily 09/29 08:00; weight and BP stable on PO regimen.\n- TTE NOT DONE this admission (echo lab backlog; pt not prioritized as stable). EF remains unknown. Outside records request sent 09/27 - no response yet. Recommend outpatient TTE.\n- Troponin: single ED value only, not repeated (no chest pain).\n2. HTN - lisinopril 10 mg PO daily resumed 09/28, BP controlled.\n3. Off O2 since 09/28.\n4. Dispo - medically stable for d/c 10/01 pending placement.\nSigned: Nuno Ferreira, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 09/30/2026 06:00\nPt AOx4. Independent with grooming, dressing and toileting at bedside. Continent. Up to bathroom independently, no device. Shower not attempted this admission.\nSelf-administers PO meds; teach-back done on furosemide and daily weights.\nRoom air. Telemetry: sinus rhythm 70s, no events.\nWeight 71.4 kg standing scale.\nSigned: M. Sato, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "ecg",
+      "title": "ECG report",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## 12-LEAD ECG REPORT\nDate/Time: 09/26/2026 11:30\nRate 96 bpm. Rhythm: sinus rhythm\nPR 168 ms, QRS 98 ms, QTc 452 ms\nLeft ventricular hypertrophy by voltage criteria\nNo acute ST-T changes. No prior ECG for comparison.\nRead by: R. Castellanos, MD (Cardiology)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Labs and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n09/26 | BNP 1,640 H | Troponin I (hs) 14 ng/L (ref <17) | Na 134 | K 3.9 | Cr 1.1 | Hgb 12.1\n09/28 | Na 137 | K 3.6 | Cr 1.2 | Mg 2.0\n09/30 | Na 138 | K 4.1 | Cr 1.1 | BNP 610 H\nTroponin repeat: not ordered\nEchocardiogram (TTE): not performed this admission\n09/26 MRSA nares PCR: Negative\n09/30 07:00 SARS-CoV-2 rapid antigen: Negative\n09/26 CXR: cardiomegaly, interstitial edema, small bilat effusions\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/29 08:00 | 98.0 | 78 | 130/80 | 16 | 96% | RA\n09/29 14:00 | 98.4 | 80 | 126/78 | 16 | 97% | RA\n09/29 20:00 | 98.2 | 74 | 124/76 | 16 | 96% | RA\n09/30 02:00 | 97.9 | 70 | 122/74 | 14 | 96% | RA\n09/30 08:15 | 98.2 | 76 | 128/78 | 16 | 96% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST (DRAFT)\nPatient: Rosa Doe  MRN: LV-2287415\n- Furosemide 40 mg PO daily\n- Lisinopril 10 mg PO daily\n- Potassium chloride 10 mEq PO daily\n- Atorvastatin 40 mg PO nightly\nDiet: 2 g sodium, 1.5 L fluid restriction. Daily weights; call PCP for gain > 2 lb/day or 5 lb/week.\nFollow-up: PCP within 7 days; outpatient TTE to be scheduled\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

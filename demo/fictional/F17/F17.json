@@ -1,0 +1,714 @@
+{
+  "packet_id": "F17",
+  "patient": {
+    "summary": "63F, heart failure exacerbation, diuresed, stable on oral meds, EF unknown, unhoused",
+    "age": "63",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused (was staying in a friend's car, now outside)",
+    "admit_reason": "Heart failure exacerbation (fluid overload after running out of furosemide)",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Cardiac",
+      "text": "No echocardiogram this admission; ejection fraction is unknown.",
+      "pages": [
+        8
+      ],
+      "quote": "TTE NOT DONE this admission (echo lab backlog; pt not prioritized as stable). EF remains unknown.",
+      "quote_page": 8
+    },
+    {
+      "label": "Cardiac",
+      "text": "Only one troponin (normal, in the ED); never repeated.",
+      "pages": [
+        8
+      ],
+      "quote": "Troponin: single ED value only, not repeated (no chest pain).",
+      "quote_page": 8
+    },
+    {
+      "label": "Cardiac",
+      "text": "Off IV furosemide since 09/28 18:00; BP and weight stable on oral regimen since 09/29.",
+      "pages": [
+        8
+      ],
+      "quote": "Transitioned to furosemide 40 mg PO daily 09/29 08:00; weight and BP stable on PO regimen.",
+      "quote_page": 8
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Room air since 09/28.",
+      "pages": [
+        8
+      ],
+      "quote": "Off O2 since 09/28.",
+      "quote_page": 8
+    },
+    {
+      "label": "Mobility",
+      "text": "Independent at bedside and to the bathroom, no device; shower not tried; no PT notes.",
+      "pages": [
+        9
+      ],
+      "quote": "Up to bathroom independently, no device. Shower not attempted this admission.",
+      "quote_page": 9
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4, self-administers meds with teach-back on furosemide and daily weights.",
+      "pages": [
+        9
+      ],
+      "quote": "Self-administers PO meds; teach-back done on furosemide and daily weights.",
+      "quote_page": 9
+    },
+    {
+      "label": "Mental health",
+      "text": "No mental health diagnosis on the form; SI, hallucinations, behavior and isolation are not documented.",
+      "pages": [
+        2
+      ],
+      "quote": "Mental Health DX: Yes [ ] No [X]",
+      "quote_page": 2
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and recovering from heart failure exacerbation needing diet, weights and med follow-through.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 5,
+          "quote": "63 y/o F, unhoused"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization request marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent with grooming, dressing and toileting at bedside.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with grooming, dressing and toileting at bedside."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Shower has not been attempted; independent bathing is not documented.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Shower not attempted this admission."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Continent; up to bathroom independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Up to bathroom independently, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No device used.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Up to bathroom independently, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the packet; only a nursing note describes mobility.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "Pages (including cover): 12"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walking distance is not documented; only walking to the bathroom is described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No mental health diagnosis on the form; none in the history.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "No alcohol use.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "No EtOH or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral meds with teach-back.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Self-administers PO meds; teach-back done on furosemide and daily weights."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "Behavior toward staff is not described in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "not_applicable",
+      "finding": "Referral form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV medications after 09/28; discharge meds are all oral.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Last IV furosemide 09/28 18:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated (MRSA and COVID tests are negative).",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/26 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "Rapid COVID negative 09/30 07:00; discharge 10/01 time not given, so it may be over 24 hours old on arrival.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/30 07:00 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent; BP 122-130/74-80 on oral meds since 09/29 08:00 (24+ hours).",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transitioned to furosemide 40 mg PO daily 09/29 08:00; weight and BP stable on PO regimen."
+        },
+        {
+          "page": 11,
+          "quote": "09/30 08:15 | 98.2 | 76 | 128/78 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_met",
+      "finding": "Only one troponin was drawn (normal); the rule asks for at least 3.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Troponin: single ED value only, not repeated (no chest pain)."
+        },
+        {
+          "page": 11,
+          "quote": "Troponin repeat: not ordered"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "met",
+      "finding": "12-lead ECG report included: sinus rhythm, LVH, no acute changes.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No acute ST-T changes. No prior ECG for comparison."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "Sinus rhythm; no atrial fibrillation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Rhythm: sinus rhythm"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "unknown",
+      "finding": "No echocardiogram and no prior EF in the packet; EF is unknown.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "EF remains unknown."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV BP medications; last IV med (furosemide) 09/28 18:00, BP controlled on oral lisinopril.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "lisinopril 10 mg PO daily resumed 09/28, BP controlled."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; form marks no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with bedside ADLs and toileting.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with grooming, dressing and toileting at bedside."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "not_applicable",
+      "finding": "Superseded by MOB-3/MOB-4.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no active infection.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/26 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use documented; no detox involved.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "not_applicable",
+      "finding": "Superseded by OTH-2; form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "Behavior toward staff is not described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CIR-E6",
+      "status": "met",
+      "finding": "Hypertension controlled on oral lisinopril.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "lisinopril 10 mg PO daily resumed 09/28, BP controlled."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-E7",
+      "status": "not_applicable",
+      "finding": "No heart attack; single troponin normal, no chest pain.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CIR-X1",
+      "status": "met",
+      "finding": "Telemetry shows sinus rhythm without events.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Telemetry: sinus rhythm 70s, no events."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-X2",
+      "status": "met",
+      "finding": "BP responds to oral medication.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "weight and BP stable on PO regimen."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Ejection fraction",
+      "rule_ids": [
+        "CARD-5"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Cardiac: EF normal. Troponin negative x3."
+        },
+        {
+          "page": 8,
+          "quote": "TTE NOT DONE this admission"
+        }
+      ],
+      "note": "Form says EF normal; the chart says no echo was done and EF is unknown, with outside records not received. Chart wins: EF unknown."
+    },
+    {
+      "topic": "Troponin count",
+      "rule_ids": [
+        "CARD-2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Troponin negative x3."
+        },
+        {
+          "page": 11,
+          "quote": "Troponin repeat: not ordered"
+        }
+      ],
+      "note": "Form says three negative troponins; the chart has one ED troponin, not repeated. Chart wins: CARD-2 not met."
+    }
+  ],
+  "questions_for_hospital": [
+    "Is there any echocardiogram or documented ejection fraction (from this or a prior admission, or the outside hospital records requested 09/27)? The form says 'EF normal' but no report is in the packet.",
+    "The form says troponin negative x3, but the chart shows one ED troponin. Were more drawn? If so, please send the results.",
+    "Has the patient been screened for suicidal ideation or hallucinations, and has she had any behavior concerns with staff?",
+    "How far does she walk, and has she showered independently? PT/OT notes would help.",
+    "Is she on any isolation? What time is discharge on 10/01, so we can check the COVID swab is within 24 hours?"
+  ],
+  "claude_fit": {
+    "score": 60,
+    "recommendation": "needs_info",
+    "reason": "Stable on oral diuretic and BP meds with 5 good vital sets (CARD-1, CARD-6 met), but EF is unknown with no echo (CARD-5) and only one troponin (CARD-2), despite the form saying 'EF normal' and 'troponin x3'. Ask for the echo/EF before deciding."
+  }
+}

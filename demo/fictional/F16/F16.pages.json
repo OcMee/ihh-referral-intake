@@ -1,0 +1,132 @@
+{
+  "packet_id": "F16",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Bayfront Regional Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Teresa Lindqvist, RN CM\nPhone: 555-0161\nDate: 10/06/2026 09:15\nPages (including cover): 14\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n58M community-acquired pneumonia, improving. Room air, ambulating independently.\nHoping for d/c to recuperative care 10/06 PM. Please call CM with questions.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Bayfront Regional Medical Center (fictional)\nDepartment/Floor: 3 North Medical\nSocial Worker/Case Manager/Nurse: Teresa Lindqvist, RN CM\nPhone: 555-0161\nEmail: tlindqvist@bayfront.example\nNursing Station: 555-0162\nAuthorized By: Dr. P. Okonkwo\n## Patient Information\nName: Daniel Doe\nMRN: BR-6120873\nBirth Date: 04/12/1968\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Community-acquired pneumonia, RLL\nAdmit Date: 10/02/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/02/2026  Result: CXR - RLL infiltrate, no cavitation\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  pneumonia - On IV antibiotics: Yes\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: None\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nOn IV antibiotics: Yes (ceftriaxone/azithromycin).\nIndependent, walking halls. Needs a safe place to finish recovery.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Daniel Doe\nDOB: 04/12/1968\nMember ID: OCH-55219036\n## Referring Provider\nFacility: Bayfront Regional Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Pneumonia, unspecified organism (RLL)\nICD-10: J18.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/06/2026\nRequested Days: 14\nAdmit Date: 10/02/2026\nClinical summary: CAP improving, room air, independent ADLs.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Bayfront Regional Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Daniel Doe\nMRN: BR-6120873\nAccount #: 99120873\nDOB: 04/12/1968\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/02/2026 13:05 (ED arrival 10/02/2026 08:40)\nAdmit Type: Inpatient\nUnit/Bed: 3N-318\nAttending: Patience Okonkwo, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 10/02/2026\n## CC\nCough, fever, shortness of breath x 4 days\n## HPI\n58 y/o M, unhoused x 2 yrs (sleeps in a tent near Example Creek trail), presents with productive cough, fevers and dyspnea on exertion x 4 days. In ED T 102.1F, HR 112, SpO2 89% RA improving to 94% on 2L NC. CXR: RLL consolidation.\nPrior level of function: independent, no assistive device, walks daily to meal program.\n## PMH\n- Tobacco use (30 pack-years)\n- No known COPD (no prior PFTs)\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nTobacco 1/2 ppd. EtOH rarely, last drink >1 month ago. Denies drug use.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 101.4F HR 108 BP 128/76 RR 22 SpO2 94% 2L NC\nCrackles RLL. No accessory muscle use.\nAlert, AOx4, calm and cooperative.\n## Assessment/Plan\n1. Community-acquired pneumonia, RLL (CURB-65 = 1) - ceftriaxone 1 g IV q24h + azithromycin 500 mg IV daily; blood and sputum cultures; droplet precautions pending respiratory viral panel\n2. Acute hypoxemia - O2 to keep SpO2 >= 92%, wean as tolerated\n3. Tobacco use - nicotine patch, cessation counseling\n4. Dispo - SW/CM consult (unhoused)\nSigned: Patience Okonkwo, MD 10/02/2026 15:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 10/06/2026 07:40\nS: Cough much improved, less sputum. No dyspnea walking in hall. Eating well.\nO: T 98.4F HR 82 BP 122/74 RR 16 SpO2 95% RA. Few RLL crackles. AOx4.\nAfebrile since 10/03 18:00. WBC 14.8 -> 8.9.\nA/P:\n1. CAP RLL - clinically improved. IV ceftriaxone/azithromycin STOPPED 10/04; transitioned to PO amoxicillin-clavulanate 875 mg BID through 10/09. Azithromycin course completed 10/05. No IV antibiotics needed. PIV removed 10/05.\n2. Hypoxemia - resolved. On room air since 10/04, ambulatory SpO2 95% RA. No home O2 needed.\n3. Isolation - respiratory viral panel negative 10/02; droplet precautions discontinued 10/02. No isolation.\n4. Dispo - medically stable for d/c to recuperative care today. PCP f/u and repeat CXR in 6 wks.\nSigned: Patience Okonkwo, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "mar",
+      "title": "Medication administration record (excerpt)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## MEDICATION ADMINISTRATION RECORD - ANTIBIOTICS\nPatient: Daniel Doe  MRN: BR-6120873\nCeftriaxone 1 g IV q24h | Start 10/02 11:30 | Given 10/02 11:30, 10/03 11:00, 10/04 10:45 | DISCONTINUED 10/04 12:00\nAzithromycin 500 mg IV daily | Start 10/02 12:00 | Given 10/02, 10/03, 10/04 | DISCONTINUED 10/04 12:00\nAzithromycin 500 mg PO daily | 10/05 09:00 given | Course complete 10/05\nAmoxicillin-clavulanate 875 mg PO BID | Start 10/04 21:00 | Given 10/04 21:00, 10/05 09:00, 10/05 21:00, 10/06 09:00 | through 10/09\n## IV access\nPeripheral IV R forearm - removed 10/05 14:00, site clean\n## Notes\nPt self-administered PO doses with RN observation 10/05 and 10/06; states dose and schedule correctly.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "rt_note",
+      "title": "Respiratory therapy note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## RESPIRATORY THERAPY NOTE\nDate: 10/05/2026 16:00\nO2 weaned to room air 10/04 08:00. Ambulatory oximetry 10/05: rest SpO2 96% RA, after walking 200 ft SpO2 95% RA, no desaturation below 94%.\nNo nebulizer or inhaler treatments required. Incentive spirometer 1500 mL, pt independent with use.\nNo home O2 indicated.\nSigned: G. Mbatha, RRT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/05/2026 11:00\nBed mobility: independent\nSit<>stand: independent\nTransfers: independent, toilet and shower chair transfer independent\nGait: 200 ft x 2, independent, no assistive device, steady; 1 standing rest break\nStairs: 12 steps with one rail, independent\nBalance: good static and dynamic\n## Assessment\nAt baseline. No skilled PT needs. No DME needed.\n## Recommendation\nD/c to recuperative care or community without PT follow-up.\nSigned: H. Varga, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/06/2026 06:30\nPt AOx4. Independent with all ADLs. Showered independently 10/05 PM, gathered own supplies. Continent of bowel and bladder, toilets independently.\nSelf-administers PO meds, teach-back done on amoxicillin-clavulanate schedule.\nCalm and cooperative. No behavioral concerns this admission.\nIsolation status: none (standard precautions).\nRoom air, SpO2 95%. Afebrile.\nSigned: C. Duarte, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 10/05/2026 13:30\nPt engaged and pleasant, AOx4. Denies SI/HI. Denies auditory or visual hallucinations. No psychiatric history.\nNo conservatorship. Not enrolled in FSP. Not a registered sex offender per pt.\nUnhoused x 2 yrs; tent and belongings at encampment. Agreeable to recuperative care, then housing navigation referral.\nSigned: Teresa Lindqvist, RN CM / S. Achterberg, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 13,
+      "doc_type": "labs",
+      "title": "Labs, imaging and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n10/02 | WBC 14.8 H | Hgb 13.9 | Plt 301 | Na 136 | K 4.0 | Cr 1.0 | BUN 18 | Procalcitonin 1.2 H\n10/04 | WBC 11.2 H\n10/06 | WBC 8.9 | Cr 0.9\n10/02 Blood cultures x2: no growth at 72 hours (final pending)\n10/02 Sputum culture: Strep pneumoniae, ceftriaxone and amoxicillin susceptible\n10/02 Respiratory viral panel (incl. SARS-CoV-2 PCR): Negative\n10/02 MRSA nares PCR: Negative\n10/06 05:40 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n10/02 CXR PA/lat: RLL consolidation, no effusion, no cavitation, no pneumothorax\n10/05 CXR portable: improving RLL opacity\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/05 08:00 | 98.2 | 84 | 124/76 | 16 | 95% | RA\n10/05 14:00 | 98.6 | 86 | 126/78 | 16 | 96% | RA\n10/05 20:00 | 98.4 | 80 | 120/72 | 16 | 95% | RA\n10/06 02:00 | 98.0 | 76 | 118/70 | 14 | 95% | RA\n10/06 07:40 | 98.4 | 82 | 122/74 | 16 | 95% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 14,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Daniel Doe  MRN: BR-6120873\n- Amoxicillin-clavulanate 875 mg PO BID through 10/09/2026 (6 doses remaining)\n- Nicotine patch 14 mg/24h daily\n- Acetaminophen 650 mg PO q6h PRN fever/pain\n- Guaifenesin 600 mg PO BID PRN cough\nNo IV medications. No home O2.\nPatient able to self-administer all medications: Yes\nMeds-to-beds: full supply dispensed by inpatient pharmacy at discharge\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

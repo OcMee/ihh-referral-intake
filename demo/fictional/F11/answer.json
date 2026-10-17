@@ -1,0 +1,9 @@
+{
+  "packet_id": "F11",
+  "intended": "needs_info",
+  "why": "Pneumonia/COPD patient newly ordered home O2 2 L/min with exertion and sleep, but the vendor has not confirmed delivery (RESP-3 unknown), and the packet is silent on SI, hallucinations, behavior and isolation (MH-2, MH-3, OTH-1, OTH-4).",
+  "traps": [
+    "Referral form says O2 No but the progress note and med list order home oxygen 2 L/min NC.",
+    "Referral form says Active Infection No while she is still on oral cefpodoxime for pneumonia."
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "packet_id": "F12",
+  "patient": {
+    "summary": "41M, R forearm cellulitis improved on PO abx, severe depression with active suicidal ideation and plan, unhoused",
+    "age": "41",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 1 year (bus shelter)",
+    "admit_reason": "Skin infection of the right forearm",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mental health",
+      "text": "Psychiatry documents active suicidal ideation with a plan to overdose; still present on 08/20.",
+      "pages": [
+        8,
+        10
+      ],
+      "quote": "Patient endorses active suicidal ideation with a plan to overdose",
+      "quote_page": 8
+    },
+    {
+      "label": "Mental health",
+      "text": "Psychiatry recommends inpatient psychiatric admission; not stable for an unsupervised setting.",
+      "pages": [
+        8,
+        10
+      ],
+      "quote": "Recommend inpatient psychiatric admission once medically cleared",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "On a 1:1 sitter since the positive suicide screen 08/17.",
+      "pages": [
+        7,
+        10
+      ],
+      "quote": "1:1 sitter initiated 15:50.",
+      "quote_page": 7
+    },
+    {
+      "label": "Infection",
+      "text": "Cellulitis improved; switched to PO cephalexin through 08/22; medically stable.",
+      "pages": [
+        9
+      ],
+      "quote": "Medically stable for discharge.",
+      "quote_page": 9
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 300+ ft independently; ADLs independent per nursing.",
+      "pages": [
+        11
+      ],
+      "quote": "Gait: 300+ ft without device, independent, steady",
+      "quote_page": 11
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; rapid COVID negative 08/20 06:00.",
+      "pages": [
+        12
+      ],
+      "quote": "08/20 06:00 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 12
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and recovering from cellulitis.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "41 y/o M experiencing homelessness (sleeps at a bus shelter near Example Ave)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "ADLs independent per nursing (PT screen).",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showering independent per nursing; gathering supplies not described.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independent; form marks continent.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "Uses no DME.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT screen included.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "## PHYSICAL THERAPY SCREEN"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 300+ ft independently.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Gait: 300+ ft without device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "met",
+      "finding": "Not wheelchair dependent; transfers independent.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Bed mobility, transfers, gait: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "not_met",
+      "finding": "Psychiatry states he is not psychiatrically stable for discharge to an unsupervised setting.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Not psychiatrically stable for discharge to an unsupervised setting"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "not_met",
+      "finding": "Exclusion applies: active suicidal ideation with a plan, documented 08/17 and unchanged 08/20.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Patient endorses active suicidal ideation with a plan to overdose"
+        },
+        {
+          "page": 10,
+          "quote": "Continues to endorse suicidal ideation with the same plan to overdose"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Psychiatry documents no hallucinations.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; last drink 5 days before admission.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "last drink 5 days ago"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Able to self-administer meds per med list (but see suicide risk).",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: NAD, AOx4"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm, cooperative, no aggression.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Calm, cooperative, no aggression."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "unknown",
+      "finding": "Sex offender box left blank on the form; not stated elsewhere.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge; IV cefazolin stopped.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated; on 1:1 suicide observation, which is not isolation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 08/17.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 08/20 06:00, same day as the referral; discharge date not set.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/20 06:00 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals afebrile with normal HR and BP; no sepsis.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/20 08:05 | 98.3 | 80 | 124/78 | 16 | 99% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Oral cephalexin; self-administers meds.",
+      "evidence": [
+        {
+          "page": 13,
+          "quote": "Cephalexin 500 mg PO QID through 08/22/2026"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics at discharge.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Right forearm.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Skin: R volar forearm erythema 12 x 7 cm"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures no growth at 96h.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/16 Blood cx x2: no growth at 96h"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "met",
+      "finding": "Uncomplicated cellulitis, now on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Cellulitis R forearm, improved. Transition to cephalexin 500 mg PO QID"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "No abscess on bedside ultrasound.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Bedside US: no abscess."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: NAD, AOx4"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Performs ADLs independently.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4, which are met.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Bed mobility, transfers, gait: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no TB or C. diff.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "No detox issue; weekend beer use, no withdrawal documented.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "last drink 5 days ago. Denies drugs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "unknown",
+      "finding": "Box left blank on the form (superseded by OTH-2).",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "No aggressive behavior.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Calm, cooperative, no aggression."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        7,
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Mental health",
+      "rule_ids": [
+        "MH-1",
+        "MH-2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [ ]"
+        },
+        {
+          "page": 8,
+          "quote": "Major depressive disorder, single episode, severe, without psychotic features."
+        }
+      ],
+      "note": "Form leaves every mental health box blank, chart documents severe depression with active suicidal ideation and plan. Chart wins; MH-2 exclusion applies."
+    }
+  ],
+  "questions_for_hospital": [
+    "Psychiatry documents active suicidal ideation with a plan and recommends inpatient psychiatric admission. Recuperative care is a low-supervision setting; can you confirm the psychiatric plan before we review a future referral?",
+    "Is he under any legal hold, conservatorship or FSP?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "Active suicidal ideation with a plan, documented by psychiatry on 08/17 and again on 08/20, is a hard exclusion (MH-2 not_met), and psychiatry says he is not stable for an unsupervised setting (MH-1 not_met). Medically he is otherwise a fit (INT-E1, MOB-3, INF-1 met), but the blank mental health boxes on the form hide this."
+  }
+}

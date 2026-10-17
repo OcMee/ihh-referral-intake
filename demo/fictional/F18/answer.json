@@ -1,0 +1,8 @@
+{
+  "packet_id": "F18",
+  "intended": "not_fit",
+  "why": "Echo shows LVEF 15%, below 25% and a new decline (CARD-5 fails), with a running IV furosemide drip and IV hydralazine/nitroglycerin within 24 hours (CARD-6, CIR-X2).",
+  "traps": [
+    "Referral form says 'Cardiac: stable. Ready for discharge 10/14' but the echo report shows LVEF 15% and cardiology writes 'NOT medically ready for discharge'."
+  ]
+}

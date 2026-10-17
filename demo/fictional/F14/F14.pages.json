@@ -1,0 +1,114 @@
+{
+  "packet_id": "F14",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Silver Oak Community Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Brian Castillo, LCSW\nPhone: 555-0186\nDate: 08/04/2026 10:05\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n38F abdominal wall abscess s/p I&D, now on oral antibiotics, wound healing.\nIndependent. Hoping for d/c 08/05/2026.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Silver Oak Community Hospital (fictional)\nDepartment/Floor: 3 South Med-Surg\nSocial Worker/Case Manager/Nurse: Brian Castillo, LCSW\nPhone: 555-0186\nEmail: bcastillo@silveroak.example\nNursing Station: 555-0187\nAuthorized By: Dr. A. Brandt\n## Patient Information\nName: Rosa Doe\nMRN: SO-7724519\nBirth Date: 02/03/1988\nGender: F\nEthnicity: Hispanic or Latina\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English / Spanish\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Abdominal wall abscess s/p I&D\nAdmit Date: 07/31/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: 1 - RLQ abdominal wall I&D site approx 2 x 1.5 cm, dry gauze daily\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 07/31/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  abscess - on PO doxycycline\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nMRSA: negative.\nPt does own dressing changes.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Rosa Doe\nDOB: 02/03/1988\nMember ID: OCH-30871246\n## Referring Provider\nFacility: Silver Oak Community Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Cutaneous abscess of abdominal wall\nICD-10: L02.211\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 08/05/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Silver Oak Community Hospital (fictional) - PATIENT FACE SHEET\nPatient: Rosa Doe\nMRN: SO-7724519\nAccount #: 99724519\nDOB: 02/03/1988\nSex: Female\nPreferred Language: English / Spanish\nEthnicity: Hispanic or Latina\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 07/31/2026 16:20\nAdmit Type: Inpatient\nUnit/Bed: 3S-318\nAttending: Anja Brandt, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 07/31/2026 18:00\n## CC\nPainful swelling of lower abdomen x 6 days, fever\n## HPI\n38 y/o F, unhoused (staying in a tent along a riverbed), presents with enlarging painful red lump on R lower abdomen that started as a \"pimple\". Subjective fevers and chills x 2 days. Denies IVDU, no skin popping. No abdominal surgery history.\nED: T 101.3F, HR 106, BP 118/72, WBC 15.2. Bedside US: 4.2 x 3.0 cm subcutaneous fluid collection RLQ abdominal wall, superficial to fascia, no intra-abdominal extension.\n## PMH\n- Obesity\n- Prior skin boils (no hospitalization)\n## Meds PTA\nNone\n## Allergies\nPenicillin (rash)\n## Social\nTobacco 5 cig/day. Occasional EtOH, last drink >2 weeks ago. Denies drugs.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nGen: uncomfortable, AOx4\nAbd: soft, non-tender except RLQ abdominal wall: 6 x 5 cm area of fluctuance with 9 cm surrounding erythema, no crepitus\n## Assessment/Plan\nAbdominal wall abscess with surrounding cellulitis, SIRS criteria on arrival.\n1. General surgery consult for I&D\n2. Vancomycin IV pending cultures (PCN allergy)\n3. Wound culture at I&D; blood cultures x2\n4. MRSA nares screen ordered\n5. Dispo: unhoused, CM for recuperative care\nSigned: Anja Brandt, MD 07/31/2026 19:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "other",
+      "title": "General surgery procedure note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## GENERAL SURGERY - PROCEDURE NOTE\nDate: 07/31/2026 21:30\nProcedure: Bedside incision and drainage, RLQ abdominal wall abscess\nAnesthesia: local lidocaine 1%\nFindings: 4 cm subcutaneous cavity, 15 mL purulent material, no fascial involvement\nSpecimen: wound culture sent\nPacking: 1/2 in plain packing strip placed\nPlan: packing removal 08/01, then wet-dry or dry gauze as wound granulates. No further surgical intervention anticipated.\nSigned: P. Iwu, MD (General Surgery)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 08/04/2026 08:15\nS: Pain 2/10. Afebrile since 08/01. Eating well.\nO: T 98.4F HR 80 BP 116/70 RR 16 SpO2 99% RA. AOx4.\nWound RLQ: 2.0 x 1.5 x 0.4 cm, clean granulating base, no packing needed, erythema resolved to 1 cm periwound.\nA/P: Abdominal wall abscess s/p I&D, improving.\n- Vancomycin IV stopped 08/03; transitioned to doxycycline 100 mg PO BID x 7 more days (through 08/10)\n- PIV to be removed before d/c\n- Dry gauze dressing daily\n- Wound culture: Staphylococcus aureus, susceptibilities pending (see lab)\n- Blood cultures no growth\n- Gen surg clinic f/u 08/12/2026\nAnticipate d/c 08/05 if placement accepted.\nSigned: Anja Brandt, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 08/04/2026 07:00\nPt AOx4, calm and cooperative.\nPt ambulating independently in hallway, no assistive device.\nShowered independently. Toileting independently, continent.\nDressing change RLQ: pt removed old gauze, cleaned with saline and applied dry gauze and tape herself with RN observation. Technique appropriate.\nPt self-administered doxycycline 100 mg PO at 06:00 with RN observation; states schedule twice daily with food and water.\nSigned: J. Okafor, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 08/04/2026 09:40\nPt unhoused, no family able to house. Agreeable to recuperative care.\nHome health referral for weekly wound check sent 08/03 to Valley Bloom Home Health (fictional) 555-0188. Status 08/04: awaiting agency acceptance.\nGen surg clinic f/u 08/12/2026 scheduled.\nDoxycycline prescription to be filled at bedside pharmacy on day of discharge.\nSigned: Brian Castillo, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n08/02 20:00 | 98.9 | 84 | 120/74 | 16 | 99% | RA\n08/03 08:00 | 98.5 | 82 | 118/72 | 16 | 99% | RA\n08/03 16:00 | 98.7 | 80 | 114/70 | 16 | 98% | RA\n08/04 00:00 | 98.2 | 76 | 112/68 | 16 | 99% | RA\n08/04 08:15 | 98.4 | 80 | 116/70 | 16 | 99% | RA\n## LABS\n07/31 | WBC 15.2 H | Hgb 12.8 | Plt 388 | Cr 0.7 | Glucose 104 | HbA1c 5.4%\n08/03 | WBC 8.6 | Hgb 12.4 | Cr 0.7\n## MICRO\n07/31 Blood cx x2: No growth, FINAL 08/04\n07/31 Wound cx RLQ abdominal wall: Staphylococcus aureus, moderate growth. Susceptibilities: PENDING\n## IMAGING\n07/31 CXR: lungs clear, no acute process\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Rosa Doe  MRN: SO-7724519\n- Doxycycline 100 mg PO twice daily with food through 08/10/2026\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n- Ibuprofen 400 mg PO every 8 hours PRN pain, with food\n## Wound supplies\n- Sterile gauze 4x4, normal saline, paper tape (7-day supply)\n## Stopped\n- Vancomycin IV (08/03)\n## Follow up\n- General surgery clinic 08/12/2026 - Silver Oak Surgical Clinic (fictional) 555-0189\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

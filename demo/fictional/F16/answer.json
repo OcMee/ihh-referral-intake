@@ -1,0 +1,8 @@
+{
+  "packet_id": "F16",
+  "intended": "fit",
+  "why": "Pneumonia improving on oral antibiotics with 5 afebrile vital sets, room air SpO2 95%, PT 200 ft independent, independent ADLs, AOx4 and negative MRSA/COVID, so ID-1, ID-2, RESP-1, MOB-3, ADL-1, COG-2, INF-1 and INF-2 are met and ID-3/OTH-3 do not apply.",
+  "traps": [
+    "Referral form says 'On IV antibiotics: Yes' but the MAR and progress note show IV ceftriaxone/azithromycin stopped 10/04, switched to oral, and the IV removed 10/05 (ID-3, OTH-3 not applicable)."
+  ]
+}

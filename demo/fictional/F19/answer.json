@@ -1,0 +1,8 @@
+{
+  "packet_id": "F19",
+  "intended": "fit",
+  "why": "Pancreatitis resolved and more than 72 hours since last drink with CIWA-Ar under 8 (MH-4 met), independent ADLs and mobility (ADL-1, ADL-2, ADL-3, MOB-3), AOx4 and self-administers oral meds (COG-1, COG-2), MRSA and COVID negative (INF-1, INF-2), and he accepted outpatient treatment (FORM-X5 met).",
+  "traps": [
+    "Referral form checks 'Refusing detox: Yes' (page 2), but the social work note (page 11) shows he accepted an outpatient IOP with an intake appointment and agrees to abstain; the chart wins, so FORM-X5 does not apply."
+  ]
+}

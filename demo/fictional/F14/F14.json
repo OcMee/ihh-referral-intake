@@ -1,0 +1,705 @@
+{
+  "packet_id": "F14",
+  "patient": {
+    "summary": "38F, abdominal wall abscess s/p bedside I&D, healing on oral doxycycline, unhoused",
+    "age": "38",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (tent along a riverbed), no fixed address",
+    "admit_reason": "Skin abscess on the lower abdomen, drained, on antibiotics",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Infection",
+      "text": "MRSA nares screen was ordered, but no result is in the packet; the form's 'MRSA: negative' is not backed by a lab. No COVID test appears anywhere in the packet.",
+      "pages": [
+        6,
+        2
+      ],
+      "quote": "MRSA nares screen ordered",
+      "quote_page": 6
+    },
+    {
+      "label": "Infection",
+      "text": "Wound culture grew Staph aureus with susceptibilities still pending, so MRSA in the wound is not ruled out.",
+      "pages": [
+        11
+      ],
+      "quote": "Staphylococcus aureus, moderate growth. Susceptibilities: PENDING",
+      "quote_page": 11
+    },
+    {
+      "label": "Wounds",
+      "text": "Wound 2.0 x 1.5 x 0.4 cm, no packing; patient changes her own dry dressing; home health wound check not yet accepted.",
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "quote": "Status 08/04: awaiting agency acceptance.",
+      "quote_page": 10
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "IV vancomycin stopped 08/03; self-administers oral doxycycline through 08/10.",
+      "pages": [
+        8,
+        9
+      ],
+      "quote": "Pt self-administered doxycycline 100 mg PO at 06:00 with RN observation",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "Independent with showering and toileting; walks in the hallway without a device (distance not documented).",
+      "pages": [
+        9
+      ],
+      "quote": "Pt ambulating independently in hallway, no assistive device.",
+      "quote_page": 9
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4 and calm; SI, hallucinations, psych history and conservatorship are not addressed.",
+      "pages": [
+        9
+      ],
+      "quote": "Pt AOx4, calm and cooperative.",
+      "quote_page": 9
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (tent along a riverbed) with a healing abscess on antibiotics.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "38 y/o F, unhoused (staying in a tent along a riverbed)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Nursing documents independent showering and toileting.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently. Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showered independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently. Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independently, continent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No assistive device used.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt ambulating independently in hallway, no assistive device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT or OT notes in the packet; only a nursing note describes mobility.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walks independently in the hallway without a device, but no distance is documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No psychiatric history or mental status beyond AOx4 and calm is documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed anywhere in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with intoxication; last drink more than 2 weeks ago.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Occasional EtOH, last drink >2 weeks ago."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship or FSP history is not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administered doxycycline with RN observation and states the schedule.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt self-administered doxycycline 100 mg PO at 06:00 with RN observation"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, progress note and nursing note.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: uncomfortable, AOx4"
+        },
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative; no aggression documented.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "IV vancomycin stopped and the PIV is to be removed before discharge.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PIV to be removed before d/c"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status is not stated anywhere; MRSA screen result is not in the packet and the wound grew Staph aureus with susceptibilities pending.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "unknown",
+      "finding": "An MRSA nares screen was ordered but no result appears in the packet; only the referral form says 'MRSA: negative'.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "No COVID swab result anywhere in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic (HbA1c 5.4%).",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile since 08/01, HR 76-84, BP normal; no signs of sepsis.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "08/04 08:15 | 98.4 | 80 | 116/70 | 16 | 99% | RA"
+        },
+        {
+          "page": 8,
+          "quote": "Afebrile since 08/01."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Self-administered oral doxycycline with RN observation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt self-administered doxycycline 100 mg PO at 06:00 with RN observation"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics stopped; oral doxycycline at discharge.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Vancomycin IV stopped 08/03; transitioned to doxycycline 100 mg PO BID"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Right lower quadrant abdominal wall abscess.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Bedside incision and drainage, RLQ abdominal wall abscess"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Wound culture grew Staph aureus, susceptibilities pending; blood cultures no growth.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Wound cx RLQ abdominal wall: Staphylococcus aureus, moderate growth. Susceptibilities: PENDING"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "met",
+      "finding": "Uncomplicated abscess, now on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "transitioned to doxycycline 100 mg PO BID x 7 more days (through 08/10)"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "not_met",
+      "finding": "Home health wound check referral was sent but no agency has accepted yet; patient does her own daily dressing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Status 08/04: awaiting agency acceptance."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "Not a complicated large abscess: 4 cm superficial cavity, no fascial involvement, no further surgery planned.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "4 cm subcutaneous cavity, 15 mL purulent material, no fascial involvement"
+        },
+        {
+          "page": 7,
+          "quote": "No further surgical intervention anticipated."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with showering and toileting.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently. Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Walks independently, distance not documented (superseded by MOB-3/MOB-4).",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "unknown",
+      "finding": "MRSA status not documented: screen result missing and wound Staph aureus susceptibilities pending.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance treatment issue; occasional alcohol only.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "MRSA result",
+      "rule_ids": [
+        "INF-1",
+        "FORM-X4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "MRSA: negative."
+        },
+        {
+          "page": 6,
+          "quote": "MRSA nares screen ordered"
+        }
+      ],
+      "note": "Form says MRSA negative, but the chart only shows the screen was ordered and no result is in the labs. Chart wins: INF-1 is unknown until the result is sent."
+    },
+    {
+      "topic": "Home health",
+      "rule_ids": [
+        "INT-E2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Home Health Ordered: Yes [ ] No [X]"
+        },
+        {
+          "page": 10,
+          "quote": "Home health referral for weekly wound check sent 08/03"
+        }
+      ],
+      "note": "Form says no home health, case management sent a home health wound check referral that is still awaiting acceptance. Chart wins: home health is planned but not confirmed."
+    }
+  ],
+  "questions_for_hospital": [
+    "Please send the MRSA nares screen result ordered on admission; we could not find it in the packet.",
+    "Please send a COVID swab (rapid is fine) taken within 24 hours of discharge.",
+    "Are the wound culture susceptibilities back, and is the Staph aureus MRSA or MSSA?",
+    "Is the patient on any isolation precautions?",
+    "Has Valley Bloom Home Health accepted the weekly wound check referral, and when is the first visit?",
+    "About how far does the patient walk independently (at least 100 ft)?",
+    "Any history of suicidal ideation, hallucinations, psychiatric diagnosis, conservatorship or FSP?",
+    "Will the patient leave with a 30-day supply of her medications (doxycycline through 08/10)?"
+  ],
+  "claude_fit": {
+    "score": 60,
+    "recommendation": "needs_info",
+    "reason": "Clinically a good fit (INT-E1, ADL-1, COG-1, ID-1 met), but INF-1 and INF-2 are unknown: the form's 'MRSA: negative' has no lab behind it and no COVID swab is in the packet, and OTH-4 is unknown with Staph aureus susceptibilities pending. Home health for INT-E2 is not yet confirmed."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packet_id": "F10",
+  "intended": "fit",
+  "why": "Healing non-infected diabetic foot ulcer with home health wound care starting 06/13 (INT-E2, INT-E4), stable glucose on oral meds (DM-1, DM-2), independent ADLs and cane use (ADL-2, MOB-3), negative MRSA and timely COVID swabs (INF-1, INF-2), AOx4 and no SI (COG-2, MH-2).",
+  "traps": [
+    "Referral form says 'Any Wounds: No' but the wound note documents a R plantar diabetic foot ulcer with every-other-day dressings."
+  ]
+}

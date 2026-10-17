@@ -1,0 +1,669 @@
+{
+  "packet_id": "F11",
+  "patient": {
+    "summary": "63F, CAP RLL with COPD, improving on PO abx, newly needs home O2 2L with exertion/sleep, unhoused (tent)",
+    "age": "63",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, sleeping in a tent x 2 years",
+    "admit_reason": "Pneumonia with COPD flare",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Meds/IV/O2",
+      "text": "New home oxygen ordered: 2 L/min by nasal cannula with exertion and sleep (form says no O2).",
+      "pages": [
+        7,
+        12
+      ],
+      "quote": "Order home oxygen 2 L/min NC with exertion and sleep.",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Oxygen order faxed to the DME vendor; delivery date and address are not confirmed.",
+      "pages": [
+        10
+      ],
+      "quote": "Awaiting vendor confirmation of delivery date and delivery address.",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "CAP improving; on PO cefpodoxime through 07/17 PM; blood cultures negative.",
+      "pages": [
+        7
+      ],
+      "quote": "Transitioned 07/14 to cefpodoxime 200 mg PO BID to complete 7 days total",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 200 ft without a device on portable O2, modified independent.",
+      "pages": [
+        9
+      ],
+      "quote": "Gait: 200 ft without device, modified independent, 1 standing rest break, on 2L NC portable O2",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "ADLs described only as independent per nursing; no OT note on bathing.",
+      "pages": [
+        10
+      ],
+      "quote": "Independent with ADLs per nursing.",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "No psychiatric, suicide, hallucination or behavior screen in the packet.",
+      "pages": [
+        6
+      ],
+      "quote": "Pt AOx4, agreeable to recuperative care.",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA negative 07/12; rapid COVID negative 07/17 05:30 before discharge.",
+      "pages": [
+        11
+      ],
+      "quote": "07/17 05:30 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (tent) and recovering from pneumonia with new oxygen needs.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "homeless sleeping in her tent near Example Park x 2 years"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Case manager reports independent ADLs per nursing; no OT evaluation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with ADLs per nursing."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "No note describes showering, gathering supplies or bathing with oxygen.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Form marks continent; ADLs independent per nursing.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "met",
+      "finding": "No DME used except portable oxygen, which she walked with.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 200 ft without device"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT evaluation included (no OT).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "## PHYSICAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 200 ft modified independent with one rest break.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 200 ft without device, modified independent, 1 standing rest break"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "met",
+      "finding": "Not wheelchair dependent; transfers independent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Safe for d/c to recuperative care."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No mental health history or status is documented beyond AOx4.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "The packet does not mention suicidal ideation either way.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "The packet does not mention hallucinations.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; denies alcohol.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Smokes 1/2 ppd. EtOH denies."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history is not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers meds; inhaler technique correct on teach-back.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Patient able to self-administer all medications: Yes"
+        },
+        {
+          "page": 8,
+          "quote": "technique correct on teach-back"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 in H&P and CM note.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, agreeable to recuperative care."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "No behavior documentation in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge; on oral antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status is not stated (viral PCR was negative).",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 07/12.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 07/17 05:30 with discharge planned 07/17 PM, within 24 hours.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/17 05:30 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent; afebrile, HR 84-92, BP normal, no signs of sepsis.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/16 07:50 | 98.5 | 88 | 122/74 | 18 | 91% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Takes oral cefpodoxime and self-administers meds.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Cefpodoxime 200 mg PO BID - last dose 07/17 PM"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics stopped 07/14; oral only.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Right lower lobe pneumonia.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "63F with CAP RLL and COPD with acute exacerbation."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures no growth (final); sputum normal flora.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Blood cx 07/11 x2: no growth, final. Sputum cx: normal flora."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Admission and 07/15 chest X-rays reported.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/15 CXR: improving RLL opacity, no effusion or pneumothorax"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vitals sent; resting SpO2 91-93%, stable.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/15 08:00 | 98.6 | 92 | 124/76 | 18 | 91% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "unknown",
+      "finding": "Oxygen is ordered, but the vendor has not confirmed delivery, so the tank/concentrator is not confirmed ready the day before arrival.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Order home oxygen 2 L/min NC with exertion and sleep."
+        },
+        {
+          "page": 10,
+          "quote": "Awaiting vendor confirmation of delivery date and delivery address."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "met",
+      "finding": "Respiratory therapy note included.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "## RESPIRATORY THERAPY NOTE"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "met",
+      "finding": "Duonebs stopped 07/15; now tiotropium daily and albuterol MDI PRN.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Tiotropium 18 mcg daily + albuterol MDI PRN with spacer"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "met",
+      "finding": "Yes, cefpodoxime PO through 07/17 PM.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Cefpodoxime 200 mg PO BID - last dose 07/17 PM"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E1",
+      "status": "met",
+      "finding": "Pneumonia is an eligible respiratory condition.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "CAP RLL improving."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E3",
+      "status": "met",
+      "finding": "COPD needing O2 only with exertion and sleep, not continuously.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Meets criteria for home O2 with exertion and sleep. Not required at rest."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax on CXR.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "no effusion or pneumothorax"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "met",
+      "finding": "No BiPAP needed.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "No BiPAP needed."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, agreeable to recuperative care."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with ADLs per nursing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with ADLs per nursing."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4, which are met.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Safe for d/c to recuperative care."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; pneumonia treated, not MRSA/TB/C. diff.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "07/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "Denies alcohol and drugs.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "EtOH denies. Drugs denies."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender per form (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "No behavior documentation.",
+      "evidence": []
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        7,
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Oxygen",
+      "rule_ids": [
+        "RESP-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "O2: Yes [ ] No [X]"
+        },
+        {
+          "page": 7,
+          "quote": "Order home oxygen 2 L/min NC with exertion and sleep."
+        }
+      ],
+      "note": "Form says no oxygen, chart orders home O2 2 L/min with exertion and sleep. Chart wins; RESP-3 applies."
+    },
+    {
+      "topic": "Active infection",
+      "rule_ids": [
+        "ID-2",
+        "RSP-E1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Active Infection: Yes [ ] No [X]"
+        },
+        {
+          "page": 12,
+          "quote": "Cefpodoxime 200 mg PO BID - last dose 07/17 PM"
+        }
+      ],
+      "note": "Form says no active infection, chart shows pneumonia still on oral antibiotics. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "Has Pacific Breeze Medical Supply confirmed the oxygen concentrator and portable tanks will be delivered to our site the day before she arrives? Please send the delivery confirmation.",
+    "Can you confirm she has no suicidal ideation, hallucinations or aggressive behavior this stay, and no history of conservatorship or FSP?",
+    "Is she on any isolation precautions?",
+    "Can you send an OT note or nursing note on showering and gathering her own supplies with oxygen?"
+  ],
+  "claude_fit": {
+    "score": 62,
+    "recommendation": "needs_info",
+    "reason": "Clinically appropriate (RSP-E1, RSP-E3, MOB-3, INF-1, INF-2 met), but the new home oxygen is ordered without confirmed delivery (RESP-3 unknown), and the packet is silent on mental health and behavior (MH-2, MH-3, OTH-1) and bathing (ADL-2). Hold until the O2 delivery is confirmed."
+  }
+}

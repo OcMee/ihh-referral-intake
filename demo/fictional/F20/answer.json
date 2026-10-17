@@ -1,0 +1,10 @@
+{
+  "packet_id": "F20",
+  "intended": "needs_info",
+  "why": "Orientation flips between AOx3 and AOx4 with nighttime disorientation (COG-2 unclear) and nobody documents whether she can self-administer medications (COG-1 unknown), with shower and toileting hygiene not assessed (ADL-2, ADL-3).",
+  "traps": [
+    "Referral form says 'Forgetful: No' (page 2), but the 10/05 nursing note (page 7) says she needed reminders to take scheduled meds.",
+    "Referral form says 'Self Administer All Meds: Yes' and 'Pt AOx4', but RN gave every dose, OT did not assess medication management, and nursing documented AOx3 on 10/04.",
+    "Fax and form say delirium resolved; the hospitalist says resolving, not fully resolved."
+  ]
+}

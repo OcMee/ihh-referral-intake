@@ -1,0 +1,728 @@
+{
+  "packet_id": "F15",
+  "patient": {
+    "summary": "61M, C. difficile colitis after clindamycin, on oral vancomycin, still on contact isolation, unhoused",
+    "age": "61",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (bus shelter), no fixed address",
+    "admit_reason": "C. diff diarrhea and dehydration after antibiotics",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Infection",
+      "text": "Active C. diff (PCR and toxin positive) on oral vancomycin day 5 of 10.",
+      "pages": [
+        6,
+        7,
+        11
+      ],
+      "quote": "09/05 C. difficile toxin EIA: POSITIVE",
+      "quote_page": 11
+    },
+    {
+      "label": "Infection",
+      "text": "Still on contact enteric precautions; infection prevention says criteria to stop are not met.",
+      "pages": [
+        9
+      ],
+      "quote": "Criteria NOT met as of 09/09/2026: 5 unformed stools in last 24h.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "Stool log shows ongoing loose and watery stools through 09/09 05:50.",
+      "pages": [
+        8
+      ],
+      "quote": "09/09 05:50 | 7 watery | KL",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Referral form says no infections requiring isolation and no active infection, which the chart contradicts.",
+      "pages": [
+        2
+      ],
+      "quote": "No infections requiring isolation.",
+      "quote_page": 2
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 300 ft independently without a device; toilets independently.",
+      "pages": [
+        10,
+        8
+      ],
+      "quote": "Gait: 300 ft without assistive device, independent, steady",
+      "quote_page": 10
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4, calm, self-administers oral vancomycin.",
+      "pages": [
+        8
+      ],
+      "quote": "Self-administers oral vancomycin with RN observation.",
+      "quote_page": 8
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (bus shelter) and recovering from C. diff colitis.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "61 y/o M, unhoused (sleeping at a bus shelter, uses day center showers)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "unknown",
+      "finding": "Toileting and walking are independent, but bathing and other ADLs are not documented in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Showering or hygiene in hospital is not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independently despite urgency.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Toileting independently, one episode of urgency, made it to bathroom."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No skilled PT needs. No DME."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT evaluation in the packet.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 300 ft independently without a device.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 300 ft without assistive device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No psychiatric history or mental status beyond AOx4 and calm is documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Nursing documents denies SI.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative. Denies SI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Denies alcohol use; not admitted with intoxication.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies EtOH or drugs."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship or FSP history is not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral vancomycin with RN observation.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Self-administers oral vancomycin with RN observation."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, progress note and nursing note.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: tired, dry mucous membranes, AOx4"
+        },
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative; no aggression documented.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "IV fluids stopped 09/08; no IV access at discharge is mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "not_met",
+      "finding": "Still on active contact enteric precautions for C. diff; criteria to stop isolation are not met (5 unformed stools in last 24h).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: ACTIVE - Contact Enteric Precautions"
+        },
+        {
+          "page": 9,
+          "quote": "Criteria NOT met as of 09/09/2026: 5 unformed stools in last 24h."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 09/05.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/05 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "COVID negative 09/09 07:00; requested discharge is 09/10 with no time given, so it is not known if arrival falls within 24 hours.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/09 07:00 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; Tmax 99.0, HR 86-92, BP normal; no signs of sepsis.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/09 08:30 | 98.8 | 88 | 118/74 | 16 | 98% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Self-administers oral vancomycin.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Self-administers oral vancomycin with RN observation."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Colon (C. difficile colitis).",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "CT A/P: mild colonic wall thickening consistent with colitis"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "C. diff PCR and toxin positive.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/05 C. difficile PCR: POSITIVE"
+        },
+        {
+          "page": 11,
+          "quote": "09/05 C. difficile toxin EIA: POSITIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Yes, contact enteric precautions are active.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: ACTIVE - Contact Enteric Precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition requiring treatment.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X3",
+      "status": "not_met",
+      "finding": "Active C. difficile infection, toxin positive, still with ongoing loose stools on day 5 of oral vancomycin.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/05 C. difficile toxin EIA: POSITIVE"
+        },
+        {
+          "page": 7,
+          "quote": "Still having loose stools, 5 in the last 24 hours, watery to mushy."
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-X1",
+      "status": "not_applicable",
+      "finding": "No cirrhosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X2",
+      "status": "not_applicable",
+      "finding": "No GI bleeding.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Toilets and walks independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Ambulating independently in room. Toileting independently"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Walks 300 ft independently (superseded by MOB-3/MOB-4).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 300 ft without assistive device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "not_met",
+      "finding": "Active C. diff not cleared; infection prevention says isolation criteria are not met.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: ACTIVE - Contact Enteric Precautions"
+        },
+        {
+          "page": 11,
+          "quote": "09/05 C. difficile PCR: POSITIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies EtOH or drugs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Isolation",
+      "rule_ids": [
+        "OTH-4",
+        "GI-X3",
+        "FORM-X4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "No infections requiring isolation."
+        },
+        {
+          "page": 9,
+          "quote": "Isolation status: ACTIVE - Contact Enteric Precautions"
+        }
+      ],
+      "note": "Form says no isolation, chart says active contact enteric precautions for C. diff. Chart wins."
+    },
+    {
+      "topic": "Active infection",
+      "rule_ids": [
+        "FORM-X4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Active Infection: Yes [ ] No [X]"
+        },
+        {
+          "page": 6,
+          "quote": "C. difficile toxin EIA: POSITIVE."
+        }
+      ],
+      "note": "Form says no active infection, chart shows C. diff toxin positive on treatment. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "The chart shows active contact enteric precautions for C. diff; could you let us know when the patient has gone 48 hours without diarrhea and isolation is cleared, so we can re-review?",
+    "Could the referral form be corrected to show the active C. diff infection and isolation?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "Active C. difficile with ongoing loose stools and contact isolation not cleared makes OTH-4, GI-X3 and FORM-X4 hard stops. The referral form's 'No infections requiring isolation' is contradicted by the chart; re-refer once isolation is cleared."
+  }
+}

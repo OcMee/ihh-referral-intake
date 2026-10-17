@@ -90,5 +90,99 @@
       "Face sheet p4 carries a behavioral alert and security flag",
       "COVID swab not collected (labs p10, pt refused) - INF-2 also unmet"
     ]
+  },
+  {
+    "packet_id": "F10",
+    "intended": "fit",
+    "why": "Healing non-infected diabetic foot ulcer with home health wound care starting 06/13 (INT-E2, INT-E4), stable glucose on oral meds (DM-1, DM-2), independent ADLs and cane use (ADL-2, MOB-3), negative MRSA and timely COVID swabs (INF-1, INF-2), AOx4 and no SI (COG-2, MH-2).",
+    "traps": [
+      "Referral form says 'Any Wounds: No' but the wound note documents a R plantar diabetic foot ulcer with every-other-day dressings."
+    ]
+  },
+  {
+    "packet_id": "F11",
+    "intended": "needs_info",
+    "why": "Pneumonia/COPD patient newly ordered home O2 2 L/min with exertion and sleep, but the vendor has not confirmed delivery (RESP-3 unknown), and the packet is silent on SI, hallucinations, behavior and isolation (MH-2, MH-3, OTH-1, OTH-4).",
+    "traps": [
+      "Referral form says O2 No but the progress note and med list order home oxygen 2 L/min NC.",
+      "Referral form says Active Infection No while she is still on oral cefpodoxime for pneumonia."
+    ]
+  },
+  {
+    "packet_id": "F12",
+    "intended": "not_fit",
+    "why": "Psychiatry documents active suicidal ideation with a plan on 08/17 and again on 08/20 (MH-2 exclusion applies) and says he is not stable for an unsupervised setting (MH-1), although he is otherwise medically stable.",
+    "traps": [
+      "Referral form leaves every behavioral and mental health box unchecked; the SI is only in the nursing note and psychiatry notes."
+    ]
+  },
+  {
+    "packet_id": "F13",
+    "intended": "fit",
+    "why": "Post-op closed ankle ORIF patient meets ADL-1 to ADL-3, MOB-1 and MOB-3 with a walker, COG-1/COG-2, OTH-4, INF-1 and INF-2, with INT-E5 staple removal and MSK-E2 outpatient PT confirmed.",
+    "traps": [
+      "Referral form admit date 07/11/2026 is the ED arrival; the face sheet inpatient admit is 07/12/2026 01:40. Not an eligibility issue."
+    ]
+  },
+  {
+    "packet_id": "F14",
+    "intended": "needs_info",
+    "why": "Healing abdominal wall abscess on oral antibiotics (INT-E1) but INF-1 is unknown (MRSA screen ordered, no result), INF-2 has no COVID swab, OTH-4 isolation is not stated, and INT-E2 home health is not yet accepted.",
+    "traps": [
+      "Referral form comment says 'MRSA: negative' but no MRSA lab result is in the packet (only 'MRSA nares screen ordered').",
+      "Wound culture grew Staph aureus with susceptibilities pending, so MRSA is not ruled out.",
+      "Referral form says Home Health Ordered: No, but case management sent a home health wound check referral that is awaiting acceptance."
+    ]
+  },
+  {
+    "packet_id": "F15",
+    "intended": "not_fit",
+    "why": "Active C. difficile with ongoing loose stools on contact enteric precautions that are not cleared, so OTH-4, GI-X3 and FORM-X4 exclusions apply.",
+    "traps": [
+      "Referral form comment says 'No infections requiring isolation' and Active Infection: No, but the chart shows active contact enteric precautions for C. diff (PCR and toxin positive) with criteria to stop isolation not met."
+    ]
+  },
+  {
+    "packet_id": "F16",
+    "intended": "fit",
+    "why": "Pneumonia improving on oral antibiotics with 5 afebrile vital sets, room air SpO2 95%, PT 200 ft independent, independent ADLs, AOx4 and negative MRSA/COVID, so ID-1, ID-2, RESP-1, MOB-3, ADL-1, COG-2, INF-1 and INF-2 are met and ID-3/OTH-3 do not apply.",
+    "traps": [
+      "Referral form says 'On IV antibiotics: Yes' but the MAR and progress note show IV ceftriaxone/azithromycin stopped 10/04, switched to oral, and the IV removed 10/05 (ID-3, OTH-3 not applicable)."
+    ]
+  },
+  {
+    "packet_id": "F17",
+    "intended": "needs_info",
+    "why": "Stable on oral diuretic and BP meds (CARD-1, CARD-6 met) and otherwise independent, but no echo or EF value in the packet (CARD-5 unknown) and only one troponin (CARD-2 incomplete).",
+    "traps": [
+      "Referral form says 'EF normal' but no echo was done and the chart says EF is unknown (CARD-5).",
+      "Referral form says 'Troponin negative x3' but the chart has a single ED troponin, not repeated (CARD-2)."
+    ]
+  },
+  {
+    "packet_id": "F18",
+    "intended": "not_fit",
+    "why": "Echo shows LVEF 15%, below 25% and a new decline (CARD-5 fails), with a running IV furosemide drip and IV hydralazine/nitroglycerin within 24 hours (CARD-6, CIR-X2).",
+    "traps": [
+      "Referral form says 'Cardiac: stable. Ready for discharge 10/14' but the echo report shows LVEF 15% and cardiology writes 'NOT medically ready for discharge'."
+    ]
+  },
+  {
+    "packet_id": "F19",
+    "intended": "fit",
+    "why": "Pancreatitis resolved and more than 72 hours since last drink with CIWA-Ar under 8 (MH-4 met), independent ADLs and mobility (ADL-1, ADL-2, ADL-3, MOB-3), AOx4 and self-administers oral meds (COG-1, COG-2), MRSA and COVID negative (INF-1, INF-2), and he accepted outpatient treatment (FORM-X5 met).",
+    "traps": [
+      "Referral form checks 'Refusing detox: Yes' (page 2), but the social work note (page 11) shows he accepted an outpatient IOP with an intake appointment and agrees to abstain; the chart wins, so FORM-X5 does not apply."
+    ]
+  },
+  {
+    "packet_id": "F20",
+    "intended": "needs_info",
+    "why": "Orientation flips between AOx3 and AOx4 with nighttime disorientation (COG-2 unclear) and nobody documents whether she can self-administer medications (COG-1 unknown), with shower and toileting hygiene not assessed (ADL-2, ADL-3).",
+    "traps": [
+      "Referral form says 'Forgetful: No' (page 2), but the 10/05 nursing note (page 7) says she needed reminders to take scheduled meds.",
+      "Referral form says 'Self Administer All Meds: Yes' and 'Pt AOx4', but RN gave every dose, OT did not assess medication management, and nursing documented AOx3 on 10/04.",
+      "Fax and form say delirium resolved; the hospitalist says resolving, not fully resolved."
+    ]
   }
 ]

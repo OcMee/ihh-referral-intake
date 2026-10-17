@@ -66,7 +66,7 @@ def sha(b: bytes) -> str:
 def fictional(body: bytes):
     """Dry run: which fictional packet is this, by content (works whatever the channel renamed it to)."""
     h = sha(body)
-    return next((f.stem for f in sorted((REPO / "app/pdf").glob("F0[1-9].pdf")) if sha(f.read_bytes()) == h), None)
+    return next((f.stem for f in sorted((REPO / "app/pdf").glob("F[0-9][0-9].pdf")) if sha(f.read_bytes()) == h), None)
 
 
 def merge(pdfs: list) -> bytes:
@@ -85,10 +85,10 @@ def docx_to_pdf(b: bytes) -> bytes:
     Our Word copies mark page breaks with "Scan page N"; other files flow onto letter pages."""
     if DRY:  # dry run: our fictional Word copy stands for its fictional PDF (same pages as the prepared transcript)
         h = sha(b)
-        for f in sorted((REPO / "app/pdf").glob("F0[1-9].docx")):
+        for f in sorted((REPO / "app/pdf").glob("F[0-9][0-9].docx")):
             if sha(f.read_bytes()) == h:
                 return f.with_suffix(".pdf").read_bytes()
-        raise ValueError("Dry run accepts only the fictional F01.docx to F09.docx")
+        raise ValueError("Dry run accepts only the fictional F01 to F20 Word files")
     import docx
     import textwrap
     from reportlab.lib.pagesizes import letter
@@ -159,7 +159,7 @@ def accept(body: bytes, name: str, source: str, meta: dict = None) -> dict:
         return {"error": "That file is not a PDF"}
     fict = fictional(body) if DRY else None
     if DRY and not fict:
-        return {"error": "Dry run accepts only the fictional F01.pdf to F09.pdf from app/pdf/"}
+        return {"error": "Dry run accepts only the fictional F01 to F20 files from app/pdf/"}
     h = sha(body)
     with ACCEPT:
         for r in OUT.glob("U[0-9][0-9]/received.json"):

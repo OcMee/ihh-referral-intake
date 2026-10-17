@@ -1,0 +1,694 @@
+{
+  "packet_id": "F18",
+  "patient": {
+    "summary": "67M, decompensated HFrEF with LVEF 15%, still on IV furosemide drip and IV antihypertensives, unhoused",
+    "age": "67",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal/Medicare",
+    "housing": "Unhoused x 4 yrs (sleeps in park)",
+    "admit_reason": "Decompensated heart failure with reduced ejection fraction",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Cardiac",
+      "text": "Echo 10/10: LVEF 15%, down from 30% in 2025.",
+      "pages": [
+        7
+      ],
+      "quote": "LVEF (biplane Simpson): 15%",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Furosemide IV drip at 15 mg/hr still running; not ready for oral diuretic.",
+      "pages": [
+        9
+      ],
+      "quote": "RUNNING as of 10/13 08:00",
+      "quote_page": 9
+    },
+    {
+      "label": "Cardiac",
+      "text": "IV hydralazine given 10/13 02:10 for SBP 184; IV nitroglycerin drip stopped 10/12 16:00.",
+      "pages": [
+        9
+      ],
+      "quote": "Hydralazine 10 mg IV PRN SBP > 180 | Given 10/13 02:10 (SBP 184)",
+      "quote_page": 9
+    },
+    {
+      "label": "Cardiac",
+      "text": "Cardiology says not medically ready for discharge, 3-5 more days expected.",
+      "pages": [
+        8
+      ],
+      "quote": "NOT medically ready for discharge.",
+      "quote_page": 8
+    },
+    {
+      "label": "Cardiac",
+      "text": "Telemetry: sinus tachycardia with two short runs of NSVT overnight.",
+      "pages": [
+        10
+      ],
+      "quote": "runs of NSVT x2 (5 beats) overnight, MD aware.",
+      "quote_page": 10
+    },
+    {
+      "label": "Mobility",
+      "text": "AOx4, independent ADLs at bedside, walks to bathroom with IV pole.",
+      "pages": [
+        10
+      ],
+      "quote": "Independent with ADLs at bedside, ambulating to bathroom with IV pole",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused 4 years with severe heart failure.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 5,
+          "quote": "67 y/o M, unhoused x 4 yrs"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Third HF admission in 6 months; authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Third HF admission in 6 months."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent with ADLs at bedside.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with ADLs at bedside"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Bathing/showering is not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Walks to the bathroom; voids in urinal independently.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "ambulating to bathroom with IV pole"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME; walks with IV pole only because of the drip.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the packet.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "Pages (including cover): 13"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walking distance is not documented; only walking to the bathroom.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No mental health diagnosis on form; none in the history.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "No alcohol for 5 years.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "EtOH none x 5 yrs."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Form marks self-administers all meds; chart does not contradict.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Self Administer All Meds: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "not_applicable",
+      "finding": "Referral form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_met",
+      "finding": "Continuous IV furosemide infusion running; no home health arranged (and a drip cannot be run at recuperative care).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Furosemide infusion 10-15 mg/hr IV continuous"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "10/09 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "Rapid COVID negative 10/13 06:00; arrival time unknown and discharge date is uncertain.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "10/13 06:00 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "not_applicable",
+      "finding": "No active infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "Not a respiratory illness admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_met",
+      "finding": "BP not stable on oral meds: SBP 184 at 02:00 on 10/13 needed IV hydralazine; oral regimen started only 10/12 18:00.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "10/13 02:00 | 98.0 | 108 | 184/102 | 22 | 92% | RA"
+        },
+        {
+          "page": 9,
+          "quote": "Hydralazine 25 mg PO TID | Start 10/12 18:00"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "met",
+      "finding": "Three troponins sent, all negative.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "(ref <17; negative x3)"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "met",
+      "finding": "ECG report included: sinus tachycardia, LBBB unchanged.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Left bundle branch block, unchanged from 2025 outside tracing per pt records"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation documented; sinus rhythm.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Rhythm: sinus tachycardia"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_met",
+      "finding": "Echo shows LVEF 15%, below the 25% minimum, and a new decline from 30% (not baseline).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "LVEF (biplane Simpson): 15%"
+        },
+        {
+          "page": 7,
+          "quote": "Decline from LVEF 30% (outside echo 2025)."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_met",
+      "finding": "IV BP medications within 24 hours: IV hydralazine 10/13 02:10 and IV nitroglycerin until 10/12 16:00.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Hydralazine 10 mg IV PRN SBP > 180 | Given 10/13 02:10 (SBP 184)"
+        },
+        {
+          "page": 8,
+          "quote": "nitroglycerin infusion weaned off 10/12 16:00"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; form marks no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with bedside ADLs.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with ADLs at bedside"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "not_applicable",
+      "finding": "Superseded by MOB-3/MOB-4.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no active infection.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "10/09 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use; no alcohol for 5 years.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "EtOH none x 5 yrs. Denies drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "not_applicable",
+      "finding": "Superseded by OTH-2; form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "calm, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-E7",
+      "status": "not_applicable",
+      "finding": "No heart attack; nonischemic cardiomyopathy, troponins negative.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "No history of MI."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-X1",
+      "status": "unknown",
+      "finding": "Two short runs of NSVT overnight; whether this is an unstable arrhythmia is not stated.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "runs of NSVT x2 (5 beats) overnight, MD aware."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-X2",
+      "status": "not_met",
+      "finding": "Hypertension still needing IV medication.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "hydralazine 10 mg IV given 02:10"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "no",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Cardiac stability",
+      "rule_ids": [
+        "CARD-5",
+        "CARD-6",
+        "CIR-X2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Cardiac: stable. Ready for discharge 10/14."
+        },
+        {
+          "page": 8,
+          "quote": "NOT medically ready for discharge. Anticipate at least 3-5 more days."
+        },
+        {
+          "page": 7,
+          "quote": "Severely reduced LV systolic function, LVEF 15%."
+        }
+      ],
+      "note": "Form says cardiac stable and ready 10/14; the echo shows LVEF 15% and cardiology says not ready, with an IV furosemide drip running and IV hydralazine given overnight. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "Cardiology documents LVEF 15% and 'not medically ready for discharge'; is the 10/14 date on the form still the plan?",
+    "When is the furosemide drip expected to stop and the patient to be on oral diuretics only?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "Echo shows LVEF 15% (CARD-5 fails, under 25% and not baseline), and he is on a running IV furosemide drip with IV hydralazine/nitroglycerin in the last 24 hours (CARD-6, CIR-X2). The form's 'cardiac stable' is contradicted by cardiology's 'not medically ready for discharge'."
+  }
+}

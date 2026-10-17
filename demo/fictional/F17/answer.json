@@ -1,0 +1,9 @@
+{
+  "packet_id": "F17",
+  "intended": "needs_info",
+  "why": "Stable on oral diuretic and BP meds (CARD-1, CARD-6 met) and otherwise independent, but no echo or EF value in the packet (CARD-5 unknown) and only one troponin (CARD-2 incomplete).",
+  "traps": [
+    "Referral form says 'EF normal' but no echo was done and the chart says EF is unknown (CARD-5).",
+    "Referral form says 'Troponin negative x3' but the chart has a single ED troponin, not repeated (CARD-2)."
+  ]
+}

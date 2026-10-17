@@ -1,0 +1,114 @@
+{
+  "packet_id": "F11",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Mesa Verde Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Ruben Castellanos, MSW\nPhone: 555-0160\nDate: 07/17/2026 08:30\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n63F CAP + COPD, improving, completing PO abx.\nTarget d/c 07/17 PM once home O2 is set up. H&P, progress notes, RT and PT notes attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Mesa Verde Medical Center (fictional)\nDepartment/Floor: 4 North Medical\nSocial Worker/Case Manager/Nurse: Ruben Castellanos, MSW\nPhone: 555-0160\nEmail: rcastellanos@mesaverde.example\nNursing Station: 555-0161\nAuthorized By: Dr. J. Whitcombe\n## Patient Information\nName: Linda Doe\nMRN: MV-1186430\nBirth Date: 09/27/1962\nGender: F\nEthnicity: Asian\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Community-acquired pneumonia, COPD\nAdmit Date: 07/11/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 07/11/2026  Result: CXR RLL infiltrate, improving\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Linda Doe\nDOB: 09/27/1962\nMember ID: OCH-40927315\n## Referring Provider\nFacility: Mesa Verde Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Pneumonia, unspecified organism\nICD-10: J18.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 07/17/2026\nRequested Days: 14\nSecondary Dx: COPD with acute lower respiratory infection (J44.0)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Mesa Verde Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Linda Doe\nMRN: MV-1186430\nAccount #: 99186430\nDOB: 09/27/1962\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 07/11/2026 22:10\nAdmit Type: Inpatient\nUnit/Bed: 4N-409\nAttending: Julian Whitcombe, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 07/11/2026\n## CC\nFever, productive cough, worse SOB x 4 days\n## HPI\n63 y/o F with COPD (GOLD 2 per 2024 PFTs), current smoker 1/2 ppd, homeless sleeping in her tent near Example Park x 2 years, presents with 4 days of fever, rusty sputum and dyspnea. No home O2 at baseline. EMS SpO2 85% RA. Uses albuterol inhaler PRN, ran out 1 month ago.\n## PMH\n- COPD\n- GERD\n## Meds PTA\n- Albuterol HFA PRN (out x 1 month)\n- Omeprazole 20 mg daily\n## Allergies\nNKDA\n## Social\nHomeless, tent. Smokes 1/2 ppd. EtOH denies. Drugs denies.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 101.6F HR 114 BP 118/70 RR 26 SpO2 86% RA -> 93% on 3L NC\nGen: ill-appearing, speaking full sentences\nLungs: RLL crackles and bronchial breath sounds, scattered expiratory wheeze\nCV: tachy, regular\nNeuro: AOx4\n## Data\nWBC 17.9, lactate 1.6, procalcitonin 1.8\nCXR: RLL consolidation, no effusion, no pneumothorax\nCOVID/flu/RSV PCR negative\n## Assessment/Plan\n63F with CAP RLL and COPD with acute exacerbation.\n1. CAP - ceftriaxone 1 g IV daily + azithromycin 500 mg IV daily; blood cx x2, sputum cx\n2. AECOPD - duonebs q4h, prednisone 40 mg PO daily x 5 days. Titrate O2 to SpO2 88-92%. No BiPAP needed.\n3. Tobacco - nicotine patch 14 mg, counseling\n4. Dispo - RT, PT; CM for recuperative care\nCode: Full. DVT ppx: heparin 5000 units SC q8h\nSigned: Julian Whitcombe, MD 07/11/2026 23:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#6\nDate: 07/16/2026 07:50\nS: Cough improving, sputum now clear. No fevers x 72h. Walking in hall with RT.\nO: T 98.5F HR 88 BP 122/74 RR 18 SpO2 91% RA at rest; 86% RA with ambulation -> 92% on 2L NC\nLungs: faint RLL crackles, minimal wheeze\nBlood cx 07/11 x2: no growth, final. Sputum cx: normal flora.\nA/P:\n- CAP RLL improving. Transitioned 07/14 to cefpodoxime 200 mg PO BID to complete 7 days total (last dose 07/17 PM). Azithromycin course complete 07/15.\n- COPD - prednisone course complete 07/15. Tiotropium + albuterol MDI.\n- New exertional and nocturnal hypoxemia: qualifies for home O2 (see RT). Order home oxygen 2 L/min NC with exertion and sleep.\n- Medically stable for d/c 07/17 once home O2 arranged\nSigned: Julian Whitcombe, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Respiratory therapy note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## RESPIRATORY THERAPY NOTE\nDate: 07/16/2026 09:30\nBreath sounds: diminished RLL, scattered end-exp wheeze, improved from admission\n## Home O2 Qualification Walk\nSpO2 RA at rest: 91%\nSpO2 RA with ambulation 200 ft: nadir 86%\nSpO2 on 2L NC with ambulation: 92-93%\nOvernight oximetry 07/15: SpO2 <88% for 41 min on RA\nMeets criteria for home O2 with exertion and sleep. Not required at rest.\nTreatments: duonebs stopped 07/15. Tiotropium 18 mcg daily + albuterol MDI PRN with spacer, technique correct on teach-back.\nPt educated on O2 safety, no smoking near oxygen; verbalized understanding.\nSigned: A. Bernal, RRT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 07/15/2026 11:00\nDx: CAP, COPD, deconditioning\n## Prior Level of Function\nIndependent ambulation without device.\n## Assessment\nBed mobility: Independent\nSit<>stand: Independent\nTransfers: Independent\nGait: 200 ft without device, modified independent, 1 standing rest break, on 2L NC portable O2\nStairs: not tested\nBalance: static good, dynamic good\n## Plan / Recommendation\nSafe for d/c to recuperative care. Will need portable O2 for walking. No DME needs other than O2.\nSigned: K. Ostrowski, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "progress_note",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 07/16/2026 10:40\nPt AOx4, agreeable to recuperative care. Independent with ADLs per nursing.\nHome O2 order (2 L/min NC with exertion and sleep, concentrator + portable tanks) faxed to Pacific Breeze Medical Supply (fictional), 555-0167, on 07/16/2026 10:15.\nAwaiting vendor confirmation of delivery date and delivery address.\nPCP follow-up: not yet scheduled; pt to establish with clinic after d/c.\nSigned: Ruben Castellanos, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n07/15 08:00 | 98.6 | 92 | 124/76 | 18 | 91% | RA\n07/15 16:00 | 98.4 | 90 | 120/72 | 18 | 92% | RA\n07/16 00:00 | 98.1 | 84 | 118/70 | 16 | 93% | 2L NC (sleep)\n07/16 07:50 | 98.5 | 88 | 122/74 | 18 | 91% | RA\n07/16 12:00 | 98.3 | 86 | 120/74 | 16 | 92% | RA\n## LABS\n07/11 | WBC 17.9 | Hgb 13.2 | Plt 342 | Cr 0.8 | Procalcitonin 1.8\n07/15 | WBC 10.6 | Hgb 12.7 | Na 138 | K 4.2 | Cr 0.7 | Glu 104\n## MICROBIOLOGY\n07/11 Blood cx x2: No growth, final\n07/12 Sputum cx: Normal respiratory flora\n07/12 MRSA nares PCR: Negative\n07/17 05:30 SARS-CoV-2 rapid antigen: Negative (added 07/17 AM before d/c)\n## IMAGING\n07/11 CXR: RLL consolidation\n07/15 CXR: improving RLL opacity, no effusion or pneumothorax\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Linda Doe  MRN: MV-1186430\n- Cefpodoxime 200 mg PO BID - last dose 07/17 PM\n- Tiotropium 18 mcg inhaled daily (NEW)\n- Albuterol HFA 90 mcg 2 puffs q4-6h PRN SOB, with spacer\n- Omeprazole 20 mg PO daily\n- Nicotine patch 14 mg/24h daily\n## DME / Respiratory\n- Home oxygen 2 L/min via nasal cannula with exertion and during sleep\n- Spacer\nPrednisone and azithromycin courses complete.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

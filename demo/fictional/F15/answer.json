@@ -1,0 +1,8 @@
+{
+  "packet_id": "F15",
+  "intended": "not_fit",
+  "why": "Active C. difficile with ongoing loose stools on contact enteric precautions that are not cleared, so OTH-4, GI-X3 and FORM-X4 exclusions apply.",
+  "traps": [
+    "Referral form comment says 'No infections requiring isolation' and Active Infection: No, but the chart shows active contact enteric precautions for C. diff (PCR and toxin positive) with criteria to stop isolation not met."
+  ]
+}
