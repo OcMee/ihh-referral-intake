@@ -29,7 +29,7 @@
     if (d) return `<span class="done ${d.decision}">${{ approve: "Approved", info: "Asked for info", deny: "Denied" }[d.decision]}</span>`;
     const m = minsLeft(p), a = Math.abs(m), h = Math.floor(a / 60), mm = Math.floor(a % 60);
     const txt = m < 0 ? `overdue ${h ? h + "h " : ""}${mm}m` : `${h}h ${String(mm).padStart(2, "0")}m left`;
-    return `<span class="clock ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="Simulated arrival time"><i></i>${txt}</span>`;
+    return `<span class="clock ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="${p.uploaded ? "Time since upload" : "Simulated arrival time"}"><i></i>${txt}</span>`;
   }
   const pill = p => `<span class="pill ${p.fit.band}">${p.fit.score}</span>`;
   const pg = (page, quote, label) => page == null ? "" :
@@ -100,9 +100,49 @@
         <select class="sort" id="sort" aria-label="Sort">${[["deadline", "Sort: deadline"], ["score", "Sort: lowest score"], ["id", "Sort: packet ID"]].map(([k, l]) => `<option value="${k}" ${ui.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select>
         ${APP.meta.real ? `<label class="toggle"><input type="checkbox" id="ihh" ${ui.showIhh ? "checked" : ""}> show IHH decision</label>` : ""}
       </div>
+      ${dropzone()}
       <div class="board">${lanes}</div>
       <p class="foot">Countdowns use simulated arrival times. Fit score is rule-based: a verified blocker caps it at 15; unknowns lower it. Weights were hand-tuned on IHH’s 11 past decisions, so it guides the coordinator and does not decide. ${esc(APP.meta.note || "")}</p>`;
   }
+
+  // ---------- intake (only with src/desk_server.py running on this computer) ----------
+  const STEP_NAMES = { fix: "Straighten pages", transcribe: "Read every page", check: "Check IHH rules", score: "Verify quotes, score", build: "Add to inbox" };
+  function dropzone() {
+    const s = ui.server; if (!s) return "";
+    const jobs = (ui.jobs || []).slice().reverse().map(j => {
+      const at = j.steps.indexOf(j.stage);
+      return `<div class="job ${j.state}"><div class="j-top"><b>${esc(j.id)}</b><span>${esc(j.name)}</span>${j.dry_run ? `<span class="tagx">dry run</span>` : ""}
+          ${j.state === "done" ? `<button class="btn" data-open="${j.id}">Open ${j.id}</button>` : ""}</div>
+        <ol class="j-steps">${j.steps.map((k, i) => `<li class="${j.state === "done" || i < at ? "ok" : i === at ? (j.state === "error" ? "bad" : "now") : ""}">${STEP_NAMES[k]}</li>`).join("")}</ol>
+        <p class="lbl">${esc(j.msg || "")}</p></div>`;
+    }).join("");
+    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" hidden>
+        <b>Drop a new referral PDF here</b><small>or click to choose a file. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
+      ${s.key ? "" : `<p class="lbl warn">No API key: start the server with ANTHROPIC_API_KEY set.</p>`}
+      ${ui.uploadError ? `<p class="lbl warn">${esc(ui.uploadError)}</p>` : ""}${jobs}</section>`;
+  }
+  async function upload(file) {
+    ui.uploadError = null;
+    if (!file || !/\.pdf$/i.test(file.name)) { ui.uploadError = "Choose a PDF file."; return render() }
+    try {
+      const r = await fetch("/api/upload", { method: "POST", headers: { "Content-Type": "application/pdf", "X-Filename": encodeURIComponent(file.name) }, body: file });
+      const j = await r.json(); if (!r.ok) ui.uploadError = j.error || "Upload failed";
+    } catch (e) { ui.uploadError = "The local server is not answering." }
+    poll();
+  }
+  async function poll() {
+    try { ui.jobs = await (await fetch("/api/jobs", { cache: "no-store" })).json() } catch (e) { return }
+    const fresh = ui.jobs.find(j => j.state === "done" && !byId[j.id]);
+    if (fresh) { location.hash = "#/" + fresh.id; return location.reload() }  // new packet is in the rebuilt page
+    if (!route()) { const y = scrollY; render(); scrollTo(0, y) }
+    if (ui.jobs.some(j => j.state === "running")) setTimeout(poll, 1500);
+  }
+  if (!APP.meta.artifact && location.protocol.startsWith("http") && APP.meta.real) {
+    fetch("/api/ping", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.ok) { ui.server = j; poll() } }).catch(() => {});
+  }
+  document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over") } });
+  document.addEventListener("dragleave", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) d.classList.remove("over") });
+  document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); upload(e.dataTransfer.files[0]) } });
 
   // ---------- review ----------
   function chip(r) {
@@ -263,6 +303,7 @@
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { ui.sort = e.target.value; render() }
     if (e.target.id === "ihh") { ui.showIhh = e.target.checked; render() }
+    if (e.target.id === "file") upload(e.target.files[0]);
   });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }

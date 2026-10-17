@@ -65,6 +65,22 @@ in parallel sub-agents, and wrote the fictional demo cases.
 **GitHub Pages:** Settings → Pages → Source: **GitHub Actions**, then Actions → "Publish Referral Desk"
 → Run workflow. The workflow publishes `app/` only and refuses to run if it finds a real packet ID.
 
+**Drop in a new referral (local only):** runs the whole pipeline on one PDF from the browser.
+
+```bash
+pip install pymupdf anthropic reportlab pydantic
+export ANTHROPIC_API_KEY=...           # Windows PowerShell: $env:ANTHROPIC_API_KEY="..."
+python src/desk_server.py              # open http://127.0.0.1:8000, drop a PDF on the inbox
+python src/desk_server.py --dry-run    # no API: accepts the fictional app/pdf/F01-F09.pdf only
+```
+
+The PDF is saved to `output/U01/` (git ignored), straightened (`ocrmypdf` if installed), transcribed by
+Claude page by page, checked against IHH's rules by Claude (`src/check.py`), then `score.py` verifies
+every quote. Quotes not found on their page go back to Claude once to correct; any still missing show as
+"check". The new referral opens on its own with its reply clock started at upload. The server listens on
+127.0.0.1 only. Untested with the live API at the event (no key in our build environment); the dry run
+tests every other step.
+
 **Full pipeline on the real packets (local only):**
 
 ```bash

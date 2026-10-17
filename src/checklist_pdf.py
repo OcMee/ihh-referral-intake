@@ -36,7 +36,7 @@ def make(d: dict, checklist: dict, dest: Path, fictional: bool) -> None:
     fit, cf = d["fit"], d.get("claude_fit", {})
     doc = SimpleDocTemplate(str(dest), pagesize=letter, leftMargin=0.5 * inch, rightMargin=0.5 * inch,
                             topMargin=0.5 * inch, bottomMargin=0.5 * inch,
-                            title=f"{d['packet_id']} fit checklist", author="Referral Desk")
+                            title=f"{d['packet_id']} fit checklist", author="Referral Desk", invariant=True)
 
     def frame(c, _doc):
         c.setFillColor(INK); c.rect(0, letter[1] - 22, letter[0], 22, stroke=0, fill=1)

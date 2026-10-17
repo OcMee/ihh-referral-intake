@@ -7,7 +7,9 @@ The real build holds de-identified packet text. Never commit, upload or publish 
 """
 
 import json
+import re
 import sys
+import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -31,7 +33,7 @@ def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=
     keep = ("patient", "fit", "claude_fit", "verification", "key_facts", "rules", "conflicts", "questions_for_hospital")
     out = {k: d.get(k) for k in keep}
     out["questions"] = out.pop("questions_for_hospital") or []
-    out.update(id=d["packet_id"], pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh, pdf=pdf, readable=readable, docx=docx, fitlist=fitlist, criteria=criteria,
+    out.update(id=d["packet_id"], uploaded=None, pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh, pdf=pdf, readable=readable, docx=docx, fitlist=fitlist, criteria=criteria,
                documents=[{**x, "name": checklist.get(x["doc_id"], x["doc_id"])} for x in d.get("documents", [])],
                page_list=[{"page": p["page"], "title": p["title"], "doc_type": p["doc_type"], "text": p["text"]} for p in pages["pages"]])
     return out
@@ -72,15 +74,25 @@ def public(checklist: dict) -> list:
 def real(checklist: dict) -> list:
     truth = {p["packet_id"]: p["decision"] for p in json.loads(DECISIONS.read_text())["packets"]}
     packets = []
-    for i, f in enumerate(sorted((REPO / "output").glob("R??/R??.scored.json"))):
-        pid = f.parent.name
-        pages = json.loads((f.parent / f"{pid}.pages.json").read_text())
+    # R01-R11 are IHH's packets; U01.. are PDFs dropped into the local server (src/desk_server.py)
+    found = [f for f in sorted((REPO / "output").glob("*/*.scored.json"))
+             if re.fullmatch(r"[A-Z]\d\d", f.parent.name) and f.stem == f"{f.parent.name}.scored"]
+    for i, f in enumerate(found):
+        pid, here = f.parent.name, f.parent
+        pages = json.loads((here / f"{pid}.pages.json").read_text())
         d = json.loads(f.read_text())
-        checklist_pdf.make(d, checklist, f.parent / f"{pid}.checklist.pdf", fictional=False)
-        packets.append(pack(d, pages, checklist, i, img=f"../{pid}/pages/p-{{nn}}.png", ihh=truth.get(pid),
-                            fitlist=f"../{pid}/{pid}.checklist.pdf", criteria=f"../../{CRIT_SRC}",
-                            pdf=f"../../challenges/1-referral-intake/packets/{pid}.pdf",
-                            readable=f"../{pid}/{pid}.readable.pdf", docx=f"../{pid}/{pid}.docx"))
+        checklist_pdf.make(d, checklist, here / f"{pid}.checklist.pdf", fictional=False)
+        uploaded = (here / f"{pid}.pdf").exists()
+        p = pack(d, pages, checklist, i, img=f"../{pid}/pages/p-{{nn}}.png", ihh=truth.get(pid),
+                 fitlist=f"../{pid}/{pid}.checklist.pdf", criteria=f"../../{CRIT_SRC}",
+                 pdf=f"../{pid}/{pid}.pdf" if uploaded else f"../../challenges/1-referral-intake/packets/{pid}.pdf",
+                 readable=f"../{pid}/{pid}.readable.pdf",
+                 docx=f"../{pid}/{pid}.docx" if (here / f"{pid}.docx").exists() else None)
+        if (here / "received.json").exists():  # real arrival time for uploads
+            r = json.loads((here / "received.json").read_text())
+            p["received_min"] = round((time.time() - r["at"]) / 60)
+            p["uploaded"] = {"name": r.get("name"), "dry_run": r.get("dry_run", False)}
+        packets.append(p)
     return packets
 
 
