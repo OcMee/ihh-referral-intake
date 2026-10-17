@@ -179,8 +179,8 @@
         <ol class="j-steps">${j.steps.map((k, i) => `<li class="${j.state === "done" || i < at ? "ok" : i === at ? (j.state === "error" ? "bad" : "now") : ""}">${STEP_NAMES[k]}</li>`).join("")}</ol>
         <p class="lbl">${esc(j.msg || "")}</p></div>`;
     }).join("");
-    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" multiple hidden>
-        <b>Drop new referral PDFs here</b><small>or click to choose. One or more files, each becomes a referral. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
+    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf,.docx" multiple hidden>
+        <b>Drop new referral PDFs or Word files here</b><small>or click to choose. One or more files, each becomes a referral. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
       <p class="lbl channels">Also arriving here: <b>Fax</b> (fax service webhook) · <b>Email</b> to ${esc(s.email || "the intake address")} · <b>Folder</b> (files saved in the intake folder) · <b>Hospital portal</b> <a href="/portal" target="_blank" rel="noopener">open /portal</a></p>
       ${s.key ? "" : `<p class="lbl warn">No API key: start the server with ANTHROPIC_API_KEY set.</p>`}
       ${ui.uploadError ? `<p class="lbl warn">${esc(ui.uploadError)}</p>` : ""}${jobs}</section>`;
@@ -190,7 +190,7 @@
     ui.uploadError = null;
     if (!files.length) return;
     for (const file of files) {
-      if (!/\.pdf$/i.test(file.name)) { errs.push(`${file.name}: not a PDF`); continue }
+      if (!/\.(pdf|docx)$/i.test(file.name)) { errs.push(`${file.name}: not a PDF or Word file`); continue }
       try {
         const r = await fetch("/api/upload", { method: "POST", headers: { "Content-Type": "application/pdf", "X-Filename": encodeURIComponent(file.name) }, body: file });
         const j = await r.json(); if (!r.ok) errs.push(`${file.name}: ${j.error || "upload failed"}`);

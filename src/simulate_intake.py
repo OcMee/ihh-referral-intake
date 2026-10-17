@@ -33,7 +33,8 @@ def mail(pdf: Path) -> None:
     m["To"] = os.environ.get("DESK_INTAKE_EMAIL", "office@ocmeed.com")
     m["Subject"] = f"Recuperative care referral (fictional demo packet {pdf.stem})"
     m.set_content("Please see the attached referral packet. Fictional demo email.")
-    m.add_attachment(pdf.read_bytes(), maintype="application", subtype="pdf", filename=pdf.name)
+    sub = "vnd.openxmlformats-officedocument.wordprocessingml.document" if pdf.suffix.lower() == ".docx" else "pdf"
+    m.add_attachment(pdf.read_bytes(), maintype="application", subtype=sub, filename=pdf.name)
     dest = REPO / "intake" / f"email-{pdf.stem}.eml"
     dest.parent.mkdir(exist_ok=True)
     dest.write_bytes(bytes(m))

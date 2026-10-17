@@ -38,7 +38,7 @@ button:disabled { opacity: .5; cursor: wait }
       <p class="lede" style="margin:0;font-size:13px">Do not type the patient's name here. Patient details go in the attached documents.</p></div>
     <div class="card"><h2>IHH's required documents</h2><div class="docs" id="docs">Loading IHH's checklist…</div><div id="missing"></div></div>
     <div class="card"><h2>Files</h2>
-      <label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf" multiple hidden><b>Drop PDFs here or click to choose</b><small>One or more PDFs; they are joined into one packet in this order.</small></label>
+      <label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf,.docx" multiple hidden><b>Drop PDFs or Word files here, or click to choose</b><small>One or more PDFs; they are joined into one packet in this order.</small></label>
       <ol class="files" id="list"></ol></div>
     <button type="submit" id="send">Send referral to IHH</button>
     <div id="res"></div>
@@ -60,7 +60,7 @@ button:disabled { opacity: .5; cursor: wait }
     $("#missing").innerHTML = miss.length ? `<p class="missing">Not ticked: ${miss.map(x => esc(x.text)).join(", ")}. You can still send, but IHH will likely ask for these before deciding.</p>` : "";
   }
   document.addEventListener("change", e => { if (e.target.closest("#docs")) missing(); if (e.target.id === "file") add(e.target.files) });
-  function add(list) { files = files.concat([...list].filter(f => /\.pdf$/i.test(f.name))); $("#list").innerHTML = files.map(f => `<li>${esc(f.name)} (${(f.size / 1048576).toFixed(1)} MB)</li>`).join("") }
+  function add(list) { files = files.concat([...list].filter(f => /\.(pdf|docx)$/i.test(f.name))); $("#list").innerHTML = files.map(f => `<li>${esc(f.name)} (${(f.size / 1048576).toFixed(1)} MB)</li>`).join("") }
   const drop = $("#drop");
   drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over") });
   drop.addEventListener("dragleave", () => drop.classList.remove("over"));

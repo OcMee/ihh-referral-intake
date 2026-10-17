@@ -80,6 +80,55 @@ def merge(pdfs: list) -> bytes:
     return out.tobytes()
 
 
+def docx_to_pdf(b: bytes) -> bytes:
+    """Word referral -> PDF pages, so it goes through the same pipeline as a fax.
+    Our Word copies mark page breaks with "Scan page N"; other files flow onto letter pages."""
+    if DRY:  # dry run: our fictional Word copy stands for its fictional PDF (same pages as the prepared transcript)
+        h = sha(b)
+        for f in sorted((REPO / "app/pdf").glob("F0[1-9].docx")):
+            if sha(f.read_bytes()) == h:
+                return f.with_suffix(".pdf").read_bytes()
+        raise ValueError("Dry run accepts only the fictional F01.docx to F09.docx")
+    import docx
+    import textwrap
+    from reportlab.lib.pagesizes import letter
+    from reportlab.pdfgen import canvas
+    d = docx.Document(io.BytesIO(b))
+    lines = []
+    for el in d.element.body.iterchildren():
+        tag = el.tag.split("}")[-1]
+        if tag == "p":
+            lines.append("".join(t.text or "" for t in el.iter() if t.tag.endswith("}t")))
+        elif tag == "tbl":
+            for row in el.iter():
+                if row.tag.endswith("}tr"):
+                    cells = ["".join(t.text or "" for t in c.iter() if t.tag.endswith("}t")) for c in row if c.tag.endswith("}tc")]
+                    lines.append(" | ".join(x.strip() for x in cells))
+    pages, cur = [], []
+    for ln in lines:
+        if re.fullmatch(r"Scan page \d+", ln.strip()) and cur:
+            pages.append(cur); cur = []
+        cur.append(ln)
+    pages.append(cur)
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter)
+    W, H = letter
+    for page in pages:
+        y = H - 54
+        for ln in page:
+            for part in textwrap.wrap(ln, 92) or [""]:
+                if y < 50:
+                    c.showPage(); y = H - 54
+                c.setFont("Courier", 9.5); c.drawString(48, y, part); y -= 13
+        c.showPage()
+    c.save()
+    return buf.getvalue()
+
+
+def to_pdf(b: bytes, name: str) -> bytes:
+    return docx_to_pdf(b) if name.lower().endswith(".docx") or b[:2] == b"PK" else b
+
+
 ACCEPT = threading.Lock()
 
 
@@ -113,8 +162,8 @@ def accept(body: bytes, name: str, source: str, meta: dict = None) -> dict:
 
 def read_eml(raw: bytes):
     msg = email.message_from_bytes(raw, policy=email.policy.default)
-    pdfs = [part.get_content() for part in msg.iter_attachments()
-            if part.get_content_type() == "application/pdf" or (part.get_filename() or "").lower().endswith(".pdf")]
+    pdfs = [to_pdf(part.get_content(), part.get_filename() or "") for part in msg.iter_attachments()
+            if part.get_content_type() == "application/pdf" or (part.get_filename() or "").lower().endswith((".pdf", ".docx"))]
     return pdfs, {"from": str(msg.get("From", ""))[:120], "subject": str(msg.get("Subject", ""))[:160]}
 
 
@@ -126,7 +175,7 @@ def watch() -> None:
     seen = {}
     while True:
         for f in sorted(INTAKE.iterdir()):
-            if not f.is_file() or f.suffix.lower() not in (".pdf", ".eml"):
+            if not f.is_file() or f.suffix.lower() not in (".pdf", ".docx", ".eml"):
                 continue
             size = f.stat().st_size
             if seen.get(f) != size:  # wait until the file stops growing (fax software still writing)
@@ -137,9 +186,9 @@ def watch() -> None:
                 raw = f.read_bytes()
                 if f.suffix.lower() == ".eml":
                     pdfs, meta = read_eml(raw)
-                    res = accept(merge(pdfs), f.name, "email", meta) if pdfs else {"error": "email has no PDF attachment"}
+                    res = accept(merge(pdfs), f.name, "email", meta) if pdfs else {"error": "email has no PDF or Word attachment"}
                 else:
-                    res = accept(raw, f.name, "folder")
+                    res = accept(to_pdf(raw, f.name), f.name, "folder")
             except Exception as e:
                 res = {"error": f"{type(e).__name__}: {e}"}
             dest = INTAKE / ("done" if "id" in res else "rejected") / f"{time.strftime('%H%M%S')}-{f.name}"
@@ -281,7 +330,10 @@ class Handler(SimpleHTTPRequestHandler):
         body = self.rfile.read(n)
         if path == "/api/upload":
             name = Path(unquote(self.headers.get("X-Filename") or "upload.pdf")).name[:120]
-            res = accept(body, name, "upload")
+            try:
+                res = accept(to_pdf(body, name), name, "upload")
+            except ValueError as e:
+                res = {"error": str(e)}
         elif path == "/api/intake/fax":
             # the shape a fax service webhook would use: raw PDF body, sender's fax number in a header
             sender = unquote(self.headers.get("X-Fax-From") or "unknown")[:40]
@@ -289,11 +341,11 @@ class Handler(SimpleHTTPRequestHandler):
         elif path == "/api/intake/portal":
             try:
                 form = json.loads(body)
-                pdfs = [base64.b64decode(f["b64"]) for f in form.get("files", [])][:20]
+                pdfs = [to_pdf(base64.b64decode(f["b64"]), str(f.get("name", ""))) for f in form.get("files", [])][:20]
                 if not pdfs:
                     return self.send_json({"error": "Attach at least one PDF"}, 400)
                 if not all(b.startswith(b"%PDF") for b in pdfs):
-                    return self.send_json({"error": "Every attached file must be a PDF"}, 400)
+                    return self.send_json({"error": "Every attached file must be a PDF or Word file"}, 400)
                 clip = lambda k, n=120: str(form.get(k) or "")[:n]
                 meta = {"from": clip("sender"), "hospital": clip("hospital"), "contact": clip("contact"),
                         "declared_docs": [d for d in form.get("docs", []) if re.fullmatch(r"DOC-\d{1,2}", str(d))]}

@@ -94,7 +94,7 @@ tests every other step.
 | Upload | Drag one or more PDFs on the inbox | – |
 | Fax | `POST /api/intake/fax`; `python src/simulate_intake.py fax app/pdf/F03.pdf` plays the fax service | A HIPAA cloud fax service's webhook |
 | Folder | Any PDF saved in `intake/` (git ignored) is picked up | Fax software saving to that folder |
-| Email | Any `.eml` in `intake/` is read (sender, subject, PDF attachments); intake address office@ocmeed.com (`DESK_INTAKE_EMAIL`) | A mailbox connector on a HIPAA-covered mailbox |
+| Email | Any `.eml` in `intake/` is read (sender, subject, PDF or Word attachments); intake address office@ocmeed.com (`DESK_INTAKE_EMAIL`) | A mailbox connector on a HIPAA-covered mailbox |
 | Hospital portal | `http://127.0.0.1:8000/portal`: files plus IHH's DOC-1..10 checklist, warns on missing documents | Hosting and hospital staff logins |
 
 **Full pipeline on the real packets (local only):**
