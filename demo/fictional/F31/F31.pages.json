@@ -1,0 +1,114 @@
+{
+  "packet_id": "F31",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Saltmarsh Point Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Grace Whitfield, RN CM\nPhone: 555-0191\nDate: 09/03/2026 09:15\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n52M with three R rib fractures after a fall. No pneumothorax. Pain controlled on PO meds.\nIndependent, room air. Planned d/c 09/03/2026 ~15:00.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Saltmarsh Point Medical Center (fictional)\nDepartment/Floor: 5 West Trauma/Surgery\nSocial Worker/Case Manager/Nurse: Grace Whitfield, RN CM\nPhone: 555-0191\nEmail: gwhitfield@saltmarshpoint.example\nNursing Station: 555-0192\nAuthorized By: Dr. P. Lindqvist\n## Patient Information\nName: Daniel Doe\nMRN: SP-6620418\nBirth Date: 09/22/1973\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Closed fractures R ribs 5-7 after fall\nAdmit Date: 08/31/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 08/31/2026  Result: CXR R rib fx 5-7, no PTX\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [X] No [ ]  (walker)\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nPain controlled on oral meds. Incentive spirometer goes with patient.\nCXR report attached.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Daniel Doe\nDOB: 09/22/1973\nMember ID: OCH-71840265\n## Referring Provider\nFacility: Saltmarsh Point Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Multiple fractures of ribs, right side, closed\nICD-10: S22.41XA\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/03/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Saltmarsh Point Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Daniel Doe\nMRN: SP-6620418\nAccount #: 99620418\nDOB: 09/22/1973\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 08/31/2026 23:10\nAdmit Type: Inpatient\nUnit/Bed: 5W-517\nAttending: Petra Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n## ED Encounter\nED Arrival: 08/31/2026 19:40\nED Disposition: Admit to inpatient (trauma surgery) 08/31/2026 23:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL (TRAUMA SURGERY)\nDate: 08/31/2026 23:40\n## CC\nR-sided chest wall pain after fall\n## HPI\n52 y/o M, unhoused (staying in a riverbed encampment), slipped on wet steps on 08/31/2026 and fell onto R side against a concrete ledge. Pain with deep breaths. No head strike, no LOC. Ambulatory at scene.\nED CT chest: acute nondisplaced fractures of R ribs 5, 6 and 7. No pneumothorax. No hemothorax. No pulmonary contusion. No flail segment.\n## PMH\n- None significant\n## PSH\n- None\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nUnhoused x 2 years. Tobacco: former, quit 5 years ago. Denies EtOH or drug use. Serum EtOH in ED: none detected. UDS negative.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 98.6F HR 96 BP 138/84 RR 20 SpO2 95% RA\nGen: uncomfortable with deep breath, AOx4\nChest: tenderness R lateral chest wall ribs 5-7, no crepitus, no paradoxical movement, breath sounds equal bilaterally\nSkin: no open wounds, small abrasion R elbow, cleaned, no dressing needed\nPsych: calm, appropriate, normal mood and affect\n## Assessment/Plan\nClosed nondisplaced fractures R ribs 5-7, mechanical fall. No pneumothorax.\n1. Multimodal pain control: acetaminophen scheduled, lidocaine patch, oxycodone PRN\n2. Incentive spirometry q1h while awake, RT to teach\n3. Repeat CXR in AM to confirm no delayed pneumothorax\n4. PT/OT\n5. Dispo: unhoused, CM consult for recuperative care\nSigned: Petra Lindqvist, MD 09/01/2026 00:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 09/01/2026\nPrecautions: rib fractures - splint chest with pillow when coughing\nBed mobility: Independent using log roll technique\nTransfers: sit-stand and bed-chair independent, no device\nGait: 150 ft independent without assistive device, steady, no loss of balance\nStairs: 4 steps with rail, independent\nFall risk: low\n## Recommendation\nPatient walks 150 ft independently with no assistive device.\nNo DME needs. No assistive device recommended at discharge.\nNo skilled PT needs after discharge; home exercise and walking program given.\nSigned: J. Moreau, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 09/01/2026\nGrooming: Independent\nUpper body dressing: Independent, uses technique to limit trunk rotation\nLower body dressing: Independent\nToileting: Independent, including hygiene and clothing management\nBathing: Independent standing shower; shower bench offered, not needed\nPatient independent with all ADLs including showering and toileting.\n## Recommendation\nNo further OT needs.\nSigned: S. Tanaka, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "other",
+      "title": "Respiratory therapy note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## RESPIRATORY THERAPY NOTE\nDate: 09/02/2026 10:00\nIncentive spirometry taught. Patient demonstrates correct technique with teach-back.\nIS volume: 1500 mL (improved from 1000 mL on 09/01).\nCough: effective with pillow splinting.\nBreathing treatments: none. No nebulizers ordered.\nOxygen: none. SpO2 96% on room air at rest and 95% with ambulation.\nPlan: continue IS 10 times per hour while awake at discharge. Incentive spirometer sent with patient.\nSigned: M. Okafor, RRT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "progress_note",
+      "title": "Trauma progress note and nursing/social work notes",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## TRAUMA SURGERY PROGRESS NOTE - HD#3\nDate: 09/03/2026 07:30\nS: Pain 3/10 at rest, 5/10 with deep breath, controlled on oral meds. Walking in halls.\nO: T 98.4F HR 78 BP 126/78 RR 16 SpO2 96% RA. AOx4.\nRepeat CXR 09/01: stable R rib fractures 5-7, no pneumothorax, no effusion.\nA/P: Closed nondisplaced R rib fractures 5-7. No pneumothorax.\n- Pain controlled on oral medicines: acetaminophen, lidocaine patch, oxycodone PO PRN. No IV medications.\n- No IV access at discharge (PIV removed before d/c).\n- Continue incentive spirometry. Return precautions for shortness of breath reviewed.\n- Follow up: trauma clinic in 2 weeks\nMedically stable for discharge to recuperative care today ~15:00.\nSigned: Petra Lindqvist, MD\n## NURSING NOTE\nDate: 09/03/2026 06:00\nIsolation: none. Standard precautions only.\nPt AOx4, calm and cooperative. Showered independently. Ambulating independently in hallway, no device.\nSelf-administering oral meds with RN check; correctly states dose and schedule for each med.\nContinent of bowel and bladder. Skin intact except healing R elbow abrasion, open to air.\nSigned: D. Reyes, RN\n## SOCIAL WORK NOTE\nDate: 09/02/2026 13:30\nPt AOx4, pleasant, future-oriented. Denies SI/HI. Denies auditory or visual hallucinations.\nNo psychiatric history. No history of conservatorship or FSP.\nNot a registered sex offender per pt. Medi-Cal active. No car. No service animal.\nPlan: recuperative care at Illumination Health + Home; pt agreeable.\nSigned: H. Brennan, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Vitals, labs and imaging",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/02 08:00 | 98.5 | 84 | 130/80 | 18 | 95% | RA\n09/02 16:00 | 98.7 | 82 | 128/78 | 16 | 96% | RA\n09/02 23:00 | 98.2 | 76 | 122/76 | 16 | 96% | RA\n09/03 04:00 | 98.0 | 74 | 120/74 | 16 | 96% | RA\n09/03 07:30 | 98.4 | 78 | 126/78 | 16 | 96% | RA\n## LABS\n08/31 | WBC 9.2 | Hgb 14.6 | Plt 251 | Na 140 | K 4.1 | Cr 1.0 | Glucose 102\n09/01 | Hgb 14.1 | Cr 0.9\n09/01 MRSA nares PCR: Negative\n09/03 08:10 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n08/31 CT chest: acute nondisplaced fractures R ribs 5-7. No pneumothorax or hemothorax.\n09/01 CXR PA/lateral: stable R rib fractures 5-7, no pneumothorax, no effusion. Lungs clear.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Daniel Doe  MRN: SP-6620418\nAll medications self-administered by patient. 30-day supply filled by inpatient pharmacy (meds to beds) and given to patient.\n- Acetaminophen 1000 mg PO every 8 hours (max 3 g/day)\n- Lidocaine 4% patch to R chest wall, 12 hours on / 12 hours off\n- Oxycodone 5 mg PO every 6 hours PRN severe pain (#15)\n- Senna 8.6 mg 2 tabs PO at bedtime while taking oxycodone\n## DME\n- Incentive spirometer (given). No walker or other assistive device.\n## Follow up\n- Trauma clinic in 2 weeks - Saltmarsh Point Trauma Clinic (fictional) 555-0193\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

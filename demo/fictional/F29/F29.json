@@ -1,0 +1,681 @@
+{
+  "packet_id": "F29",
+  "patient": {
+    "summary": "59F, hypertensive urgency treated with oral meds, unhoused",
+    "age": "59",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 6 months (bus shelter)",
+    "admit_reason": "Very high blood pressure after 2 months off her BP medicines",
+    "pages": [
+      2,
+      4,
+      6
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Cardiac",
+      "text": "Only one blood pressure is in the packet after the switch to oral meds: 158/94 on 09/10.",
+      "pages": [
+        7
+      ],
+      "quote": "BP 158/94 this AM on oral amlodipine + lisinopril.",
+      "quote_page": 7
+    },
+    {
+      "label": "Cardiac",
+      "text": "No vitals flowsheet and no ECG/EKG anywhere in the packet.",
+      "pages": [
+        7
+      ],
+      "quote": "Hypertensive urgency, improved on oral regimen.",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Treated with oral meds only; no IV antihypertensives.",
+      "pages": [
+        5
+      ],
+      "quote": "No IV antihypertensives given in ED.",
+      "quote_page": 5
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks the hallway independently, no device; distance not recorded and no PT note.",
+      "pages": [
+        8
+      ],
+      "quote": "Ambulating in hallway independently, steady gait, no device.",
+      "quote_page": 8
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4 and can name her BP medicines; self-administers.",
+      "pages": [
+        8
+      ],
+      "quote": "able to name her BP medicines and their purpose",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; rapid COVID negative 09/10 05:40.",
+      "pages": [
+        10
+      ],
+      "quote": "09/10 05:40 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "No psychiatric or psychosocial screen in the packet.",
+      "pages": [
+        9
+      ],
+      "quote": "agreeable to recuperative care referral",
+      "quote_page": 9
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and recovering from hypertensive urgency.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "unknown",
+      "finding": "Nursing documents toileting and dressing only; hygiene/bathing not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Bathing/hygiene not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent with toileting, continent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and dressing."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No device.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Ambulating in hallway independently, steady gait, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walks hallway independently but distance is not documented and there is no PT note.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Ambulating in hallway independently, steady gait, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No mental health screen in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; denies alcohol.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Denies alcohol or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers; can name BP meds.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4. Calm, pleasant, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Calm, pleasant, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No IV medications. No IV access at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/08 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 09/10 05:40, day of discharge.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/10 05:40 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "not_applicable",
+      "finding": "No infection this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Chest X-ray report included.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/08 CXR: No acute cardiopulmonary process. Heart size normal."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_met",
+      "finding": "No vitals sheet; only one BP (158/94) after the switch to oral meds, so 24h of stable BP on oral meds cannot be shown.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "BP 158/94 this AM on oral amlodipine + lisinopril."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "unknown",
+      "finding": "No troponin results in the packet; not stated whether one was drawn.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_met",
+      "finding": "No EKG/ECG in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation history in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "unknown",
+      "finding": "No ejection fraction or echo in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV blood pressure medicines given.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "No IV antihypertensives given in ED."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-E4",
+      "status": "not_applicable",
+      "finding": "She is on medication, so the untreated stable hypertension item does not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CIR-E6",
+      "status": "unknown",
+      "finding": "BP improved on oral meds per physician, but only one reading documents it.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Hypertensive urgency, improved on oral regimen."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-X1",
+      "status": "unknown",
+      "finding": "No ECG or rhythm strip; telemetry results not sent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CIR-X2",
+      "status": "unknown",
+      "finding": "No IV meds and asymptomatic, but response to oral meds rests on one reading (158/94).",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "No IV antihypertensives given in ED."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Toileting and dressing independent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and dressing."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Superseded by MOB-3/MOB-4; walking distance unknown.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection; MRSA negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/08 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies substance use.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Denies alcohol or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Calm, pleasant, cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "unknown",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Blood pressure stable",
+      "rule_ids": [
+        "CARD-1",
+        "CIR-E6"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "BP stable on oral meds."
+        },
+        {
+          "page": 7,
+          "quote": "BP 158/94 this AM on oral amlodipine + lisinopril."
+        }
+      ],
+      "note": "Form says BP stable on oral meds, but the packet has no vitals sheet and only one BP reading after the switch to oral meds. Stability over 24h cannot be confirmed."
+    }
+  ],
+  "questions_for_hospital": [
+    "Could you send the last 5 sets of vital signs, including all blood pressures since she started oral amlodipine and lisinopril?",
+    "Could you send the EKG/ECG result from this admission?",
+    "Were troponins drawn? If so, please send the results.",
+    "Could you send PT or nursing documentation of walking distance and bathing?",
+    "Was a mental health screen done (suicidal ideation, hallucinations, conservatorship/FSP)?",
+    "Is she on any isolation precautions?"
+  ],
+  "claude_fit": {
+    "score": 62,
+    "recommendation": "needs_info",
+    "reason": "Oral-only treatment and no IV BP meds (CARD-6 met), but CARD-1 and CARD-3 are not met: only one BP after the oral switch and no ECG, despite the form saying 'BP stable'. Mental health (MH-1..3), walking distance (MOB-3) and isolation (OTH-4) are also undocumented."
+  }
+}

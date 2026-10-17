@@ -1,0 +1,105 @@
+{
+  "packet_id": "F30",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Westbay Community Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Priya Raman, LCSW\nPhone: 555-0190\nDate: 10/06/2026 10:15\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n35M L leg laceration, sutured, medically cleared.\nRequesting recuperative care for wound healing. H&P, nursing, labs and med list attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Westbay Community Hospital (fictional)\nDepartment/Floor: Observation Unit\nSocial Worker/Case Manager/Nurse: Priya Raman, LCSW\nPhone: 555-0190\nEmail: praman@westbay.example\nNursing Station: 555-0191\nAuthorized By: Dr. E. Mwangi\n## Patient Information\nName: Terrence Doe\nMRN: WB-2093368\nBirth Date: 03/21/1991\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Laceration L lower leg, sutured\nAdmit Date: 10/04/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: L anterior shin laceration 7 cm, 9 sutures\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/04/2026  Result: CXR negative\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [ ]  Type: \nNon-compliant: Yes [ ] No [ ]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 10\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Terrence Doe\nDOB: 03/21/1991\nMember ID: OCH-39917260\n## Referring Provider\nFacility: Westbay Community Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Laceration without foreign body, left lower leg\nICD-10: S81.812A\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/06/2026\nRequested Days: 10\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Westbay Community Hospital (fictional) - PATIENT FACE SHEET\nPatient: Terrence Doe\nMRN: WB-2093368\nAccount #: 99093368\nDOB: 03/21/1991\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/04/2026 23:50 (ED arrival 10/04/2026 21:15)\nAdmit Type: Inpatient\nUnit/Bed: OBS-07\nAttending: Esther Mwangi, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 10/05/2026 00:30\nAttending: Esther Mwangi, MD (Hospital Medicine)\n## HPI\n35 y/o M with schizophrenia, unhoused x 3 years, brought by police after found with a laceration to the L shin from climbing a fence. Laceration irrigated and closed in ED with 9 sutures. Pt reports he stopped his medications \"a few months ago\". Admitted to observation for wound care and psychiatric evaluation.\n## PMH\n- Schizophrenia (dx age 22), prior psychiatric hospitalizations x 3\n## Social\nUnhoused x 3 years. Smokes 1 ppd. Denies alcohol. Cannabis daily.\n## Allergies\nHaloperidol (dystonia)\n## Exam\nVS: T 98.6F, HR 92, BP 128/80, RR 16, SpO2 99% RA\nL anterior shin: 7 cm linear laceration closed with 9 sutures, edges approximated, no erythema.\nNeuro: nonfocal. Alert, oriented to person and place only.\nPsych: guarded, responding to internal stimuli\n## Plan\n1. Laceration - daily dressing, suture removal in 10-14 days; Tdap given\n2. Psychiatry consult\nIsolation: None - standard precautions\nElectronically signed: Esther Mwangi, MD 10/05/2026 01:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "psych_consult",
+      "title": "Psychiatry consultation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PSYCHIATRY CONSULTATION\nDate: 10/05/2026 14:00\nConsultant: H. Lindgren, MD (Psychiatry)\nReason: schizophrenia off medications, responding to internal stimuli\n## Interview\nPt endorses hearing voices for several weeks. Reports command auditory hallucinations telling him to \"go out and hide from the cameras\" and to \"not trust anyone who gives you pills\".\nDenies suicidal ideation. Denies homicidal ideation. Denies visual hallucinations.\nOff risperidone for about 4 months. Declines to restart antipsychotic today.\n## MSE\nDisheveled, guarded, poor eye contact. Thought process: tangential. Thought content: paranoid delusions about surveillance. Perception: active command auditory hallucinations. Insight poor, judgment impaired.\nOriented to person and place, not to date.\n## Assessment\nSchizophrenia, acute exacerbation, nonadherent to medications. Does not currently meet 5150 criteria.\n## Recommendations\n- Encourage restart of risperidone; patient declining\n- Referral to county outpatient mental health\n- Not psychiatrically stable at this time\nSigned: H. Lindgren, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#2\nDate: 10/06/2026 07:30\nS: Wants to leave. Refused morning medications offered by psychiatry.\nO: T 98.4F HR 84 BP 124/76 RR 16 SpO2 99% RA\nL shin laceration clean, dry, intact sutures, no signs of infection.\nA/P:\n- L shin laceration - medically cleared for discharge. Suture removal 10-14 days.\n- Schizophrenia off meds - per psychiatry, not stable; declines risperidone\nSigned: Esther Mwangi, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 10/05/2026 20:00\nPt observed talking to himself, appears to be responding to voices.\nOriented to person and place only.\nPt refused evening risperidone offered per psychiatry.\nAmbulating in room and hallway independently, steady.\nIndependent with toileting and showering.\nNot aggressive toward staff; guarded, keeps to himself.\nSigned: N. Achebe, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 10/06/2026 09:40\nPt unhoused x 3 years. Not conserved. Not currently enrolled in FSP; county outpatient mental health referral placed per psychiatry.\nPt says he will \"maybe\" go to recuperative care.\nSuture removal appointment: Westbay Urgent Care (fictional) 10/15/2026 at 11:00 (confirmed).\nSigned: Priya Raman, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Vital signs and laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/05 04:00 | 98.4 | 90 | 126/80 | 16 | 99% | RA\n10/05 12:00 | 98.6 | 88 | 128/78 | 16 | 98% | RA\n10/05 20:00 | 98.2 | 86 | 122/76 | 16 | 99% | RA\n10/06 00:00 | 98.0 | 82 | 120/74 | 14 | 99% | RA\n10/06 07:30 | 98.4 | 84 | 124/76 | 16 | 99% | RA\n## LABORATORY RESULTS\n10/04 WBC 7.9 (4.0-11.0 K/uL)\n10/04 Urine drug screen: positive for cannabinoids\n## MICROBIOLOGY\n10/05 MRSA nares PCR: NEGATIVE\n10/06 06:00 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n10/04 L tib/fib X-ray: no fracture, no foreign body\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION RECONCILIATION\nPatient: Terrence Doe  MRN: WB-2093368\n## New Medications\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n- Risperidone 2 mg PO nightly (patient states he will not take)\n## Wound Supplies\n- Nonadherent pads, gauze wrap (7-day supply)\nNo antibiotics. No IV access.\nPatient able to self-administer all medications: Unknown - declining antipsychotic\nReviewed with patient by: T. Salas, PharmD 10/06/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

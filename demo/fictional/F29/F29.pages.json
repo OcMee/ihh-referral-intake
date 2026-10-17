@@ -1,0 +1,105 @@
+{
+  "packet_id": "F29",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Ridge Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Owen Petrakis, MSW\nPhone: 555-0180\nDate: 09/10/2026 09:05\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n59F hypertensive urgency, treated, now on oral BP meds. BP stable.\nReady for d/c 09/10. H&P, progress note, nursing note and med list attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Canyon Ridge Medical Center (fictional)\nDepartment/Floor: 3 South Telemetry\nSocial Worker/Case Manager/Nurse: Owen Petrakis, MSW\nPhone: 555-0180\nEmail: opetrakis@canyonridge.example\nNursing Station: 555-0181\nAuthorized By: Dr. S. Villanueva\n## Patient Information\nName: Gloria Doe\nMRN: CR-5521094\nBirth Date: 11/02/1966\nGender: F\nEthnicity: Hispanic or Latina\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: Spanish/English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Hypertensive urgency\nAdmit Date: 09/08/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/08/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nBP stable on oral meds. Pt independent, ready for recuperative care.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Gloria Doe\nDOB: 11/02/1966\nMember ID: OCH-58204417\n## Referring Provider\nFacility: Canyon Ridge Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Hypertensive urgency\nICD-10: I16.0\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/10/2026\nRequested Days: 14\nSecondary Dx: Essential hypertension (I10)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Canyon Ridge Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Gloria Doe\nMRN: CR-5521094\nAccount #: 99521094\nDOB: 11/02/1966\nSex: Female\nPreferred Language: Spanish\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/08/2026 20:30 (ED arrival 09/08/2026 15:10)\nAdmit Type: Inpatient\nUnit/Bed: 3S-318\nAttending: Sofia Villanueva, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "ed_note",
+      "title": "Emergency department note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## EMERGENCY DEPARTMENT PHYSICIAN NOTE\nDate: 09/08/2026 15:40\n## CC\nHeadache, \"my blood pressure machine at the clinic said very high\"\n## HPI\n59 y/o F with HTN, off all BP medications x 2 months after losing her belongings, unhoused. Mild headache x 1 day. Denies chest pain, SOB, vision change, weakness, numbness, confusion.\nTriage BP 214/118, HR 88.\n## Exam\nAOx4. Neuro exam nonfocal. Fundi: no papilledema. Lungs clear. No edema.\n## ED Course\nClonidine 0.1 mg PO given. Amlodipine 10 mg PO given.\nNo IV antihypertensives given in ED.\nLabs: creatinine 1.0, UA no protein, no blood.\n## Impression\nHypertensive urgency without evidence of end-organ damage.\nAdmit to telemetry for BP control on oral regimen.\nSigned: K. Bernal, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 09/08/2026\nAttending: Sofia Villanueva, MD (Hospital Medicine)\n## HPI\n59 y/o F with long-standing HTN, off amlodipine and lisinopril x 2 months, unhoused x 6 months (sleeping at a bus shelter near Example Transit Center), admitted with hypertensive urgency. Headache resolved after oral meds in ED.\n## PMH\n- Hypertension\n- Hyperlipidemia\n## Social\nUnhoused x 6 months. Never smoker. Denies alcohol or drug use.\n## Allergies\nNKDA\n## Plan\n1. Hypertensive urgency - resume amlodipine 10 mg daily, add lisinopril 20 mg daily; goal gradual BP lowering over 24-48h\n2. BMP in AM\n3. MRSA nares PCR per protocol\n4. Dispo - CM consult; unhoused, anticipate recuperative care\nCode status: Full\nElectronically signed: Sofia Villanueva, MD 09/08/2026 21:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#3\nDate: 09/10/2026 07:45\nS: No headache. No chest pain. Feels well.\nO: BP 158/94 this AM on oral amlodipine + lisinopril. HR 76. Afebrile.\nCreatinine 0.9, K 4.2.\nA/P:\n- Hypertensive urgency, improved on oral regimen. Continue amlodipine 10 mg daily + lisinopril 20 mg daily\n- PCP follow-up for BP recheck\n- Medically stable for d/c to recuperative care\nSigned: Sofia Villanueva, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 09/09/2026 22:00\nPt AOx4. Calm, pleasant, cooperative.\nAmbulating in hallway independently, steady gait, no device.\nIndependent with toileting and dressing. Continent of bowel and bladder.\nTook evening amlodipine and lisinopril; able to name her BP medicines and their purpose.\nSigned: R. Abara, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 09/10/2026 08:30\nPt unhoused x 6 months, agreeable to recuperative care referral.\nMedi-Cal active with Orange Coast Health Plan (fictional).\nPCP follow-up: Canyon Ridge Family Clinic (fictional) 09/16/2026 at 10:15 (confirmed) for BP recheck.\nPt has a phone that charges at shelter; message number 555-0100.\nSigned: Owen Petrakis, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Laboratory results",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABORATORY RESULTS\nCollected | Test | Result | Ref\n09/08 15:30 | Creatinine | 1.0 | 0.6-1.1 mg/dL\n09/08 15:30 | Potassium | 3.9 | 3.5-5.1 mmol/L\n09/08 15:30 | Urinalysis protein | Negative | Negative\n09/10 05:00 | Creatinine | 0.9 | 0.6-1.1 mg/dL\n09/10 05:00 | Potassium | 4.2 | 3.5-5.1 mmol/L\n## MICROBIOLOGY\n09/08 MRSA nares PCR: NEGATIVE\n09/10 05:40 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n09/08 CXR: No acute cardiopulmonary process. Heart size normal.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION RECONCILIATION\nPatient: Gloria Doe  MRN: CR-5521094\n## Continue / Resume\n- Amlodipine 10 mg PO daily\n- Atorvastatin 20 mg PO daily\n## New Medications\n- Lisinopril 20 mg PO daily\nNo IV medications. No IV access at discharge.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\nReviewed with patient in Spanish by: L. Cortez, PharmD 09/10/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

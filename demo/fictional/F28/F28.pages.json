@@ -1,0 +1,114 @@
+{
+  "packet_id": "F28",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Tessa Nakamura, RN CM\nPhone: 555-0170\nDate: 08/21/2026 08:40\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n47M dog bite L hand s/p washout, on PO Augmentin, does own dressings.\nTarget d/c 08/21 PM. H&P, op note, wound RN, PT/OT, labs and med list attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harbor Point Hospital (fictional)\nDepartment/Floor: 5 West Surgical\nSocial Worker/Case Manager/Nurse: Tessa Nakamura, RN CM\nPhone: 555-0170\nEmail: tnakamura@harborpoint.example\nNursing Station: 555-0171\nAuthorized By: Dr. A. Lindqvist\n## Patient Information\nName: Marcus Doe\nMRN: HP-3307815\nBirth Date: 05/14/1979\nGender: M\nEthnicity: Black\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Dog bite L hand with cellulitis, s/p I&D\nAdmit Date: 08/18/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: L hand dorsum, 2 puncture wounds s/p washout, packed\nIndependent with Wound Care: Yes [ ] No [X]\nHome Health Ordered: Yes [X] No [ ]\nPPD/TB Test or Chest X-Ray: Date: 08/18/2026  Result: CXR negative\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  cellulitis L hand, on PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Marcus Doe\nDOB: 05/14/1979\nMember ID: OCH-77310482\n## Referring Provider\nFacility: Harbor Point Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Open bite of left hand, dog\nICD-10: S61.452A / W54.0XXA\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 08/21/2026\nRequested Days: 14\nSecondary Dx: Cellulitis of left hand (L03.114)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Hospital (fictional) - PATIENT FACE SHEET\nPatient: Marcus Doe\nMRN: HP-3307815\nAccount #: 99307815\nDOB: 05/14/1979\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 08/18/2026 16:40 (ED arrival 08/18/2026 11:05)\nAdmit Type: Inpatient\nUnit/Bed: 5W-512B\nAttending: Anika Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 08/18/2026\nAttending: Anika Lindqvist, MD (Hospital Medicine)\nConsult: Hand Surgery, R. Osei, MD\n## Chief Complaint\n\"A dog bit my hand and now it's swollen\" x 2 days\n## HPI\n47 y/o M experiencing homelessness (sleeps in his car's former spot behind Example Plaza, now outdoors, x 14 months) presents 2 days after a bite to the dorsum of the L hand by a stray dog. Increasing redness, swelling and pain. No fever at home. Right-hand dominant. Dog not located; rabies risk assessed by public health liaison, rabies PEP series started in ED (see med list).\n## PMH\n- None significant\n## PSH\n- Appendectomy 2005\n## Social History\nUnhoused x 14 months. Smokes 5 cigarettes/day. Occasional beer, last drink 1 week ago. Denies drug use.\n## Allergies\nNKDA\n## Home Medications\n- None\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 100.2F, HR 98, BP 138/84, RR 16, SpO2 98% RA\nGen: NAD, AOx4\nL hand: two 0.5 cm puncture wounds dorsum over 3rd/4th metacarpals, surrounding erythema 6 x 5 cm, swelling, fluctuance. Full ROM of fingers, no tenosynovitis signs, sensation intact. No joint involvement.\nPsych: calm, cooperative, appropriate\n## Assessment / Plan\n47M with infected dog bite L hand with cellulitis and small abscess.\n1. Hand surgery consult - bedside vs OR washout\n2. IV ampicillin-sulbactam, transition to PO amoxicillin-clavulanate when improving\n3. Tdap given in ED; rabies PEP started in ED\n4. X-ray L hand to r/o fracture/foreign body\n5. MRSA nares PCR per protocol\n6. Dispo - CM consult; unhoused, anticipate recuperative care\nIsolation: None - standard precautions\nCode status: Full\nElectronically signed: Anika Lindqvist, MD 08/18/2026 18:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "op_note",
+      "title": "Hand surgery procedure note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HAND SURGERY PROCEDURE NOTE\nDate: 08/19/2026 09:15\nSurgeon: R. Osei, MD\nProcedure: Irrigation and debridement (washout) of L hand dog bite wounds, OR\nFindings: small subcutaneous abscess dorsum L hand, no tendon involvement, no joint involvement. No foreign body.\nWound culture sent.\nWounds left open to heal, loosely packed with plain packing strip.\n## Plan\n- Daily dressing change: remove packing, rinse with NS, re-pack loosely, dry gauze, elevate\n- Transition to PO amoxicillin-clavulanate when afebrile 24h, total 10 days\n- Hand Clinic follow-up in 1 week\nSigned: R. Osei, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "wound_note",
+      "title": "Wound care nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING WOUND CARE NOTE\nDate: 08/20/2026 14:30\nWound: L hand dorsum, 2 open wounds s/p washout 08/19\nSize: 1.0 x 0.6 cm and 0.8 x 0.5 cm, depth 0.4 cm each\nWound bed: pink, scant serosanguinous drainage, no odor. Erythema receding, now 2 x 2 cm.\n## Education\nTaught daily dressing change with packing strip using R (dominant) hand.\nPt performed return demonstration of dressing change independently x2 (08/20 AM and PM), correct technique.\nPt states understanding of signs of infection to report.\n## Plan\nDaily dressing change by patient. Home health RN wound check 2x/week arranged by CM.\nSigned: J. Ferreira, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#4\nDate: 08/21/2026 07:15\nS: Pain 2/10. Doing own dressing changes. Wants to leave.\nO: T 98.4F HR 76 BP 126/78 RR 16 SpO2 98% RA\nAfebrile since 08/19 18:00. Erythema much improved.\nSwitched to PO amoxicillin-clavulanate 875/125 mg BID on 08/20 08:00, tolerating.\nWound culture: Pasteurella multocida, sensitive to amoxicillin-clavulanate.\nL hand X-ray 08/18: no fracture, no foreign body, no osteomyelitis.\nA/P:\n- Infected dog bite L hand s/p washout, improving on oral antibiotics. Complete 10 days total.\n- Rabies PEP: next doses scheduled at Harbor Point ED Infusion (fictional) per med list\n- Medically stable for d/c to recuperative care today\nSigned: Anika Lindqvist, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Case management and social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT / SOCIAL WORK NOTE\nDate: 08/21/2026 09:00\nPt AOx4, calm and cooperative, no behavioral concerns per nursing.\nPsychosocial screen: denies depression. Denies suicidal ideation. Denies homicidal ideation. No hallucinations. No psychiatric history. No conservatorship. Not enrolled in FSP.\nSubstance use: occasional beer, last drink over 1 week ago, no withdrawal signs; no drug use.\n## Arrangements\nHome health: Coastline Home Health (fictional), 555-0176, accepted; RN start of care 08/22/2026 for wound check, then 2x/week.\nHand Clinic: Harbor Point Hand Clinic (fictional) 08/26/2026 at 13:00 (confirmed).\nRabies PEP doses: day 7 and day 14 appointments confirmed at Harbor Point ED Infusion (fictional).\nSigned: Tessa Nakamura, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "pt_eval",
+      "title": "Physical and occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL AND OCCUPATIONAL THERAPY EVALUATION\nDate: 08/20/2026 10:30\nBed mobility: Independent\nTransfers: Independent\nGait: 200 ft independent, no assistive device, steady, no rest breaks\nStairs: 12 steps independent\n## ADLs\nIndependent with all ADLs.\nGrooming, dressing, toileting: Independent, using R hand, L hand kept elevated\nShower: Independent, standing, uses glove bag over L hand dressing\nCognition: AOx4, follows multi-step commands\n## Recommendation\nNo PT/OT follow-up needs. No DME.\nSigned: L. Brandt, PT / M. Ochoa, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "labs",
+      "title": "Vital signs, labs and discharge medications",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n08/20 08:00 | 98.6 | 80 | 128/80 | 16 | 98% | RA\n08/20 16:00 | 98.4 | 78 | 124/76 | 16 | 98% | RA\n08/20 23:00 | 98.2 | 74 | 122/74 | 14 | 98% | RA\n08/21 04:00 | 98.0 | 72 | 120/72 | 14 | 99% | RA\n08/21 07:15 | 98.4 | 76 | 126/78 | 16 | 98% | RA\n## LABORATORY RESULTS\n08/18 WBC 14.2 H (4.0-11.0 K/uL)\n08/21 WBC 8.1 (4.0-11.0 K/uL)\n08/21 Creatinine 0.9 (0.7-1.3 mg/dL)\n## MICROBIOLOGY\n08/18 MRSA nares PCR: NEGATIVE\n08/19 L hand wound culture: Pasteurella multocida, sensitive to amoxicillin-clavulanate\n08/18 Blood cultures x2: no growth at 72 hours\n08/21 06:10 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n08/18 CXR: No acute cardiopulmonary process\n08/18 L hand X-ray: no fracture, no foreign body\n## DISCHARGE MEDICATION RECONCILIATION\nPatient: Marcus Doe  MRN: HP-3307815\n## New Medications\n- Amoxicillin-clavulanate 875/125 mg PO twice daily x 7 more days (end 08/27)\n- Ibuprofen 400 mg PO every 8 hours PRN pain, with food\n- Rabies vaccine IM: remaining doses at scheduled ED Infusion visits (not self-administered)\n## Wound Supplies\n- Plain packing strip, NS bullets, gauze, tape (7-day supply)\n## Stopped\n- Ampicillin-sulbactam IV (inpatient only). IV removed 08/20.\nNo IV access at discharge.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes (full course)\nReviewed with patient by: D. Haddad, PharmD 08/21/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,775 @@
+{
+  "packet_id": "F28",
+  "patient": {
+    "summary": "47M, infected dog bite L hand s/p washout, on oral antibiotics, unhoused",
+    "age": "47",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 14 months, outdoors",
+    "admit_reason": "Infected dog bite to the left hand, washed out in the OR",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Wounds",
+      "text": "Two small open L hand wounds s/p washout; patient return-demonstrated his own daily dressing change twice.",
+      "pages": [
+        8
+      ],
+      "quote": "Pt performed return demonstration of dressing change independently x2",
+      "quote_page": 8
+    },
+    {
+      "label": "Home health",
+      "text": "Home health accepted, RN start of care 08/22 then 2x/week; hand clinic 08/26 confirmed.",
+      "pages": [
+        10
+      ],
+      "quote": "RN start of care 08/22/2026 for wound check, then 2x/week",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "Afebrile since 08/19; on PO amoxicillin-clavulanate; culture Pasteurella sensitive.",
+      "pages": [
+        9
+      ],
+      "quote": "Afebrile since 08/19 18:00. Erythema much improved.",
+      "quote_page": 9
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 200 ft independently, no device; independent with all ADLs.",
+      "pages": [
+        11
+      ],
+      "quote": "Gait: 200 ft independent, no assistive device, steady, no rest breaks",
+      "quote_page": 11
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4, self-administers all meds.",
+      "pages": [
+        12
+      ],
+      "quote": "Patient able to self-administer all medications: Yes",
+      "quote_page": 12
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; rapid COVID negative 08/21 06:10.",
+      "pages": [
+        12
+      ],
+      "quote": "08/21 06:10 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 12
+    },
+    {
+      "label": "Mental health",
+      "text": "Denies SI/HI, no hallucinations, no psychiatric history.",
+      "pages": [
+        10
+      ],
+      "quote": "Denies suicidal ideation.",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and recovering from a hand infection.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Shower: Independent, standing"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independent.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Grooming, dressing, toileting: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No PT/OT follow-up needs. No DME."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT/OT evaluation included.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "PHYSICAL AND OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 200 ft independently.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Gait: 200 ft independent, no assistive device, steady, no rest breaks"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "met",
+      "finding": "Transfers independent.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Transfers: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "No hallucinations.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; last drink over 1 week ago.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "last drink over 1 week ago, no withdrawal signs"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship, not in FSP.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No conservatorship. Not enrolled in FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers all medications.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm and cooperative"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative, no behavioral concerns.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "IV removed; no IV access at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No IV access at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "No isolation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/18 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 08/21 06:10, within 24h of planned 08/21 PM discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/21 06:10 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent; afebrile, HR 72-80, BP normal; no sepsis signs.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/21 07:15 | 98.4 | 76 | 126/78 | 16 | 98% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "On oral amoxicillin-clavulanate, self-administers.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Amoxicillin-clavulanate 875/125 mg PO twice daily x 7 more days (end 08/27)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics stopped; oral only at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Ampicillin-sulbactam IV (inpatient only). IV removed 08/20."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Left hand dorsum.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "small subcutaneous abscess dorsum L hand"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Wound culture grew Pasteurella, sensitive; blood cultures no growth.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Pasteurella multocida, sensitive to amoxicillin-clavulanate"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "met",
+      "finding": "Skin infection (cellulitis, small abscess) now on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "improving on oral antibiotics"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "met",
+      "finding": "Home health accepted with RN start of care 08/22, then 2x/week; patient does daily dressings.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "RN start of care 08/22/2026 for wound check, then 2x/week"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E4",
+      "status": "met",
+      "finding": "Small open wounds, infection improving.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Erythema receding, now 2 x 2 cm."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "met",
+      "finding": "No skin graft needed; wounds left open to heal.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Wounds left open to heal"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "Abscess was small and drained.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "small subcutaneous abscess dorsum L hand"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X2",
+      "status": "met",
+      "finding": "X-ray shows no osteomyelitis.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no fracture, no foreign body, no osteomyelitis"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4, which are met.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Transfers: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "Infection is cellulitis on oral antibiotics; MRSA negative; no TB or C. diff.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "08/18 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use treatment issue.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm and cooperative"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Independent with wound care",
+      "rule_ids": [
+        "INT-E2",
+        "ADL-1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Independent with Wound Care: Yes [ ] No [X]"
+        },
+        {
+          "page": 8,
+          "quote": "Pt performed return demonstration of dressing change independently x2"
+        }
+      ],
+      "note": "Form says not independent with wound care; the nursing note documents two correct return demonstrations of the dressing change. Chart wins: he does his own dressings, home health checks 2x/week."
+    }
+  ],
+  "questions_for_hospital": [
+    "Can you confirm he leaves with the remaining amoxicillin-clavulanate and 7 days of packing supplies in hand?",
+    "Who will bring him to the rabies vaccine appointments at the ED Infusion clinic?"
+  ],
+  "claude_fit": {
+    "score": 92,
+    "recommendation": "approve",
+    "reason": "Hand infection improving on oral antibiotics with home health and hand clinic arranged, walks 200 ft, independent ADLs, AOx4, MRSA/COVID negative (INT-E1, INT-E2, ID-2, MOB-3, ADL-1, INF-1, INF-2). The form's 'Independent with Wound Care: No' is contradicted by the nursing return demonstration."
+  }
+}

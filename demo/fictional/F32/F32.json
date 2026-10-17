@@ -1,0 +1,696 @@
+{
+  "packet_id": "F32",
+  "patient": {
+    "summary": "61F, dehydration with kidney injury (resolved), stage 2 sacral pressure injury, unhoused",
+    "age": "61",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (sleeping on a bus bench), no fixed address",
+    "admit_reason": "Dehydration and kidney injury after poor intake in hot weather",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Wounds",
+      "text": "Nursing documents a stage 2 sacral pressure injury present on admission; the form says no wounds.",
+      "pages": [
+        8,
+        2
+      ],
+      "quote": "Sacrum: Stage 2 pressure injury, partial thickness, pink wound bed. Present on admission.",
+      "quote_page": 8
+    },
+    {
+      "label": "Wounds",
+      "text": "Wound size not measured and no wound care plan yet; consult pending.",
+      "pages": [
+        8,
+        7
+      ],
+      "quote": "Size: not measured at this time. Wound care consult to follow.",
+      "quote_page": 8
+    },
+    {
+      "label": "Wounds",
+      "text": "RN changes the foam dressing; patient cannot see or reach the area.",
+      "pages": [
+        8
+      ],
+      "quote": "Patient unable to see or reach the area.",
+      "quote_page": 8
+    },
+    {
+      "label": "Home health",
+      "text": "Home health wound care not yet referred; no agency confirmed, although the form says it was ordered.",
+      "pages": [
+        9,
+        2
+      ],
+      "quote": "No agency identified or confirmed yet.",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "Independent with dressing, grooming, toileting and feeding; bathing and walking distance not documented; no PT/OT.",
+      "pages": [
+        8
+      ],
+      "quote": "Independent with dressing, grooming, toileting and feeding.",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 09/08; COVID negative 09/10 14:00, discharge time not set.",
+      "pages": [
+        10
+      ],
+      "quote": "09/10 14:00 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4; suicidal ideation, hallucinations and isolation status not documented.",
+      "pages": [
+        7,
+        8
+      ],
+      "quote": "Pt AOx4.",
+      "quote_page": 8
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused, admitted with dehydration and kidney injury, has a pressure wound.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "61 y/o F, unhoused (sleeping sitting up on a bus bench for several weeks)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "unknown",
+      "finding": "Nursing documents independent dressing, grooming, toileting and feeding, but bathing is not assessed; no OT eval.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "No note says whether she can shower or bathe herself.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent toileting; continent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with dressing, grooming, toileting and feeding."
+        },
+        {
+          "page": 8,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No assistive device.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Ambulating independently in room and to bathroom, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "unknown",
+      "finding": "No PT or OT evaluation in the packet; only nursing notes.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walks independently in room and to bathroom; distance not documented and no PT eval.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history listed; form marks no mental health diagnosis.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "No note documents asking about suicidal ideation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "No note documents asking about hallucinations.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with intoxication; serum alcohol none detected.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Serum EtOH in ED: none detected."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship or FSP history not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral meds and states dose and schedule.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Self-administering oral meds with RN check; states dose and schedule correctly."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, progress and nursing notes.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: tired, dry mucous membranes, AOx4"
+        },
+        {
+          "page": 8,
+          "quote": "Pt AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "Behavior toward staff not described; no aggression documented either.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender per form and case management.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        },
+        {
+          "page": 9,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "Saline lock removed; no IV access.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "IV fluids stopped 09/09. Saline lock removed."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated anywhere in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 09/08.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/08 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "COVID negative 09/10 14:00; discharge time not set, so the 24-hour window can not be checked yet.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/10 14:00 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile, HR 76-86, BP stable.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/10 08:15 | 98.4 | 80 | 134/82 | 16 | 98% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection documented; wound not described as infected.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No cultures.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR no acute process).",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Hypertension; amlodipine started 09/09, BP stable on oral medication.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Hypertension - amlodipine 5 mg PO daily started 09/09, BP stable."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No troponins.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac event; EKG not needed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No heart failure.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "BP controlled on oral amlodipine; no IV blood pressure medicine documented.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "amlodipine 5 mg PO daily started 09/09, BP stable."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "unknown",
+      "finding": "Sacral wound is in a hard-to-reach area she cannot reach; home health not yet referred or confirmed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No agency identified or confirmed yet."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E6",
+      "status": "unknown",
+      "finding": "Stage 2 sacral pressure injury; size and dressing plan not documented and wound care not yet scheduled.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Size: not measured at this time. Wound care consult to follow."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "not_applicable",
+      "finding": "Stage 2 partial thickness; no grafting described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "unknown",
+      "finding": "Independent with most ADLs; bathing not assessed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Walks in room and to bathroom; distance not documented (superseded by MOB-3/MOB-4).",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; CXR no acute process.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/08 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies tobacco, EtOH or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender per patient (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "Behavior not described.",
+      "evidence": []
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Wounds",
+      "rule_ids": [
+        "INT-E6",
+        "INT-E2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Any Wounds: Yes [ ] No [X]"
+        },
+        {
+          "page": 8,
+          "quote": "Sacrum: Stage 2 pressure injury, partial thickness, pink wound bed."
+        }
+      ],
+      "note": "Form says no wounds, nursing skin assessment documents a stage 2 sacral pressure injury. Chart wins: she has a wound."
+    },
+    {
+      "topic": "Home health",
+      "rule_ids": [
+        "INT-E2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Home Health Ordered: Yes [X] No [ ]"
+        },
+        {
+          "page": 9,
+          "quote": "No agency identified or confirmed yet."
+        }
+      ],
+      "note": "Form says home health is ordered, case management says the referral is not yet sent and no agency is confirmed. Chart wins: not arranged."
+    }
+  ],
+  "questions_for_hospital": [
+    "The skin assessment shows a stage 2 sacral pressure injury. Can you send the wound care consult note with size, dressing type and change frequency?",
+    "Has a home health agency accepted her for wound care, and when is the first visit?",
+    "Can you confirm her isolation status?",
+    "Has she been asked about suicidal ideation and hallucinations, and does she have any conservatorship or FSP history?",
+    "Can she shower independently, and how far can she walk? A PT/OT note would help.",
+    "What is the planned discharge date and time, so we can check the COVID swab timing?"
+  ],
+  "claude_fit": {
+    "score": 55,
+    "recommendation": "needs_info",
+    "reason": "No hard stop, but INT-E6 and INT-E2 are unknown: the sacral wound has no size or dressing plan and home health is not confirmed, and the form wrongly says no wounds. ADL-2, MOB-3, MH-2, MH-3 and OTH-4 are also undocumented."
+  }
+}

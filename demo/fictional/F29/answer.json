@@ -1,0 +1,9 @@
+{
+  "packet_id": "F29",
+  "intended": "needs_info",
+  "why": "Hypertensive urgency treated with oral meds only (CARD-6 met) and she is otherwise independent, but there is only one BP reading after the switch to oral meds and no vitals sheet (CARD-1 not met) and no ECG (CARD-3 not met), plus no mental health screen or PT note. Ask the hospital before deciding.",
+  "traps": [
+    "Referral form comments say 'BP stable on oral meds' but there is no vitals sheet; the only post-switch BP is 158/94 in the progress note (page 7).",
+    "No ECG/EKG anywhere in the packet (CARD-3)."
+  ]
+}

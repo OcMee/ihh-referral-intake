@@ -1,0 +1,671 @@
+{
+  "packet_id": "F30",
+  "patient": {
+    "summary": "35M, sutured L shin laceration, schizophrenia off meds with active command hallucinations, unhoused",
+    "age": "35",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 3 years",
+    "admit_reason": "Leg cut from climbing a fence, stitched; psychiatric evaluation",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mental health",
+      "text": "Psychiatry documents active command auditory hallucinations.",
+      "pages": [
+        6
+      ],
+      "quote": "Perception: active command auditory hallucinations.",
+      "quote_page": 6
+    },
+    {
+      "label": "Mental health",
+      "text": "Off risperidone ~4 months and declining to restart; psychiatry says not stable.",
+      "pages": [
+        6
+      ],
+      "quote": "Not psychiatrically stable at this time",
+      "quote_page": 6
+    },
+    {
+      "label": "Cognition",
+      "text": "Oriented to person and place only, not AOx4.",
+      "pages": [
+        6
+      ],
+      "quote": "Oriented to person and place, not to date.",
+      "quote_page": 6
+    },
+    {
+      "label": "Wounds",
+      "text": "7 cm shin laceration, 9 sutures, clean; medically cleared; suture removal booked.",
+      "pages": [
+        7
+      ],
+      "quote": "L shin laceration - medically cleared for discharge.",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks independently; independent toileting and showering.",
+      "pages": [
+        8
+      ],
+      "quote": "Independent with toileting and showering.",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; rapid COVID negative 10/06 06:00.",
+      "pages": [
+        10
+      ],
+      "quote": "10/06 06:00 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and recovering from a sutured laceration.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent with toileting and showering.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and showering."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and showering."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toilets independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and showering."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walks room and hallway independently; distance not documented.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Ambulating in room and hallway independently, steady."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "not_met",
+      "finding": "Off antipsychotic, declining to restart; psychiatry says not stable.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Not psychiatrically stable at this time"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "not_met",
+      "finding": "Psychiatry documents active command auditory hallucinations; exclusion applies.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Perception: active command auditory hallucinations."
+        },
+        {
+          "page": 6,
+          "quote": "Reports command auditory hallucinations"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; denies alcohol.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies alcohol."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "Not conserved, not in FSP.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Not conserved. Not currently enrolled in FSP"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "not_met",
+      "finding": "Declining his antipsychotic; pharmacy marks self-administration unknown.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Unknown - declining antipsychotic"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "not_met",
+      "finding": "Oriented to person and place only.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Oriented to person and place, not to date."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Not aggressive toward staff.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Not aggressive toward staff"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No antibiotics. No IV access."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "No isolation.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/05 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 10/06 06:00, day of referral.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/06 06:00 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "not_applicable",
+      "finding": "No infection; wound clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "unknown",
+      "finding": "Daily dressing; no home health arranged and form says independent with wound care, but not confirmed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E4",
+      "status": "met",
+      "finding": "Uncomplicated laceration without infection.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "L shin laceration clean, dry, intact sutures, no signs of infection."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "met",
+      "finding": "Suture removal appointment confirmed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "10/15/2026 at 11:00 (confirmed)"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "unknown",
+      "finding": "Not AOx4 due to active psychosis; no dementia documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with toileting and showering.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Independent with toileting and showering."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Superseded by MOB-3/MOB-4; distance unknown.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection; MRSA negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/05 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "unknown",
+      "finding": "Daily cannabis use; no detox treatment discussed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Not aggressive toward staff.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Not aggressive toward staff"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "unknown",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Mental health diagnosis",
+      "rule_ids": [
+        "MH-1",
+        "MH-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [ ]"
+        },
+        {
+          "page": 6,
+          "quote": "Schizophrenia, acute exacerbation, nonadherent to medications."
+        }
+      ],
+      "note": "Form leaves Mental Health DX unchecked; the chart documents schizophrenia off meds with active command auditory hallucinations. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "Has he restarted any antipsychotic, and has psychiatry reassessed the command hallucinations?",
+    "Is county outpatient mental health able to see him before any placement?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "Psychiatry documents active command auditory hallucinations and says he is not psychiatrically stable off medications (MH-3 and MH-1 not met), and he is not AOx4 (COG-2). The laceration itself is cleared, but the form's blank Mental Health DX hides the deciding issue."
+  }
+}

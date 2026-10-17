@@ -1,0 +1,105 @@
+{
+  "packet_id": "F32",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Juniper Ridge Community Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Owen Takahashi, LCSW\nPhone: 555-0195\nDate: 09/10/2026 11:20\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n61F admitted with dehydration and acute kidney injury, now resolved. On oral meds.\nHoping for d/c 09/11/2026.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Juniper Ridge Community Hospital (fictional)\nDepartment/Floor: 2 East Medicine\nSocial Worker/Case Manager/Nurse: Owen Takahashi, LCSW\nPhone: 555-0195\nEmail: otakahashi@juniperridge.example\nNursing Station: 555-0196\nAuthorized By: Dr. N. Halvorsen\n## Patient Information\nName: Linda Doe\nMRN: JR-3305871\nBirth Date: 03/11/1965\nGender: F\nEthnicity: Asian\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Dehydration with acute kidney injury\nAdmit Date: 09/07/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [X] No [ ]\nPPD/TB Test or Chest X-Ray: Date: 09/07/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nAKI resolved with IV fluids, now drinking well.\nIndependent.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Linda Doe\nDOB: 03/11/1965\nMember ID: OCH-48260913\n## Referring Provider\nFacility: Juniper Ridge Community Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Dehydration; acute kidney failure, unspecified\nICD-10: E86.0, N17.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/11/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Juniper Ridge Community Hospital (fictional) - PATIENT FACE SHEET\nPatient: Linda Doe\nMRN: JR-3305871\nAccount #: 99305871\nDOB: 03/11/1965\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/07/2026 18:05\nAdmit Type: Inpatient\nUnit/Bed: 2E-209\nAttending: Nils Halvorsen, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL (HOSPITAL MEDICINE)\nDate: 09/07/2026 19:00\n## CC\nWeakness and dizziness\n## HPI\n61 y/o F, unhoused (sleeping sitting up on a bus bench for several weeks), brought in by outreach worker after 3 days of poor oral intake during hot weather, dizziness and decreased urination.\nLabs in ED: Cr 2.4 (baseline unknown), BUN 48. Orthostatic.\n## PMH\n- Hypertension (not on meds for several months)\n## PSH\n- None\n## Meds PTA\nNone\n## Allergies\nSulfa (rash)\n## Social\nUnhoused x 8 months. Denies tobacco, EtOH or drug use. Serum EtOH in ED: none detected.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nT 99.0F HR 108 BP 102/64 RR 18 SpO2 98% RA\nGen: tired, dry mucous membranes, AOx4\nCV: tachycardic, regular\nLungs: clear\nSkin: see nursing skin assessment\n## Assessment/Plan\n1. Dehydration with acute kidney injury, prerenal: IV fluids, trend Cr\n2. Hypertension: hold meds while volume down, restart when BP allows\n3. Dispo: unhoused, CM consult\nSigned: Nils Halvorsen, MD 09/07/2026 19:45\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospital medicine progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITAL MEDICINE PROGRESS NOTE - HD#4\nDate: 09/10/2026 08:15\nS: Feels much better. Eating and drinking well. No dizziness.\nO: T 98.4F HR 80 BP 134/82 RR 16 SpO2 98% RA. AOx4.\nCr 0.9 today (2.4 on admission).\nA/P:\n1. AKI, prerenal - resolved. IV fluids stopped 09/09. Saline lock removed.\n2. Hypertension - amlodipine 5 mg PO daily started 09/09, BP stable.\n3. Sacral pressure injury - per nursing. Wound care consult requested.\nMedically ready for discharge once dispo arranged.\nSigned: Nils Halvorsen, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing notes and skin assessment",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING ADMISSION SKIN ASSESSMENT\nDate: 09/07/2026 21:30\nBraden score: 17\nSacrum: Stage 2 pressure injury, partial thickness, pink wound bed. Present on admission.\nSize: not measured at this time. Wound care consult to follow.\nOther skin: intact.\nSigned: K. Lindgren, RN\n## NURSING NOTE\nDate: 09/10/2026 06:45\nPt AOx4. Independent with dressing, grooming, toileting and feeding.\nContinent of bowel and bladder.\nAmbulating independently in room and to bathroom, no device.\nSelf-administering oral meds with RN check; states dose and schedule correctly.\nSacral wound: foam dressing in place, changed by RN. Patient unable to see or reach the area.\nSigned: T. Abara, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "other",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 09/10/2026 10:40\nPt agreeable to recuperative care at Illumination Health + Home. Referral packet faxed.\nHome health for wound care: referral to be sent once wound care consult recommendations are available. No agency identified or confirmed yet.\nMedi-Cal active. No car. No service animal. Not a registered sex offender per pt.\nSigned: Owen Takahashi, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "labs",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/09 08:00 | 98.6 | 86 | 130/80 | 16 | 98% | RA\n09/09 16:00 | 98.4 | 82 | 136/84 | 16 | 98% | RA\n09/09 23:00 | 98.2 | 78 | 128/78 | 16 | 97% | RA\n09/10 04:00 | 98.1 | 76 | 126/76 | 16 | 98% | RA\n09/10 08:15 | 98.4 | 80 | 134/82 | 16 | 98% | RA\n## LABS\n09/07 | WBC 8.8 | Hgb 13.2 | Plt 230 | Na 146 H | K 4.8 | BUN 48 H | Cr 2.4 H | Glucose 94\n09/10 | Na 139 | K 4.0 | BUN 14 | Cr 0.9\n09/08 MRSA nares PCR: Negative\n09/10 14:00 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n09/07 CXR: no acute process\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Linda Doe  MRN: JR-3305871\nAll medications self-administered by patient. 30-day supply to be filled by inpatient pharmacy (meds to beds) before discharge.\n- Amlodipine 5 mg PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n## Wound supplies\n- Pending wound care consult recommendations\n## Follow up\n- Primary care follow up within 1 week - clinic to be scheduled\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

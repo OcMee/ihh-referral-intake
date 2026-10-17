@@ -245,5 +245,47 @@
     "traps": [
       "Referral form says 'O2: Yes' (2L nasal cannula) but the RT note shows oxygen weaned off 10/13, two days before the note, with no home O2 indicated (RESP-3 not applicable)."
     ]
+  },
+  {
+    "packet_id": "F28",
+    "intended": "fit",
+    "why": "Infected dog bite L hand washed out, afebrile and improving on oral amoxicillin-clavulanate, does own dressing changes with home health 2x/week and hand clinic booked, walks 200 ft, independent ADLs, AOx4, MRSA and COVID negative, so INT-E1, INT-E2, ID-2, MOB-3, ADL-1, COG-2, INF-1 and INF-2 are met.",
+    "traps": [
+      "Referral form says 'Independent with Wound Care: No' but the nursing wound note (page 8) documents return demonstration of the dressing change independently x2."
+    ]
+  },
+  {
+    "packet_id": "F29",
+    "intended": "needs_info",
+    "why": "Hypertensive urgency treated with oral meds only (CARD-6 met) and she is otherwise independent, but there is only one BP reading after the switch to oral meds and no vitals sheet (CARD-1 not met) and no ECG (CARD-3 not met), plus no mental health screen or PT note. Ask the hospital before deciding.",
+    "traps": [
+      "Referral form comments say 'BP stable on oral meds' but there is no vitals sheet; the only post-switch BP is 158/94 in the progress note (page 7).",
+      "No ECG/EKG anywhere in the packet (CARD-3)."
+    ]
+  },
+  {
+    "packet_id": "F30",
+    "intended": "not_fit",
+    "why": "Schizophrenia off medications with active command auditory hallucinations documented by psychiatry (MH-3 exclusion applies), not psychiatrically stable (MH-1 not met) and oriented x2 only (COG-2 not met). The leg laceration is medically cleared but that does not change the mental health exclusion.",
+    "traps": [
+      "Referral form leaves Mental Health DX unchecked (neither Yes nor No) while the psychiatry consult (page 6) documents schizophrenia with active command auditory hallucinations."
+    ]
+  },
+  {
+    "packet_id": "F31",
+    "intended": "fit",
+    "why": "Three closed nondisplaced right rib fractures after a fall, no pneumothorax or hemothorax (RSP-X1/RSP-X2), pain controlled on oral medicines, incentive spirometry taught, room air SpO2 96%, independent ADLs, walks 150 ft with no device (MOB-3), AOx4, MRSA and COVID negative, chest imaging sent (RESP-1).",
+    "traps": [
+      "Referral form says 'Assistive Device: Yes (walker)' but PT discharged him with no assistive device and none recommended."
+    ]
+  },
+  {
+    "packet_id": "F32",
+    "intended": "needs_info",
+    "why": "Stage 2 sacral pressure injury (hard-to-reach area she cannot reach) with no wound size or dressing plan and home health wound care not confirmed (INT-E6 and INT-E2 unknown); otherwise independent and stable, but bathing, walking distance, SI/hallucination screening and isolation status are undocumented.",
+    "traps": [
+      "Referral form says 'Any Wounds: No' while the nursing admission skin assessment documents a stage 2 sacral pressure injury present on admission.",
+      "Referral form says 'Home Health Ordered: Yes' but case management says the home health referral is not yet sent and no agency is confirmed."
+    ]
   }
 ]

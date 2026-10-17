@@ -1,0 +1,849 @@
+{
+  "packet_id": "F31",
+  "patient": {
+    "summary": "52M, three closed right rib fractures after a fall, no pneumothorax, unhoused",
+    "age": "52",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (riverbed encampment), no fixed address",
+    "admit_reason": "Broken ribs (right 5-7) after slipping and falling",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mobility",
+      "text": "PT: walks 150 ft independently with no assistive device; no device recommended.",
+      "pages": [
+        7
+      ],
+      "quote": "Patient walks 150 ft independently with no assistive device.",
+      "quote_page": 7
+    },
+    {
+      "label": "Other",
+      "text": "OT: independent with all ADLs including showering and toileting.",
+      "pages": [
+        8
+      ],
+      "quote": "Patient independent with all ADLs including showering and toileting.",
+      "quote_page": 8
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Pain controlled on oral medicines only, no IV access, room air SpO2 96%.",
+      "pages": [
+        10,
+        9
+      ],
+      "quote": "Pain controlled on oral medicines: acetaminophen, lidocaine patch, oxycodone PO PRN.",
+      "quote_page": 10
+    },
+    {
+      "label": "Other",
+      "text": "No pneumothorax on CT or repeat chest X-ray; imaging reports sent.",
+      "pages": [
+        11
+      ],
+      "quote": "stable R rib fractures 5-7, no pneumothorax, no effusion. Lungs clear.",
+      "quote_page": 11
+    },
+    {
+      "label": "Other",
+      "text": "Incentive spirometry taught with teach-back; spirometer goes with patient.",
+      "pages": [
+        9
+      ],
+      "quote": "Incentive spirometry taught. Patient demonstrates correct technique with teach-back.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 09/01; COVID negative 09/03 08:10, about 7 hours before planned 15:00 discharge.",
+      "pages": [
+        11,
+        10
+      ],
+      "quote": "09/03 08:10 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4, denies SI/HI and hallucinations, no psych history, no conservatorship or FSP.",
+      "pages": [
+        10
+      ],
+      "quote": "Denies auditory or visual hallucinations.",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused with three rib fractures after a fall.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "52 y/o M, unhoused (staying in a riverbed encampment)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "OT documents independence with all ADLs.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Patient independent with all ADLs including showering and toileting."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently standing.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Bathing: Independent standing shower; shower bench offered, not needed"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent toileting including hygiene; continent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Toileting: Independent, including hygiene and clothing management"
+        },
+        {
+          "page": 10,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "PT discharged him with no assistive device, so no DME to use.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No DME needs. No assistive device recommended at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations are in the packet.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        },
+        {
+          "page": 8,
+          "quote": "OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 150 ft independently without a device.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Gait: 150 ft independent without assistive device, steady, no loss of balance"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; normal mood and affect.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No psychiatric history."
+        },
+        {
+          "page": 6,
+          "quote": "Psych: calm, appropriate, normal mood and affect"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Social work documents denial of SI/HI.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, pleasant, future-oriented. Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Social work documents no hallucinations.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with intoxication; serum alcohol none detected.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Serum EtOH in ED: none detected."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "Social work documents no conservatorship or FSP history.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral meds and states dose and schedule.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Self-administering oral meds with RN check; correctly states dose and schedule for each med."
+        },
+        {
+          "page": 12,
+          "quote": "All medications self-administered by patient."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, progress and nursing notes.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: uncomfortable with deep breath, AOx4"
+        },
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative; no aggression documented.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender per form and social work.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        },
+        {
+          "page": 10,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No IV access at discharge (PIV removed before d/c)."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "Nursing documents no isolation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 09/01.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/01 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID rapid antigen negative 09/03 08:10; planned discharge 09/03 ~15:00, about 7 hours later.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/03 08:10 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 10,
+          "quote": "Medically stable for discharge to recuperative care today ~15:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile, normal HR and BP, SpO2 95-96% RA.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/03 07:30 | 98.4 | 78 | 126/78 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "CT chest and repeat CXR reports are in the packet.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/01 CXR PA/lateral: stable R rib fractures 5-7, no pneumothorax, no effusion."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vital sets sent, SpO2 95-96% on room air.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/03 07:30 | 98.4 | 78 | 126/78 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No oxygen needed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Oxygen: none. SpO2 96% on room air at rest and 95% with ambulation."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "met",
+      "finding": "Respiratory therapy note documents incentive spirometry teaching.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Incentive spirometry taught. Patient demonstrates correct technique with teach-back."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "met",
+      "finding": "No breathing treatments; incentive spirometry only.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Breathing treatments: none. No nebulizers ordered."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV medications.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No IV medications."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax on CT or repeat CXR.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "08/31 CT chest: acute nondisplaced fractures R ribs 5-7. No pneumothorax or hemothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X2",
+      "status": "met",
+      "finding": "No hemothorax on CT.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "No pneumothorax. No hemothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X4",
+      "status": "not_applicable",
+      "finding": "No pulmonary embolism described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "not_applicable",
+      "finding": "No BiPAP.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-E1",
+      "status": "met",
+      "finding": "Closed nondisplaced rib fractures.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Closed nondisplaced fractures R ribs 5-7, mechanical fall."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E2",
+      "status": "not_applicable",
+      "finding": "PT states no skilled PT needs after discharge.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No skilled PT needs after discharge; home exercise and walking program given."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E3",
+      "status": "not_applicable",
+      "finding": "No rheumatoid arthritis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-E4",
+      "status": "not_applicable",
+      "finding": "No joint replacement.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X1",
+      "status": "met",
+      "finding": "Fractures are closed.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Closed nondisplaced fractures R ribs 5-7, mechanical fall."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X2",
+      "status": "not_applicable",
+      "finding": "No bone infection described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X3",
+      "status": "not_applicable",
+      "finding": "No external fixator; no surgery.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X4",
+      "status": "not_applicable",
+      "finding": "No amputation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MSK-X5",
+      "status": "not_applicable",
+      "finding": "No facial trauma.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Patient independent with all ADLs including showering and toileting."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Walks 150 ft without a device (superseded by MOB-3/MOB-4).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Patient walks 150 ft independently with no assistive device."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active MRSA, TB or C. diff; MRSA negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/01 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use; UDS negative.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies EtOH or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender per patient (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Assistive device",
+      "rule_ids": [
+        "MOB-1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Assistive Device: Yes [X] No [ ]  (walker)"
+        },
+        {
+          "page": 7,
+          "quote": "No DME needs. No assistive device recommended at discharge."
+        }
+      ],
+      "note": "Form says he uses a walker, PT says he walks 150 ft with no device and none is recommended. Chart wins: no walker."
+    }
+  ],
+  "questions_for_hospital": [
+    "The referral form lists a walker, but PT recommends no assistive device. Can you confirm he is discharging without a walker?"
+  ],
+  "claude_fit": {
+    "score": 92,
+    "recommendation": "approve",
+    "reason": "Meets ADL-1 to ADL-3, MOB-3 without a device, COG-1/COG-2, OTH-4, INF-1 and INF-2, and RSP-X1/RSP-X2 (no pneumothorax or hemothorax) on room air. The only issue is the form's walker entry, which the PT note contradicts."
+  }
+}

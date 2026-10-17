@@ -1,0 +1,8 @@
+{
+  "packet_id": "F30",
+  "intended": "not_fit",
+  "why": "Schizophrenia off medications with active command auditory hallucinations documented by psychiatry (MH-3 exclusion applies), not psychiatrically stable (MH-1 not met) and oriented x2 only (COG-2 not met). The leg laceration is medically cleared but that does not change the mental health exclusion.",
+  "traps": [
+    "Referral form leaves Mental Health DX unchecked (neither Yes nor No) while the psychiatry consult (page 6) documents schizophrenia with active command auditory hallucinations."
+  ]
+}

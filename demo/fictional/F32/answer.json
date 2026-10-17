@@ -1,0 +1,9 @@
+{
+  "packet_id": "F32",
+  "intended": "needs_info",
+  "why": "Stage 2 sacral pressure injury (hard-to-reach area she cannot reach) with no wound size or dressing plan and home health wound care not confirmed (INT-E6 and INT-E2 unknown); otherwise independent and stable, but bathing, walking distance, SI/hallucination screening and isolation status are undocumented.",
+  "traps": [
+    "Referral form says 'Any Wounds: No' while the nursing admission skin assessment documents a stage 2 sacral pressure injury present on admission.",
+    "Referral form says 'Home Health Ordered: Yes' but case management says the home health referral is not yet sent and no agency is confirmed."
+  ]
+}
