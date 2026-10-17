@@ -446,6 +446,7 @@ main { padding-block-end: 150px }
     if (u.from) bits.push(`sender ${esc(u.from)}`);
     if (u.contact) bits.push(`callback ${esc(u.contact)}`);
     if (u.subject) bits.push(`“${esc(u.subject)}”`);
+    if (u.attachment) bits.push(`attachment ${esc(u.attachment)} of that email`);
     if (u.source === "portal") bits.push(u.declared_docs && u.declared_docs.length ? `hospital says it attached ${u.declared_docs.map(esc).join(", ")}` : "hospital ticked no documents");
     if (u.dry_run) bits.push("dry run");
     return `<div class="meta arrival">${bits.join(" · ")}</div>`;

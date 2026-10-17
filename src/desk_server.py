@@ -185,8 +185,16 @@ def watch() -> None:
             try:
                 raw = f.read_bytes()
                 if f.suffix.lower() == ".eml":
+                    # one referral per attachment: joining files could merge two patients into one review
                     pdfs, meta = read_eml(raw)
-                    res = accept(merge(pdfs), f.name, "email", meta) if pdfs else {"error": "email has no PDF or Word attachment"}
+                    res = {"error": "email has no PDF or Word attachment"}
+                    ids = []
+                    for i, b in enumerate(pdfs, 1):
+                        part = {**meta, "attachment": f"{i} of {len(pdfs)}"} if len(pdfs) > 1 else meta
+                        r = accept(b, f.name, "email", part)
+                        (ids.append(r["id"]) if "id" in r else print(f"intake folder: {f.name} attachment {i}: {r['error']}"))
+                    if ids:
+                        res = {"id": ", ".join(ids)}
                 else:
                     res = accept(to_pdf(raw, f.name), f.name, "folder")
             except Exception as e:
