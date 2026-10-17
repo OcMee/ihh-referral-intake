@@ -123,13 +123,14 @@ ignores them and everything in `output/`.
 | Part | Status |
 |---|---|
 | Transcription of the 11 IHH packets (282 pages) | Working. Done in-session with Claude page by page; `clean.py --transcribe` does the same through the API (not yet run end to end with a key) |
-| Criteria check against IHH's rules, with quotes and pages | Working on all 11 real and 12 fictional packets |
+| Criteria check against IHH's rules, with quotes and pages | Working on all 11 real and 23 fictional packets (D01-D03, F01-F20) |
 | Quote verification, fit score, one-pagers, app, Word export | Working |
-| Evidence panel with original scans | Working in the local real build; public build shows transcripts |
+| Evidence panel with the original | Real build: the actual fax scans (local only). Public build: fictional originals, where the referral form page is IHH's real blank form (RC0725-SH) filled with the invented answers, and every page is given a fax-scan look. The other pages are typed from the invented case file, not real hospital templates |
 | 2-hour clock | Mocked: arrival times are simulated |
-| Saving decisions | Working, in the browser only (localStorage); no database, no login |
+| Saving decisions | Working, in the browser only (localStorage), stamped with the reviewer's name; no shared database |
+| Sign-in | Demo gate only (`cornel@ocmeed.com` / `testihh`): it runs in the browser and is not security |
 | Sending the reply | Not built on purpose: the tool never sends email or fax |
-| Uploading a new PDF from the app | Not built; runs from the command line |
+| Intake of new referrals (upload, fax, folder, email, portal; PDF, Word, photos) | Working on the local server in dry run. The live API run (Claude reading a new packet) was wired but not completed at the event: key and workspace setup failed. Fax and email are simulated; nothing real is connected |
 
 ## Results on IHH's 11 real packets
 
@@ -143,7 +144,7 @@ Run blind: the checks never saw `eval/decisions.json`.
 
 - 459 of 459 criteria quotes were found on the page they cite.
 - 386 of 386 Word pages match their transcripts (real and fictional), checked by `verify_docx.py`.
-- On the 9 fictional "Doe" packets, the rule score matched the outcome each case was written for on 7 of 9.
+- On the 20 fictional "Doe" packets (F01-F20), the rule score matched the outcome each case was written for on 18 of 20; 713 of 713 quotes verified. The two misses (F06, F07) are timing cases: written as "needs info", scored "not a fit" (see below).
 
 ## Where it gets things wrong
 
@@ -160,6 +161,11 @@ Run blind: the checks never saw `eval/decisions.json`.
 - **Timing rules.** With dates redacted, rules like "24 hours on insulin" are "can't tell". On the
   fictional packets, where dates exist, the tool says "not a fit" when the honest answer is "not yet":
   the rules have no "re-refer when ready" outcome.
+- **Missing required results cost nothing.** Rules where the hospital must send a result (MRSA and
+  COVID swabs INF-1/INF-2, three troponins CARD-2) do not lower the score when the result is missing,
+  so a packet can look better than it is. Found while writing F14 and F17.
+- **Fictional originals are partly typed.** Only the referral form page uses IHH's real layout; the
+  H&P, notes and labs are typed pages with a scan look, so they are easier to read than real faxes.
 - **Never trust it to approve on its own.** No packet scores "likely fit" without a coordinator's review.
 
 ## Next steps
@@ -168,6 +174,13 @@ Run blind: the checks never saw `eval/decisions.json`.
 - Let coordinators mark a finding right or wrong, and tune the weights on 50+ labelled past referrals.
 - Add a "not yet, re-refer at …" answer for timing rules.
 - A second, independent read of every blocker before it is shown.
+- Finish the live intake run with a workspace-scoped API key, then connect a HIPAA-covered fax
+  service and mailbox in place of the simulations.
+- Score missing required results (INF-1, INF-2, CARD-2) instead of ignoring them.
+- After approval: a discharge handoff checklist from IHH's own rules (O2 tank at the site the day
+  before, home health start date, 30-day medication supply, hospice arranged, transport time). Site
+  locations and bed availability would come from IHH; we have neither today.
+- A report page: tool vs IHH decisions, most common blockers and missing documents per hospital.
 
 ## Data and privacy
 
