@@ -1,0 +1,22 @@
+<title>Referral Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<!--STYLE-->
+<header class="bar"><div class="bar-in gutter">
+  <a class="logo" href="#/" style="color:#fff;text-decoration:none"><b>OCMEE</b> DESIGN<span>Referral Desk for Illumination Health + Home</span></a>
+  <nav class="crumb" id="crumb"></nav><span class="sp"></span>
+  <span class="tag" id="mode"></span>
+  <button class="iconbtn" data-reset title="Clear the decisions saved in this browser">Reset decisions</button>
+  <button class="iconbtn" data-theme title="Switch light or dark">◐ Theme</button>
+</div></header>
+<div class="notice gutter" id="notice"></div>
+<main class="gutter" id="main"></main>
+<div id="dock"></div>
+<!--DATA-->
+<script>
+  (function () { var m = (window.APP && window.APP.meta) || {}; var t = document.getElementById("mode");
+    t.textContent = m.real ? "Real packets · local only" : "Fictional demo data"; if (m.real) t.classList.add("real");
+    if (m.banner) document.getElementById("notice").innerHTML = "<div>" + m.banner + "</div>"; })();
+</script>
+<!--SCRIPT-->
