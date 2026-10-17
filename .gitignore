@@ -27,3 +27,6 @@ challenges/1-referral-intake/packets/*
 !challenges/1-referral-intake/packets/README.md
 *.zip
 **/R[0-9][0-9].pdf
+
+# engine output from real packets
+output/

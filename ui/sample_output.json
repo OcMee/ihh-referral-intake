@@ -1,0 +1,94 @@
+{
+  "_note": "FAKE SAMPLE for UI development. Not from any packet. Every quote is invented placeholder text.",
+  "packet_id": "SAMPLE",
+  "pages": 20,
+  "generated_at": "2026-10-17T11:00:00-07:00",
+  "recommendation": "needs_info",
+  "confidence": "medium",
+  "summary": "[SAMPLE] No exclusion found. Mobility looks fine per PT eval. COVID swab and MRSA swab are not in the packet, and the form and chart disagree on walking distance.",
+  "blockers": [],
+  "rules": [
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "[SAMPLE] PT eval reports the patient walks more than 100 ft with a walker.",
+      "evidence": [
+        { "page": 11, "doc_type": "pt_eval", "quote": "[SAMPLE QUOTE] ambulated 150 ft with FWW, mod I" }
+      ],
+      "verified": true,
+      "verify_note": "Quote found on page 11."
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "[SAMPLE] Psych note says no suicidal ideation.",
+      "evidence": [
+        { "page": 15, "doc_type": "progress_note", "quote": "[SAMPLE QUOTE] denies SI/HI" }
+      ],
+      "verified": true,
+      "verify_note": "Quote found on page 15."
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "[SAMPLE] H&P documents AOx4.",
+      "evidence": [
+        { "page": 6, "doc_type": "h_and_p", "quote": "[SAMPLE QUOTE] A&Ox4" }
+      ],
+      "verified": false,
+      "verify_note": "Second pass found 'A&Ox3' on page 6. Check by hand."
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "[SAMPLE] No COVID swab result in the packet.",
+      "evidence": [],
+      "verified": true,
+      "verify_note": "No swab result on any page."
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "cant_tell",
+      "finding": "[SAMPLE] Alcohol intoxication on admission is noted, but dates are redacted so the 72 hour hold can't be checked.",
+      "evidence": [
+        { "page": 5, "doc_type": "h_and_p", "quote": "[SAMPLE QUOTE] BAL elevated on arrival" }
+      ],
+      "verified": true,
+      "verify_note": "Quote found on page 5."
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "[SAMPLE] No diabetes in history or med list.",
+      "evidence": [],
+      "verified": true,
+      "verify_note": ""
+    }
+  ],
+  "documents": [
+    { "doc_id": "DOC-1", "present": "yes", "pages": [2] },
+    { "doc_id": "DOC-4", "present": "yes", "pages": [5, 6, 7] },
+    { "doc_id": "DOC-6", "present": "no", "pages": [] },
+    { "doc_id": "DOC-8", "present": "yes", "pages": [11, 12] }
+  ],
+  "conflicts": [
+    {
+      "topic": "Mobility",
+      "rule_ids": ["MOB-3", "FORM-M6"],
+      "sources": [
+        { "page": 2, "doc_type": "referral_form", "quote": "[SAMPLE QUOTE] walks 50 ft" },
+        { "page": 11, "doc_type": "pt_eval", "quote": "[SAMPLE QUOTE] ambulated 150 ft with FWW" }
+      ],
+      "note": "[SAMPLE] Form and PT eval disagree. PT eval is the chart, so it wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "[SAMPLE] Please send a negative COVID swab from within 24 hours of discharge.",
+    "[SAMPLE] Please send the last 24 hours of vitals."
+  ],
+  "page_map": [
+    { "page": 1, "doc_type": "fax_cover", "orientation": "normal" },
+    { "page": 2, "doc_type": "referral_form", "orientation": "normal" },
+    { "page": 11, "doc_type": "pt_eval", "orientation": "upside_down" }
+  ]
+}
