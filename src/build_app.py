@@ -147,6 +147,10 @@ def main(argv: list) -> None:
     else:
         data = {"meta": {"real": False, "banner": "",
                          "note": "All patients in this demo are invented."}, "packets": public(checklist)}
+        # website drag-and-check: recognize the demo files by content (sha256 of each PDF and Word copy)
+        import hashlib
+        data["meta"]["known"] = {hashlib.sha256(f.read_bytes()).hexdigest(): f.stem for f in sorted((REPO / "app/pdf").glob("*.*"))
+                                 if re.fullmatch(r"[DF]\d\d", f.stem) and f.suffix in (".pdf", ".docx")}
         (REPO / "app/index.html").write_text(html(data, artifact=False), encoding="utf-8")
         (REPO / "app/artifact.html").write_text(html(data, artifact=True), encoding="utf-8")
         dest = REPO / "app/index.html"

@@ -189,7 +189,14 @@
   const STEP_NAMES = { fix: "Straighten pages", transcribe: "Read every page", check: "Check IHH rules", score: "Verify quotes, score", build: "Add to inbox" };
   function dropzone() {
     const s = ui.server;
-    if (!s) return `<section class="intake"><div class="drop off"><b>New referrals arrive on the local version</b><small>Drag and drop (PDF, Word, photos), fax, email, a watched folder and the hospital portal run on the coordinator’s computer, so packets never pass through this website. Start it with start-desk.bat and open 127.0.0.1:8000. See the README.</small></div></section>`;
+    if (!s) {  // website: drag and check works for the demo files; new files are checked live on the local version
+      const c = ui.check;
+      return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept=".pdf,.docx" hidden>
+          <b>Drag a referral here to check it</b><small>On this website: the demo packets (PDF or Word, F01 to F20) are checked against prepared, verified results. Any new file is read by Claude on the local version (start-desk.bat), so packets never pass through this website. <a href="pdf/F12.pdf" download>Download a demo packet to try</a>.</small></label>
+        ${c ? `<div class="job ${c.state}"><div class="j-top"><b>${esc(c.id || "")}</b><span>${esc(c.name)}</span>${c.state === "done" ? `<button class="btn" data-open="${c.id}">Open ${c.id}</button>` : ""}</div>
+          ${c.state === "error" ? "" : `<ol class="j-steps">${STEPS_WEB.map((k, i) => `<li class="${c.state === "done" || i < c.step ? "ok" : i === c.step ? "now" : ""}">${k}</li>`).join("")}</ol>`}
+          <p class="lbl">${esc(c.msg)}</p></div>` : ""}</section>`;
+    }
     const jobs = (ui.jobs || []).slice().reverse().map(j => {
       const at = j.steps.indexOf(j.stage);
       return `<div class="job ${j.state}"><div class="j-top"><b>${esc(j.id)}</b><span class="src">${esc(j.source)}</span><span>${esc(j.name)}</span>${j.dry_run ? `<span class="tagx">dry run</span>` : ""}
@@ -202,6 +209,18 @@
       <p class="lbl channels">Also arriving here: <b>Fax</b> (fax service webhook) · <b>Email</b> to ${esc(s.email || "the intake address")} · <b>Folder</b> (files saved in the intake folder) · <b>Hospital portal</b> <a href="/portal" target="_blank" rel="noopener">open /portal</a></p>
       ${s.key ? "" : `<p class="lbl warn">No API key: start the server with ANTHROPIC_API_KEY set.</p>`}
       ${ui.uploadError ? `<p class="lbl warn">${esc(ui.uploadError)}</p>` : ""}${jobs}</section>`;
+  }
+  const STEPS_WEB = ["Recognize file", "Read every page", "Check IHH rules", "Verify quotes, score", "Open review"];
+  async function webCheck(file) {
+    if (!file) return;
+    ui.check = { name: file.name, state: "running", step: 0, msg: "Reading the file in this browser…" }; render();
+    let id = null;
+    try { const h = await crypto.subtle.digest("SHA-256", await file.arrayBuffer()); id = (APP.meta.known || {})[[...new Uint8Array(h)].map(x => x.toString(16).padStart(2, "0")).join("")] } catch (e) { /* no crypto */ }
+    if (!id || !byId[id]) { ui.check = { name: file.name, state: "error", msg: "Not one of the demo packets. This website only has prepared results; run the local version (start-desk.bat) to have Claude read a new file." }; return render() }
+    const p = byId[id], d = decisions()[id];
+    for (let i = 1; i <= 4; i++) { await new Promise(r => setTimeout(r, 650)); ui.check = { ...ui.check, id, step: i, msg: [`Matched ${id}: ${p.pages} pages`, `${p.pages} pages transcribed`, `${p.rules.length} IHH rules checked`, `${p.verification.verified}/${p.verification.quotes} quotes found on their page · fit ${p.fit.score} (${p.fit.label})`][i - 1] }; if (!route()) render() }
+    ui.check = { ...ui.check, state: "done", msg: `Prepared result for ${id}: fit ${p.fit.score}, ${p.fit.label}.${d ? ` Already reviewed: ${KIND[d.decision]} by ${d.by}.` : " Waiting for your decision."}` };
+    render();
   }
   async function upload(list) {
     const files = [...(list || [])], errs = [];
@@ -239,7 +258,7 @@
   }
   document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over") } });
   document.addEventListener("dragleave", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) d.classList.remove("over") });
-  document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); upload(e.dataTransfer.files) } });
+  document.addEventListener("drop", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); ui.server ? upload(e.dataTransfer.files) : webCheck(e.dataTransfer.files[0]) } });
 
   // ---------- decision record ----------
   const KIND = { approve: "Approve", info: "Ask for info", deny: "Deny" };
@@ -478,7 +497,7 @@
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { ui.sort = e.target.value; render() }
     if (e.target.id === "ihh") { ui.showIhh = e.target.checked; render() }
-    if (e.target.id === "file") { upload(e.target.files); e.target.value = "" }
+    if (e.target.id === "file") { ui.server ? upload(e.target.files) : webCheck(e.target.files[0]); e.target.value = "" }
   });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }
