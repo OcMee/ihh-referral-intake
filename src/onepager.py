@@ -217,6 +217,29 @@ th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05
 <div class="foot">Fit score is rule-based. Weights were hand-tuned after comparing with these 11 IHH decisions, so agreement here is in-sample. The coordinator decides.</div></div></body></html>"""
 
 
+def bundle(scored: list, decisions: dict, checklist: dict) -> str:
+    """Index + every summary in one file, for viewing without the output/ folder."""
+    import re
+    def body(h):
+        h = h[h.index('<div class="wrap">'):h.rindex("</body>")]
+        h = re.sub(r'<a href="pages/p-\d+\.png" target="_blank">(p\d+)</a>', r"\1", h)
+        return h.replace('href="../index.html"', 'href="#index"').replace('target="_blank"', "")
+    idx = body(index(scored, decisions)).replace('href="R', 'href="#R').replace(".summary.html", "")
+    idx = re.sub(r'href="#(R\d\d)/R\d\d"', r'href="#\1"', idx)
+    secs = f'<section id="index">{idx}</section>' + "".join(
+        f'<section id="{d["packet_id"]}">{body(render(d, checklist))}</section>' for d in scored)
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Referral Intake Summaries</title>
+<style>{CSS}
+table{{width:100%;border-collapse:collapse;background:var(--card)}}th,td{{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}}
+th{{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05em}}
+.pill{{display:inline-block;min-width:34px;text-align:center;color:#fff;border-radius:12px;padding:1px 8px;font-weight:700}}
+.dec{{display:none}}body.show .dec{{display:table-cell}}section{{display:none}}section.on{{display:block}}</style></head>
+<body>{secs}<script>
+function go(){{const id=(location.hash||'#index').slice(1);document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));scrollTo(0,0)}}
+addEventListener('hashchange',go);go();</script></body></html>"""
+
+
 def main(argv: list[str]) -> None:
     out_root = Path(argv[1]) if len(argv) > 1 else REPO / "output"
     checklist = {x["id"]: x["text"] for x in json.loads(CRITERIA.read_text())["referral_checklist"]["items"]}
@@ -227,6 +250,7 @@ def main(argv: list[str]) -> None:
         (f.parent / f"{d['packet_id']}.summary.html").write_text(render(d, checklist), encoding="utf-8")
         scored.append(d)
     (out_root / "index.html").write_text(index(scored, decisions), encoding="utf-8")
+    (out_root / "all.html").write_text(bundle(scored, decisions, checklist), encoding="utf-8")
     print(f"{len(scored)} summaries -> {out_root}/index.html")
 
 
