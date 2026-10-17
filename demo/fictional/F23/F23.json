@@ -1,0 +1,548 @@
+{
+  "packet_id": "F23",
+  "patient": {
+    "summary": "69M, L brain stroke with R-sided weakness, unhoused (shelter)",
+    "age": "69",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, staying at a shelter x 6 months",
+    "admit_reason": "Stroke with right arm and leg weakness",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mobility",
+      "text": "PT: transfers need total assist of 2; walks only 10 ft with max assist of 2.",
+      "pages": [
+        7
+      ],
+      "quote": "Transfers: Total assist x 2 for bed to chair",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "OT: total assist for toileting and showering; needs 24-hour physical help with ADLs.",
+      "pages": [
+        8
+      ],
+      "quote": "Toileting: Total assist for toileting and clothing management",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Persistent R hemiparesis after L MCA stroke; neurology recommends inpatient rehab or SNF.",
+      "pages": [
+        6
+      ],
+      "quote": "L MCA ischemic stroke with persistent R hemiparesis",
+      "quote_page": 6
+    },
+    {
+      "label": "Other",
+      "text": "Referral form comment says independent with ADLs, which the PT/OT notes contradict.",
+      "pages": [
+        2
+      ],
+      "quote": "Independent with ADLs. Ambulatory. Stable for discharge.",
+      "quote_page": 2
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4 and follows 2-step commands.",
+      "pages": [
+        8
+      ],
+      "quote": "Cognition: AOx4, follows 2-step commands",
+      "quote_page": 8
+    },
+    {
+      "label": "Mental health",
+      "text": "Denies SI/HI, no hallucinations, no psychiatric history.",
+      "pages": [
+        9
+      ],
+      "quote": "denies suicidal ideation.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 10/01; rapid COVID negative 10/06 05:30.",
+      "pages": [
+        10
+      ],
+      "quote": "10/06 05:30 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (shelter) after a stroke.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "69 y/o M experiencing homelessness"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "not_met",
+      "finding": "OT: moderate to total assist for ADLs; needs 24-hour physical help.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Requires 24-hour physical assistance for ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "not_met",
+      "finding": "Total assist for showering.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Shower: Total assist"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "not_met",
+      "finding": "Total assist for toileting.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Toileting: Total assist for toileting and clothing management"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_met",
+      "finding": "Cannot use the hemi-walker without max assist of 2.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Gait: 10 ft with hemi-walker, maximum assist x 2, R knee buckling"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations are in the packet.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        },
+        {
+          "page": 8,
+          "quote": "OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "not_met",
+      "finding": "Walks only 10 ft with max assist of 2.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Gait: 10 ft with hemi-walker, maximum assist x 2, R knee buckling"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_met",
+      "finding": "Transfers need total assist of 2.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Transfers: Total assist x 2 for bed to chair"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "No hallucinations.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted for alcohol intoxication.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship or FSP.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "unknown",
+      "finding": "Med list says self-administers 'with setup'; who does the setup is not stated.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Yes, with setup"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "BP 136/82 RR 16 SpO2 98% RA. AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "No behavioral concerns.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access noted at discharge; all meds oral.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status is not stated; swabs negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares negative 10/01.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/01 06:00 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 10/06 05:30, referral for 10/06 (within 24h).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/06 05:30 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "NEU-X1",
+      "status": "not_met",
+      "finding": "Stroke with residual deficit: persistent R hemiparesis and ambulatory difficulty.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "L MCA ischemic stroke with persistent R hemiparesis"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent; BP controlled on oral meds.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "BP controlled on oral lisinopril + amlodipine"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "BP on oral medications.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "BP controlled on oral lisinopril + amlodipine"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired; AOx4.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Cognition: AOx4, follows 2-step commands"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "not_met",
+      "finding": "Unable to perform ADLs without physical help.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Requires 24-hour physical assistance for ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "not_met",
+      "finding": "Superseded by MOB-3/MOB-4, which also fail.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Transfers: Total assist x 2 for bed to chair"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection; MRSA negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/01 06:00 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "No aggressive behavior.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        6,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "ADLs and walking",
+      "rule_ids": [
+        "ADL-1",
+        "ADL-3",
+        "MOB-3",
+        "MOB-4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Independent with ADLs. Ambulatory. Stable for discharge."
+        },
+        {
+          "page": 8,
+          "quote": "Toileting: Total assist for toileting and clothing management"
+        }
+      ],
+      "note": "Form says independent with ADLs and ambulatory; OT and PT document total assist for toileting and transfers. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "PT/OT document total assist for transfers and toileting. Is there newer therapy documentation showing improvement?",
+    "Have SNF or acute rehab options been re-explored, given the PT/OT recommendation?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "OT/PT document total assist for toileting and transfers and 10 ft gait with max assist (ADL-3, MOB-4, MOB-3 not met), and the stroke left a neurological deficit (NEU-X1). The form's 'Independent with ADLs' is contradicted by the chart."
+  }
+}

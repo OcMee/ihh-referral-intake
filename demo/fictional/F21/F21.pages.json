@@ -1,0 +1,105 @@
+{
+  "packet_id": "F21",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Gloria Abernathy, RN CM\nPhone: 555-0110\nDate: 09/09/2026 09:15\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n47F POD#2 s/p laparoscopic cholecystectomy, recovering well.\nReady for d/c 09/09 PM. H&P, op note, progress note, PT/OT, labs attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harbor Point Medical Center (fictional)\nDepartment/Floor: 5 South Surgical\nSocial Worker/Case Manager/Nurse: Gloria Abernathy, RN CM\nPhone: 555-0110\nEmail: gabernathy@harborpoint.example\nNursing Station: 555-0111\nAuthorized By: Dr. S. Lindqvist\n## Patient Information\nName: Teresa Doe\nMRN: HP-0418827\nBirth Date: 03/14/1979\nGender: F\nEthnicity: Hispanic/Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute cholecystitis s/p laparoscopic cholecystectomy\nAdmit Date: 09/06/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/06/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 10\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Teresa Doe\nDOB: 03/14/1979\nMember ID: OCH-30571862\n## Referring Provider\nFacility: Harbor Point Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Acute cholecystitis with cholelithiasis\nICD-10: K80.00\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/09/2026\nRequested Days: 10\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Teresa Doe\nMRN: HP-0418827\nAccount #: 99418827\nDOB: 03/14/1979\nSex: Female\nPreferred Language: English\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/06/2026 23:40 (ED arrival 09/06/2026 18:05)\nAdmit Type: Inpatient\nUnit/Bed: 5S-512\nAttending: Sven Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 09/07/2026\nAttending: Sven Lindqvist, MD (General Surgery)\n## Chief Complaint\nRUQ abdominal pain and vomiting x 2 days\n## HPI\n47 y/o F experiencing homelessness (sleeps in her car, car recently towed, now at Example Shelter) presents with 2 days of RUQ pain after meals, nausea and vomiting. Fever 100.8F in ED. RUQ US: gallbladder wall thickening, pericholecystic fluid, impacted stone in the neck. WBC 14.2. LFTs mildly elevated, bilirubin normal.\n## PMH\n- Hypertension\n- Obesity (BMI 33)\n## Allergies\nPenicillin (rash)\n## Social History\nHomeless x 1 year. Denies tobacco, alcohol and drug use.\n## Exam\nT 100.8F HR 102 BP 138/86 RR 18 SpO2 98% RA. AOx4. Murphy sign positive.\n## Assessment / Plan\nAcute calculous cholecystitis. IV antibiotics (ceftriaxone + metronidazole), NPO, laparoscopic cholecystectomy 09/07.\nSigned: Sven Lindqvist, MD 09/07/2026 01:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "op_note",
+      "title": "Operative note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OPERATIVE NOTE\nDate of Surgery: 09/07/2026\nSurgeon: Sven Lindqvist, MD\nProcedure: Laparoscopic cholecystectomy\nFindings: Acutely inflamed gallbladder, no perforation, no abscess. Cystic duct and artery clipped.\nClosure: 4 port sites closed with absorbable subcuticular suture; skin closed with steri-strips. No staples. No drains.\nEBL: 20 mL. Complications: none.\nSigned: Sven Lindqvist, MD 09/07/2026 14:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Surgery progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SURGERY PROGRESS NOTE - POD#2\nDate: 09/09/2026 07:15\nS: Pain 3/10, controlled with oral meds. Tolerating regular diet. Passing flatus, BM yesterday.\nO: T 98.4F HR 80 BP 128/80 RR 16 SpO2 98% RA\nIncisions: 4 laparoscopic port-site incisions with steri-strips intact, clean, dry, no erythema, no drainage.\nA/P:\n- s/p lap cholecystectomy POD#2, uncomplicated. Antibiotics stopped 09/08; no antibiotics at discharge.\n- Steri-strips to fall off on their own; may shower. No dressing changes needed.\n- Pain: oxycodone 5 mg PO q6h PRN x 3 days, acetaminophen scheduled\n- Medically stable for d/c to recuperative care today\nSigned: Sven Lindqvist, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "PT/OT evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL AND OCCUPATIONAL THERAPY EVALUATION\nDate: 09/08/2026 13:30\nBed mobility: Independent\nSit<>stand: Independent\nTransfers: Independent\nGait: 200 ft without device, independent, steady, no rest breaks\nStairs: 12 steps with rail, independent\n## ADLs\nGrooming, UB/LB dressing, toileting: Independent\nShower: Independent, standing\nCognition: AOx4, follows commands\n## Recommendation\nSafe for d/c to recuperative care. No PT/OT follow-up needs. No DME.\nSigned: R. Fontaine, PT, DPT / L. Achebe, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Case management and social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT / SOCIAL WORK NOTE\nDate: 09/09/2026 08:40\nPt AOx4, calm and cooperative throughout stay, no behavioral concerns per nursing.\nPsychosocial screen: denies depression. Denies suicidal ideation. Denies homicidal ideation. No hallucinations. No psychiatric history. No history of conservatorship or FSP.\nSubstance use: denies alcohol and drug use.\nPt agreeable to recuperative care.\n## Follow-up\nPost-op visit: Harbor Point Surgery Clinic (fictional) 09/18/2026 at 09:30 (confirmed) for incision check.\nPCP follow-up: Harbor Point Community Clinic (fictional) 09/24/2026 at 11:00 (confirmed).\nSigned: Gloria Abernathy, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "vitals",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/08 08:00 | 98.9 | 88 | 132/82 | 16 | 97% | RA\n09/08 16:00 | 98.6 | 84 | 130/80 | 16 | 98% | RA\n09/08 23:00 | 98.2 | 78 | 126/78 | 14 | 98% | RA\n09/09 04:00 | 98.1 | 76 | 124/78 | 16 | 98% | RA\n09/09 07:15 | 98.4 | 80 | 128/80 | 16 | 98% | RA\n## LABS\n09/06 | WBC 14.2 H | Hgb 13.1 | AST 68 H | ALT 74 H | T bili 0.9\n09/09 | WBC 8.6 | Hgb 12.4 | AST 31 | ALT 40 | T bili 0.6 | Cr 0.8\n## MICROBIOLOGY\n09/07 06:00 MRSA nares PCR: NEGATIVE\n09/09 05:45 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n09/06 CXR: No acute cardiopulmonary process\n09/06 RUQ US: Acute calculous cholecystitis\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Teresa Doe  MRN: HP-0418827\n- Oxycodone 5 mg PO every 6 hours PRN severe pain x 3 days (12 tablets)\n- Acetaminophen 1000 mg PO every 8 hours\n- Docusate 100 mg PO twice daily while taking oxycodone\n- Lisinopril 10 mg PO daily\n## Stopped\n- Ceftriaxone, metronidazole, enoxaparin (inpatient only)\nNo antibiotics at discharge. No IV access at discharge.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

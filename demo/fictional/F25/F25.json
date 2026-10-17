@@ -1,0 +1,733 @@
+{
+  "packet_id": "F25",
+  "patient": {
+    "summary": "54M, MSSA bacteremia from left foot cellulitis, on IV cefazolin via PICC for 4 more weeks, unhoused",
+    "age": "54",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (bus shelter)",
+    "admit_reason": "Blood infection from a left foot skin infection",
+    "pages": [
+      2,
+      4,
+      5,
+      7
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Home health",
+      "text": "Home infusion and home health referrals sent 10/03; neither agency has accepted yet.",
+      "pages": [
+        10
+      ],
+      "quote": "Status 10/05: neither agency has accepted yet.",
+      "quote_page": 10
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Needs IV cefazolin every 8 hours via PICC through 11/03/2026.",
+      "pages": [
+        8
+      ],
+      "quote": "Cefazolin 2 g IV every 8 hours via R arm PICC (placed 10/04) through 11/03/2026",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRI shows no osteomyelitis; repeat blood cultures negative; TTE no vegetation.",
+      "pages": [
+        7
+      ],
+      "quote": "MRI L foot 10/01: cellulitis of dorsal foot, no abscess, no osteomyelitis.",
+      "quote_page": 7
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; COVID swab not yet done.",
+      "pages": [
+        11
+      ],
+      "quote": "SARS-CoV-2 swab: to be collected on day of discharge (not yet done)",
+      "quote_page": 11
+    },
+    {
+      "label": "Mobility",
+      "text": "Up in room and to bathroom independently; walking distance not documented and no PT note.",
+      "pages": [
+        9
+      ],
+      "quote": "Pt up in room and to bathroom independently, no device.",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "Self-administration teaching for IV antibiotics cannot start until infusion agency accepts.",
+      "pages": [
+        10
+      ],
+      "quote": "Self-administration teaching cannot start until infusion agency accepts.",
+      "quote_page": 10
+    },
+    {
+      "label": "Mental health",
+      "text": "No psychiatric or social work assessment in the packet (SI, hallucinations, conservatorship not addressed).",
+      "pages": [
+        9
+      ],
+      "quote": "Pt AOx4, cooperative.",
+      "quote_page": 9
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused with MSSA bacteremia needing 4 weeks of IV antibiotics.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "54 y/o M, unhoused (sleeping at a bus shelter)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; GEN-1 already met.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Showers and toilets independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently with PICC cover. Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently with PICC cover.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently with PICC cover."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toilets independently, continent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the packet; only nursing notes.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt up in room and to bathroom independently, no device."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walks in room and to the bathroom independently; distance not documented, no PT eval.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No psychiatric history or mental status beyond AOx4 documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation not addressed in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations not addressed in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Denies alcohol use; not admitted with intoxication.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history not addressed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers oral amlodipine and states purpose; IV self-administration teaching not started (see ID-3).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt self-administered amlodipine 5 mg PO at 06:00 with RN observation; states purpose and schedule."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, cooperative."
+        },
+        {
+          "page": 8,
+          "quote": "BP 128/80 RR 16 SpO2 98% RA. AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Cooperative; no aggression documented.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form: not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "unknown",
+      "finding": "PICC in place; home health referral sent but not accepted, so maintenance is not confirmed.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Status 10/05: neither agency has accepted yet."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/30 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "not_met",
+      "finding": "COVID swab not yet collected.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "SARS-CoV-2 swab: to be collected on day of discharge (not yet done)"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent, afebrile and stable.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "VITAL SIGNS - LAST 5 SETS"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "Antibiotic is IV, not oral.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "unknown",
+      "finding": "Home infusion and home health referrals sent but not accepted; arrangement not confirmed.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Status 10/05: neither agency has accepted yet."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Left foot cellulitis with MSSA bacteremia.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "MSSA bacteremia from L foot cellulitis, cleared."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures MSSA, repeats no growth.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Repeat blood cultures 10/01 and 10/02: no growth to date."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Five stable vitals; BP controlled on oral amlodipine.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Amlodipine 5 mg PO daily started 10/03 for HTN, BP controlled"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No troponin in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "unknown",
+      "finding": "No EKG in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "met",
+      "finding": "EF 60% on TTE.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "TTE 10/02: no vegetation, EF 60%."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "Oral BP medication only.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Amlodipine 5 mg PO daily started 10/03 for HTN, BP controlled"
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-E6",
+      "status": "met",
+      "finding": "Hypertension controlled on oral amlodipine.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Amlodipine 5 mg PO daily started 10/03 for HTN, BP controlled"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "not_met",
+      "finding": "Skin infection, but treatment is IV, not oral.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Cefazolin 2 g IV every 8 hours via R arm PICC"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "not_applicable",
+      "finding": "No open wound needing wound care.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E3",
+      "status": "unknown",
+      "finding": "IV antibiotics allowed if home health coordinated; not yet accepted.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Status 10/05: neither agency has accepted yet."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "No abscess on MRI.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/01 MRI L foot: cellulitis, no abscess, no osteomyelitis"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X2",
+      "status": "met",
+      "finding": "MRI shows no osteomyelitis.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/01 MRI L foot: cellulitis, no abscess, no osteomyelitis"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; form says no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Toileting independently, continent."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Walking distance not documented (MOB-3).",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; MSSA bacteremia cleared on repeat cultures.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/30 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies substance use.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Form: not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Home health",
+      "rule_ids": [
+        "ID-3",
+        "OTH-3",
+        "INT-E3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Home Health Ordered: Yes [X] No [ ]"
+        },
+        {
+          "page": 10,
+          "quote": "Status 10/05: neither agency has accepted yet."
+        }
+      ],
+      "note": "Form says home health ordered, case management says neither the infusion nor home health agency has accepted. Chart wins: IV arrangement not confirmed."
+    }
+  ],
+  "questions_for_hospital": [
+    "Have Seaside Infusion Services and Valley Bloom Home Health accepted, and when is the first visit and who will give the cefazolin doses?",
+    "Has IV self-administration teaching been completed?",
+    "Please send a COVID swab (rapid is fine) within 24 hours of discharge.",
+    "About how far does the patient walk independently (at least 100 ft)? A PT note would help.",
+    "Any history of suicidal ideation, hallucinations, psychiatric diagnosis, conservatorship or FSP?",
+    "Is the patient on any isolation precautions?",
+    "Is an EKG available?"
+  ],
+  "claude_fit": {
+    "score": 60,
+    "recommendation": "needs_info",
+    "reason": "Clinically appropriate (ADL-1 to ADL-3, COG-2, ID-1, MSK-X2 ruled out by MRI) but ID-3, OTH-3 and INT-E3 are unconfirmed: the form says home health ordered while the CM note says no agency has accepted. MOB-3, MH-2, MH-3 and OTH-4 are also undocumented."
+  }
+}

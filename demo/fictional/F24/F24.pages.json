@@ -1,0 +1,114 @@
+{
+  "packet_id": "F24",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Coral Ridge Regional Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Gloria Pham, RN CM\nPhone: 555-0131\nDate: 09/22/2026 09:10\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n46F pyelonephritis, finished IV antibiotics, now on oral cephalexin. Afebrile, independent.\nPlanned d/c 09/22/2026 ~15:00.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Coral Ridge Regional Hospital (fictional)\nDepartment/Floor: 5 West Medicine\nSocial Worker/Case Manager/Nurse: Gloria Pham, RN CM\nPhone: 555-0131\nEmail: gpham@coralridge.example\nNursing Station: 555-0132\nAuthorized By: Dr. H. Lindqvist\n## Patient Information\nName: Denise Doe\nMRN: CR-3381705\nBirth Date: 11/09/1979\nGender: F\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute pyelonephritis, right\nAdmit Date: 09/17/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/17/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [X] No [ ]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  pyelonephritis - on PO cephalexin\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 10\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nFinishing oral antibiotics; PCP follow up being scheduled.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Denise Doe\nDOB: 11/09/1979\nMember ID: OCH-61204873\n## Referring Provider\nFacility: Coral Ridge Regional Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Acute pyelonephritis\nICD-10: N10\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/22/2026\nRequested Days: 10\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Coral Ridge Regional Hospital (fictional) - PATIENT FACE SHEET\nPatient: Denise Doe\nMRN: CR-3381705\nAccount #: 99381705\nDOB: 11/09/1979\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/17/2026 19:05\nAdmit Type: Inpatient\nUnit/Bed: 5W-517\nAttending: Helena Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 09/17/2026 20:30\n## CC\nR flank pain, fever, painful urination x 3 days\n## HPI\n46 y/o F, unhoused (staying in a car park stairwell and a day shelter), with 3 days of dysuria and urinary frequency, then R flank pain, fevers and vomiting since yesterday. Unable to keep fluids down.\nED: T 102.4F, HR 112, BP 104/66, WBC 17.8, lactate 1.6. UA: large leukocyte esterase, nitrite positive, >50 WBC/hpf. CT A/P: R pyelonephritis, no abscess, no obstructing stone.\nPatient retaining urine in ED (bladder scan 720 mL); Foley catheter placed in ED.\n## PMH\n- Recurrent UTIs (outpatient treated)\n## PSH\n- None\n## Meds PTA\nNone\n## Allergies\nSulfa (hives)\n## Social\nUnhoused x 8 months. Denies tobacco. Rare EtOH, last drink >1 month ago. Denies drugs. UDS negative.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nGen: ill-appearing, AOx4\nCV: tachycardic, regular. Lungs: clear\nAbd: soft, suprapubic tenderness. R CVA tenderness.\nPsych: calm, cooperative, normal mood and affect\n## Assessment/Plan\nAcute R pyelonephritis with sepsis, no obstruction.\n1. Ceftriaxone 1 g IV daily; urine and blood cultures sent\n2. IV fluids, antiemetics\n3. Foley for urinary retention; voiding trial when afebrile\n4. Dispo: unhoused, CM consult for recuperative care\nSigned: Helena Lindqvist, MD 09/17/2026 21:15\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#6\nDate: 09/22/2026 07:50\nS: Flank pain resolved. Eating and drinking well. Voiding without difficulty.\nO: T 98.3F HR 76 BP 118/74 RR 16 SpO2 98% RA. AOx4. No CVA tenderness.\nA/P: Acute R pyelonephritis, resolved sepsis.\n- Afebrile since 09/19\n- Urine culture: E. coli, pan-sensitive except ampicillin. Blood cultures no growth x2.\n- Ceftriaxone IV stopped 09/21; transitioned to cephalexin 500 mg PO four times daily through 09/29/2026\n- Foley removed 09/20, voiding trial passed. No catheter at discharge.\n- PIV to be removed before d/c. No IV access at discharge.\n- PCP follow up within 1 week (CM scheduling)\nMedically stable for discharge to recuperative care today.\nSigned: Helena Lindqvist, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 09/21/2026\nBed mobility: Independent\nTransfers: Independent, no device\nGait: 150 ft independent, no assistive device, steady, no rest breaks needed\nStairs: 12 steps with rail, independent\nBalance: good static and dynamic\n## Recommendation\nNo skilled PT needs. Safe to discharge to community setting. No DME needed.\nSigned: M. Okonkwo, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 09/22/2026 06:40\nIsolation: none. Standard precautions only.\nPt AOx4, calm and cooperative.\nFoley catheter removed 09/20 per order. Pt voiding independently, adequate amounts, post-void bladder scan 40 mL.\nNo catheter in place. Continent of bowel and bladder.\nShowered independently. Dresses and toilets independently.\nPt self-administered cephalexin 500 mg PO at 06:00 with RN observation; states schedule four times daily and stop date.\nSigned: C. Ramirez, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 09/21/2026 13:30\nPt AOx4, pleasant, engaged in planning. Denies SI/HI. Denies auditory or visual hallucinations.\nNo psychiatric history. No history of conservatorship or FSP.\nNot a registered sex offender per pt. Medi-Cal active. No car. No service animal.\nPCP appointment: Example Community Clinic (fictional) 555-0134, 09/28/2026 10:00 (confirmed).\nPlan: recuperative care at Illumination Health + Home; pt agreeable.\nSigned: N. Farah, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/20 20:00 | 98.4 | 80 | 116/72 | 16 | 98% | RA\n09/21 08:00 | 98.1 | 74 | 114/70 | 16 | 99% | RA\n09/21 16:00 | 98.6 | 78 | 120/76 | 16 | 98% | RA\n09/21 23:00 | 98.0 | 72 | 112/70 | 14 | 98% | RA\n09/22 07:50 | 98.3 | 76 | 118/74 | 16 | 98% | RA\n## LABS\n09/17 | WBC 17.8 H | Hgb 12.9 | Plt 301 | Na 136 | K 3.6 | Cr 1.3 H | Glucose 104\n09/21 | WBC 8.4 | Cr 0.8\n## MICROBIOLOGY\n09/17 Urine culture: >100,000 CFU/mL E. coli. Resistant: ampicillin. Sensitive: cefazolin, ceftriaxone, ciprofloxacin, nitrofurantoin.\n09/17 Blood cultures x2: no growth at 5 days\n09/17 MRSA nares PCR: Negative\n09/22 07:15 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n09/17 CXR: no acute process\n09/17 CT A/P: R pyelonephritis, no abscess, no hydronephrosis\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Denise Doe  MRN: CR-3381705\nAll medications self-administered by patient. Full course filled by inpatient pharmacy (meds to beds) and given to patient.\n- Cephalexin 500 mg PO four times daily through 09/29/2026\n- Acetaminophen 650 mg PO every 6 hours PRN pain or fever\n- Ondansetron 4 mg PO every 8 hours PRN nausea\n## Stopped\n- Ceftriaxone IV (09/21)\n- Foley catheter (removed 09/20)\n## Follow up\n- PCP: Example Community Clinic (fictional) 555-0134, 09/28/2026 10:00\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

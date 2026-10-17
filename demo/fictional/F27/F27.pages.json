@@ -1,0 +1,114 @@
+{
+  "packet_id": "F27",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Sunridge Valley Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Owen Prescott, LCSW\nPhone: 555-0181\nDate: 10/15/2026 08:40\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n34F asthma exacerbation, resolved. Independent, walking halls.\nHoping for d/c to recuperative care 10/15 PM. Please call with questions.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Sunridge Valley Medical Center (fictional)\nDepartment/Floor: 4 East Medical\nSocial Worker/Case Manager/Nurse: Owen Prescott, LCSW\nPhone: 555-0181\nEmail: oprescott@sunridge.example\nNursing Station: 555-0182\nAuthorized By: Dr. M. Castellano\n## Patient Information\nName: Angela Doe\nMRN: SV-2093516\nBirth Date: 02/03/1992\nGender: F\nEthnicity: Black or African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute asthma exacerbation\nAdmit Date: 10/12/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/12/2026  Result: CXR - hyperinflation, no infiltrate\n## History of Health & Living Situation\nO2: Yes [X] No [ ]  2L nasal cannula\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: None\n## Length of Stay Authorized\nDays: 10\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nO2 2L NC per admission orders.\nIndependent with ADLs. Needs stable place to finish steroid taper.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Angela Doe\nDOB: 02/03/1992\nMember ID: OCH-55841177\n## Referring Provider\nFacility: Sunridge Valley Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Asthma, moderate persistent, with acute exacerbation\nICD-10: J45.41\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/15/2026\nRequested Days: 10\nAdmit Date: 10/12/2026\nClinical summary: asthma exacerbation resolved, room air, independent ADLs.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Sunridge Valley Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Angela Doe\nMRN: SV-2093516\nAccount #: 99093516\nDOB: 02/03/1992\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/12/2026 03:10 (ED arrival 10/11/2026 23:45)\nAdmit Type: Inpatient\nUnit/Bed: 4E-421\nAttending: Miguel Castellano, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 10/12/2026\n## CC\nWheezing and shortness of breath x 2 days\n## HPI\n34 y/o F with moderate persistent asthma, unhoused x 1 yr (sleeps in her car until it was towed 3 weeks ago, now outdoors), presents with wheezing and dyspnea after wildfire smoke exposure and running out of her controller inhaler. In ED SpO2 90% RA, given continuous albuterol nebs, IV methylprednisolone, magnesium. Placed on 2L NC.\nNo prior intubations. No ICU admissions.\n## PMH\n- Asthma since childhood\n- Seasonal allergic rhinitis\n## Meds PTA\nAlbuterol inhaler PRN (ran out); fluticasone-salmeterol (ran out 1 month ago)\n## Allergies\nPenicillin (rash)\n## Social\nNever smoker. Rare EtOH. Denies drug use.\n## Exam\nT 98.6F HR 112 BP 132/84 RR 26 SpO2 93% 2L NC. Diffuse expiratory wheezes. Speaking in short sentences. AOx4.\n## Assessment/Plan\n1. Acute asthma exacerbation - albuterol/ipratropium nebs q4h, methylprednisolone 40 mg IV q12h then prednisone taper, O2 to SpO2 >= 92%\n2. Dispo - SW consult (unhoused)\nSigned: Miguel Castellano, MD 10/12/2026 05:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#4\nDate: 10/15/2026 07:30\nS: Breathing back to baseline. No nighttime symptoms. Walking halls without dyspnea.\nO: T 98.2F HR 78 BP 118/72 RR 16 SpO2 96% RA. Clear to auscultation, no wheezes. AOx4. Peak flow 380 L/min (personal best approx 400).\nA/P:\n1. Asthma exacerbation - resolved. Off nebulizers since 10/13. On room air since 10/13 10:00. Prednisone 40 mg PO daily, last dose 10/17. Restart fluticasone-salmeterol BID; albuterol MDI PRN. No antibiotics (no infection).\n2. Dispo - medically stable for d/c to recuperative care today. Pulmonology f/u in 2 wks.\nSigned: Miguel Castellano, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "rt_note",
+      "title": "Respiratory therapy note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## RESPIRATORY THERAPY NOTE\nDate: 10/15/2026 09:00\nO2 weaned off 10/13 10:00; on room air since. Ambulatory oximetry 10/14: rest SpO2 97% RA, after walking 250 ft SpO2 96% RA.\nNebulizer treatments discontinued 10/13. No breathing treatments needed in last 48 hours other than her own MDI PRN (used once 10/14).\nInhaler technique taught with spacer; pt demonstrated correct technique with teach-back. Asthma action plan reviewed.\nNo home O2 indicated.\nSigned: D. Ferreira, RRT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/14/2026 13:00\nBed mobility: independent\nTransfers: independent\nGait: 250 ft independent, no assistive device, steady, no rest break needed\nStairs: 14 steps with rail, independent\nBalance: good\n## Assessment\nAt baseline. No skilled PT needs. No DME needed.\nSigned: R. Albescu, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/15/2026 06:00\nPt AOx4. Independent with all ADLs. Showered independently 10/14 PM. Continent of bowel and bladder, toilets independently.\nSelf-administers prednisone and inhalers, teach-back done.\nCalm and cooperative. No behavioral concerns this admission.\nIsolation status: none (standard precautions).\nRoom air, SpO2 96%. Afebrile.\nSigned: T. Nakashima, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 10/14/2026 15:30\nPt engaged, AOx4. Denies SI/HI. Denies auditory or visual hallucinations. No psychiatric history.\nNo conservatorship. Not enrolled in FSP.\nUnhoused x 1 yr; car towed, belongings with a friend. Agreeable to recuperative care and housing navigation referral.\nSigned: Owen Prescott, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Labs, imaging and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n10/12 | WBC 11.8 H | Eos 6% | Hgb 13.2 | Plt 265 | Na 138 | K 3.6 | Cr 0.7 | Glucose 142\n10/14 | WBC 10.9 | K 3.9 | Glucose 118\n10/12 Respiratory viral panel (incl. SARS-CoV-2 PCR): Negative\n10/12 MRSA nares PCR: Negative\n10/15 05:50 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n10/12 CXR PA/lat: Hyperinflation. No infiltrate, no effusion, no pneumothorax.\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/14 08:00 | 98.4 | 82 | 120/74 | 16 | 97% | RA\n10/14 14:00 | 98.6 | 80 | 116/70 | 16 | 96% | RA\n10/14 20:00 | 98.2 | 76 | 118/72 | 14 | 97% | RA\n10/15 02:00 | 98.0 | 74 | 114/70 | 14 | 96% | RA\n10/15 07:30 | 98.2 | 78 | 118/72 | 16 | 96% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Angela Doe  MRN: SV-2093516\n- Prednisone 40 mg PO daily through 10/17/2026 (2 doses remaining)\n- Fluticasone-salmeterol 250/50 1 inhalation BID\n- Albuterol HFA 2 puffs q4h PRN wheeze, with spacer\n- Cetirizine 10 mg PO daily\nNo IV medications. No home O2. No antibiotics.\nPatient able to self-administer all medications: Yes\nMeds-to-beds: 30-day supply of all medications dispensed at discharge\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

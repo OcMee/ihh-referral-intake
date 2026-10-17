@@ -1,0 +1,8 @@
+{
+  "packet_id": "F27",
+  "intended": "fit",
+  "why": "Asthma exacerbation resolved: off nebulizers since 10/13, room air SpO2 96%, chest X-ray sent, RT note sent, PT 250 ft independent, independent ADLs, AOx4, MRSA and COVID negative, inhaler technique taught, so RESP-1, RESP-2, RESP-4, MOB-3, ADL-1, COG-2, INF-1 and INF-2 are met and RESP-3 does not apply.",
+  "traps": [
+    "Referral form says 'O2: Yes' (2L nasal cannula) but the RT note shows oxygen weaned off 10/13, two days before the note, with no home O2 indicated (RESP-3 not applicable)."
+  ]
+}

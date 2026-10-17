@@ -1,0 +1,573 @@
+{
+  "packet_id": "F21",
+  "patient": {
+    "summary": "47F, POD#2 after laparoscopic gallbladder removal, unhoused (shelter)",
+    "age": "47",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, staying at a shelter",
+    "admit_reason": "Gallbladder infection, gallbladder removed by laparoscopy",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Wounds",
+      "text": "Four small port-site incisions with steri-strips, clean and dry; no staples, no dressing changes (form says no wounds).",
+      "pages": [
+        6,
+        7
+      ],
+      "quote": "4 laparoscopic port-site incisions with steri-strips intact, clean, dry",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 200 ft without a device and does all ADLs independently.",
+      "pages": [
+        8
+      ],
+      "quote": "Gait: 200 ft without device, independent, steady, no rest breaks",
+      "quote_page": 8
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4 and self-administers all meds; 30-day supply dispensed.",
+      "pages": [
+        8,
+        11
+      ],
+      "quote": "Patient able to self-administer all medications: Yes",
+      "quote_page": 11
+    },
+    {
+      "label": "Mental health",
+      "text": "Denies SI/HI, no hallucinations, no psychiatric history, no conservatorship/FSP.",
+      "pages": [
+        9
+      ],
+      "quote": "Denies suicidal ideation.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 09/07; rapid COVID negative 09/09 05:45, discharge 09/09.",
+      "pages": [
+        10
+      ],
+      "quote": "09/09 05:45 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 10
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Oral pain meds only; no antibiotics and no IV access at discharge.",
+      "pages": [
+        11
+      ],
+      "quote": "No antibiotics at discharge. No IV access at discharge.",
+      "quote_page": 11
+    },
+    {
+      "label": "Other",
+      "text": "Post-op surgery visit confirmed for incision check.",
+      "pages": [
+        9
+      ],
+      "quote": "09/18/2026 at 09:30 (confirmed) for incision check",
+      "quote_page": 9
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (shelter) and recovering from surgery.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "47 y/o F experiencing homelessness"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "PT/OT: grooming, dressing and toileting independent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Grooming, UB/LB dressing, toileting: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently, standing.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Shower: Independent, standing"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independent per OT.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Grooming, UB/LB dressing, toileting: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "met",
+      "finding": "No DME needed.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No PT/OT follow-up needs. No DME."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT/OT evaluation is in the packet.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PHYSICAL AND OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 200 ft without device.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Gait: 200 ft without device, independent, steady, no rest breaks"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "met",
+      "finding": "Transfers independent.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transfers: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "No hallucinations.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted for alcohol intoxication; denies alcohol use.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship or FSP.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers all meds; 30-day supply dispensed.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Yes"
+        },
+        {
+          "page": 11,
+          "quote": "30-day supply dispensed from outpatient pharmacy: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative throughout stay"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "No behavioral concerns.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No IV access at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status is not stated in the chart; MRSA and COVID swabs are negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares negative 09/07.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/07 06:00 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 09/09 05:45, discharge 09/09 PM (within 24h).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "09/09 05:45 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-E1",
+      "status": "met",
+      "finding": "Post abdominal surgery, uncomplicated.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "s/p lap cholecystectomy POD#2, uncomplicated."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "met",
+      "finding": "No dressing changes needed; incision check at confirmed surgery visit; abdomen is not a hard-to-reach area.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No dressing changes needed."
+        },
+        {
+          "page": 9,
+          "quote": "09/18/2026 at 09:30 (confirmed) for incision check"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "met",
+      "finding": "No staples or external sutures; absorbable suture and steri-strips; post-op visit confirmed.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "skin closed with steri-strips. No staples."
+        },
+        {
+          "page": 9,
+          "quote": "09/18/2026 at 09:30 (confirmed) for incision check"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "met",
+      "finding": "No skin grafting.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "clean, dry, no erythema, no drainage"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Cognition: AOx4, follows commands"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Performs ADLs independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Grooming, UB/LB dressing, toileting: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4, which are met.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transfers: Independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection at discharge; MRSA negative.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Antibiotics stopped 09/08; no antibiotics at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "No aggressive behavior.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Wounds",
+      "rule_ids": [
+        "INT-E2",
+        "INT-E5"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Any Wounds: Yes [ ] No [X]"
+        },
+        {
+          "page": 7,
+          "quote": "4 laparoscopic port-site incisions with steri-strips intact"
+        }
+      ],
+      "note": "Form says no wounds, chart documents 4 port-site incisions with steri-strips. Chart wins; they are clean, need no dressing changes and have a confirmed post-op check, so INT-E2 and INT-E5 are met."
+    }
+  ],
+  "questions_for_hospital": [
+    "The referral form says no wounds, but the progress note documents 4 port-site incisions with steri-strips. Can you confirm any incision care instructions for our staff?",
+    "Can you confirm she is not on any isolation precautions at discharge?"
+  ],
+  "claude_fit": {
+    "score": 90,
+    "recommendation": "approve",
+    "reason": "Independent ADLs and mobility (ADL-1, MOB-3), AOx4 and mentally stable (COG-2, MH-2), negative swabs in time (INF-1, INF-2). The form's 'no wounds' is wrong, but the incisions are clean with steri-strips and a confirmed follow-up, so INT-E5 is met."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "packet_id": "F25",
+  "intended": "needs_info",
+  "why": "MSSA bacteremia from L foot cellulitis on IV cefazolin via PICC through 11/03/2026; home infusion and home health referrals sent but not accepted, so ID-3, OTH-3 and INT-E3 are unconfirmed. Also no PT note (MOB-3), no psych/SW assessment (MH-1 to MH-3, MH-5), isolation not documented (OTH-4), COVID swab not yet done (INF-2). Otherwise independent.",
+  "traps": [
+    "Referral form says 'Home Health Ordered: Yes' but the case management note says neither agency has accepted yet. Chart wins: arrangement unknown.",
+    "Diagnosis changed from the brief: osteomyelitis is a hard exclusion (MSK-X2) and would score not_fit, so the packet uses MSSA bacteremia with MRI negative for osteomyelitis. A reviewer must not misread the H&P's 'evaluate for osteomyelitis' as a diagnosis."
+  ]
+}

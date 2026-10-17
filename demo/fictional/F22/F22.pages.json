@@ -1,0 +1,96 @@
+{
+  "packet_id": "F22",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Seabrook Regional Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Monique Barrett, MSW\nPhone: 555-0120\nDate: 09/23/2026 10:05\nPages (including cover): 10\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n65M L hip fracture s/p repair, stable, ready for d/c.\nRequesting recuperative care. H&P, op note, progress notes, labs attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Seabrook Regional Hospital (fictional)\nDepartment/Floor: 4 West Ortho\nSocial Worker/Case Manager/Nurse: Monique Barrett, MSW\nPhone: 555-0120\nEmail: mbarrett@seabrookregional.example\nNursing Station: 555-0121\nAuthorized By: Dr. A. Okafor\n## Patient Information\nName: Walter Doe\nMRN: SR-2290415\nBirth Date: 11/02/1960\nGender: M\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: L intertrochanteric hip fracture s/p intramedullary nail\nAdmit Date: 09/19/2026\nAny Wounds: Yes [X] No [ ]\nNumber/Location/Size/Stage: L hip surgical incision\nIndependent with Wound Care: Yes [X] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/19/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [X] No [ ]  front-wheeled walker\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Walter Doe\nDOB: 11/02/1960\nMember ID: OCH-71938204\n## Referring Provider\nFacility: Seabrook Regional Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Intertrochanteric fracture of left femur, closed\nICD-10: S72.142A\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 09/23/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Seabrook Regional Hospital (fictional) - PATIENT FACE SHEET\nPatient: Walter Doe\nMRN: SR-2290415\nAccount #: 99290415\nDOB: 11/02/1960\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/19/2026 21:15 (ED arrival 09/19/2026 16:40)\nAdmit Type: Inpatient\nUnit/Bed: 4W-418\nAttending: Adaeze Okafor, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 09/19/2026\nAttending: Adaeze Okafor, MD (Orthopedic Surgery)\n## Chief Complaint\nL hip pain after a fall, unable to bear weight\n## HPI\n65 y/o M experiencing homelessness (sleeps in a tent near Example Creek x 3 years) tripped on a curb today and fell onto his L side. Unable to stand. No head strike, no LOC. L leg shortened and externally rotated. X-ray: closed L intertrochanteric femur fracture. Skin intact.\n## PMH\n- Hypertension\n- Osteoarthritis, knees\n## Allergies\nNKDA\n## Social History\nHomeless x 3 years. Former smoker. Denies alcohol and drug use.\n## Exam\nT 98.6F HR 92 BP 146/88 RR 16 SpO2 97% RA. AOx4. L leg neurovascularly intact.\n## Assessment / Plan\nClosed L intertrochanteric hip fracture. Plan intramedullary nail 09/20. Pain control. DVT ppx.\nSigned: Adaeze Okafor, MD 09/19/2026 22:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "op_note",
+      "title": "Operative note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OPERATIVE NOTE\nDate of Surgery: 09/20/2026\nSurgeon: Adaeze Okafor, MD\nProcedure: Cephalomedullary nail, L intertrochanteric femur fracture\nFindings: Closed fracture, good reduction on fluoroscopy.\nClosure: Layered closure. Skin closed with staples. Sterile dressing applied.\nEBL: 150 mL. Complications: none.\nPost-op: Weight bearing as tolerated L leg. PT/OT evaluate and treat.\nSigned: Adaeze Okafor, MD 09/20/2026 12:45\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Orthopedic progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ORTHOPEDIC PROGRESS NOTE - POD#3\nDate: 09/23/2026 07:30\nS: Pain 4/10 with movement, controlled on oral meds. Eating well.\nO: T 98.3F HR 82 BP 132/80 RR 16 SpO2 98% RA\nL hip incision: staples intact, clean, dry, no erythema, no drainage.\nPost-op Hgb stable.\nA/P:\n- s/p cephalomedullary nail L hip POD#3, uncomplicated. Weight bearing as tolerated.\n- Dressing: dry gauze, change every 2 days or if soiled.\n- Staple removal at 2 weeks post-op.\n- DVT ppx: apixaban 2.5 mg PO BID x 35 days\n- Medically stable for d/c\nSigned: Adaeze Okafor, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "social_work",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 09/23/2026 09:20\nPt AOx4, pleasant and cooperative, no behavioral concerns per nursing.\nPsychosocial screen: denies depression. Denies suicidal ideation. Denies homicidal ideation. No hallucinations. No psychiatric history. No history of conservatorship or FSP.\nSubstance use: denies alcohol and drug use.\nPt agreeable to recuperative care. Front-wheeled walker ordered for discharge.\nOrtho follow-up: Seabrook Orthopedic Clinic (fictional) 10/04/2026 at 13:15 (confirmed) for wound check.\nOutpatient PT referral: sent, not yet scheduled.\nSigned: Monique Barrett, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "vitals",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n09/22 08:00 | 98.7 | 86 | 136/82 | 16 | 97% | RA\n09/22 16:00 | 98.5 | 84 | 134/80 | 16 | 98% | RA\n09/22 23:00 | 98.1 | 78 | 128/78 | 14 | 98% | RA\n09/23 04:00 | 98.0 | 76 | 126/76 | 16 | 98% | RA\n09/23 07:30 | 98.3 | 82 | 132/80 | 16 | 98% | RA\n## LABS\n09/19 | WBC 9.8 | Hgb 13.6 | Plt 251 | Cr 1.0\n09/22 | WBC 8.4 | Hgb 11.2 L | Plt 238 | Cr 0.9\n## MICROBIOLOGY\n09/20 05:30 MRSA nares PCR: NEGATIVE\n09/23 06:10 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n09/19 CXR: No acute cardiopulmonary process\n09/20 L hip X-ray post-op: hardware in good position\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Walter Doe  MRN: SR-2290415\n- Apixaban 2.5 mg PO twice daily x 35 days (NEW, DVT prevention)\n- Oxycodone 5 mg PO every 6 hours PRN severe pain x 5 days\n- Acetaminophen 1000 mg PO every 8 hours\n- Amlodipine 5 mg PO daily\n## Wound Supplies\n- Dry gauze, paper tape\n## DME\n- Front-wheeled walker (ordered)\nNo antibiotics at discharge. No IV access at discharge.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

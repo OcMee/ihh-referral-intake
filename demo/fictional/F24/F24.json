@@ -1,0 +1,738 @@
+{
+  "packet_id": "F24",
+  "patient": {
+    "summary": "46F, right pyelonephritis with sepsis, resolved, on oral antibiotics, unhoused",
+    "age": "46",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (car park stairwell / day shelter)",
+    "admit_reason": "Kidney infection with fever and vomiting",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Other",
+      "text": "Foley catheter was removed 09/20; patient voids on her own. The form's 'Foley: Yes' is out of date.",
+      "pages": [
+        9
+      ],
+      "quote": "Foley catheter removed 09/20 per order. Pt voiding independently",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "IV antibiotics stopped; now cephalexin by mouth through 09/29, self-administered.",
+      "pages": [
+        7
+      ],
+      "quote": "transitioned to cephalexin 500 mg PO four times daily through 09/29/2026",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "No IV access at discharge.",
+      "pages": [
+        7
+      ],
+      "quote": "PIV to be removed before d/c. No IV access at discharge.",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 150 ft independently with no device.",
+      "pages": [
+        8
+      ],
+      "quote": "Gait: 150 ft independent, no assistive device, steady, no rest breaks needed",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; COVID rapid negative 09/22 07:15, same day as planned discharge.",
+      "pages": [
+        11
+      ],
+      "quote": "09/22 07:15 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4, denies SI/HI and hallucinations, no psych history.",
+      "pages": [
+        10
+      ],
+      "quote": "Denies auditory or visual hallucinations.",
+      "quote_page": 10
+    },
+    {
+      "label": "Other",
+      "text": "PCP appointment confirmed 09/28 10:00.",
+      "pages": [
+        10
+      ],
+      "quote": "09/28/2026 10:00 (confirmed)",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and admitted with sepsis from pyelonephritis.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "46 y/o F, unhoused (staying in a car park stairwell and a day shelter)"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; GEN-1 already met.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Nursing: showers, dresses and toilets independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently. Dresses and toilets independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toilets independently, continent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT evaluation is in the packet.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 150 ft independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Gait: 150 ft independent, no assistive device, steady, no rest breaks needed"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; normal mood.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No psychiatric history."
+        },
+        {
+          "page": 6,
+          "quote": "Psych: calm, cooperative, normal mood and affect"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies SI/HI.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Denies hallucinations.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with intoxication; last drink over a month ago.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship or FSP history.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers cephalexin and states schedule; all meds self-administered.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt self-administered cephalexin 500 mg PO at 06:00 with RN observation"
+        },
+        {
+          "page": 12,
+          "quote": "All medications self-administered by patient."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No IV access at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "No isolation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID rapid negative 09/22 07:15, about 8 hours before planned 15:00 discharge.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/22 07:15 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 1,
+          "quote": "Planned d/c 09/22/2026 ~15:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent, afebrile and stable.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "VITAL SIGNS - LAST 5 SETS"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Self-administers oral cephalexin.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "states schedule four times daily and stop date"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics at discharge.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Right kidney (pyelonephritis).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Acute R pyelonephritis, resolved sepsis."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Urine culture E. coli; blood cultures no growth.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/17 Blood cultures x2: no growth at 5 days"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "No isolation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac diagnosis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GU-E1",
+      "status": "met",
+      "finding": "Urinary tract infection (pyelonephritis), now on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Acute R pyelonephritis, resolved sepsis."
+        }
+      ]
+    },
+    {
+      "rule_id": "GU-E6",
+      "status": "not_applicable",
+      "finding": "Foley removed 09/20; no catheter at discharge.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Foley removed 09/20, voiding trial passed. No catheter at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "GU-E5",
+      "status": "not_applicable",
+      "finding": "No catheterization needed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GU-X1",
+      "status": "met",
+      "finding": "No intermittent catheterization needed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No catheter in place."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4, no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently. Dresses and toilets independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Walks 150 ft, transfers independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transfers: Independent, no device"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no TB or C. diff.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "09/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use treatment issue.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Not aggressive.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Foley catheter",
+      "rule_ids": [
+        "GU-E6",
+        "ADL-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Foley Catheter: Yes [X] No [ ]"
+        },
+        {
+          "page": 9,
+          "quote": "Foley catheter removed 09/20 per order. Pt voiding independently"
+        }
+      ],
+      "note": "Form says Foley catheter yes, nursing note says it was removed 09/20 and she voids on her own. Chart wins: no catheter at discharge."
+    }
+  ],
+  "questions_for_hospital": [
+    "Please confirm the Foley catheter is out (nursing note says removed 09/20) so we can correct the referral form."
+  ],
+  "claude_fit": {
+    "score": 92,
+    "recommendation": "approve",
+    "reason": "Meets ADL-1 to ADL-3, MOB-3, COG-1, COG-2, ID-1, ID-2, INF-1 and INF-2 on oral antibiotics for GU-E1. The form's Foley 'Yes' is out of date: the Foley was removed 09/20, so GU-E6 does not apply."
+  }
+}

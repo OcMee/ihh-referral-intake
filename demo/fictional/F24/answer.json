@@ -1,0 +1,8 @@
+{
+  "packet_id": "F24",
+  "intended": "fit",
+  "why": "Pyelonephritis (GU-E1) treated, on oral cephalexin; afebrile with 5 stable vitals (ID-1), meets ADL-1 to ADL-3, MOB-3 (150 ft), COG-1/COG-2, OTH-4, INF-1 and INF-2 (COVID negative same day as discharge).",
+  "traps": [
+    "Referral form says 'Foley Catheter: Yes' but the nursing note and progress note show the Foley was removed 09/20 and the patient voids independently. Chart wins: GU-E6 not applicable."
+  ]
+}

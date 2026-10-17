@@ -184,5 +184,66 @@
       "Referral form says 'Self Administer All Meds: Yes' and 'Pt AOx4', but RN gave every dose, OT did not assess medication management, and nursing documented AOx3 on 10/04.",
       "Fax and form say delirium resolved; the hospitalist says resolving, not fully resolved."
     ]
+  },
+  {
+    "packet_id": "F21",
+    "intended": "fit",
+    "why": "Uncomplicated post-op lap cholecystectomy: oral pain meds, independent ADLs, walks 200 ft, AOx4, MRSA/COVID negative, post-op visit confirmed.",
+    "traps": [
+      "Referral form says 'Any Wounds: No' but the op note and progress note document 4 port-site incisions with steri-strips (p6, p7). Chart wins; INT-E5 met because no staples and follow-up is confirmed."
+    ]
+  },
+  {
+    "packet_id": "F22",
+    "intended": "needs_info",
+    "why": "Stable after closed L hip fracture repair, but the PT/OT notes are missing, so walking distance, transfers and ADLs cannot be checked (MOB-2 not met; MOB-3, MOB-4 unknown).",
+    "traps": [
+      "Referral form says 'Ambulatory: Yes' with a walker, but there is no PT/OT note to support it (op note only says 'PT/OT evaluate and treat').",
+      "Staples placed; ortho visit is for 'wound check', staple removal not explicitly scheduled (INT-E5 unknown).",
+      "Outpatient PT referral sent but not scheduled (MSK-E2)."
+    ]
+  },
+  {
+    "packet_id": "F23",
+    "intended": "not_fit",
+    "why": "L MCA stroke with persistent R hemiparesis; OT/PT document total assist for toileting and transfers (ADL-3, MOB-4 not met) and stroke with residual deficit (NEU-X1).",
+    "traps": [
+      "Referral form comments say 'Independent with ADLs. Ambulatory.' but OT (p8) and PT (p7) document total assist for toileting and transfers."
+    ]
+  },
+  {
+    "packet_id": "F24",
+    "intended": "fit",
+    "why": "Pyelonephritis (GU-E1) treated, on oral cephalexin; afebrile with 5 stable vitals (ID-1), meets ADL-1 to ADL-3, MOB-3 (150 ft), COG-1/COG-2, OTH-4, INF-1 and INF-2 (COVID negative same day as discharge).",
+    "traps": [
+      "Referral form says 'Foley Catheter: Yes' but the nursing note and progress note show the Foley was removed 09/20 and the patient voids independently. Chart wins: GU-E6 not applicable."
+    ]
+  },
+  {
+    "packet_id": "F25",
+    "intended": "needs_info",
+    "why": "MSSA bacteremia from L foot cellulitis on IV cefazolin via PICC through 11/03/2026; home infusion and home health referrals sent but not accepted, so ID-3, OTH-3 and INT-E3 are unconfirmed. Also no PT note (MOB-3), no psych/SW assessment (MH-1 to MH-3, MH-5), isolation not documented (OTH-4), COVID swab not yet done (INF-2). Otherwise independent.",
+    "traps": [
+      "Referral form says 'Home Health Ordered: Yes' but the case management note says neither agency has accepted yet. Chart wins: arrangement unknown.",
+      "Diagnosis changed from the brief: osteomyelitis is a hard exclusion (MSK-X2) and would score not_fit, so the packet uses MSSA bacteremia with MRI negative for osteomyelitis. A reviewer must not misread the H&P's 'evaluate for osteomyelitis' as a diagnosis."
+    ]
+  },
+  {
+    "packet_id": "F26",
+    "intended": "not_fit",
+    "why": "Suspected active pulmonary TB with a right upper lobe cavitary lesion, still on airborne isolation with AFB smears #2/#3 and TB PCR pending, and Infectious Disease has not cleared isolation, so OTH-4 (isolation exclusion) and FORM-X4 (TB not cleared by a doctor/ID) are not met.",
+    "traps": [
+      "Referral form says 'PPD/TB: chest X-ray negative' but the radiology report shows a 3.2 cm right upper lobe cavitary lesion concerning for active TB (OTH-4, FORM-X4).",
+      "Form and fax cover call it pneumonia; the H&P and ID consult treat it as suspected pulmonary tuberculosis.",
+      "One negative AFB smear is not clearance; ID requires 3 negative smears and negative PCR."
+    ]
+  },
+  {
+    "packet_id": "F27",
+    "intended": "fit",
+    "why": "Asthma exacerbation resolved: off nebulizers since 10/13, room air SpO2 96%, chest X-ray sent, RT note sent, PT 250 ft independent, independent ADLs, AOx4, MRSA and COVID negative, inhaler technique taught, so RESP-1, RESP-2, RESP-4, MOB-3, ADL-1, COG-2, INF-1 and INF-2 are met and RESP-3 does not apply.",
+    "traps": [
+      "Referral form says 'O2: Yes' (2L nasal cannula) but the RT note shows oxygen weaned off 10/13, two days before the note, with no home O2 indicated (RESP-3 not applicable)."
+    ]
   }
 ]

@@ -1,0 +1,114 @@
+{
+  "packet_id": "F26",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harborview Coast Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Renata Solberg, RN CM\nPhone: 555-0171\nDate: 10/14/2026 10:05\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n47M pneumonia, cough improving. Ambulating independently, self-care.\nRequesting recuperative care placement 10/15. Please call CM with questions.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harborview Coast Hospital (fictional)\nDepartment/Floor: 5 West Medical\nSocial Worker/Case Manager/Nurse: Renata Solberg, RN CM\nPhone: 555-0171\nEmail: rsolberg@harborview.example\nNursing Station: 555-0172\nAuthorized By: Dr. L. Abernathy\n## Patient Information\nName: Marcus Doe\nMRN: HC-4418207\nBirth Date: 07/22/1979\nGender: M\nEthnicity: Hispanic or Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English, Spanish\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Pneumonia, right upper lobe; weight loss\nAdmit Date: 10/09/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/09/2026  Result: Chest X-ray negative\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  pneumonia\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: None\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nPPD/TB: chest X-ray negative.\nIndependent with ADLs, walks in room. Needs safe place to recover.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Marcus Doe\nDOB: 07/22/1979\nMember ID: OCH-55730412\n## Referring Provider\nFacility: Harborview Coast Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Pneumonia, unspecified organism (RUL)\nICD-10: J18.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/15/2026\nRequested Days: 14\nAdmit Date: 10/09/2026\nClinical summary: RUL pneumonia, room air, independent ADLs.\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harborview Coast Hospital (fictional) - PATIENT FACE SHEET\nPatient: Marcus Doe\nMRN: HC-4418207\nAccount #: 99418207\nDOB: 07/22/1979\nSex: Male\nPreferred Language: English\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/09/2026 16:20 (ED arrival 10/09/2026 11:55)\nAdmit Type: Inpatient\nUnit/Bed: 5W-512 (negative pressure room)\nAttending: Lorraine Abernathy, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 10/09/2026\n## CC\nCough x 6 weeks, night sweats, weight loss\n## HPI\n47 y/o M, unhoused x 4 yrs (stays in congregate shelters and outdoors), presents with productive cough x 6 weeks, intermittent blood-streaked sputum, drenching night sweats and about 15 lb unintentional weight loss. Reports a shelter contact with a \"TB scare\" earlier this year. No prior TB testing on file.\n## PMH\n- Tobacco use\n- No known HIV testing on file\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nTobacco 1/2 ppd. EtOH socially, last drink 2 weeks ago. Denies drug use.\n## Exam\nT 100.6F HR 98 BP 126/80 RR 18 SpO2 96% RA. Coarse breath sounds RUL. Thin. AOx4.\n## Assessment/Plan\n1. RUL cavitary lesion with chronic cough, night sweats, weight loss - suspected pulmonary tuberculosis. Airborne isolation in negative pressure room. Sputum AFB smear and culture x3, TB PCR. HIV, QuantiFERON. Infectious Disease consult.\n2. Tobacco use - nicotine patch\n3. Dispo - SW/CM consult (unhoused). No discharge until ID clears isolation.\nSigned: Lorraine Abernathy, MD 10/09/2026 18:30\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 10/14/2026 07:50\nS: Cough persists, less sputum. Night sweats improving. Eating better.\nO: T 99.4F HR 88 BP 122/76 RR 16 SpO2 96% RA. Coarse RUL breath sounds. AOx4.\nA/P:\n1. Suspected pulmonary TB, RUL cavitary lesion - remains on AIRBORNE ISOLATION. Sputum AFB smear #1 negative, smears #2 and #3 pending. TB PCR pending. ID following; ID has NOT cleared isolation.\n2. Empiric RIPE therapy started 10/12 per ID (rifampin, isoniazid, pyrazinamide, ethambutol) with pyridoxine.\n3. Dispo - not medically ready for congregate setting until isolation cleared by ID and public health. CM aware.\nSigned: Lorraine Abernathy, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "id_consult",
+      "title": "Infectious disease consult note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## INFECTIOUS DISEASE CONSULT - FOLLOW-UP\nDate: 10/13/2026 15:10\nImaging reviewed: RUL thick-walled cavitary lesion with surrounding nodular opacities, highly concerning for active pulmonary TB.\nSputum AFB smear #1 negative 10/11. Smears #2, #3 and TB PCR pending. Cultures take up to 6-8 weeks.\nRecommendations:\n- Continue airborne isolation. NOT cleared for discharge to congregate or shared living setting.\n- Isolation may be reconsidered only after 3 negative AFB smears and negative TB PCR, or after adequate treatment with clinical response, per ID and County Public Health.\n- Continue RIPE + pyridoxine; directly observed therapy (DOT) referral to County TB clinic.\nSigned: N. Vasquez-Hale, MD (Infectious Disease)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/13/2026 11:15\nSeen in room only (airborne isolation); hallway gait not tested.\nBed mobility: independent\nTransfers: independent\nGait: in room approx 40 ft x 3 laps, independent, no assistive device\nBalance: good\n## Assessment\nNo skilled PT needs. Expect independent community ambulation; distance >100 ft not tested due to isolation.\nSigned: J. Whitcombe, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing shift note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING SHIFT NOTE\nDate: 10/14/2026 06:15\nPt AOx4. Independent with ADLs, showers independently in room bathroom. Continent of bowel and bladder.\nTakes RIPE meds with RN direct observation; states names and purpose of each med.\nCalm and cooperative. Wears surgical mask when staff in room.\nIsolation status: AIRBORNE - negative pressure room, N95 required for staff.\nSigned: P. Delacroix, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## SOCIAL WORK NOTE\nDate: 10/13/2026 14:00\nPt pleasant and engaged, AOx4. Denies SI/HI. Denies hallucinations. No psychiatric history.\nNo conservatorship. Not enrolled in FSP.\nUnhoused x 4 yrs; stays in congregate shelters. Public health notified of suspected TB for contact investigation.\nSigned: Renata Solberg, RN CM / E. Thorsen, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Labs, imaging and vitals",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## LABS\n10/09 | WBC 10.4 | Hgb 12.1 L | Plt 388 | Na 135 | K 4.1 | Cr 0.8 | Albumin 3.1 L\n10/09 HIV 1/2 Ag/Ab: Nonreactive\n10/10 QuantiFERON-TB Gold: Positive\n10/11 Sputum AFB smear #1: Negative (no AFB seen)\n10/12 Sputum AFB smear #2: Pending\n10/13 Sputum AFB smear #3: Pending\n10/11 MTB PCR (sputum): Pending\n10/09 MRSA nares PCR: Negative\n10/14 05:30 SARS-CoV-2 rapid antigen: Negative\n## RADIOLOGY REPORT\n10/09 CXR PA/lat: Right upper lobe cavitary lesion, 3.2 cm, with surrounding nodular opacities. No effusion. No pneumothorax.\nImpression: Findings concerning for active pulmonary tuberculosis. Recommend airborne isolation.\n10/10 CT chest: RUL thick-walled cavity with tree-in-bud nodularity. No pulmonary embolism.\n## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/13 08:00 | 99.1 | 90 | 124/78 | 16 | 96% | RA\n10/13 14:00 | 99.6 | 92 | 126/80 | 18 | 96% | RA\n10/13 20:00 | 99.2 | 88 | 120/74 | 16 | 95% | RA\n10/14 02:00 | 98.8 | 84 | 118/72 | 16 | 96% | RA\n10/14 07:50 | 99.4 | 88 | 122/76 | 16 | 96% | RA\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Current medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CURRENT MEDICATIONS\nPatient: Marcus Doe  MRN: HC-4418207\n- Rifampin 600 mg PO daily (DOT)\n- Isoniazid 300 mg PO daily (DOT)\n- Pyrazinamide 1500 mg PO daily (DOT)\n- Ethambutol 1200 mg PO daily (DOT)\n- Pyridoxine 50 mg PO daily\n- Nicotine patch 14 mg/24h daily\nNo IV medications. No home O2.\nDischarge medication list: not yet prepared\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

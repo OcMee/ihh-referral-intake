@@ -70,7 +70,8 @@ def page_images(pdf: Path, dest: Path) -> int:
         return len(doc)
 
 
-def public(checklist: dict) -> list:
+def public(checklist: dict, pre: str = "") -> list:
+    """pre: path prefix to app/ (the local build lives in output/app/, so it uses ../../app/)."""
     import make_demo
     import shutil
     rules = score.load_rules()
@@ -97,8 +98,8 @@ def public(checklist: dict) -> list:
                          "reason": "Demo: hospital faxed negative MRSA and COVID swab results (INF-1, INF-2)."})
         checklist_pdf.make(d, checklist, out_dir / f"{pid}.checklist.pdf", fictional=True)
         page_images(out_dir / f"{pid}.pdf", out_dir / "pages" / pid)
-        p = pack(d, pages, checklist, j, pdf=f"pdf/{pid}.pdf", img=f"pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"pdf/{pid}.readable.pdf",
-                 docx=f"pdf/{pid}.docx", fitlist=f"pdf/{pid}.checklist.pdf", criteria="pdf/ihh-admission-criteria.pdf", seed=seed)
+        p = pack(d, pages, checklist, j, pdf=f"{pre}pdf/{pid}.pdf", img=f"{pre}pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"{pre}pdf/{pid}.readable.pdf",
+                 docx=f"{pre}pdf/{pid}.docx", fitlist=f"{pre}pdf/{pid}.checklist.pdf", criteria=f"{pre}pdf/ihh-admission-criteria.pdf", seed=seed)
         p["received_min"] = received
         packets.append(p)
     for i, (check, pages) in enumerate(items):
@@ -106,8 +107,8 @@ def public(checklist: dict) -> list:
         pid = d["packet_id"]
         checklist_pdf.make(d, checklist, out_dir / f"{pid}.checklist.pdf", fictional=True)
         page_images(out_dir / f"{pid}.pdf", out_dir / "pages" / pid)
-        packets.append(pack(d, pages, checklist, i, pdf=f"pdf/{pid}.pdf", img=f"pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"pdf/{pid}.readable.pdf",
-                            docx=f"pdf/{pid}.docx", fitlist=f"pdf/{pid}.checklist.pdf", criteria="pdf/ihh-admission-criteria.pdf"))
+        packets.append(pack(d, pages, checklist, i, pdf=f"{pre}pdf/{pid}.pdf", img=f"{pre}pdf/pages/{pid}/p-{{nn}}.jpg", readable=f"{pre}pdf/{pid}.readable.pdf",
+                            docx=f"{pre}pdf/{pid}.docx", fitlist=f"{pre}pdf/{pid}.checklist.pdf", criteria=f"{pre}pdf/ihh-admission-criteria.pdf"))
     return packets
 
 
@@ -139,8 +140,13 @@ def real(checklist: dict) -> list:
 def main(argv: list) -> None:
     checklist = {x["id"]: x["text"] for x in json.loads(CRITERIA.read_text())["referral_checklist"]["items"]}
     if "--real" in argv:
-        data = {"meta": {"real": True, "banner": "De-identified IHH packets. Local only: do not share, upload or publish this page.",
-                         "note": "IHH decisions are hidden unless you tick the box."}, "packets": real(checklist)}
+        local = real(checklist)
+        if any(x["id"].startswith("R") for x in local):  # the 11 IHH packets are on this computer
+            data = {"meta": {"real": True, "local": True, "banner": "De-identified IHH packets. Local only: do not share, upload or publish this page.",
+                             "note": "IHH decisions are hidden unless you tick the box."}, "packets": local}
+        else:  # a coordinator's laptop without the IHH packets: the fictional desk plus anything dropped in
+            data = {"meta": {"real": False, "local": True, "banner": "", "note": "All patients in this demo are invented."},
+                    "packets": public(checklist, pre="../../app/") + local}
         dest = REPO / "output/app/index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html(data, artifact=False), encoding="utf-8")

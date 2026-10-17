@@ -1,0 +1,547 @@
+{
+  "packet_id": "F22",
+  "patient": {
+    "summary": "65M, L hip fracture repaired with a nail, unhoused (tent)",
+    "age": "65",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, sleeps in a tent x 3 years",
+    "admit_reason": "Broke left hip in a fall, surgery done",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Mobility",
+      "text": "No PT or OT note in the packet; walking distance, transfers and ADLs are not documented. Form says ambulatory with a walker.",
+      "pages": [
+        2
+      ],
+      "quote": "Ambulatory: Yes [X] No [ ]",
+      "quote_page": 2
+    },
+    {
+      "label": "Mobility",
+      "text": "Ortho ordered PT/OT to evaluate; outpatient PT referral sent but not scheduled.",
+      "pages": [
+        6,
+        8
+      ],
+      "quote": "Outpatient PT referral: sent, not yet scheduled.",
+      "quote_page": 8
+    },
+    {
+      "label": "Wounds",
+      "text": "L hip incision closed with staples; dry gauze every 2 days; staples out at 2 weeks.",
+      "pages": [
+        7
+      ],
+      "quote": "Staple removal at 2 weeks post-op.",
+      "quote_page": 7
+    },
+    {
+      "label": "Home health",
+      "text": "No home health ordered for the dressing changes.",
+      "pages": [
+        2
+      ],
+      "quote": "Home Health Ordered: Yes [ ] No [X]",
+      "quote_page": 2
+    },
+    {
+      "label": "Mental health",
+      "text": "Denies SI/HI, no hallucinations, no psychiatric history, no conservatorship/FSP.",
+      "pages": [
+        8
+      ],
+      "quote": "Denies suicidal ideation.",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 09/20; rapid COVID negative 09/23 06:10, discharge 09/23.",
+      "pages": [
+        9
+      ],
+      "quote": "09/23 06:10 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 9
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "All oral meds including apixaban for clot prevention; self-administers; 30-day supply.",
+      "pages": [
+        10
+      ],
+      "quote": "Patient able to self-administer all medications: Yes",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (tent) and recovering from hip surgery.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "65 y/o M experiencing homelessness"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "unknown",
+      "finding": "No OT or nursing ADL documentation in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Bathing/hygiene ability after hip surgery is not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "unknown",
+      "finding": "Toileting ability is not documented; form says continent only.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "unknown",
+      "finding": "Walker ordered, but no PT note shows he uses it independently.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "PT/OT notes were ordered but none are in the packet.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "PT/OT evaluate and treat."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walking distance is not documented; the form's 'Ambulatory: Yes' has no PT note behind it.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "unknown",
+      "finding": "Transfers are not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; pleasant and cooperative.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Denies suicidal ideation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "No hallucinations.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted for alcohol intoxication.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship or FSP.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers all meds; 30-day supply dispensed.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, pleasant and cooperative"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "No behavioral concerns.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form marks not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No IV access at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status is not stated; swabs negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares negative 09/20.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "09/20 05:30 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 09/23 06:10, discharge 09/23 (within 24h).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "09/23 06:10 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E1",
+      "status": "met",
+      "finding": "Closed fracture.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Findings: Closed fracture, good reduction on fluoroscopy."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-E2",
+      "status": "not_met",
+      "finding": "Outpatient PT referral sent but not scheduled.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Outpatient PT referral: sent, not yet scheduled."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X1",
+      "status": "met",
+      "finding": "Not an open fracture.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "closed L intertrochanteric femur fracture. Skin intact."
+        }
+      ]
+    },
+    {
+      "rule_id": "MSK-X3",
+      "status": "met",
+      "finding": "Internal nail, no external fixation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Procedure: Cephalomedullary nail, L intertrochanteric femur fracture"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "unknown",
+      "finding": "Dressing change every 2 days; no home health ordered and his ability to reach a hip dressing is not documented by nursing.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Dressing: dry gauze, change every 2 days or if soiled."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "unknown",
+      "finding": "Staples placed; ortho visit 10/04 is for wound check, staple removal not stated as scheduled.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Staple removal at 2 weeks post-op."
+        },
+        {
+          "page": 8,
+          "quote": "10/04/2026 at 13:15 (confirmed) for wound check"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "Not cognitively impaired.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "AOx4. L leg neurovascularly intact."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "unknown",
+      "finding": "ADLs not documented by OT or nursing.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Superseded by MOB-3/MOB-4, which are unknown.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection; MRSA negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No antibiotics at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "denies alcohol and drug use"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; form marks No.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "No aggressive behavior.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "no behavioral concerns per nursing"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Walking",
+      "rule_ids": [
+        "MOB-3",
+        "MOB-4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Ambulatory: Yes [X] No [ ]"
+        },
+        {
+          "page": 6,
+          "quote": "PT/OT evaluate and treat."
+        }
+      ],
+      "note": "Form says ambulatory, but there is no PT/OT note in the packet to support it after hip surgery. Chart does not say; MOB-3 and MOB-4 stay unknown."
+    }
+  ],
+  "questions_for_hospital": [
+    "Please send the PT and OT evaluations: how far does he walk with the walker, and does he transfer and toilet independently?",
+    "Is staple removal scheduled at the 10/04 ortho visit, or should it happen elsewhere?",
+    "Who will do the every-2-day hip dressing changes? Has home health been considered?",
+    "When is the outpatient PT appointment?",
+    "Can you confirm he is not on any isolation precautions at discharge?"
+  ],
+  "claude_fit": {
+    "score": 60,
+    "recommendation": "needs_info",
+    "reason": "Medically stable with negative swabs and no mental health concerns, but there is no PT/OT note (MOB-2), so walking, transfers and ADLs (MOB-3, MOB-4, ADL-1) are unknown. Staple removal (INT-E5) and outpatient PT (MSK-E2) are not yet arranged."
+  }
+}

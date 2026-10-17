@@ -1,0 +1,10 @@
+{
+  "packet_id": "F22",
+  "intended": "needs_info",
+  "why": "Stable after closed L hip fracture repair, but the PT/OT notes are missing, so walking distance, transfers and ADLs cannot be checked (MOB-2 not met; MOB-3, MOB-4 unknown).",
+  "traps": [
+    "Referral form says 'Ambulatory: Yes' with a walker, but there is no PT/OT note to support it (op note only says 'PT/OT evaluate and treat').",
+    "Staples placed; ortho visit is for 'wound check', staple removal not explicitly scheduled (INT-E5 unknown).",
+    "Outpatient PT referral sent but not scheduled (MSK-E2)."
+  ]
+}

@@ -254,7 +254,7 @@
     if (!route()) { const y = scrollY; render(); scrollTo(0, y) }
     if (ui.jobs.some(j => j.state === "running")) setTimeout(poll, 1500);
   }
-  if (!APP.meta.artifact && location.protocol.startsWith("http") && APP.meta.real) {
+  if (!APP.meta.artifact && location.protocol.startsWith("http") && APP.meta.local) {
     fetch("/api/ping", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.ok) { ui.server = j; poll(); mergeServer() } }).catch(() => {});
   }
   document.addEventListener("dragover", e => { const d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over") } });

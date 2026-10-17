@@ -1,0 +1,765 @@
+{
+  "packet_id": "F27",
+  "patient": {
+    "summary": "34F, asthma exacerbation resolved, room air, unhoused",
+    "age": "34",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 1 yr (car towed, now outdoors)",
+    "admit_reason": "Asthma attack after smoke exposure and running out of inhalers",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Meds/IV/O2",
+      "text": "Oxygen weaned off 10/13; on room air since, walking SpO2 96%; no home O2.",
+      "pages": [
+        7
+      ],
+      "quote": "O2 weaned off 10/13 10:00; on room air since.",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Nebulizers stopped 10/13; finishing oral prednisone through 10/17.",
+      "pages": [
+        6
+      ],
+      "quote": "Off nebulizers since 10/13.",
+      "quote_page": 6
+    },
+    {
+      "label": "Other",
+      "text": "Inhaler technique taught with spacer, correct teach-back; asthma action plan reviewed.",
+      "pages": [
+        7
+      ],
+      "quote": "Inhaler technique taught with spacer; pt demonstrated correct technique with teach-back.",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "PT: walks 250 ft independently with no device and no rest.",
+      "pages": [
+        8
+      ],
+      "quote": "Gait: 250 ft independent, no assistive device, steady, no rest break needed",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Independent with all ADLs, AOx4.",
+      "pages": [
+        9
+      ],
+      "quote": "Independent with all ADLs.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative; rapid COVID negative 10/15 05:50; no isolation.",
+      "pages": [
+        11
+      ],
+      "quote": "10/15 05:50 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    },
+    {
+      "label": "Mental health",
+      "text": "Denies SI/HI and hallucinations; no psychiatric history.",
+      "pages": [
+        10
+      ],
+      "quote": "Denies SI/HI. Denies auditory or visual hallucinations.",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused 1 year and recovering from an asthma exacerbation.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 5,
+          "quote": "unhoused x 1 yr"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization request marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showered independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Showered independently 10/14 PM."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Continent and toilets independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Continent of bowel and bladder, toilets independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used or needed.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No DME needed."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT evaluation included.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 250 ft independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Gait: 250 ft independent, no assistive device, steady, no rest break needed"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Denies hallucinations.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship and not in FSP.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No conservatorship. Not enrolled in FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers prednisone and inhalers with teach-back.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Self-administers prednisone and inhalers, teach-back done."
+        },
+        {
+          "page": 7,
+          "quote": "pt demonstrated correct technique with teach-back"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 per nursing.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Calm and cooperative. No behavioral concerns this admission."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "not_applicable",
+      "finding": "Referral form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV medications at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No IV medications."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "No isolation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: none (standard precautions)."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 10/15 05:50, within 24h of planned 10/15 PM discharge.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/15 05:50 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No infection this admission; vitals reviewed under RESP-2.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "No antibiotics (no infection)."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection; respiratory viral panel negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/12 Respiratory viral panel (incl. SARS-CoV-2 PCR): Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: none (standard precautions)."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Chest X-ray report included.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/12 CXR PA/lat: Hyperinflation. No infiltrate, no effusion, no pneumothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vitals sent; SpO2 96-97% on room air, stable.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/15 07:30 | 98.2 | 78 | 118/72 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "Oxygen weaned off 10/13; no home O2 indicated.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No home O2 indicated."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "met",
+      "finding": "Respiratory therapy note included.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "RESPIRATORY THERAPY NOTE"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "met",
+      "finding": "Nebulizers stopped 10/13; uses own albuterol MDI as needed.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Nebulizer treatments discontinued 10/13."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "met",
+      "finding": "No antibiotics.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "No antibiotics (no infection)."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "not_applicable",
+      "finding": "Superseded by MOB-3/MOB-4.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No active infection; MRSA and COVID negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "not_applicable",
+      "finding": "Superseded by OTH-2; form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E4",
+      "status": "met",
+      "finding": "Asthma is an eligible respiratory condition.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Acute asthma exacerbation"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E5",
+      "status": "met",
+      "finding": "SpO2 96% on room air with physician note that the exacerbation resolved.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "SpO2 96% RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax on chest X-ray.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "no pneumothorax"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X2",
+      "status": "met",
+      "finding": "No effusion on chest X-ray.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "no effusion"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X3",
+      "status": "not_applicable",
+      "finding": "No tracheostomy.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X4",
+      "status": "unknown",
+      "finding": "Pulmonary embolism is not mentioned either way.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "met",
+      "finding": "On room air; no BiPAP.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "On room air since 10/13 10:00."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "unknown",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Oxygen",
+      "rule_ids": [
+        "RESP-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "O2: Yes [X] No [ ]  2L nasal cannula"
+        },
+        {
+          "page": 7,
+          "quote": "O2 weaned off 10/13 10:00; on room air since."
+        }
+      ],
+      "note": "Form says O2 Yes (2L nasal cannula); the RT note shows oxygen weaned off 10/13 and no home O2 indicated. Chart wins: no oxygen tank needed."
+    }
+  ],
+  "questions_for_hospital": [
+    "Can you confirm she leaves with the remaining prednisone doses, her controller inhaler, albuterol and spacer in hand?",
+    "Was pulmonary embolism considered? Nothing in the packet mentions it."
+  ],
+  "claude_fit": {
+    "score": 92,
+    "recommendation": "approve",
+    "reason": "Asthma exacerbation resolved: off nebulizers, room air SpO2 96%, PT 250 ft independent, independent ADLs, AOx4 and negative MRSA/COVID (RESP-1, RESP-2, MOB-3, ADL-1, INF-1, INF-2). The form's 'O2: Yes' is out of date; the RT note shows O2 weaned off 10/13, so RESP-3 does not apply."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packet_id": "F23",
+  "intended": "not_fit",
+  "why": "L MCA stroke with persistent R hemiparesis; OT/PT document total assist for toileting and transfers (ADL-3, MOB-4 not met) and stroke with residual deficit (NEU-X1).",
+  "traps": [
+    "Referral form comments say 'Independent with ADLs. Ambulatory.' but OT (p8) and PT (p7) document total assist for toileting and transfers."
+  ]
+}

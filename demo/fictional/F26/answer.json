@@ -1,0 +1,10 @@
+{
+  "packet_id": "F26",
+  "intended": "not_fit",
+  "why": "Suspected active pulmonary TB with a right upper lobe cavitary lesion, still on airborne isolation with AFB smears #2/#3 and TB PCR pending, and Infectious Disease has not cleared isolation, so OTH-4 (isolation exclusion) and FORM-X4 (TB not cleared by a doctor/ID) are not met.",
+  "traps": [
+    "Referral form says 'PPD/TB: chest X-ray negative' but the radiology report shows a 3.2 cm right upper lobe cavitary lesion concerning for active TB (OTH-4, FORM-X4).",
+    "Form and fax cover call it pneumonia; the H&P and ID consult treat it as suspected pulmonary tuberculosis.",
+    "One negative AFB smear is not clearance; ID requires 3 negative smears and negative PCR."
+  ]
+}

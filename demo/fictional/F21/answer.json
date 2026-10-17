@@ -1,0 +1,8 @@
+{
+  "packet_id": "F21",
+  "intended": "fit",
+  "why": "Uncomplicated post-op lap cholecystectomy: oral pain meds, independent ADLs, walks 200 ft, AOx4, MRSA/COVID negative, post-op visit confirmed.",
+  "traps": [
+    "Referral form says 'Any Wounds: No' but the op note and progress note document 4 port-site incisions with steri-strips (p6, p7). Chart wins; INT-E5 met because no staples and follow-up is confirmed."
+  ]
+}

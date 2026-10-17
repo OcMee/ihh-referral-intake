@@ -1,0 +1,114 @@
+{
+  "packet_id": "F25",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Crest Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Keith Yamamoto, LCSW\nPhone: 555-0141\nDate: 10/05/2026 11:20\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n54M MSSA bacteremia from L foot cellulitis, on IV cefazolin via PICC x 4 more weeks.\nHome infusion arranged per referral form. Hoping for d/c 10/06/2026.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harbor Crest Medical Center (fictional)\nDepartment/Floor: 6 East Medicine\nSocial Worker/Case Manager/Nurse: Keith Yamamoto, LCSW\nPhone: 555-0141\nEmail: kyamamoto@harborcrest.example\nNursing Station: 555-0142\nAuthorized By: Dr. P. Adeyemi\n## Patient Information\nName: Luis Doe\nMRN: HC-5027719\nBirth Date: 06/30/1972\nGender: M\nEthnicity: Hispanic or Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: Spanish / English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: MSSA bacteremia, L foot cellulitis\nAdmit Date: 09/30/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [X] No [ ]\nPPD/TB Test or Chest X-Ray: Date: 09/30/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  MSSA bacteremia - IV cefazolin via PICC\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: \n## Length of Stay Authorized\nDays: 30\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nHome infusion arranged for IV antibiotics via PICC.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Luis Doe\nDOB: 06/30/1972\nMember ID: OCH-48816352\n## Referring Provider\nFacility: Harbor Crest Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Sepsis due to methicillin susceptible Staphylococcus aureus\nICD-10: A41.01\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/06/2026\nRequested Days: 30\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Crest Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Luis Doe\nMRN: HC-5027719\nAccount #: 99027719\nDOB: 06/30/1972\nSex: Male\nPreferred Language: Spanish / English\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/30/2026 14:45\nAdmit Type: Inpatient\nUnit/Bed: 6E-604\nAttending: Priya Adeyemi, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate: 09/30/2026 16:30\n## CC\nL foot redness and swelling x 5 days, fever and chills\n## HPI\n54 y/o M, unhoused (sleeping at a bus shelter), with blisters on L foot from ill-fitting shoes that became red, swollen and painful over 5 days. Fevers and rigors since last night. Denies IVDU.\nED: T 102.9F, HR 118, BP 108/64, WBC 19.1. L dorsal foot erythema to ankle, no open wound, no fluctuance.\nXR L foot: soft tissue swelling, no bone erosion, no gas.\n## PMH\n- Hypertension (not on meds for 1 year)\n## PSH\n- None\n## Meds PTA\nNone\n## Allergies\nNKDA\n## Social\nUnhoused x 2 years. Tobacco 1 ppd. Denies EtOH or drug use. UDS negative.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Exam\nGen: ill-appearing, AOx4\nCV: tachycardic, no murmur. Lungs: clear\nL foot: dorsal erythema and warmth extending to ankle, tender, intact skin, healing blisters, no drainage\n## Assessment/Plan\nL foot cellulitis with sepsis.\n1. Blood cultures x2, then vancomycin + cefazolin IV\n2. MRI L foot to evaluate for deep infection / osteomyelitis\n3. MRSA nares screen\n4. Dispo: unhoused, CM consult for recuperative care\nSigned: Priya Adeyemi, MD 09/30/2026 17:20\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "other",
+      "title": "Infectious disease consult",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## INFECTIOUS DISEASE CONSULT\nDate: 10/02/2026 10:15\nReason: MSSA bacteremia\nBlood cultures 09/30: MSSA 2 of 2 bottles. Repeat blood cultures 10/01 and 10/02: no growth to date.\nMRI L foot 10/01: cellulitis of dorsal foot, no abscess, no osteomyelitis.\nTTE 10/02: no vegetation, EF 60%.\n## Recommendations\n- Stop vancomycin. Cefazolin 2 g IV every 8 hours.\n- Complicated MSSA bacteremia (fever >72h before clearance): total 4 more weeks IV cefazolin via PICC, end date 11/03/2026.\n- PICC placement once repeat cultures negative x 48h.\n- Home infusion and home health nursing needed for PICC care and weekly labs (CBC, BMP).\n- ID clinic follow up 2 weeks after discharge.\nSigned: R. Marsh, MD (Infectious Disease)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#6\nDate: 10/05/2026 08:00\nS: Foot pain 2/10. No fevers. Eating well.\nO: T 98.5F HR 78 BP 128/80 RR 16 SpO2 98% RA. AOx4.\nL foot: erythema resolved to small area over dorsum, no warmth.\nA/P: MSSA bacteremia from L foot cellulitis, cleared.\n- Afebrile since 10/03\n- Cefazolin 2 g IV every 8 hours via R arm PICC (placed 10/04) through 11/03/2026\n- PICC tip confirmed SVC on CXR 10/04\n- Amlodipine 5 mg PO daily started 10/03 for HTN, BP controlled\n- Dispo: medically ready once home infusion / home health confirmed\nSigned: Priya Adeyemi, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 10/05/2026 06:50\nPt AOx4, cooperative.\nPt up in room and to bathroom independently, no device.\nShowered independently with PICC cover. Toileting independently, continent.\nR arm PICC: dressing clean, dry, intact; flushes without difficulty.\nPt self-administered amlodipine 5 mg PO at 06:00 with RN observation; states purpose and schedule.\nSigned: S. Delgado, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "social_work",
+      "title": "Case management note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT NOTE\nDate: 10/05/2026 10:30\nPt unhoused, agreeable to recuperative care.\nHome infusion referral sent 10/03 to Seaside Infusion Services (fictional) 555-0144 for cefazolin and PICC care.\nHome health nursing referral sent 10/03 to Valley Bloom Home Health (fictional) 555-0188 for weekly PICC dressing change and labs.\nStatus 10/05: neither agency has accepted yet. Awaiting insurance authorization review.\nSelf-administration teaching cannot start until infusion agency accepts.\nID clinic follow up to be scheduled after discharge date set.\nSigned: Keith Yamamoto, LCSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "labs",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/03 20:00 | 98.9 | 84 | 130/82 | 16 | 98% | RA\n10/04 08:00 | 98.4 | 80 | 126/78 | 16 | 98% | RA\n10/04 16:00 | 98.7 | 82 | 132/80 | 16 | 97% | RA\n10/04 23:00 | 98.2 | 76 | 124/76 | 16 | 98% | RA\n10/05 08:00 | 98.5 | 78 | 128/80 | 16 | 98% | RA\n## LABS\n09/30 | WBC 19.1 H | Hgb 13.4 | Plt 266 | Na 135 | K 3.9 | Cr 1.1 | Glucose 112\n10/04 | WBC 9.0 | Cr 0.9\n## MICROBIOLOGY\n09/30 Blood cultures x2: Staphylococcus aureus, methicillin susceptible (MSSA), 2 of 2\n10/01 Blood cultures x2: no growth to date\n10/02 Blood cultures x2: no growth to date\n09/30 MRSA nares PCR: Negative\nSARS-CoV-2 swab: to be collected on day of discharge (not yet done)\n## IMAGING\n09/30 CXR: no acute process\n10/01 MRI L foot: cellulitis, no abscess, no osteomyelitis\n10/04 CXR: R PICC tip in SVC\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list (draft)",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST - DRAFT\nPatient: Luis Doe  MRN: HC-5027719\n- Cefazolin 2 g IV every 8 hours via PICC through 11/03/2026 (home infusion - pending agency acceptance)\n- Amlodipine 5 mg PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n- Nicotine patch 21 mg/24h daily\n## Lines\n- R arm PICC (placed 10/04/2026) - remove at end of therapy\n## Follow up\n- ID clinic 2 weeks after discharge (to be scheduled)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

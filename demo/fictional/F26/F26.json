@@ -1,0 +1,798 @@
+{
+  "packet_id": "F26",
+  "patient": {
+    "summary": "47M, suspected pulmonary TB (RUL cavitary lesion) on airborne isolation, unhoused",
+    "age": "47",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused x 4 yrs (congregate shelters and outdoors)",
+    "admit_reason": "Chronic cough, night sweats, weight loss; suspected tuberculosis",
+    "pages": [
+      2,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Infection",
+      "text": "Suspected pulmonary TB; still on airborne isolation and ID has not cleared it.",
+      "pages": [
+        6
+      ],
+      "quote": "ID has NOT cleared isolation.",
+      "quote_page": 6
+    },
+    {
+      "label": "Infection",
+      "text": "ID: not cleared for discharge to any congregate or shared living setting.",
+      "pages": [
+        7
+      ],
+      "quote": "NOT cleared for discharge to congregate or shared living setting.",
+      "quote_page": 7
+    },
+    {
+      "label": "Infection",
+      "text": "Radiology shows a right upper lobe cavitary lesion, not a negative X-ray as the form says.",
+      "pages": [
+        11
+      ],
+      "quote": "Right upper lobe cavitary lesion, 3.2 cm, with surrounding nodular opacities.",
+      "quote_page": 11
+    },
+    {
+      "label": "Infection",
+      "text": "Only 1 of 3 AFB smears resulted (negative); smears #2, #3 and TB PCR pending; QuantiFERON positive.",
+      "pages": [
+        6
+      ],
+      "quote": "Sputum AFB smear #1 negative, smears #2 and #3 pending.",
+      "quote_page": 6
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "On oral RIPE TB therapy by directly observed therapy; room air, no IV.",
+      "pages": [
+        12
+      ],
+      "quote": "No IV medications. No home O2.",
+      "quote_page": 12
+    },
+    {
+      "label": "Mobility",
+      "text": "PT only saw him in his room; walking 100 ft was not tested.",
+      "pages": [
+        8
+      ],
+      "quote": "distance >100 ft not tested due to isolation.",
+      "quote_page": 8
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4, denies SI/HI and hallucinations, no psychiatric history.",
+      "pages": [
+        10
+      ],
+      "quote": "Denies SI/HI. Denies hallucinations. No psychiatric history.",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused 4 years and acutely ill.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 5,
+          "quote": "47 y/o M, unhoused x 4 yrs"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization request marks re-hospitalization risk.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Nursing documents independence with ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with ADLs, showers independently in room bathroom."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "showers independently in room bathroom"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Continent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT evaluation included.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Walked about 40 ft laps in room; 100 ft was not tested because of isolation.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "distance >100 ft not tested due to isolation."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; calm and cooperative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Denies suicidal ideation.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Denies hallucinations.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Denies hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; last drink 2 weeks before admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "No conservatorship and not in FSP.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "No conservatorship. Not enrolled in FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Takes meds under observation and can name each one and its purpose.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "states names and purpose of each med."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 per nursing.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "not_applicable",
+      "finding": "Referral form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV medications.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No IV medications."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "not_met",
+      "finding": "On airborne isolation and ID has not cleared it, so the isolation exclusion applies.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Isolation status: AIRBORNE - negative pressure room, N95 required for staff."
+        },
+        {
+          "page": 6,
+          "quote": "ID has NOT cleared isolation."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/09 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "Rapid COVID negative 10/14 05:30; requested start 10/15 with no time, so it may be more than 24 hours old at arrival.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/14 05:30 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals sent; low-grade temps to 99.6, HR 84-92, BP normal; no signs of sepsis.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/14 07:50 | 99.4 | 88 | 122/76 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Takes oral TB meds with RN observation and knows them.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Takes RIPE meds with RN direct observation"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Lungs: right upper lobe cavity.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Right upper lobe cavitary lesion, 3.2 cm"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Sputum AFB smear #1 negative; #2, #3 and TB PCR pending; cultures take 6-8 weeks.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/11 Sputum AFB smear #1: Negative (no AFB seen)"
+        },
+        {
+          "page": 11,
+          "quote": "10/12 Sputum AFB smear #2: Pending"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Yes, airborne isolation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "remains on AIRBORNE ISOLATION."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Chest X-ray and CT reports included.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/10 CT chest: RUL thick-walled cavity with tree-in-bud nodularity."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vitals sent; SpO2 95-96% on room air.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/13 14:00 | 99.6 | 92 | 126/80 | 18 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No home oxygen.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No home O2."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_met",
+      "finding": "No respiratory therapy note in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "unknown",
+      "finding": "No respiratory therapy note; breathing treatments not documented either way.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "met",
+      "finding": "On empiric RIPE TB therapy since 10/12.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Empiric RIPE therapy started 10/12 per ID"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac condition this admission.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "AOx4; no cognitive impairment.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with ADLs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Independent with ADLs"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "not_applicable",
+      "finding": "Superseded by MOB-3/MOB-4.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "not_met",
+      "finding": "Suspected active tuberculosis not cleared by ID.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "NOT cleared for discharge to congregate or shared living setting."
+        },
+        {
+          "page": 6,
+          "quote": "ID has NOT cleared isolation."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use treatment involved.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "not_applicable",
+      "finding": "Superseded by OTH-2; form marks not a registered sex offender.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E1",
+      "status": "unknown",
+      "finding": "Form says pneumonia, but the chart's working diagnosis is suspected TB, which is not a listed eligible respiratory condition.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "suspected pulmonary tuberculosis"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E5",
+      "status": "met",
+      "finding": "SpO2 96% on room air.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "SpO2 96% RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No pneumothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X2",
+      "status": "met",
+      "finding": "No effusion on chest X-ray.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No effusion."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X3",
+      "status": "not_applicable",
+      "finding": "No tracheostomy.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X4",
+      "status": "met",
+      "finding": "CT chest shows no pulmonary embolism.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No pulmonary embolism."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "met",
+      "finding": "On room air; no BiPAP.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "SpO2 96% RA"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "TB chest X-ray",
+      "rule_ids": [
+        "OTH-4",
+        "FORM-X4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "PPD/TB: chest X-ray negative."
+        },
+        {
+          "page": 11,
+          "quote": "Right upper lobe cavitary lesion, 3.2 cm, with surrounding nodular opacities."
+        },
+        {
+          "page": 11,
+          "quote": "Findings concerning for active pulmonary tuberculosis."
+        }
+      ],
+      "note": "Form says the TB chest X-ray is negative; the radiology report shows a right upper lobe cavity concerning for active TB, and the patient is on airborne isolation. Chart wins."
+    },
+    {
+      "topic": "Diagnosis",
+      "rule_ids": [
+        "RSP-E1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Pneumonia, right upper lobe; weight loss"
+        },
+        {
+          "page": 5,
+          "quote": "suspected pulmonary tuberculosis. Airborne isolation in negative pressure room."
+        }
+      ],
+      "note": "Form lists pneumonia; the H&P and ID notes treat this as suspected pulmonary TB. Chart wins."
+    }
+  ],
+  "questions_for_hospital": [
+    "Has Infectious Disease or County Public Health cleared airborne isolation? We cannot accept a patient on isolation.",
+    "Can you send results of AFB smears #2 and #3 and the TB PCR when they are final?",
+    "The referral form says the TB chest X-ray was negative, but the radiology report shows a cavitary lesion. Can you confirm which is current?",
+    "Once isolation is cleared, can PT document whether he walks 100 ft?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "Suspected active pulmonary TB on airborne isolation that ID has not cleared, so OTH-4 and FORM-X4 exclude admission now. The form's 'chest X-ray negative' is contradicted by the radiology report showing a right upper lobe cavity."
+  }
+}

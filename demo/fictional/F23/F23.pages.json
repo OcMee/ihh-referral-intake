@@ -1,0 +1,105 @@
+{
+  "packet_id": "F23",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Coastal Pines Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Ivy Nakamura, RN CM\nPhone: 555-0130\nDate: 10/06/2026 11:30\nPages (including cover): 11\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n69M L MCA ischemic stroke, medically stable, ready for d/c.\nRequesting recuperative care. H&P, neuro note, PT/OT, labs attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Coastal Pines Hospital (fictional)\nDepartment/Floor: 3 North Neuro/Tele\nSocial Worker/Case Manager/Nurse: Ivy Nakamura, RN CM\nPhone: 555-0130\nEmail: inakamura@coastalpines.example\nNursing Station: 555-0131\nAuthorized By: Dr. M. Petrosyan\n## Patient Information\nName: Gregory Doe\nMRN: CP-3305719\nBirth Date: 07/21/1957\nGender: M\nEthnicity: Black/African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Acute ischemic stroke, L MCA\nAdmit Date: 09/30/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 09/30/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n## Referring Party Comments\nIndependent with ADLs. Ambulatory. Stable for discharge.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Gregory Doe\nDOB: 07/21/1957\nMember ID: OCH-55620937\n## Referring Provider\nFacility: Coastal Pines Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Cerebral infarction due to thrombosis of left middle cerebral artery\nICD-10: I63.312\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/06/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Coastal Pines Hospital (fictional) - PATIENT FACE SHEET\nPatient: Gregory Doe\nMRN: CP-3305719\nAccount #: 99305719\nDOB: 07/21/1957\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 09/30/2026 20:50 (ED arrival 09/30/2026 17:25)\nAdmit Type: Inpatient\nUnit/Bed: 3N-307\nAttending: Mariam Petrosyan, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 09/30/2026\nAttending: Mariam Petrosyan, MD (Hospital Medicine)\n## Chief Complaint\nSudden right arm and leg weakness, slurred speech\n## HPI\n69 y/o M experiencing homelessness (sleeps at Example Shelter x 6 months) brought by EMS after shelter staff noted sudden R-sided weakness and slurred speech. Last known well 4.5 hours before arrival; outside tPA window. CT head: no hemorrhage. MRI: acute L MCA territory infarct.\n## PMH\n- Hypertension, untreated x 2 years\n- Hyperlipidemia\n## Allergies\nNKDA\n## Social History\nHomeless x 6 months. Smokes 1/2 ppd. Denies alcohol and drug use.\n## Exam\nT 98.4F HR 88 BP 178/96 RR 16 SpO2 97% RA. AOx4. Mild dysarthria. R arm 2/5, R leg 3/5 strength.\n## Assessment / Plan\nAcute L MCA ischemic stroke with R hemiparesis. Aspirin + atorvastatin, permissive HTN then PO antihypertensives, telemetry, PT/OT/SLP.\nSigned: Mariam Petrosyan, MD 09/30/2026 22:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "progress_note",
+      "title": "Neurology progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NEUROLOGY PROGRESS NOTE\nDate: 10/06/2026 08:00\nS: No new symptoms. Speech improved, mild dysarthria remains.\nO: T 98.2F HR 74 BP 136/82 RR 16 SpO2 98% RA. AOx4.\nStrength: R arm 2/5, R leg 3/5, unchanged from admission. R facial droop.\nA/P:\n- L MCA ischemic stroke with persistent R hemiparesis\n- Aspirin 81 mg + clopidogrel 75 mg x 21 days, then aspirin alone. Atorvastatin 80 mg.\n- BP controlled on oral lisinopril + amlodipine\n- Medically stable for d/c. Recommend acute inpatient rehab or SNF per PT/OT.\nSigned: Mariam Petrosyan, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/05/2026 10:30\nDx: L MCA stroke, R hemiparesis\n## Assessment\nBed mobility: Moderate assist\nSit<>stand: Maximum assist x 1\nTransfers: Total assist x 2 for bed to chair\nGait: 10 ft with hemi-walker, maximum assist x 2, R knee buckling\nBalance: static fair, dynamic poor\n## Plan / Recommendation\nHigh fall risk. Not safe to ambulate without assistance. Recommend acute inpatient rehab or SNF. Wheelchair for distances.\nSigned: E. Valdez, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 10/05/2026 14:00\n## ADLs\nGrooming: Moderate assist (R hand non-functional)\nUB dressing: Moderate assist\nLB dressing: Maximum assist\nToileting: Total assist for toileting and clothing management\nShower: Total assist\nCognition: AOx4, follows 2-step commands\n## Recommendation\nRequires 24-hour physical assistance for ADLs. Recommend acute inpatient rehab or SNF.\nSigned: J. Whitaker, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Case management and social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT / SOCIAL WORK NOTE\nDate: 10/06/2026 09:45\nPt AOx4, cooperative, no behavioral concerns per nursing.\nPsychosocial screen: denies suicidal ideation. Denies homicidal ideation. No hallucinations. No psychiatric history. No history of conservatorship or FSP.\nSubstance use: denies alcohol and drug use. Tobacco cessation counseling given.\nAcute rehab referral: declined by insurance 10/05. SNF referrals sent, no bed offers yet.\nPt agreeable to recuperative care.\nSigned: Ivy Nakamura, RN CM\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "vitals",
+      "title": "Vitals, labs and microbiology",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/05 08:00 | 98.5 | 78 | 140/84 | 16 | 97% | RA\n10/05 16:00 | 98.3 | 76 | 138/82 | 16 | 98% | RA\n10/05 23:00 | 98.0 | 72 | 132/80 | 14 | 98% | RA\n10/06 04:00 | 97.9 | 70 | 130/78 | 16 | 98% | RA\n10/06 08:00 | 98.2 | 74 | 136/82 | 16 | 98% | RA\n## LABS\n09/30 | WBC 7.9 | Hgb 14.2 | Plt 228 | Cr 1.1 | Glu 112 | A1c 5.8\n10/04 | WBC 7.2 | Hgb 13.8 | Cr 1.0 | LDL 162 H\n## MICROBIOLOGY\n10/01 06:00 MRSA nares PCR: NEGATIVE\n10/06 05:30 SARS-CoV-2 rapid antigen: NEGATIVE\n## IMAGING\n09/30 CT head: no hemorrhage\n09/30 MRI brain: acute L MCA territory infarct\n09/30 CXR: clear lungs\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST (PENDING)\nPatient: Gregory Doe  MRN: CP-3305719\n- Aspirin 81 mg PO daily\n- Clopidogrel 75 mg PO daily x 21 days\n- Atorvastatin 80 mg PO nightly\n- Lisinopril 20 mg PO daily\n- Amlodipine 5 mg PO daily\n- Nicotine patch 14 mg/24h daily\nPatient able to self-administer all medications: Yes, with setup (opens bottles with L hand)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}
