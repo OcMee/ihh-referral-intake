@@ -52,7 +52,7 @@ function runs(text, opts = {}) {
   const parts = text.split(/(\[REDACTED\]|\[X\]|\[ \]|\[\?\]|\[illegible\]|\[POSSIBLE MISSED REDACTION\])/g);
   for (const p of parts) {
     if (!p) continue;
-    const base = { font: FONT, size: opts.size || 17, bold: opts.bold, color: opts.color, italics: opts.italics };
+    const base = { font: opts.font || FONT, size: opts.size || 17, bold: opts.bold, color: opts.color, italics: opts.italics };
     if (p === "[REDACTED]") out.push(new TextRun({ ...base, text: " redacted ", color: "FFFFFF", size: 13, shading: { type: ShadingType.CLEAR, fill: "111111", color: "auto" } }));
     else if (p === "[X]") out.push(new TextRun({ ...base, text: "☒", font: "Segoe UI Symbol" }));
     else if (p === "[ ]") out.push(new TextRun({ ...base, text: "☐", font: "Segoe UI Symbol" }));
@@ -98,7 +98,7 @@ function band(label, fill, color, font, pages, title) {
 }
 
 function sectionHead(text, font, color) {
-  return para([new TextRun({ text, font, bold: true, size: font === SERIF ? 19 : 17, color })], {
+  return para(runs(text, { font, bold: true, size: font === SERIF ? 19 : 17, color }), {
     keepNext: true, after: 20, spacing: { before: 60, after: 20 },
     border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "BFBFBF", space: 1 } },
   });
@@ -216,7 +216,7 @@ function build(data, srcName) {
     body.push(band(lab, fill, color, font, d.pages.map(p => p.page), title));
     for (const p of d.pages) {
       body.push(para([
-        new TextRun({ text: `Page ${p.page}`, font: FONT, size: 13, bold: true, color: "999999" }),
+        new TextRun({ text: `Scan page ${p.page}`, font: FONT, size: 13, bold: true, color: "999999" }),
         ...(p.orientation !== "normal" ? [new TextRun({ text: `  · scanned ${p.orientation.replace("_", " ")}`, font: FONT, size: 13, color: "999999" })] : []),
         ...(p.legibility !== "good" ? [new TextRun({ text: `  · legibility ${p.legibility}`, font: FONT, size: 13, color: "A86400" })] : []),
       ], { spacing: { before: 50, after: 10 }, keepNext: true }));
