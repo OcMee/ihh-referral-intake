@@ -139,6 +139,7 @@
       const q = esc(s.quote).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
       text = text.replace(new RegExp(q, "i"), m => `<mark id="hit">${m}</mark>`);
     }
+    text = text.replace(/^## (.*)$/gm, "<b>$1</b>").replace(/^- /gm, "• ");
     const img = p.img ? p.img.replace("{nn}", String(pageObj.page).padStart(2, "0")) : null;
     const tab = s.tab || (img ? "scan" : "text");
     const r = s.rule ? p.rules.find(x => x.rule_id === s.rule) : null;
