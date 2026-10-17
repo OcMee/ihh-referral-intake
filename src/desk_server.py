@@ -125,7 +125,28 @@ def docx_to_pdf(b: bytes) -> bytes:
     return buf.getvalue()
 
 
+IMG = (".jpg", ".jpeg", ".png")
+
+
+def is_image(b: bytes, name: str = "") -> bool:
+    return b[:3] == b"\xff\xd8\xff" or b[:8] == b"\x89PNG\r\n\x1a\n" or name.lower().endswith(IMG)
+
+
+def images_to_pdf(imgs: list) -> bytes:
+    """Phone photos of a paper fax: each picture becomes one page, in the order given."""
+    if DRY:
+        raise ValueError("Dry run cannot use photos: it only knows the prepared fictional packets. Use the live mode.")
+    import pymupdf
+    out = pymupdf.open()
+    for b in imgs:
+        with pymupdf.open(stream=b) as im:
+            out.insert_pdf(pymupdf.open("pdf", im.convert_to_pdf()))
+    return out.tobytes()
+
+
 def to_pdf(b: bytes, name: str) -> bytes:
+    if is_image(b, name):
+        return images_to_pdf([b])
     return docx_to_pdf(b) if name.lower().endswith(".docx") or b[:2] == b"PK" else b
 
 
@@ -162,8 +183,11 @@ def accept(body: bytes, name: str, source: str, meta: dict = None) -> dict:
 
 def read_eml(raw: bytes):
     msg = email.message_from_bytes(raw, policy=email.policy.default)
-    pdfs = [to_pdf(part.get_content(), part.get_filename() or "") for part in msg.iter_attachments()
-            if part.get_content_type() == "application/pdf" or (part.get_filename() or "").lower().endswith((".pdf", ".docx"))]
+    parts = [(part.get_content(), part.get_filename() or "") for part in msg.iter_attachments()]
+    imgs = [b for b, n in parts if isinstance(b, bytes) and is_image(b, n)]
+    pdfs = [to_pdf(b, n) for b, n in parts if isinstance(b, bytes) and not is_image(b, n) and (b.startswith(b"%PDF") or n.lower().endswith((".pdf", ".docx")))]
+    if imgs:  # photos in one email are pages of one paper referral
+        pdfs.append(images_to_pdf(imgs))
     return pdfs, {"from": str(msg.get("From", ""))[:120], "subject": str(msg.get("Subject", ""))[:160]}
 
 
@@ -175,7 +199,7 @@ def watch() -> None:
     seen = {}
     while True:
         for f in sorted(INTAKE.iterdir()):
-            if not f.is_file() or f.suffix.lower() not in (".pdf", ".docx", ".eml"):
+            if not f.is_file() or f.suffix.lower() not in (".pdf", ".docx", ".eml", *IMG):
                 continue
             size = f.stat().st_size
             if seen.get(f) != size:  # wait until the file stops growing (fax software still writing)
@@ -187,7 +211,7 @@ def watch() -> None:
                 if f.suffix.lower() == ".eml":
                     # one referral per attachment: joining files could merge two patients into one review
                     pdfs, meta = read_eml(raw)
-                    res = {"error": "email has no PDF or Word attachment"}
+                    res = {"error": "email has no PDF, Word or photo attachment"}
                     ids = []
                     for i, b in enumerate(pdfs, 1):
                         part = {**meta, "attachment": f"{i} of {len(pdfs)}"} if len(pdfs) > 1 else meta
@@ -342,6 +366,15 @@ class Handler(SimpleHTTPRequestHandler):
                 res = accept(to_pdf(body, name), name, "upload")
             except ValueError as e:
                 res = {"error": str(e)}
+        elif path == "/api/upload/photos":
+            try:
+                form = json.loads(body)
+                imgs = [base64.b64decode(f["b64"]) for f in form.get("files", [])][:60]
+                if not imgs or not all(is_image(b) for b in imgs):
+                    return self.send_json({"error": "Photos must be JPG or PNG"}, 400)
+                res = accept(images_to_pdf(imgs), f"{len(imgs)} photos", "upload", {"photos": len(imgs)})
+            except ValueError as e:
+                res = {"error": str(e)}
         elif path == "/api/intake/fax":
             # the shape a fax service webhook would use: raw PDF body, sender's fax number in a header
             sender = unquote(self.headers.get("X-Fax-From") or "unknown")[:40]
@@ -349,11 +382,13 @@ class Handler(SimpleHTTPRequestHandler):
         elif path == "/api/intake/portal":
             try:
                 form = json.loads(body)
-                pdfs = [to_pdf(base64.b64decode(f["b64"]), str(f.get("name", ""))) for f in form.get("files", [])][:20]
+                raw = [(base64.b64decode(f["b64"]), str(f.get("name", ""))) for f in form.get("files", [])][:40]
+                imgs = [b for b, n in raw if is_image(b, n)]
+                pdfs = [to_pdf(b, n) for b, n in raw if not is_image(b, n)] + ([images_to_pdf(imgs)] if imgs else [])
                 if not pdfs:
                     return self.send_json({"error": "Attach at least one PDF"}, 400)
                 if not all(b.startswith(b"%PDF") for b in pdfs):
-                    return self.send_json({"error": "Every attached file must be a PDF or Word file"}, 400)
+                    return self.send_json({"error": "Every attached file must be a PDF, Word file or photo"}, 400)
                 clip = lambda k, n=120: str(form.get(k) or "")[:n]
                 meta = {"from": clip("sender"), "hospital": clip("hospital"), "contact": clip("contact"),
                         "declared_docs": [d for d in form.get("docs", []) if re.fullmatch(r"DOC-\d{1,2}", str(d))]}

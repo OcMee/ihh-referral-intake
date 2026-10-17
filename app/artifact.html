@@ -545,8 +545,8 @@ main { padding-block-end: 150px }
         <ol class="j-steps">${j.steps.map((k, i) => `<li class="${j.state === "done" || i < at ? "ok" : i === at ? (j.state === "error" ? "bad" : "now") : ""}">${STEP_NAMES[k]}</li>`).join("")}</ol>
         <p class="lbl">${esc(j.msg || "")}</p></div>`;
     }).join("");
-    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf,.docx" multiple hidden>
-        <b>Drop new referral PDFs or Word files here</b><small>or click to choose. One or more files, each becomes a referral. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
+    return `<section class="intake"><label class="drop" id="drop"><input type="file" id="file" accept="application/pdf,.pdf,.docx,image/jpeg,image/png,.jpg,.jpeg,.png" multiple hidden>
+        <b>Drop referrals here: PDF, Word or photos</b><small>or click to choose. Each PDF or Word file becomes a referral; photos dropped together become one referral, one page per photo. It is processed on this computer and saved in output/, which is never committed.${s.dry_run ? " DRY RUN: only the fictional F01 to F09 PDFs, with prepared results." : ""}</small></label>
       <p class="lbl channels">Also arriving here: <b>Fax</b> (fax service webhook) · <b>Email</b> to ${esc(s.email || "the intake address")} · <b>Folder</b> (files saved in the intake folder) · <b>Hospital portal</b> <a href="/portal" target="_blank" rel="noopener">open /portal</a></p>
       ${s.key ? "" : `<p class="lbl warn">No API key: start the server with ANTHROPIC_API_KEY set.</p>`}
       ${ui.uploadError ? `<p class="lbl warn">${esc(ui.uploadError)}</p>` : ""}${jobs}</section>`;
@@ -555,8 +555,16 @@ main { padding-block-end: 150px }
     const files = [...(list || [])], errs = [];
     ui.uploadError = null;
     if (!files.length) return;
-    for (const file of files) {
-      if (!/\.(pdf|docx)$/i.test(file.name)) { errs.push(`${file.name}: not a PDF or Word file`); continue }
+    const photos = files.filter(f => /\.(jpe?g|png)$/i.test(f.name));
+    if (photos.length) {
+      try {
+        const b64 = f => new Promise((ok, no) => { const r = new FileReader(); r.onload = () => ok(r.result.split(",")[1]); r.onerror = no; r.readAsDataURL(f) });
+        const r = await fetch("/api/upload/photos", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ files: await Promise.all(photos.map(async f => ({ name: f.name, b64: await b64(f) }))) }) });
+        const j = await r.json(); if (!r.ok) errs.push(`photos: ${j.error || "upload failed"}`);
+      } catch (e) { errs.push("The local server is not answering.") }
+    }
+    for (const file of files.filter(f => !photos.includes(f))) {
+      if (!/\.(pdf|docx)$/i.test(file.name)) { errs.push(`${file.name}: not a PDF, Word file or photo`); continue }
       try {
         const r = await fetch("/api/upload", { method: "POST", headers: { "Content-Type": "application/pdf", "X-Filename": encodeURIComponent(file.name) }, body: file });
         const j = await r.json(); if (!r.ok) errs.push(`${file.name}: ${j.error || "upload failed"}`);
