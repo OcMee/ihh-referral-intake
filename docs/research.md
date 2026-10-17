@@ -110,3 +110,22 @@ more independent sources or the publisher's own page agree. Open the URL before 
 | 3.7 vs 8.3 hospital days over 12 months, respite vs usual care | Confirmed in abstract (Buchanan et al., AJPH 2006;96(7):1278-1281). An NHCHC brief cites 3.4 vs 8.1: use the abstract's numbers | "Chicago cohort; no difference in ED or outpatient visits" | https://pmc.ncbi.nlm.nih.gov/articles/PMC1483848/ |
 | 6,321 people homeless in Orange County, Jan 2026 (3,256 sheltered, 3,065 unsheltered), down 13.7% from 2024 | Confirmed (County of Orange press release and 2026 PIT report) | as stated | https://www.ocgov.com/press/county-orange-announces-2026-point-time-count-results |
 | Recuperative care rules change Jan 1 2027 | Partly confirmed: DHCS says a revised recuperative care definition takes effect Jan 1 2027, with a plan to sunset short-term post-hospitalization housing and an updated room and board policy | Do NOT say "room and board comes out" or "stricter supervision": the actual wording was not found | https://www.dhcs.ca.gov/news/stakeholder-news-october-5-2026/ |
+
+## Read from the original documents (uploaded by the team, Oct 17 2026)
+
+These replace earlier search-summary claims where they differ.
+
+**Recup Connect (Safety Net Connect + NIMRC).** Healthcare Innovation, David Raths, Oct 17 2025.
+- Features: real-time bed availability and eligibility criteria; electronic referrals to preferred facilities or a shared pending queue for provider review; secure messaging between care settings.
+- Scale at the time: 5 LA hospitals in the pilot (4 CommonSpirit + Huntington), 3 onboarded; "almost 1,000 referrals in the system", much of it entered by recuperative care facilities to track patients. (Earlier summary of "660+ referrals, 7 sites" came from a different, unverified source: do not use it.)
+- Safety Net Connect also runs "the Cal-AIM platform for our local Orange County Medicaid plan called Cal Optima" (CEO quote). IHH may already use it.
+- The article does not say the platform reads the clinical packet against the criteria; it shows each facility's criteria to the discharge planner.
+
+**CarePort Referral Management (WellSky), brochure.** Receive referrals from hospitals in one system; notifications by text, fax or email; transfer demographic, financial and clinical data into back-office systems; share bed availability; configurable assessments; intake tasks; admit from a referral work list; mobile app. No criteria evaluation is described.
+
+**Tennr.** Fierce Healthcare, Heather Landi, Jun 18 2025; IVP announcement, Jun 18 2025; NeuronFeed profile.
+- Reads faxed referrals, extracts diagnosis, insurance, ordering provider, clinical justification; flags missing information; checks insurance eligibility; routes to schedulers.
+- Its model RaeLM is "trained on 100 million anonymized healthcare documents, 2.3 billion distinct data fields and 8,000 sets of criteria" and "evaluates documents against" criteria (payer and qualification criteria; sentence cut off in our copy). **So Tennr does evaluate documents against criteria.** Our honest difference: it targets specialty practices, DME suppliers, labs and provider groups (insurance and scheduling), not a homeless recuperative care provider's admission rules.
+- Scale: about 10 million documents a month (CEO, Fierce). Funding: $101M Series C at a $605M valuation; Fierce says $162M raised in total, NeuronFeed says $138M (conflict).
+- Accuracy "over 99.8%" is IVP's (investor) claim, not independently verified.
+- Fierce also reports an estimate that 70% of healthcare organizations still exchange information by fax (source of the estimate not shown).
