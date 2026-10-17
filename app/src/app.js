@@ -172,7 +172,8 @@
   // ---------- intake (only with src/desk_server.py running on this computer) ----------
   const STEP_NAMES = { fix: "Straighten pages", transcribe: "Read every page", check: "Check IHH rules", score: "Verify quotes, score", build: "Add to inbox" };
   function dropzone() {
-    const s = ui.server; if (!s) return "";
+    const s = ui.server;
+    if (!s) return `<section class="intake"><div class="drop off"><b>New referrals arrive on the local version</b><small>Drag and drop (PDF, Word, photos), fax, email, a watched folder and the hospital portal run on the coordinator’s computer, so packets never pass through this website. Start it with start-desk.bat and open 127.0.0.1:8000. See the README.</small></div></section>`;
     const jobs = (ui.jobs || []).slice().reverse().map(j => {
       const at = j.steps.indexOf(j.stage);
       return `<div class="job ${j.state}"><div class="j-top"><b>${esc(j.id)}</b><span class="src">${esc(j.source)}</span><span>${esc(j.name)}</span>${j.dry_run ? `<span class="tagx">dry run</span>` : ""}

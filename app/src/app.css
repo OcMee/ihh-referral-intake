@@ -343,3 +343,14 @@ main { padding-block-end: 150px }
 .rc.fit .num { color: #4cc38a } .rc.nofit .num { color: #ff7a6e } .rc.info .num { color: var(--brand-amber) }
 .hero2 .lede .soon { color: var(--brand-amber) }
 .pf.here { font: inherit; text-align: left; cursor: pointer; border-left-color: var(--ink); background: var(--warn-bg) } .pf.here:hover { border-color: var(--brand-orange) }
+.drop.off { cursor: default; border-style: solid; border-color: var(--line-strong); background: var(--surface-2) } .drop.off:hover { background: var(--surface-2) }
+
+/* softer shade: the near-black header and hero were hard on the eyes; same layout, mid-dark grey */
+:root { --shade: #3d4046; --shade-2: #494c53; --shade-line: #5c6068 }
+.bar { background: var(--shade) }
+.bar .tag { border-color: var(--shade-line) }
+.hero2 { background: linear-gradient(135deg, #474a51 0%, var(--shade) 60%); box-shadow: 0 14px 32px rgba(0, 0, 0, .10) }
+.pipe > div, .pipe .hot { background: var(--shade-2); border-color: var(--shade-line) }
+.rc { background: var(--shade-2); border-color: var(--shade-line) }
+.seg button.on { background: var(--shade) }
+.who-form input, .who-form select { background: var(--shade-2); border-color: var(--shade-line) }
