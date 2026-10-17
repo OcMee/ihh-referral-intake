@@ -238,6 +238,8 @@ def main() -> None:
     ap.add_argument("pdf", type=Path)
     ap.add_argument("--transcribe", action="store_true", help="call Claude to transcribe pages")
     ap.add_argument("--pages-json", type=Path, help="use an existing transcript JSON")
+    ap.add_argument("--skip-fix", action="store_true",
+                    help="skip ocrmypdf (no Tesseract/Ghostscript needed); use pages as scanned")
     args = ap.parse_args()
 
     src = args.pdf.resolve()
@@ -245,8 +247,12 @@ def main() -> None:
     out = OUT_ROOT / packet_id
     out.mkdir(parents=True, exist_ok=True)
 
-    print(f"[1/3] fixing pages -> {out}")
-    fixed = fix(src, out)
+    if args.skip_fix:
+        print("[1/3] skipped fix, using pages as scanned")
+        fixed = src
+    else:
+        print(f"[1/3] fixing pages -> {out}")
+        fixed = fix(src, out)
     images = render(fixed, out)
 
     pages_json = args.pages_json or out / f"{packet_id}.pages.json"
