@@ -306,6 +306,7 @@
         <button data-close aria-label="Close">✕</button></div>
       ${r ? `<div class="rulebox"><span class="chip ${r.status}">${ICON[r.status] || ""} <span class="rid">${r.rule_id}</span>${esc(r.short)}</span><div class="t">${esc(r.finding)}</div><div class="t" style="font-size:11.5px">Rule: ${esc(r.text)}</div></div>` : ""}
       <div class="body">${tabs.length > 1 ? `<div class="tabs">${tabs.map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? "on" : ""}">${l}</button>`).join("")}</div>` : `<div class="lbl" style="margin-bottom:8px">Transcript of the packet page.</div>`}
+        ${!APP.meta.real && tab !== "text" ? `<p class="lbl fict">Fictional original: IHH’s real referral form filled with invented answers; other pages printed from the invented case file and given a fax-scan look.</p>` : ""}
         ${tab === "pdf" ? `<iframe class="pdfv" src="${pdf}#page=${pageObj.page}&view=FitH" title="Original PDF, page ${pageObj.page}"></iframe>${s.quote ? `<p class="lbl">Looking for: <mark>${esc(s.quote)}</mark></p>` : ""}`
           : tab === "scan" ? `<img src="${img}" alt="Original scan of page ${pageObj.page}">${s.quote ? `<p class="lbl">Looking for: <mark>${esc(s.quote)}</mark></p>` : ""}` : `<pre>${text}</pre>`}</div></aside>`;
   }

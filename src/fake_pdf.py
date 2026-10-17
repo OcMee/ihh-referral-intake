@@ -30,8 +30,54 @@ def packets():
 
 
 def render(pid: str, pages: list, dest: Path) -> None:
+    """Typed pages, IHH's real referral form filled with the fictional answers, then a fax-scan look."""
+    import io
+    import ihh_form
+    import pymupdf
+    buf = io.BytesIO()
+    _typed(pid, pages, buf)
+    typed = pymupdf.open(stream=buf.getvalue(), filetype="pdf")
+    out = pymupdf.open()
+    for i, p in enumerate(pages):
+        if p["doc_type"] == "referral_form":
+            out.insert_pdf(pymupdf.open(stream=ihh_form.fill(p["text"]), filetype="pdf"))
+        else:
+            out.insert_pdf(typed, from_page=i, to_page=i)
+    scan(out, pid, dest, form_pages={i + 1 for i, p in enumerate(pages) if p["doc_type"] == "referral_form"})
+
+
+def scan(doc, pid: str, dest: Path, form_pages=frozenset()) -> None:
+    """Make clean pages look faxed: grey, slight skew, speckle, soft edges, a fax header line."""
+    import io
+    import random
+    import pymupdf
+    from PIL import Image, ImageDraw, ImageFilter
+    rnd = random.Random(pid)  # same packet -> same look every build
+    n = len(doc)
+    pdf = pymupdf.open()
+    for i, pg in enumerate(doc, start=1):
+        pix = pg.get_pixmap(dpi=110, colorspace=pymupdf.csGRAY)
+        im = Image.frombytes("L", (pix.width, pix.height), pix.samples)
+        if i in form_pages:  # typed pages already carry the fax strip; the IHH form gets the same line
+            d = ImageDraw.Draw(im)
+            d.text((40, 10), f"FAX  {pid}  FICTIONAL DEMO RECORD - NOT A REAL PATIENT", fill=30)
+            d.text((im.width - 140, 10), f"PAGE {i:02d}/{n:02d}", fill=30)
+        im = im.rotate(rnd.uniform(-0.8, 0.8), resample=Image.BICUBIC, expand=False, fillcolor=255)
+        im = im.filter(ImageFilter.GaussianBlur(0.45))
+        noise = Image.effect_noise(im.size, 26).point(lambda v: 0 if v < 18 else 255)
+        im = Image.composite(im, Image.new("L", im.size, 70), noise)  # dark specks
+        im = im.point(lambda v: 255 if v > 205 else int(v * 0.85))  # fax contrast
+        b = io.BytesIO()
+        im.save(b, "JPEG", quality=62)
+        page = pdf.new_page(width=pg.rect.width, height=pg.rect.height)
+        page.insert_image(page.rect, stream=b.getvalue())
+    pdf.set_metadata({"title": f"{pid} fictional referral packet (scan look)", "creationDate": "", "modDate": ""})
+    pdf.save(dest, garbage=3, deflate=True)
+
+
+def _typed(pid: str, pages: list, dest) -> None:
     W, H = letter
-    c = canvas.Canvas(str(dest), pagesize=letter)
+    c = canvas.Canvas(dest, pagesize=letter)
     c.setTitle(f"{pid} fictional referral packet")
     n = len(pages)
     for p in pages:
@@ -84,8 +130,8 @@ def readable() -> None:
         imgs = []
         with pymupdf.open(OUT / f"{pid}.pdf") as doc:
             for i, pg in enumerate(doc, start=1):
-                img = tmp / f"p-{i:02d}.png"
-                pg.get_pixmap(dpi=90).save(img)
+                img = tmp / f"p-{i:02d}.jpg"  # JPEG: the scan speckle makes PNG pages huge
+                pg.get_pixmap(dpi=90).save(img, jpg_quality=60)
                 imgs.append(img)
         clean.build({"packet_id": pid, "pages": pages}, imgs, OUT / f"{pid}.readable.pdf", f"{pid}.pdf (fictional)")
         for img in imgs:

@@ -363,3 +363,4 @@ main { padding-block-end: 150px }
 .hero2 .lede .soon { color: #faac23 } .hero2 .eyebrow, .eyebrow.who { color: #ff860f }
 .hero2, .hero2 h1 { color: #ffffff } .hero2 .lede { color: #e6e6e6 }
 .pipe > div:first-child { background: linear-gradient(135deg, #ff860f, #faac23) }
+.lbl.fict { margin: 0 0 8px; padding: 6px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn) }
