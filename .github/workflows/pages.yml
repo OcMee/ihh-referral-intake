@@ -24,7 +24,7 @@ jobs:
         run: |
           if grep -qE "\bR(0[1-9]|1[01])\b" app/index.html; then echo "app/index.html mentions a real packet ID; refusing to publish"; exit 1; fi
       - name: Stage site
-        run: mkdir -p _site && cp app/index.html _site/index.html && touch _site/.nojekyll
+        run: mkdir -p _site/pdf && cp app/index.html _site/index.html && cp app/pdf/*.pdf app/pdf/*.docx _site/pdf/ && touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

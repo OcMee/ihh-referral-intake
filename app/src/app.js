@@ -143,7 +143,7 @@
         <div class="meta">${clock(p)} ${ui.showIhh && p.ihh ? `<span class="ihh">· IHH decided: ${p.ihh}</span>` : ""}</div></div>
       <div class="grid3">
         <div class="card"><h2>Key facts <small>click a page to see it</small></h2><ul class="facts">${facts}</ul></div>
-        <div class="card ringbox">${ring(p.fit.score, p.fit.band)}<div class="band" style="color:${BAND[p.fit.band]}">${esc(p.fit.label)}</div>
+        <div class="card ringbox">${ring(p.fit.score, p.fit.band)}<div class="band" style="color:${BAND[p.fit.band]}">${esc(p.fit.label)}</div>${proof(p)}
           <div class="second">Claude's read: <b>${esc(cf.score ?? "–")}/100 · ${esc(String(cf.recommendation || "").replace("_", " "))}</b><br>${esc(cf.reason || "")}</div>
           ${reasons ? `<details class="why"><summary>How the score was built</summary><ul><li>start 100</li>${reasons}${p.fit.blockers.length ? "<li>verified blocker: capped at 15</li>" : "<li>no blocker: floor 40</li>"}</ul></details>` : ""}</div>
         <div class="card"><h2>Blockers</h2>${blocks}<h2 style="margin-top:12px">Form vs chart</h2>${confs}</div>
@@ -152,6 +152,15 @@
       <div class="two"><div class="card"><h2>Missing from packet</h2><div class="miss">${missing}</div></div>
         <div class="card"><h2>Ask the hospital <small>${(p.questions || []).length} questions</small></h2><ol class="qs">${(p.questions || []).map(q => `<li>${esc(q)}</li>`).join("") || "<li>No open questions</li>"}</ol></div></div>
       <p class="foot">✓ next to a page means the quote was found on that page (${p.verification.verified}/${p.verification.quotes} criteria quotes verified). "check" means read the page yourself. Transcripts are AI-made from the scans.</p>`;
+  }
+
+  function proof(p) {
+    const v = p.verification, files = !APP.meta.artifact;
+    const link = (href, name, sub) => href && files ? `<a class="pf" href="${href}" target="_blank" rel="noopener"><b>${name}</b><small>${sub}</small></a>` : "";
+    return `<div class="proof"><p class="eyebrow">Proof behind the score</p>
+      <div class="pf-row">${link(p.pdf, "Original PDF", `${p.pages} pages as faxed`)}${link(p.readable, "Readable PDF", "each page beside its transcript")}${link(p.docx, "Word copy", "compact, in the form styles")}</div>
+      ${files ? "" : `<p class="lbl">The files open in the GitHub Pages or local version of this app.</p>`}
+      <p class="pf-check"><span class="vf">✓</span> ${v.verified}/${v.quotes} quotes found on the page they cite</p></div>`;
   }
 
   // ---------- evidence panel ----------
@@ -166,15 +175,18 @@
     }
     text = text.replace(/^## (.*)$/gm, "<b>$1</b>").replace(/^- /gm, "• ");
     const img = p.img ? p.img.replace("{nn}", String(pageObj.page).padStart(2, "0")) : null;
-    const tab = s.tab || (img ? "scan" : "text");
+    const pdf = p.pdf && !APP.meta.artifact ? p.pdf : null;
+    const tabs = [pdf && ["pdf", "Original PDF"], img && ["scan", "Scan image"], ["text", "Transcript"]].filter(Boolean);
+    const tab = s.tab && tabs.some(t => t[0] === s.tab) ? s.tab : tabs[0][0];
     const r = s.rule ? p.rules.find(x => x.rule_id === s.rule) : null;
     return `<aside class="panel" aria-label="Evidence">
       <div class="ph"><b>Page ${pageObj.page} of ${p.pages}</b><span class="lbl">${esc(pageObj.title)}</span><span class="sp"></span>
         <button data-nav="-1" ${i <= 0 ? "disabled" : ""} aria-label="Previous page">◀</button><button data-nav="1" ${i >= p.page_list.length - 1 ? "disabled" : ""} aria-label="Next page">▶</button>
         <button data-close aria-label="Close">✕</button></div>
       ${r ? `<div class="rulebox"><span class="chip ${r.status}">${ICON[r.status] || ""} <span class="rid">${r.rule_id}</span>${esc(r.short)}</span><div class="t">${esc(r.finding)}</div><div class="t" style="font-size:11.5px">Rule: ${esc(r.text)}</div></div>` : ""}
-      <div class="body">${img ? `<div class="tabs"><button data-tab="scan" class="${tab === "scan" ? "on" : ""}">Original scan</button><button data-tab="text" class="${tab === "text" ? "on" : ""}">Transcript</button></div>` : `<div class="lbl" style="margin-bottom:8px">${APP.meta.real ? "" : "Fictional packet: transcript only, no scan."}</div>`}
-        ${tab === "scan" && img ? `<img src="${img}" alt="Original scan of page ${pageObj.page}">${s.quote ? `<p class="lbl">Looking for: <mark>${esc(s.quote)}</mark></p>` : ""}` : `<pre>${text}</pre>`}</div></aside>`;
+      <div class="body">${tabs.length > 1 ? `<div class="tabs">${tabs.map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? "on" : ""}">${l}</button>`).join("")}</div>` : `<div class="lbl" style="margin-bottom:8px">Transcript of the packet page.</div>`}
+        ${tab === "pdf" ? `<iframe class="pdfv" src="${pdf}#page=${pageObj.page}&view=FitH" title="Original PDF, page ${pageObj.page}"></iframe>${s.quote ? `<p class="lbl">Looking for: <mark>${esc(s.quote)}</mark></p>` : ""}`
+          : tab === "scan" ? `<img src="${img}" alt="Original scan of page ${pageObj.page}">${s.quote ? `<p class="lbl">Looking for: <mark>${esc(s.quote)}</mark></p>` : ""}` : `<pre>${text}</pre>`}</div></aside>`;
   }
 
   // ---------- decision ----------

@@ -22,11 +22,11 @@ DECISIONS = REPO / "challenges/1-referral-intake/eval/decisions.json"
 ARRIVED = [96, 12, 131, 44, 23, 71, 58, 7, 109, 35, 84, 18, 63, 102, 29, 50, 3, 77, 40, 125]
 
 
-def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None) -> dict:
+def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=None, readable=None, docx=None) -> dict:
     keep = ("patient", "fit", "claude_fit", "verification", "key_facts", "rules", "conflicts", "questions_for_hospital")
     out = {k: d.get(k) for k in keep}
     out["questions"] = out.pop("questions_for_hospital") or []
-    out.update(id=d["packet_id"], pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh,
+    out.update(id=d["packet_id"], pages=len(pages["pages"]), received_min=ARRIVED[i % len(ARRIVED)], img=img, ihh=ihh, pdf=pdf, readable=readable, docx=docx,
                documents=[{**x, "name": checklist.get(x["doc_id"], x["doc_id"])} for x in d.get("documents", [])],
                page_list=[{"page": p["page"], "title": p["title"], "doc_type": p["doc_type"], "text": p["text"]} for p in pages["pages"]])
     return out
@@ -34,6 +34,7 @@ def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None) -> d
 
 def html(data: dict, artifact: bool) -> str:
     shell = (SRC / "shell.html").read_text()
+    data = {**data, "meta": {**data["meta"], "artifact": artifact}}
     blob = json.dumps(data, separators=(",", ":")).replace("</", "<\\/")
     page = (shell.replace("<!--STYLE-->", f"<style>{(SRC / 'app.css').read_text()}</style>")
                  .replace("<!--DATA-->", f"<script>window.APP={blob};</script>")
@@ -49,10 +50,12 @@ def public(checklist: dict) -> list:
     rules = score.load_rules()
     packets, i = [], 0
     for check, pages in ((make_demo.c1, make_demo.p1), (make_demo.c2, make_demo.p2), (make_demo.c3, make_demo.p3)):
-        packets.append(pack(score.score_packet(check, {"pages": pages}, rules), {"pages": pages}, checklist, i)); i += 1
+        packets.append(pack(score.score_packet(check, {"pages": pages}, rules), {"pages": pages}, checklist, i, pdf=f"pdf/{check['packet_id']}.pdf",
+                            readable=f"pdf/{check['packet_id']}.readable.pdf", docx=f"pdf/{check['packet_id']}.docx")); i += 1
     for f in sorted((REPO / "demo/fictional").glob("F0?/F0?.json")):
         pages = json.loads(f.with_name(f"{f.stem}.pages.json").read_text())
-        packets.append(pack(score.score_packet(json.loads(f.read_text()), pages, rules), pages, checklist, i)); i += 1
+        packets.append(pack(score.score_packet(json.loads(f.read_text()), pages, rules), pages, checklist, i, pdf=f"pdf/{f.stem}.pdf",
+                            readable=f"pdf/{f.stem}.readable.pdf", docx=f"pdf/{f.stem}.docx")); i += 1
     return packets
 
 
@@ -62,7 +65,9 @@ def real(checklist: dict) -> list:
     for i, f in enumerate(sorted((REPO / "output").glob("R??/R??.scored.json"))):
         pid = f.parent.name
         pages = json.loads((f.parent / f"{pid}.pages.json").read_text())
-        packets.append(pack(json.loads(f.read_text()), pages, checklist, i, img=f"../{pid}/pages/p-{{nn}}.png", ihh=truth.get(pid)))
+        packets.append(pack(json.loads(f.read_text()), pages, checklist, i, img=f"../{pid}/pages/p-{{nn}}.png", ihh=truth.get(pid),
+                            pdf=f"../../challenges/1-referral-intake/packets/{pid}.pdf",
+                            readable=f"../{pid}/{pid}.readable.pdf", docx=f"../{pid}/{pid}.docx"))
     return packets
 
 
