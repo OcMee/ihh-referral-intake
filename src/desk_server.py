@@ -185,6 +185,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--port", type=int, default=8000)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--open", action="store_true", help="open the browser once the server is listening")
     args = ap.parse_args()
     DRY = args.dry_run
     if not DRY and not os.environ.get("ANTHROPIC_API_KEY"):
@@ -193,8 +194,15 @@ def main() -> None:
         print("note: ocrmypdf not found, pages will be used as scanned (no auto-rotate)")
     import build_app
     build_app.main(["--real"])
-    srv = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    print(f"Referral Desk{' (DRY RUN)' if DRY else ''}: http://127.0.0.1:{args.port}   Ctrl+C to stop")
+    try:
+        srv = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
+    except OSError as e:
+        sys.exit(f"Port {args.port} is busy ({e}). Close the other Referral Desk window, or add --port 8001.")
+    url = f"http://127.0.0.1:{args.port}"
+    print(f"Referral Desk{' (DRY RUN)' if DRY else ''} is running: {url}   Keep this window open. Ctrl+C to stop.")
+    if args.open:
+        import webbrowser
+        threading.Timer(0.5, webbrowser.open, [url]).start()
     srv.serve_forever()
 
 

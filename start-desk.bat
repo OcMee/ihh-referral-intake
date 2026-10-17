@@ -16,6 +16,8 @@ if /i "%~1"=="--dry-run" goto run
 if "%ANTHROPIC_API_KEY%"=="" set /p ANTHROPIC_API_KEY=Paste your Anthropic API key and press Enter:
 if "%ANTHROPIC_WORKSPACE_ID%"=="" set /p ANTHROPIC_WORKSPACE_ID=Workspace ID (starts with wrkspc_), or press Enter to skip:
 :run
-start "" cmd /c "timeout /t 8 >nul & start http://127.0.0.1:8000"
-python src\desk_server.py %*
+echo Starting Referral Desk. The browser opens when it is ready...
+python src\desk_server.py --open %*
+echo.
+echo Referral Desk stopped. If you see an error above, take a screenshot of this window.
 pause
