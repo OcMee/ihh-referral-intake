@@ -1,0 +1,143 @@
+{
+  "packet_id": "F08",
+  "patient": {
+    "summary": "79F, POD3 after nail fixation of closed L hip fracture from a fall, unhoused",
+    "age": "79",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal (referral form says Medi-Cal/Medicare)",
+    "housing": "Unhoused (was living in car, car towed 07/2026, now at bus shelter)",
+    "admit_reason": "Closed left intertrochanteric hip fracture after a fall, fixed with a nail 08/11",
+    "pages": [2, 3, 4, 5, 7]
+  },
+  "key_facts": [
+    {"label": "Mobility", "text": "PT on 08/13: walked only 15 ft with a front-wheeled walker and moderate assist, high fall risk; PT says not safe for an unsupervised setting.", "pages": [9], "quote": "Gait: 15 ft with FWW, Mod A x1, w/c follow", "quote_page": 9},
+    {"label": "Mobility", "text": "Needs 1-2 person assist for transfers and toileting.", "pages": [9], "quote": "Requires 1-2 person assist for transfers and toileting.", "quote_page": 9},
+    {"label": "Other", "text": "OT: maximal assist for lower-body dressing and toileting hygiene; shower not attempted; OT recommends SNF.", "pages": [10], "quote": "Toileting hygiene: Max A", "quote_page": 10},
+    {"label": "Other", "text": "Night nursing: up to commode only with 2-person assist, could not do own peri-care, one episode of incontinence.", "pages": [11], "quote": "Unable to perform own peri-care; RN assisted.", "quote_page": 11},
+    {"label": "Meds/IV/O2", "text": "Discharging on daily enoxaparin injections for 28 days, but she has not yet self-injected.", "pages": [13], "quote": "(pt has not yet self-injected)", "quote_page": 13},
+    {"label": "Wounds", "text": "Two stapled L hip incisions, clean/dry/intact; staple removal booked at ortho clinic 08/25.", "pages": [7, 8], "quote": "Staple removal: Ortho clinic 08/25/2026", "quote_page": 7},
+    {"label": "Cognition", "text": "AOx4 with good safety awareness.", "pages": [10], "quote": "Cognition: AOx4, good safety awareness", "quote_page": 10},
+    {"label": "Infection", "text": "MRSA PCR negative 08/10; COVID rapid antigen negative 08/14 05:00, valid for an arrival before 08/15 05:00.", "pages": [12], "quote": "08/14 05:00 SARS-CoV-2 rapid antigen: Negative", "quote_page": 12}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Unhoused 79-year-old recovering from hip fracture surgery.", "evidence": [{"page": 4, "quote": "Address: NO FIXED ADDRESS (homeless)"}, {"page": 5, "quote": "unhoused (lives in her car, car towed 07/2026, now at bus shelter)"}]},
+    {"rule_id": "GEN-2", "status": "not_applicable", "finding": "Unhoused; GEN-1 covers her.", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Authorization request marks her at risk of re-hospitalization.", "evidence": [{"page": 3, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "not_met", "finding": "OT and nursing document max assist for lower-body dressing and toileting hygiene; the form's 'independent with ADLs' is contradicted by the chart.", "evidence": [{"page": 10, "quote": "LB dressing: Max A (unable to reach feet, no AE training yet)"}, {"page": 10, "quote": "Toileting hygiene: Max A"}]},
+    {"rule_id": "ADL-2", "status": "not_met", "finding": "Shower not attempted; OT anticipates moderate assist even with a tub bench, and she cannot do her own peri-care.", "evidence": [{"page": 10, "quote": "Shower: not attempted; anticipate Mod A with tub bench"}, {"page": 11, "quote": "Unable to perform own peri-care; RN assisted."}]},
+    {"rule_id": "ADL-3", "status": "not_met", "finding": "Toileting requires 1-2 person assist and she had an incontinence episode before help arrived.", "evidence": [{"page": 11, "quote": "pt up to bedside commode x2 with 2-person assist and FWW."}, {"page": 9, "quote": "Requires 1-2 person assist for transfers and toileting."}]},
+
+    {"rule_id": "MOB-1", "status": "not_met", "finding": "Uses a front-wheeled walker but only with moderate assist; not independent with DME.", "evidence": [{"page": 9, "quote": "Sit<>stand from bed: Mod A x1 with FWW"}]},
+    {"rule_id": "MOB-2", "status": "met", "finding": "PT re-evaluation and OT evaluation were sent.", "evidence": [{"page": 9, "quote": "PHYSICAL THERAPY - POD3 RE-EVALUATION"}, {"page": 10, "quote": "OCCUPATIONAL THERAPY EVALUATION"}]},
+    {"rule_id": "MOB-3", "status": "not_met", "finding": "Walked 15 ft with moderate assist, knee buckling, high fall risk; far below 100 ft at modified independence.", "evidence": [{"page": 9, "quote": "Gait: 15 ft with FWW, Mod A x1, w/c follow"}, {"page": 9, "quote": "Balance: poor dynamic standing, high fall risk"}]},
+    {"rule_id": "MOB-4", "status": "not_met", "finding": "Not wheelchair dependent, but transfers need 1-2 person assist, so independent transfer is not met either way.", "evidence": [{"page": 9, "quote": "Bed->chair stand-pivot: Mod A x2 (08/12); Min-Mod A x1 (08/13)"}]},
+
+    {"rule_id": "MH-1", "status": "met", "finding": "Referral form reports no mental health diagnosis; no psychiatric issues in the chart.", "evidence": [{"page": 2, "quote": "Mental Health DX: Yes [ ] No [X]"}]},
+    {"rule_id": "MH-2", "status": "unknown", "finding": "Suicidal ideation is not addressed in the chart.", "evidence": []},
+    {"rule_id": "MH-3", "status": "unknown", "finding": "Hallucinations are not addressed in the chart.", "evidence": []},
+    {"rule_id": "MH-4", "status": "not_applicable", "finding": "Not admitted with alcohol intoxication.", "evidence": []},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship or FSP history is not mentioned.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "unknown", "finding": "Form says she self-administers all meds, but the chart says she has not yet self-injected the enoxaparin she will need daily for 28 days.", "evidence": []},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 on H&P and OT evaluation.", "evidence": [{"page": 10, "quote": "Cognition: AOx4, good safety awareness"}]},
+
+    {"rule_id": "OTH-1", "status": "unknown", "finding": "No mention of aggressive behavior either way.", "evidence": []},
+    {"rule_id": "OTH-2", "status": "met", "finding": "Referral form says she is not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "OTH-3", "status": "not_applicable", "finding": "No IV access at discharge; enoxaparin is subcutaneous.", "evidence": []},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation status not stated (MRSA and COVID negative).", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "not_applicable", "finding": "Not a hospice patient.", "evidence": []},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative 08/10.", "evidence": [{"page": 12, "quote": "08/10 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "unknown", "finding": "COVID rapid antigen negative 08/14 05:00, but the 08/15 arrival time is not stated; the swab is within 24 hours only for an arrival before 08/15 05:00, otherwise a repeat is needed.", "evidence": [{"page": 12, "quote": "08/14 05:00 SARS-CoV-2 rapid antigen: Negative"}]},
+
+    {"rule_id": "DM-1", "status": "not_applicable", "finding": "Not diabetic per form.", "evidence": []},
+    {"rule_id": "DM-2", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-3", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-4", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-5", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-Q1", "status": "not_applicable", "finding": "Form says no insulin.", "evidence": []},
+    {"rule_id": "DM-Q2", "status": "not_applicable", "finding": "Form says no diabetes oral meds.", "evidence": []},
+    {"rule_id": "DM-Q3", "status": "not_applicable", "finding": "Not diabetic; no A1C sent.", "evidence": []},
+
+    {"rule_id": "ID-1", "status": "not_applicable", "finding": "No infection; for reference the last 5 vital sets show Tmax 99.0, HR 84-90, BP normal.", "evidence": []},
+    {"rule_id": "ID-2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_applicable", "finding": "No IV antibiotics.", "evidence": []},
+    {"rule_id": "ID-Q1", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-Q2", "status": "not_applicable", "finding": "No cultures needed.", "evidence": []},
+    {"rule_id": "ID-Q3", "status": "unknown", "finding": "Isolation not mentioned.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "Not a respiratory referral (form notes admission CXR negative).", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "Not a respiratory referral; SpO2 96-97% on room air.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "No O2.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "Not a respiratory referral.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments listed.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "met", "finding": "Last 5 vital sets sent; BP 128-138/72-78 on home lisinopril.", "evidence": [{"page": 12, "quote": "08/14 07:00 | 98.6 | 86 | 134/76 | 16 | 97% | RA"}]},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin; not a cardiac admission.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "Not a cardiac admission; no EKG in packet.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation documented.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "not_applicable", "finding": "No ejection fraction concern, chemotherapy or heart attack.", "evidence": []},
+    {"rule_id": "CARD-6", "status": "unknown", "finding": "No IV BP medication appears in the packet, but this is not stated explicitly.", "evidence": []},
+
+    {"rule_id": "MSK-E1", "status": "met", "finding": "Closed intertrochanteric fracture, fixed without complications.", "evidence": [{"page": 7, "quote": "Cephalomedullary nail fixation, L intertrochanteric femur fracture (closed)"}]},
+    {"rule_id": "MSK-E2", "status": "not_met", "finding": "No PT is arranged after discharge; PT and OT recommend SNF and home health is marked not ordered.", "evidence": [{"page": 2, "quote": "Home Health Ordered: Yes [ ] No [X]"}, {"page": 9, "quote": "SNF for continued rehab."}]},
+    {"rule_id": "MSK-X3", "status": "met", "finding": "Internal nail fixation; no external fixator.", "evidence": [{"page": 7, "quote": "Cephalomedullary nail fixation, L intertrochanteric femur fracture (closed)"}]},
+    {"rule_id": "INT-E2", "status": "unknown", "finding": "Home health is not ordered; dressing-change needs for the stapled incisions are not stated.", "evidence": []},
+    {"rule_id": "INT-E5", "status": "met", "finding": "Staples in place with removal scheduled at ortho clinic 08/25.", "evidence": [{"page": 7, "quote": "Staple removal: Ortho clinic 08/25/2026"}]},
+    {"rule_id": "END-E2", "status": "met", "finding": "Hypothyroidism on levothyroxine, TSH 3.4.", "evidence": [{"page": 13, "quote": "Levothyroxine 75 mcg PO daily"}]},
+    {"rule_id": "CIR-E6", "status": "met", "finding": "Hypertension controlled on oral lisinopril.", "evidence": [{"page": 13, "quote": "Lisinopril 10 mg PO daily"}]},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "No cognitive impairment; AOx4.", "evidence": [{"page": 10, "quote": "Cognition: AOx4, good safety awareness"}]},
+    {"rule_id": "FORM-X2", "status": "not_met", "finding": "Unable to perform ADLs independently (max assist dressing and toileting hygiene).", "evidence": [{"page": 10, "quote": "Toileting hygiene: Max A"}, {"page": 11, "quote": "Unable to perform own peri-care; RN assisted."}]},
+    {"rule_id": "FORM-X3", "status": "not_applicable", "finding": "Superseded by MOB-3/MOB-4, both of which are not met.", "evidence": []},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "No active infection; MRSA negative, CXR negative.", "evidence": [{"page": 12, "quote": "08/10 MRSA nares PCR: Negative"}]},
+    {"rule_id": "FORM-X5", "status": "unknown", "finding": "Substance use is not addressed in the packet.", "evidence": []},
+    {"rule_id": "FORM-X6", "status": "not_applicable", "finding": "Superseded by OTH-2; form says not registered.", "evidence": []},
+    {"rule_id": "FORM-X7", "status": "unknown", "finding": "No mention of aggressive or combative behavior either way.", "evidence": []}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [4]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [5, 6]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [7, 8]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [12]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [13]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [9, 10, 11]},
+    {"doc_id": "DOC-9", "present": "no", "pages": []},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "ADL independence", "rule_ids": ["ADL-1", "ADL-2", "ADL-3", "FORM-X2"],
+     "sources": [{"page": 2, "quote": "Independent w/ ADLs. Ambulating with PT."}, {"page": 10, "quote": "Toileting hygiene: Max A"}],
+     "note": "Fax cover and referral form say independent with ADLs; OT and nursing document max assist for dressing and toileting hygiene. Chart wins: not independent."},
+    {"topic": "Assistive device and ambulation", "rule_ids": ["MOB-1", "MOB-3"],
+     "sources": [{"page": 2, "quote": "Assistive Device: Yes [ ] No [X]"}, {"page": 9, "quote": "Gait: 15 ft with FWW, Mod A x1, w/c follow"}],
+     "note": "Form says no assistive device; PT shows a front-wheeled walker with moderate assist for 15 ft, and the med list orders a walker and commode. Chart wins."},
+    {"topic": "Continence", "rule_ids": ["ADL-3"],
+     "sources": [{"page": 2, "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"}, {"page": 11, "quote": "Episode of urinary incontinence 03:00 before assistance arrived"}],
+     "note": "Form says continent; nursing documents incontinence while waiting for assistance and a PureWick placed. Chart wins."},
+    {"topic": "Self-administration of medications", "rule_ids": ["COG-1"],
+     "sources": [{"page": 2, "quote": "Self Administer All Meds: Yes [X] No [ ]"}, {"page": 13, "quote": "(pt has not yet self-injected)"}],
+     "note": "Form says she self-administers all meds; med list says she has not yet self-injected enoxaparin. Chart wins: not yet shown."},
+    {"topic": "Discharge level of care", "rule_ids": ["MOB-3", "MSK-E2"],
+     "sources": [{"page": 1, "quote": "Pt prefers recuperative care over SNF."}, {"page": 9, "quote": "Not safe for d/c to unsupervised setting at this time."}],
+     "note": "Referral asks for recuperative care at the patient's preference; PT and OT both recommend SNF. Chart wins."}
+  ],
+  "questions_for_hospital": [
+    "PT and OT recommend SNF and document moderate-to-maximal assist for transfers, toileting and dressing. Is there any newer PT/OT note showing independent ADLs and walking 100 ft?",
+    "Has the patient been taught and observed to self-inject enoxaparin?",
+    "Is outpatient or home health PT, and wound care for the stapled incisions, arranged after discharge?",
+    "Will a 30-day supply of discharge medications be sent?",
+    "Is there any history of aggressive behavior, substance use, or conservatorship/FSP?"
+  ],
+  "claude_fit": {
+    "score": 5,
+    "recommendation": "deny",
+    "reason": "The chart contradicts the referral form: she needs moderate-to-maximal assist for toileting, dressing and transfers and walks only 15 ft with help, so ADL-1, ADL-2, ADL-3, MOB-3 and FORM-X2 are not met, and PT/OT recommend SNF. Re-refer if she later reaches independent ADLs and 100 ft ambulation."
+  }
+}

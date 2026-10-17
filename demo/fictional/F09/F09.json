@@ -1,0 +1,134 @@
+{
+  "packet_id": "F09",
+  "patient": {
+    "summary": "24M, infected L forearm laceration with cellulitis, schizophrenia off meds with command hallucinations and aggression toward staff, unhoused",
+    "age": "24",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused since age 19, multiple episodes",
+    "admit_reason": "Infected left forearm laceration with cellulitis (bedside washout, delayed closure)",
+    "pages": [2, 3, 4, 5, 6]
+  },
+  "key_facts": [
+    {"label": "Mental health", "text": "Psychiatry documents command auditory hallucinations telling him to hurt people, including staff, and paranoid delusions.", "pages": [8], "quote": "Command auditory hallucinations to harm others.", "quote_page": 8},
+    {"label": "Mental health", "text": "On 09/03 he threatened an RN and threw a meal tray at her; Code Gray, IM olanzapine, 1:1 sitter; verbally aggressive again 09/04.", "pages": [7], "quote": "threw meal tray toward RN (missed, struck wall).", "quote_page": 7},
+    {"label": "Mental health", "text": "Schizophrenia off risperidone for about 3 months; risperidone restarted 09/04 and psychiatry recommends stabilization before discharge to any congregate setting.", "pages": [8], "quote": "Recommend psychiatric stabilization before discharge to any congregate setting", "quote_page": 8},
+    {"label": "Infection", "text": "Cellulitis improved (erythema down to 2 cm, afebrile, WBC normalized) on oral cephalexin through 09/08; wound culture grew pan-sensitive group A strep.", "pages": [9, 10], "quote": "Cellulitis L forearm - improved, cephalexin 500 mg PO QID through 09/08", "quote_page": 9},
+    {"label": "Infection", "text": "COVID swab was not collected because he refused on 09/05; MRSA PCR negative.", "pages": [10], "quote": "SARS-CoV-2 rapid antigen: Not collected (pt refused 09/05 AM)", "quote_page": 10},
+    {"label": "Wounds", "text": "6 cm sutured forearm laceration; suture removal scheduled 09/11 at the wound clinic.", "pages": [2], "quote": "Suture removal 09/11 at Seaside Wound Clinic (fictional).", "quote_page": 2},
+    {"label": "Substance use", "text": "Daily cannabis and occasional methamphetamine; urine drug screen positive for both.", "pages": [5, 10], "quote": "09/01 UDS: + cannabinoids, + amphetamines", "quote_page": 10},
+    {"label": "Other", "text": "Face sheet carries a behavioral alert and security flag added 09/03.", "pages": [4], "quote": "Behavioral alert: YES (added 09/03/2026)", "quote_page": 4}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Unhoused with an infected wound needing antibiotics and suture follow-up.", "evidence": [{"page": 4, "quote": "Address: NO FIXED ADDRESS (homeless)"}, {"page": 3, "quote": "Member is experiencing homelessness [X]"}]},
+    {"rule_id": "GEN-2", "status": "not_applicable", "finding": "Unhoused; GEN-1 covers him.", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Authorization request marks him at risk of re-hospitalization.", "evidence": [{"page": 3, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "met", "finding": "Fax cover states ambulatory and independent; the chart does not describe ADL assistance.", "evidence": [{"page": 1, "quote": "on PO abx. Ambulatory, independent."}]},
+    {"rule_id": "ADL-2", "status": "unknown", "finding": "Independent bathing is not specifically documented.", "evidence": []},
+    {"rule_id": "ADL-3", "status": "unknown", "finding": "Independent toileting is not specifically documented (form says continent).", "evidence": []},
+
+    {"rule_id": "MOB-1", "status": "not_applicable", "finding": "Form says no assistive device.", "evidence": []},
+    {"rule_id": "MOB-2", "status": "not_met", "finding": "No PT/OT notes are in the packet.", "evidence": []},
+    {"rule_id": "MOB-3", "status": "unknown", "finding": "Form says ambulatory, but 100 ft distance is not documented.", "evidence": []},
+    {"rule_id": "MOB-4", "status": "not_applicable", "finding": "Not wheelchair dependent.", "evidence": []},
+
+    {"rule_id": "MH-1", "status": "not_met", "finding": "Acute schizophrenia exacerbation; risperidone only restarted 09/04 and psychiatry recommends stabilization before any congregate setting.", "evidence": [{"page": 8, "quote": "Schizophrenia, acute exacerbation in setting of medication nonadherence and methamphetamine use."}, {"page": 8, "quote": "Recommend psychiatric stabilization before discharge to any congregate setting"}]},
+    {"rule_id": "MH-2", "status": "met", "finding": "Denies suicidal ideation to psychiatry.", "evidence": [{"page": 8, "quote": "Reports he sometimes \"has to listen.\" Denies SI."}]},
+    {"rule_id": "MH-3", "status": "not_met", "finding": "Command auditory hallucinations to harm others are documented.", "evidence": [{"page": 8, "quote": "Command auditory hallucinations to harm others."}, {"page": 7, "quote": "Pt stated voices were \"telling me you're poisoning me.\""}]},
+    {"rule_id": "MH-4", "status": "not_applicable", "finding": "Not admitted with acute alcohol intoxication.", "evidence": []},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship/FSP is not mentioned; a 5150 evaluation is pending daily reassessment.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "unknown", "finding": "Form says he self-administers all meds, but he stopped risperidone for 3 months and is refusing care; ability to manage meds is not confirmed.", "evidence": []},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 on the 09/05 progress note and psychiatry exam.", "evidence": [{"page": 9, "quote": "Wound: sutures intact, erythema resolved to 2 cm. AOx4."}]},
+
+    {"rule_id": "OTH-1", "status": "not_met", "finding": "Threatened and threw a tray at an RN on 09/03 and was verbally aggressive toward a CNA on 09/04.", "evidence": [{"page": 7, "quote": "Pt yelled profanities and threats at RN"}, {"page": 7, "quote": "Pt verbally aggressive toward CNA during vitals, refused, security on standby."}]},
+    {"rule_id": "OTH-2", "status": "met", "finding": "Referral form says he is not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "OTH-3", "status": "not_applicable", "finding": "Switched from IV cefazolin to oral cephalexin; no IV at discharge.", "evidence": []},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation is not mentioned (MRSA negative; on 1:1 sitter for behavior, not isolation).", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "not_applicable", "finding": "Not a hospice patient.", "evidence": []},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative 09/01.", "evidence": [{"page": 10, "quote": "09/01 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "not_met", "finding": "No COVID swab: patient refused on 09/05.", "evidence": [{"page": 10, "quote": "SARS-CoV-2 rapid antigen: Not collected (pt refused 09/05 AM)"}]},
+
+    {"rule_id": "DM-1", "status": "not_applicable", "finding": "Not diabetic per form.", "evidence": []},
+    {"rule_id": "DM-2", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-3", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-4", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-5", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-Q1", "status": "not_applicable", "finding": "Form says no insulin.", "evidence": []},
+    {"rule_id": "DM-Q2", "status": "not_applicable", "finding": "Form says no diabetes oral meds.", "evidence": []},
+    {"rule_id": "DM-Q3", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+
+    {"rule_id": "ID-1", "status": "met", "finding": "Last vital sets sent (one refused); afebrile, HR 88-96, normal BP, no signs of sepsis.", "evidence": [{"page": 10, "quote": "09/05 07:50 | 98.4 | 88 | 128/78 | 16 | 99% | RA"}]},
+    {"rule_id": "ID-2", "status": "unknown", "finding": "Form says he self-administers meds, but recent nonadherence makes independent oral antibiotic use unconfirmed.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_applicable", "finding": "Oral antibiotics only at discharge.", "evidence": []},
+    {"rule_id": "ID-Q1", "status": "met", "finding": "Left dorsal forearm laceration.", "evidence": [{"page": 6, "quote": "L dorsal forearm: 6 cm laceration with purulent drainage"}]},
+    {"rule_id": "ID-Q2", "status": "met", "finding": "Wound culture grew pan-sensitive group A strep.", "evidence": [{"page": 10, "quote": "09/01 Wound cx: Strep pyogenes (GAS), pan-sensitive"}]},
+    {"rule_id": "ID-Q3", "status": "unknown", "finding": "Isolation not mentioned.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "Not a respiratory referral (form notes CXR negative).", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "Not a respiratory referral; SpO2 98-99% on room air.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "No O2.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "Not a respiratory referral.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "Antibiotics are for skin, not respiratory.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "not_applicable", "finding": "No cardiac or BP condition; BP normal.", "evidence": []},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin; not cardiac.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "Not cardiac.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "not_applicable", "finding": "No ejection fraction concern.", "evidence": []},
+    {"rule_id": "CARD-6", "status": "not_applicable", "finding": "No hypertension; no BP medications.", "evidence": []},
+
+    {"rule_id": "INT-E1", "status": "met", "finding": "Cellulitis improving on oral antibiotics (cephalexin through 09/08).", "evidence": [{"page": 9, "quote": "Cellulitis L forearm - improved, cephalexin 500 mg PO QID through 09/08"}]},
+    {"rule_id": "INT-E2", "status": "unknown", "finding": "Home health not ordered; form says independent with wound care, but dressing-change frequency is not stated.", "evidence": []},
+    {"rule_id": "INT-E5", "status": "met", "finding": "Sutures in place with removal scheduled 09/11 at the wound clinic.", "evidence": [{"page": 2, "quote": "Suture removal 09/11 at Seaside Wound Clinic (fictional)."}]},
+    {"rule_id": "INT-X2", "status": "met", "finding": "Cellulitis after laceration, not a complicated large abscess; no foreign body.", "evidence": [{"page": 10, "quote": "09/01 L forearm XR: no foreign body, no fracture"}]},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "Cognition grossly intact, AOx4; not cognitively impaired.", "evidence": [{"page": 8, "quote": "cognition grossly intact, AOx4"}]},
+    {"rule_id": "FORM-X2", "status": "met", "finding": "No ADL deficit documented; fax says independent.", "evidence": [{"page": 1, "quote": "on PO abx. Ambulatory, independent."}]},
+    {"rule_id": "FORM-X3", "status": "not_applicable", "finding": "Superseded by MOB-3/MOB-4.", "evidence": []},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "Infection is strep cellulitis, not MRSA, TB or C. diff; MRSA PCR negative.", "evidence": [{"page": 10, "quote": "09/01 MRSA nares PCR: Negative"}]},
+    {"rule_id": "FORM-X5", "status": "unknown", "finding": "Methamphetamine and cannabis use documented, but no detox offer or refusal to abstain is recorded.", "evidence": []},
+    {"rule_id": "FORM-X6", "status": "not_applicable", "finding": "Superseded by OTH-2; form says not registered.", "evidence": []},
+    {"rule_id": "FORM-X7", "status": "not_met", "finding": "Aggressive and combative toward nursing staff 09/03 and 09/04.", "evidence": [{"page": 7, "quote": "threw meal tray toward RN (missed, struck wall). Code Gray called"}, {"page": 8, "quote": "Aggression toward staff 09/03 and 09/04."}]}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [4]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [5, 6]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [8, 9]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [11]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [7]},
+    {"doc_id": "DOC-9", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "Behavior and mental health", "rule_ids": ["OTH-1", "FORM-X7", "MH-1", "MH-3"],
+     "sources": [{"page": 2, "quote": "Mental Health DX: Yes [ ] No [X]"}, {"page": 8, "quote": "Command auditory hallucinations to harm others."}],
+     "note": "Referral form says no mental health diagnosis and no limitations; chart documents schizophrenia off meds, command hallucinations and aggression toward staff. Chart wins."},
+    {"topic": "Medication compliance", "rule_ids": ["COG-1", "MH-1"],
+     "sources": [{"page": 2, "quote": "Non-compliant: Yes [ ] No [X]"}, {"page": 5, "quote": "None (prior risperidone 2 mg BID - not taking)"}],
+     "note": "Form says not non-compliant; H&P shows he stopped risperidone about 3 months ago and he refused labs, vitals and the COVID swab. Chart wins."},
+    {"topic": "Readiness for discharge", "rule_ids": ["MH-1"],
+     "sources": [{"page": 1, "quote": "Ready for discharge today."}, {"page": 8, "quote": "Recommend psychiatric stabilization before discharge to any congregate setting"}],
+     "note": "Fax says ready for discharge today; psychiatry recommends stabilization first and he remains on a 1:1 sitter. Chart wins."}
+  ],
+  "questions_for_hospital": [
+    "Has psychiatry cleared him as stable for a congregate setting, and has he had any aggression or command hallucinations since starting risperidone 09/04?",
+    "Is he still on a 1:1 sitter, and what is the outcome of the daily 5150 reassessment?",
+    "Could you please send a negative COVID swab taken within 24 hours of arrival?",
+    "Will the wound need dressing changes before the 09/11 suture removal, and who will do them?",
+    "Can you confirm he will take cephalexin and risperidone on his own, and will a 30-day supply be sent?"
+  ],
+  "claude_fit": {
+    "score": 3,
+    "recommendation": "deny",
+    "reason": "The infection itself fits (INT-E1, INT-E5, ID-1), but the chart documents aggression toward staff on 09/03 and 09/04 (OTH-1, FORM-X7) and command hallucinations to harm others with an unstabilized schizophrenia exacerbation (MH-3, MH-1). The COVID swab was also refused (INF-2), and psychiatry advises against discharge to a congregate setting."
+  }
+}

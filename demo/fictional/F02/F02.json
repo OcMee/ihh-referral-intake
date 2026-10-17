@@ -1,0 +1,975 @@
+{
+  "packet_id": "F02",
+  "patient": {
+    "summary": "34M, POD4 open appendectomy for perforated appendicitis, staples in, T2DM on oral agents, shelter",
+    "age": "34",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused, staying at shelter x 4 months",
+    "admit_reason": "Perforated appendicitis, s/p open appendectomy",
+    "pages": [
+      2,
+      3,
+      5,
+      6
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Wounds",
+      "text": "8 cm RLQ incision with staples, clean/dry/intact; staple removal booked 04/22.",
+      "pages": [
+        9
+      ],
+      "quote": "Staple removal: St. Brigid Surgery Clinic 04/22/2026 at 09:30 (appointment confirmed)",
+      "quote_page": 9
+    },
+    {
+      "label": "Diabetes",
+      "text": "Sliding-scale insulin stopped 04/15 PM; back on home metformin + glipizide; no insulin at discharge.",
+      "pages": [
+        9,
+        12
+      ],
+      "quote": "Insulin sliding scale DISCONTINUED 04/15 PM; resumed home metformin + glipizide 04/15",
+      "quote_page": 9
+    },
+    {
+      "label": "Diabetes",
+      "text": "Five glucose readings fall 182 to 132 with no hypoglycemia; independent glucometer use.",
+      "pages": [
+        10
+      ],
+      "quote": "Pt demonstrates independent glucometer use (teach-back 04/15, RN S. Kim).",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "Peritoneal E. coli; now on oral cipro + metronidazole through 04/18, afebrile, WBC normal.",
+      "pages": [
+        9,
+        11
+      ],
+      "quote": "04/12 Peritoneal fluid cx: E. coli, pan-sensitive",
+      "quote_page": 11
+    },
+    {
+      "label": "Mobility",
+      "text": "Walking halls independently, tolerating diet, medically stable for discharge.",
+      "pages": [
+        9
+      ],
+      "quote": "Ambulating halls independently multiple times/day.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 04/12; COVID PCR not detected 04/16 05:30.",
+      "pages": [
+        11
+      ],
+      "quote": "04/16 05:30 SARS-CoV-2 PCR: Not detected",
+      "quote_page": 11
+    },
+    {
+      "label": "Home health",
+      "text": "No home health ordered; patient independent with incision care.",
+      "pages": [
+        2,
+        9
+      ],
+      "quote": "pt independent with incision care",
+      "quote_page": 9
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Shelter-dwelling patient recovering from open appendectomy with staples in place.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 6,
+          "quote": "Homeless, staying at shelter x 4 months."
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization request marks risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "No limitations on form; ambulating, eating, independent with incision care. No formal ADL assessment.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Ambulating halls independently multiple times/day."
+        },
+        {
+          "page": 9,
+          "quote": "pt independent with incision care"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "Showering allowed after 48h but no bathing/hygiene assessment is in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Continent of bowel and bladder; having bowel movements.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Assistive Device: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the 12-page packet; surgery note documents independent ambulation instead.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "Pages (including cover): 12"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walking halls independently several times a day (distance not quantified).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Ambulating halls independently multiple times/day."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No mental health diagnosis on form or in H&P.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Admitted for appendicitis, not alcohol intoxication; drinks rarely.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Denies tobacco/drugs. EtOH rare."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history is not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Self-administers meds; no insulin at discharge, oral agents only.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Self Administer All Meds: Yes [X] No [ ]"
+        },
+        {
+          "page": 12,
+          "quote": "No insulin at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 documented on admission exam (not re-documented at discharge).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "AOx4, NAD otherwise"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "No aggression documented, but behavior is not explicitly addressed; form lists no behavioral limitations.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form states not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics discontinued; discharge regimen is oral.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "IV ceftriaxone / IV metronidazole"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated; MRSA nares negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 04/12.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "04/12 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID PCR not detected 04/16 05:30; valid only if arrival is before 04/17 05:30 (fax asks for today or tomorrow).",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "04/16 05:30 SARS-CoV-2 PCR: Not detected"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "met",
+      "finding": "Five consecutive glucose readings trend down 182 to 132.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "04/16 07:00 | 132 | none"
+        },
+        {
+          "page": 10,
+          "quote": "No hypoglycemia this admission."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "met",
+      "finding": "Came through the ED; ED workup documents not in DKA.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "serum ketones negative - not in DKA."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "met",
+      "finding": "Not starting a new insulin regimen; inpatient sliding scale stopped 04/15 PM and home oral agents resumed 04/15, with no insulin at discharge.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Insulin sliding scale DISCONTINUED 04/15 PM; resumed home metformin + glipizide 04/15"
+        },
+        {
+          "page": 12,
+          "quote": "No insulin at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Referred from inpatient stay, not the ED, and A1c 7.4% is not poorly controlled.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "T2DM, last A1c 7.4% (01/2026, per outside records)"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "met",
+      "finding": "Independent glucometer use demonstrated by teach-back.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Pt demonstrates independent glucometer use (teach-back 04/15, RN S. Kim)."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "No insulin at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No insulin at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "met",
+      "finding": "No insulin at discharge and no pump; inpatient sliding scale only.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No insulin at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "met",
+      "finding": "Metformin 1000 mg BID and glipizide 5 mg daily.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Metformin 1000 mg PO BID with meals (home med - resume)"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "met",
+      "finding": "Last A1c 7.4% (01/2026).",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "T2DM, last A1c 7.4% (01/2026, per outside records)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals afebrile with normal HR/BP; WBC normalized.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "04/16 07:15 | 98.6 | 82 | 126/80 | 16 | 98% | RA"
+        },
+        {
+          "page": 9,
+          "quote": "WBC 8.4 (from 16.1)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Oral cipro + metronidazole through 04/18; self-administers meds.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Ciprofloxacin 500 mg PO BID through 04/18/2026"
+        },
+        {
+          "page": 2,
+          "quote": "Self Administer All Meds: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics discontinued.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "IV ceftriaxone / IV metronidazole"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Intra-abdominal (perforated appendix with localized purulent fluid).",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "perforated gangrenous appendix, localized purulent fluid, irrigated"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Peritoneal fluid culture grew pan-sensitive E. coli.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "04/12 Peritoneal fluid cx: E. coli, pan-sensitive"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR clear.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "No ADL limitations documented; ambulating and self-caring for incision.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "pt independent with incision care"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4; ambulates independently.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Ambulating halls independently multiple times/day."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; CXR clear; no C. diff or TB.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "04/12 MRSA nares PCR: Negative"
+        },
+        {
+          "page": 11,
+          "quote": "04/11 CXR: clear lungs, no free air"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "No substance treatment issue; denies drugs, rare alcohol.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Denies tobacco/drugs. EtOH rare."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "No aggression documented, but not explicitly addressed (same as OTH-1).",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "not_applicable",
+      "finding": "No skin infection; incision clean.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "not_applicable",
+      "finding": "No dressing changes or wound checks ordered; incision clean/dry/intact, patient independent with incision care, RLQ is not hard to reach. Home health not ordered.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Incision: RLQ, staples intact, C/D/I, no erythema or drainage"
+        },
+        {
+          "page": 2,
+          "quote": "Home Health Ordered: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics at discharge.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E4",
+      "status": "not_applicable",
+      "finding": "Wound is a surgical incision (see INT-E5).",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "met",
+      "finding": "Staples in place; removal appointment confirmed 04/22 09:30.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Staple removal: St. Brigid Surgery Clinic 04/22/2026 at 09:30 (appointment confirmed)"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E6",
+      "status": "not_applicable",
+      "finding": "No pressure ulcer.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E7",
+      "status": "not_applicable",
+      "finding": "No burns.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "met",
+      "finding": "Incision healing; no grafting.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "staples intact, C/D/I, no erythema or drainage"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "CT showed no drainable abscess.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "perforated appendicitis, no drainable abscess"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X3",
+      "status": "not_applicable",
+      "finding": "No burns.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E1",
+      "status": "met",
+      "finding": "Post abdominal surgery (open appendectomy), tolerating diet with bowel function.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "POD4 s/p open appendectomy, recovering well."
+        },
+        {
+          "page": 9,
+          "quote": "Tolerating regular diet, +flatus, +BM 04/15."
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-E2",
+      "status": "not_applicable",
+      "finding": "Not a hernia.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E3",
+      "status": "not_applicable",
+      "finding": "Not diverticulitis.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E4",
+      "status": "not_applicable",
+      "finding": "No IBD.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E5",
+      "status": "not_applicable",
+      "finding": "No ascites.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E6",
+      "status": "not_applicable",
+      "finding": "No GERD listed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-E7",
+      "status": "not_applicable",
+      "finding": "Not a bowel obstruction.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X1",
+      "status": "not_applicable",
+      "finding": "No liver disease in PMH.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X2",
+      "status": "not_applicable",
+      "finding": "No GI bleed or varices.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X3",
+      "status": "not_applicable",
+      "finding": "No C. diff diagnosis or diarrhea documented (on antibiotics; watch).",
+      "evidence": []
+    },
+    {
+      "rule_id": "END-E1",
+      "status": "met",
+      "finding": "Glucose improving and stable on 5 consecutive readings with oral treatment.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "04/16 07:00 | 132 | none"
+        }
+      ]
+    },
+    {
+      "rule_id": "END-E2",
+      "status": "not_applicable",
+      "finding": "No thyroid disease.",
+      "evidence": []
+    },
+    {
+      "rule_id": "END-E3",
+      "status": "not_applicable",
+      "finding": "No thyroidectomy.",
+      "evidence": []
+    },
+    {
+      "rule_id": "END-X1",
+      "status": "not_applicable",
+      "finding": "No parathyroidectomy.",
+      "evidence": []
+    },
+    {
+      "rule_id": "END-X2",
+      "status": "met",
+      "finding": "Not alcoholic ketoacidosis; beta-hydroxybutyrate negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Beta-hydroxybutyrate 0.2 (neg)"
+        }
+      ]
+    },
+    {
+      "rule_id": "END-X3",
+      "status": "met",
+      "finding": "Not in DKA.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "serum ketones negative - not in DKA."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Insulin",
+      "rule_ids": [
+        "DM-3",
+        "DM-6",
+        "DM-Q1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Insulin: Yes [X] No [ ]"
+        },
+        {
+          "page": 12,
+          "quote": "No insulin at discharge."
+        }
+      ],
+      "note": "Form says on insulin, chart says sliding scale was inpatient only and stopped 04/15; discharged on oral agents. Chart wins; DM-3 does not apply."
+    },
+    {
+      "topic": "Active infection",
+      "rule_ids": [
+        "ID-1",
+        "ID-2"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Active Infection: Yes [ ] No [X]"
+        },
+        {
+          "page": 9,
+          "quote": "Transition to PO abx (PCN allergy): ciprofloxacin 500 mg PO BID + metronidazole 500 mg PO TID"
+        }
+      ],
+      "note": "Form says no active infection, chart shows intra-abdominal E. coli infection still on oral antibiotics through 04/18. Chart wins; infection rules applied (all met)."
+    }
+  ],
+  "questions_for_hospital": [
+    "Can you confirm he has no history of suicidal ideation, hallucinations, or aggressive behavior during this stay?",
+    "Is he independent with showering/hygiene, and is he on any isolation precautions?",
+    "Has he ever been under a conservatorship or FSP?",
+    "Are there any dressing-change or wound-check orders for the incision, or is it open to air until staple removal on 04/22?",
+    "Will a 30-day supply of his medications be sent with him, and if he arrives after 04/17 05:30 can a repeat COVID swab be done?"
+  ],
+  "claude_fit": {
+    "score": 85,
+    "recommendation": "approve",
+    "reason": "Shelter-dwelling post-op patient who is ambulatory, afebrile on oral antibiotics, with staple removal booked (INT-E5, GI-E1, ID-1 met), and diabetes stable on home oral agents with insulin stopped and 5 improving readings (DM-1, DM-2, DM-3, DM-5 met). The form's insulin and active-infection boxes conflict with the chart but the chart is favorable; open items are mental-health/behavior confirmations (MH-2, OTH-1) and no PT/OT notes (MOB-2)."
+  }
+}

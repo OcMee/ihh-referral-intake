@@ -1,0 +1,139 @@
+{
+  "packet_id": "F05",
+  "patient": {
+    "summary": "52F, R forearm abscess s/p I&D with MSSA bacteremia (cleared), PICC for IV cefazolin through 06/17, unhoused",
+    "age": "52",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (sleeps in tent near a park), no fixed address",
+    "admit_reason": "Right forearm abscess with sepsis and MSSA bloodstream infection",
+    "pages": [1, 3, 4, 5]
+  },
+  "key_facts": [
+    {"label": "Home health", "text": "Home infusion and home health referrals sent 06/07, but no agency has accepted yet.", "pages": [8], "quote": "NO agency acceptance yet.", "quote_page": 8},
+    {"label": "Meds/IV/O2", "text": "Needs cefazolin 2 g IV every 8 hours via PICC through 06/17; who will give it is still TBD.", "pages": [8, 12], "quote": "Who will administer cefazolin q8h: TBD", "quote_page": 8},
+    {"label": "Wounds", "text": "Forearm I&D wound is still packed by the RN; patient has not been taught and is hesitant to pack it herself.", "pages": [9], "quote": "Pt has NOT yet been taught wound packing", "quote_page": 9},
+    {"label": "Mobility", "text": "Walks to the bathroom and in her room independently, has not walked in the hallway; PT consult ordered but not yet seen.", "pages": [8, 9], "quote": "Has not walked in hallway this shift.", "quote_page": 9},
+    {"label": "Infection", "text": "MSSA bacteremia cleared 06/03 (repeat cultures final no growth), afebrile since 06/03, TTE without vegetation, EF 60%.", "pages": [7, 11], "quote": "Uncomplicated MSSA bacteremia from skin/soft tissue source, cleared 06/03.", "quote_page": 7},
+    {"label": "Infection", "text": "MRSA nares negative 06/02; COVID rapid antigen negative 06/08 07:00.", "pages": [11], "quote": "06/08 07:00 SARS-CoV-2 rapid antigen: Negative", "quote_page": 11},
+    {"label": "Cognition", "text": "AOx4 via Vietnamese interpreter, calm and cooperative.", "pages": [9], "quote": "Pt AOx4 via interpreter. Calm, cooperative.", "quote_page": 9},
+    {"label": "Other", "text": "Referral form says home health ordered and patient independent with wound care; the chart says neither is confirmed.", "pages": [2], "quote": "PICC L arm. HH arranged for IV abx and wound care.", "quote_page": 2}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Unhoused (tent near a park) and needs IV antibiotics and wound care to recover.", "evidence": [{"page": 5, "quote": "52 y/o F, unhoused (sleeps in tent near Example Park), recycler"}]},
+    {"rule_id": "GEN-2", "status": "unknown", "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Auth form checks at risk of hospitalization/re-hospitalization.", "evidence": [{"page": 3, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "unknown", "finding": "Chart only says she walks to the bathroom and in her room independently; ADLs overall are not documented.", "evidence": []},
+    {"rule_id": "ADL-2", "status": "unknown", "finding": "Showering/hygiene independence is not documented (and she has a PICC and packed wound).", "evidence": []},
+    {"rule_id": "ADL-3", "status": "unknown", "finding": "Walks to the bathroom independently and form says continent, but toileting independence is not stated in the chart.", "evidence": []},
+
+    {"rule_id": "MOB-1", "status": "not_applicable", "finding": "No assistive device.", "evidence": []},
+    {"rule_id": "MOB-2", "status": "not_met", "finding": "PT consult was ordered 06/07 but the patient has not been seen; no PT/OT notes in packet.", "evidence": [{"page": 8, "quote": "PT consult ordered 06/07 - pending (not yet seen)"}]},
+    {"rule_id": "MOB-3", "status": "unknown", "finding": "Walks only in room and to bathroom; 100 ft not documented and no PT eval yet.", "evidence": []},
+    {"rule_id": "MOB-4", "status": "not_applicable", "finding": "Not wheelchair dependent.", "evidence": []},
+
+    {"rule_id": "MH-1", "status": "met", "finding": "No mental health diagnosis; calm and cooperative.", "evidence": [{"page": 9, "quote": "Pt AOx4 via interpreter. Calm, cooperative."}]},
+    {"rule_id": "MH-2", "status": "unknown", "finding": "Suicidal ideation is not addressed in the chart.", "evidence": []},
+    {"rule_id": "MH-3", "status": "unknown", "finding": "Hallucinations are not addressed in the chart.", "evidence": []},
+    {"rule_id": "MH-4", "status": "not_applicable", "finding": "No alcohol use; not admitted with intoxication.", "evidence": [{"page": 5, "quote": "No tobacco, no EtOH, no drugs."}]},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship or FSP history is not mentioned.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "unknown", "finding": "Form says she self-administers all meds, but the chart says IV cefazolin administration is TBD (agency RN vs teaching her an elastomeric pump) and she has not been taught wound care.", "evidence": []},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 via interpreter.", "evidence": [{"page": 9, "quote": "Pt AOx4 via interpreter. Calm, cooperative."}]},
+
+    {"rule_id": "OTH-1", "status": "met", "finding": "Calm and cooperative; no aggression documented.", "evidence": [{"page": 9, "quote": "Pt AOx4 via interpreter. Calm, cooperative."}]},
+    {"rule_id": "OTH-2", "status": "met", "finding": "Referral form marks not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "OTH-3", "status": "not_met", "finding": "Has a PICC, but no home health or home infusion agency has accepted yet; chart beats the form's 'HH arranged'.", "evidence": [{"page": 8, "quote": "Coastline: awaiting response. NO agency acceptance yet."}, {"page": 8, "quote": "Medically ready for d/c once home infusion/HH confirmed"}]},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation status is not stated (MSSA, MRSA nares negative).", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "not_applicable", "finding": "Not a hospice patient.", "evidence": []},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative 06/02.", "evidence": [{"page": 11, "quote": "06/02 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "unknown", "finding": "COVID negative 06/08 07:00 is only valid for an arrival before 06/09 07:00; discharge date is a hope (06/09) and depends on home health, so a repeat swab will likely be needed.", "evidence": []},
+
+    {"rule_id": "DM-1", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-2", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-3", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-4", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-5", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-Q1", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-Q2", "status": "not_applicable", "finding": "No diabetes medications.", "evidence": []},
+    {"rule_id": "DM-Q3", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+
+    {"rule_id": "ID-1", "status": "met", "finding": "Last 5 vital sets sent: afebrile, HR 76-84, BP 114-122 systolic; no signs of sepsis now.", "evidence": [{"page": 10, "quote": "06/08 08:10 | 98.5 | 80 | 118/72 | 16 | 99% | RA"}, {"page": 8, "quote": "Afebrile since 06/03."}]},
+    {"rule_id": "ID-2", "status": "not_applicable", "finding": "No oral antibiotics; on IV cefazolin.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_met", "finding": "IV antibiotics required but home health/home infusion is not yet confirmed.", "evidence": [{"page": 8, "quote": "Bayside reviewing - insurance auth pending."}, {"page": 8, "quote": "NO agency acceptance yet."}]},
+    {"rule_id": "ID-Q1", "status": "met", "finding": "Right volar forearm abscess, s/p I&D, with MSSA bacteremia.", "evidence": [{"page": 2, "quote": "1 - R volar forearm I&D site 3 x 1.5 cm, packed"}]},
+    {"rule_id": "ID-Q2", "status": "met", "finding": "Blood and wound cultures done: MSSA; repeat blood cultures 06/03 no growth, final 06/08.", "evidence": [{"page": 11, "quote": "06/03 Blood cx x2: No growth, FINAL 06/08"}]},
+    {"rule_id": "ID-Q3", "status": "unknown", "finding": "Not stated.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "No respiratory illness; CXR clear.", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "No oxygen required.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "not_applicable", "finding": "No cardiac diagnosis.", "evidence": []},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin in packet.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "No cardiac diagnosis.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "met", "finding": "TTE shows EF 60%; not on chemotherapy.", "evidence": [{"page": 11, "quote": "06/04 TTE: no vegetations, EF 60%"}]},
+    {"rule_id": "CARD-6", "status": "not_applicable", "finding": "No hypertension or IV BP medications.", "evidence": []},
+
+    {"rule_id": "INT-E1", "status": "not_applicable", "finding": "Abscess is being treated with IV, not oral, antibiotics; see INT-E3.", "evidence": []},
+    {"rule_id": "INT-E2", "status": "not_met", "finding": "Wound needs packing changes by RN, patient not taught, and the home health agency has not accepted.", "evidence": [{"page": 9, "quote": "Pt has NOT yet been taught wound packing"}, {"page": 8, "quote": "Coastline: awaiting response."}]},
+    {"rule_id": "INT-E3", "status": "not_met", "finding": "IV antibiotics allowed only once home health is coordinated; it is not yet, and who gives the doses is TBD.", "evidence": [{"page": 8, "quote": "Who will administer cefazolin q8h: TBD"}]},
+    {"rule_id": "INT-X1", "status": "not_applicable", "finding": "No skin grafting.", "evidence": []},
+    {"rule_id": "INT-X2", "status": "met", "finding": "Hand surgery found no deep space infection and I&D adequate; ID calls it uncomplicated. 'Complicated large abscess' is not defined, so coordinator may want to confirm.", "evidence": [{"page": 6, "quote": "no deep space infection on exam; I&D adequate"}]},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "AOx4; no cognitive impairment.", "evidence": [{"page": 9, "quote": "Pt AOx4 via interpreter. Calm, cooperative."}]},
+    {"rule_id": "FORM-X2", "status": "unknown", "finding": "ADL ability is not documented in the chart beyond walking to the bathroom.", "evidence": []},
+    {"rule_id": "FORM-X3", "status": "unknown", "finding": "Superseded by MOB-3/MOB-4; 100 ft ambulation not documented.", "evidence": []},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "Infection is MSSA (not MRSA), bacteremia cleared; MRSA nares negative, CXR negative.", "evidence": [{"page": 11, "quote": "06/02 MRSA nares PCR: Negative"}]},
+    {"rule_id": "FORM-X5", "status": "met", "finding": "No alcohol or drug use; denies IV drug use.", "evidence": [{"page": 5, "quote": "No tobacco, no EtOH, no drugs."}]},
+    {"rule_id": "FORM-X6", "status": "met", "finding": "Superseded by OTH-2; form marks not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "FORM-X7", "status": "met", "finding": "Calm and cooperative; no aggression documented.", "evidence": [{"page": 9, "quote": "Pt AOx4 via interpreter. Calm, cooperative."}]}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [4]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [5, 6]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [7, 8]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [12]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [9]},
+    {"doc_id": "DOC-9", "present": "yes", "pages": [7, 11]},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "Home health / home infusion", "rule_ids": ["OTH-3", "ID-3", "INT-E2", "INT-E3"],
+     "sources": [{"page": 2, "quote": "PICC L arm. HH arranged for IV abx and wound care."}, {"page": 8, "quote": "NO agency acceptance yet."}],
+     "note": "Form says home health is arranged, chart (case management 06/08 12:45) says no agency has accepted. Chart wins: not arranged."},
+    {"topic": "Independent wound care", "rule_ids": ["INT-E2"],
+     "sources": [{"page": 2, "quote": "Independent with Wound Care: Yes [X] No [ ]"}, {"page": 9, "quote": "Pt has NOT yet been taught wound packing"}],
+     "note": "Form says independent with wound care, nursing says she has not been taught and is hesitant. Chart wins: not independent."},
+    {"topic": "Self-administration of meds", "rule_ids": ["COG-1"],
+     "sources": [{"page": 2, "quote": "Self Administer All Meds: Yes [X] No [ ]"}, {"page": 12, "quote": "administration by home infusion agency TBD"}],
+     "note": "Form says she self-administers all meds, chart says who gives the IV cefazolin is still TBD. Chart wins: not confirmed."}
+  ],
+  "questions_for_hospital": [
+    "Has Bayside Home Infusion or Coastline Home Health accepted the patient, and what is the first visit date and time at our site?",
+    "Who will give the cefazolin every 8 hours (agency RN or patient with an elastomeric pump), and if the patient, has she been taught and shown she can do it?",
+    "Who will do the forearm wound packing and how often; will home health wound care visits start within 24 hours of arrival?",
+    "Can you send the PT evaluation once done, including whether she can walk at least 100 ft?",
+    "Can nursing confirm she is independent with showering, hygiene and toileting?",
+    "Can you send a COVID test result from within 24 hours of the actual arrival time?",
+    "Is the patient on any isolation precautions?",
+    "Has the patient had any suicidal ideation or hallucinations, and any history of conservatorship or Full Service Partnership (FSP)?",
+    "Who will draw the weekly CBC/BMP and get her to the ID clinic visit on 06/15?"
+  ],
+  "claude_fit": {
+    "score": 30,
+    "recommendation": "needs_info",
+    "reason": "Clinically a reasonable recuperative care case (bacteremia cleared, stable vitals, INF-1 met), but OTH-3, ID-3, INT-E2 and INT-E3 are not met because no home health or infusion agency has accepted, despite the form saying it is arranged. MOB-2 is not met and MOB-3/ADL-1 are unknown because PT has not seen her, so re-review once home health, PT notes and a fresh COVID swab are in."
+  }
+}

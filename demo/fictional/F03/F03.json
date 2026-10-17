@@ -1,0 +1,895 @@
+{
+  "packet_id": "F03",
+  "patient": {
+    "summary": "68M, COPD exacerbation resolved, now on room air, walks with walker, unhoused",
+    "age": "68",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal/Medicare",
+    "housing": "Unhoused (lives in park), 4+ episodes in 3 years",
+    "admit_reason": "COPD exacerbation",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Meds/IV/O2",
+      "text": "Weaned to room air 05/07; does not qualify for home oxygen (form still says 2L).",
+      "pages": [
+        8,
+        12
+      ],
+      "quote": "O2: Room air since 05/07/2026 08:00 (weaned from 2L NC)",
+      "quote_page": 8
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 150 ft with a new front-wheeled walker at modified independence, one rest break.",
+      "pages": [
+        9
+      ],
+      "quote": "Gait: 150 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "OT: independent/modified-independent ADLs, showers with chair and gathers own supplies.",
+      "pages": [
+        10
+      ],
+      "quote": "Shower: Modified independent with shower chair; gathers own supplies",
+      "quote_page": 10
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4, manages own meds and inhaler technique correct on teach-back.",
+      "pages": [
+        8,
+        10
+      ],
+      "quote": "Cognition: AOx4, follows multi-step commands, manages own meds (pillbox demo)",
+      "quote_page": 10
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA negative 05/04; rapid COVID negative 05/09 06:00, but discharge is 05/10 AM so it will be over 24h old.",
+      "pages": [
+        1,
+        11
+      ],
+      "quote": "05/09 06:00 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    },
+    {
+      "label": "Cardiac",
+      "text": "HTN stable on oral amlodipine; one negative troponin, no EKG sent.",
+      "pages": [
+        11,
+        12
+      ],
+      "quote": "Troponin <0.01 x1",
+      "quote_page": 11
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Steroid and doxycycline courses complete; 30-day supply dispensed.",
+      "pages": [
+        12
+      ],
+      "quote": "30-day supply dispensed from outpatient pharmacy: Yes",
+      "quote_page": 12
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused (living in a park, 4+ episodes) and deconditioned after a COPD exacerbation.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "homeless living in park near Example Ave"
+        },
+        {
+          "page": 9,
+          "quote": "Dx: AECOPD, deconditioning"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Authorization marks re-hospitalization risk; prior exacerbation 11/2025 after running out of inhalers.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "OT documents independent or modified-independent ADLs.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Grooming: Independent (standing at sink)"
+        },
+        {
+          "page": 10,
+          "quote": "LB dressing: Modified independent (seated)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers modified independent with shower chair and gathers own supplies.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Shower: Modified independent with shower chair; gathers own supplies"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Toileting independent (OT); continent.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "met",
+      "finding": "Uses a front-wheeled walker at modified independence.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 150 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations included.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt safe for d/c to recuperative care with FWW."
+        },
+        {
+          "page": 10,
+          "quote": "D/c to recuperative care. No further acute OT needs."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walked 150 ft with walker, modified independent, one rest break.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 150 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent; transfers modified independent.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Transfers: Modified independent"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No mental health diagnosis on form or in PMH.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Admitted for COPD exacerbation; no alcohol intoxication documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history is not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Manages own meds (pillbox demo) and correct inhaler technique on teach-back.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "manages own meds (pillbox demo)"
+        },
+        {
+          "page": 8,
+          "quote": "MDI technique with spacer: correct on teach-back x2"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P and OT eval.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Cognition: AOx4, follows multi-step commands"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "No aggression documented, but behavior is not explicitly addressed; form lists no behavioral limitations.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form states not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV therapy at discharge; all meds oral/inhaled.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated; COVID/flu/RSV PCR negative and MRSA negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 05/04.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/04 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "not_met",
+      "finding": "Rapid COVID negative 05/09 06:00 is only valid until 05/10 06:00; planned discharge is 05/10 AM, so the swab will likely be over 24h old at arrival. Repeat swab needed.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/09 06:00 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 1,
+          "quote": "Discharge ready 05/10 AM."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals afebrile with HR 84-92 and normal BP; no sepsis signs.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/09 12:00 | 98.5 | 84 | 128/78 | 16 | 93% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Oral doxycycline course completed 05/08; self-administers meds.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Doxycycline 100 mg PO BID - last dose 05/08 (course COMPLETE)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Respiratory (likely bronchitis trigger for COPD exacerbation).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "likely viral/bacterial bronchitis trigger"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Viral PCR panel negative; no sputum or blood cultures reported.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "COVID/flu/RSV PCR negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Chest X-ray sent: hyperinflation, no infiltrate or pneumothorax.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/04 CXR PA/Lat: hyperinflation c/w COPD."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vitals on room air, SpO2 92-93%, consistent with reported baseline 91-92%.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/09 08:00 | 98.3 | 88 | 132/80 | 18 | 92% | RA"
+        },
+        {
+          "page": 8,
+          "quote": "Pt reports baseline SpO2 \"around 91-92\" per prior clinic - consistent"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "O2 not required: on room air since 05/07 and did not qualify for home O2.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "O2: Room air since 05/07/2026 08:00 (weaned from 2L NC)"
+        },
+        {
+          "page": 12,
+          "quote": "Home O2: Not required"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "met",
+      "finding": "Respiratory therapy note included.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Signed: D. Park, RRT"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "met",
+      "finding": "Duonebs stopped; now tiotropium, fluticasone/salmeterol and albuterol MDI with spacer.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "transitioned from duonebs to MDI."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "met",
+      "finding": "Doxycycline course completed 05/08; no antibiotics at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Doxycycline 100 mg PO BID - last dose 05/08 (course COMPLETE)"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Hypertension; BP stable 128-136/78-82 on oral amlodipine over last 5 vitals.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/08 08:00 | 98.4 | 92 | 136/82 | 18 | 92% | RA"
+        },
+        {
+          "page": 12,
+          "quote": "Amlodipine 5 mg PO daily"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_met",
+      "finding": "Only one troponin result sent (negative); rule asks for 3 consecutive with 2 negative if troponin was drawn. Likely a single screen with normal BNP.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Troponin <0.01 x1"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "unknown",
+      "finding": "No EKG in the packet; not clearly required since admission was not cardiac.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No heart failure, MI or chemotherapy; EF not reported.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "BP managed with oral amlodipine only; no IV antihypertensives documented.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "HTN - continue amlodipine"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "OT documents independent/modified independent ADLs.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Shower: Modified independent with shower chair; gathers own supplies"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4; walks 150 ft with walker at modified independence.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 150 ft with front-wheeled walker (FWW), modified independent, 1 standing rest break"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; CXR without infiltrate; no TB or C. diff.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/04 MRSA nares PCR: Negative"
+        },
+        {
+          "page": 2,
+          "quote": "Result: CXR hyperinflation, no infiltrate"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "No substance use treatment issue documented; former smoker.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "No aggression documented, but not explicitly addressed (same as OTH-1).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-E1",
+      "status": "not_applicable",
+      "finding": "No pneumonia; no infiltrate on CXR.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-E2",
+      "status": "met",
+      "finding": "Bronchitis felt to be the exacerbation trigger.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "likely viral/bacterial bronchitis trigger"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E3",
+      "status": "met",
+      "finding": "COPD not requiring continuous O2; on room air and no home O2 qualification.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No home O2 qualification (ambulatory sat >88%)."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E4",
+      "status": "not_applicable",
+      "finding": "No asthma.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-E5",
+      "status": "unknown",
+      "finding": "Baseline SpO2 is 91-92% (patient-reported, RT says consistent), below the 94% in this rule; rule's meaning is unclear and no physician explanation is given. Coordinator judgment.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt reports baseline SpO2 \"around 91-92\" per prior clinic - consistent"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E6",
+      "status": "not_applicable",
+      "finding": "No tracheostomy.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-E7",
+      "status": "not_applicable",
+      "finding": "No CPAP.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax on CXR.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No focal consolidation, effusion or pneumothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X2",
+      "status": "met",
+      "finding": "No effusion/hemothorax on CXR.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "No focal consolidation, effusion or pneumothorax."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X3",
+      "status": "not_applicable",
+      "finding": "No trach or ventilator.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X4",
+      "status": "not_applicable",
+      "finding": "No pulmonary embolism diagnosed.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "met",
+      "finding": "BiPAP not needed.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No BiPAP needed."
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-E6",
+      "status": "met",
+      "finding": "Hypertension controlled on oral amlodipine.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Amlodipine 5 mg PO daily"
+        }
+      ]
+    },
+    {
+      "rule_id": "CIR-X1",
+      "status": "not_applicable",
+      "finding": "No arrhythmia documented; tachycardia on admission was regular and resolved.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CIR-X2",
+      "status": "met",
+      "finding": "Hypertension responding to oral medication; no IV meds.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "05/09 12:00 | 98.5 | 84 | 128/78 | 16 | 93% | RA"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Oxygen",
+      "rule_ids": [
+        "RESP-3",
+        "RSP-E3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "O2: Yes [X] No [ ]  2L NC"
+        },
+        {
+          "page": 12,
+          "quote": "Home O2: Not required"
+        }
+      ],
+      "note": "Form says on 2L oxygen, chart says room air since 05/07 and no home O2 qualification. Chart wins; RESP-3 not applicable."
+    },
+    {
+      "topic": "Assistive device",
+      "rule_ids": [
+        "MOB-1",
+        "MOB-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Assistive Device: Yes [ ] No [X]"
+        },
+        {
+          "page": 9,
+          "quote": "Pt safe for d/c to recuperative care with FWW."
+        }
+      ],
+      "note": "Form says no assistive device, PT issued a front-wheeled walker. Chart wins; he uses it independently, so MOB-1 is met."
+    }
+  ],
+  "questions_for_hospital": [
+    "His rapid COVID swab was 05/09 06:00; can a repeat swab be done the morning of discharge 05/10 so it is within 24 hours of arrival?",
+    "Can you confirm he has no history of suicidal ideation, hallucinations, or aggressive behavior during this stay?",
+    "Is he on any isolation precautions, and has he ever been under a conservatorship or FSP?",
+    "Only one troponin was sent; were additional troponins or an EKG done, and if so can you send them?",
+    "Can the physician comment on his baseline oxygen saturation (reported 91-92%) for our respiratory criteria?"
+  ],
+  "claude_fit": {
+    "score": 78,
+    "recommendation": "needs_info",
+    "reason": "Clinically a good fit: off oxygen, ADLs and walker use independent, PT/OT/RT notes and meds in hand (RESP-2, RSP-E3, MOB-1, MOB-3, ADL-2 met; chart overrides the form's O2 and no-device boxes). Hold for a repeat COVID swab since the 05/09 06:00 test lapses before a 05/10 AM arrival (INF-2 not met), and ask about the single troponin/EKG (CARD-2) and the 91-92% baseline (RSP-E5)."
+  }
+}

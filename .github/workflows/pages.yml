@@ -1,0 +1,33 @@
+name: Publish Referral Desk (fictional demo) to GitHub Pages
+# Publishes app/ only. app/index.html holds fictional cases; the real-packet build lives in output/ and is git ignored.
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", ".github/workflows/pages.yml"]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse to publish real packet IDs
+        run: |
+          if grep -qE "\bR(0[1-9]|1[01])\b" app/index.html; then echo "app/index.html mentions a real packet ID; refusing to publish"; exit 1; fi
+      - name: Stage site
+        run: mkdir -p _site && cp app/index.html _site/index.html && touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

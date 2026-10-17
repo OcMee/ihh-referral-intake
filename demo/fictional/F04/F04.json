@@ -1,0 +1,127 @@
+{
+  "packet_id": "F04",
+  "patient": {
+    "summary": "72F, stage IV pancreatic cancer with liver mets, pain/nausea now controlled, enrolled in hospice, unhoused",
+    "age": "72",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (sleeping at bus terminal), no fixed address",
+    "admit_reason": "Cancer pain and nausea control; transitioned to hospice",
+    "pages": [2, 3, 4, 7]
+  },
+  "key_facts": [
+    {"label": "Other", "text": "Hospice (Sunrise Hospice) elected 05/25, RN admission visit at the recuperative care site confirmed for 05/26 16:00.", "pages": [6], "quote": "Hospice RN admission visit at recuperative care site 05/26/2026 at 16:00 (confirmed)", "quote_page": 6},
+    {"label": "Meds/IV/O2", "text": "Patient and sister were told recuperative care staff cannot give medications; hospice staff will give comfort kit meds.", "pages": [6, 11], "quote": "Discussed with patient and sister (by phone) that recuperative care staff cannot administer medications", "quote_page": 6},
+    {"label": "Mobility", "text": "PT: walked 220 ft with no device, independent, one seated rest; no DME needed.", "pages": [8], "quote": "Gait: 220 ft without assistive device, independent, steady; 1 seated rest due to fatigue", "quote_page": 8},
+    {"label": "Other", "text": "Independent with ADLs, toileting and showering per nursing and PT.", "pages": [7], "quote": "Pt independent with ADLs, toileting and showering per nursing and PT.", "quote_page": 7},
+    {"label": "Cognition", "text": "AOx4 and self-administers her scheduled oral meds with a pillbox.", "pages": [9], "quote": "Pt self-administers scheduled PO meds", "quote_page": 9},
+    {"label": "Mental health", "text": "Calm and pleasant, denies suicidal ideation, no psychiatric history.", "pages": [7], "quote": "Denies SI, no psych hx.", "quote_page": 7},
+    {"label": "Infection", "text": "MRSA nares negative 05/21; COVID rapid antigen negative 05/25 18:00; last 5 vital sets afebrile and stable.", "pages": [10], "quote": "05/25 18:00 SARS-CoV-2 rapid antigen: Negative", "quote_page": 10},
+    {"label": "Other", "text": "The referral form marks Hospice as No, but the chart and auth form show hospice is elected and arranged.", "pages": [12, 3], "quote": "Hospice: Yes [ ] No [X]", "quote_page": 12}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Unhoused, sleeping at a bus terminal, with terminal cancer needing a place to recover with hospice support.", "evidence": [{"page": 4, "quote": "now sleeping at bus terminal"}, {"page": 2, "quote": "Address: NO FIXED ADDRESS (homeless)"}]},
+    {"rule_id": "GEN-2", "status": "unknown", "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Auth form checks at risk of hospitalization/re-hospitalization.", "evidence": [{"page": 3, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "met", "finding": "Social work note says independent with ADLs per nursing and PT.", "evidence": [{"page": 7, "quote": "Pt independent with ADLs, toileting and showering per nursing and PT."}]},
+    {"rule_id": "ADL-2", "status": "met", "finding": "Independent with showering per nursing and PT; hospice aide is also available for bathing support if needed.", "evidence": [{"page": 7, "quote": "Pt independent with ADLs, toileting and showering per nursing and PT."}]},
+    {"rule_id": "ADL-3", "status": "met", "finding": "Independent with toileting; continent per form.", "evidence": [{"page": 7, "quote": "Pt independent with ADLs, toileting and showering per nursing and PT."}]},
+
+    {"rule_id": "MOB-1", "status": "not_applicable", "finding": "No DME used or needed per PT.", "evidence": []},
+    {"rule_id": "MOB-2", "status": "met", "finding": "PT evaluation dated 05/23 is in the packet.", "evidence": [{"page": 8, "quote": "PHYSICAL THERAPY EVALUATION"}]},
+    {"rule_id": "MOB-3", "status": "met", "finding": "Walked 220 ft independently with one seated rest.", "evidence": [{"page": 8, "quote": "Gait: 220 ft without assistive device, independent, steady; 1 seated rest due to fatigue"}]},
+    {"rule_id": "MOB-4", "status": "not_applicable", "finding": "Not wheelchair dependent.", "evidence": []},
+
+    {"rule_id": "MH-1", "status": "met", "finding": "No psychiatric history; calm, pleasant and clear about wishes.", "evidence": [{"page": 7, "quote": "Pt AOx4, calm, pleasant, clear about wishes."}]},
+    {"rule_id": "MH-2", "status": "met", "finding": "Social work documents patient denies SI.", "evidence": [{"page": 7, "quote": "Denies SI, no psych hx."}]},
+    {"rule_id": "MH-3", "status": "unknown", "finding": "Hallucinations are not specifically addressed (no psych history is noted).", "evidence": []},
+    {"rule_id": "MH-4", "status": "not_applicable", "finding": "No alcohol use; not admitted with intoxication.", "evidence": [{"page": 4, "quote": "Never smoker. No EtOH/drugs."}]},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship or FSP history is not mentioned.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "met", "finding": "Self-administers scheduled oral meds and demonstrated pillbox use; no insulin.", "evidence": [{"page": 9, "quote": "Pt self-administers scheduled PO meds"}, {"page": 9, "quote": "demonstrated pillbox use"}]},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 on H&P, social work and day-of-discharge note.", "evidence": [{"page": 5, "quote": "Neuro: AOx4, decisional"}, {"page": 7, "quote": "Pt AOx4, calm, pleasant, clear about wishes."}]},
+
+    {"rule_id": "OTH-1", "status": "met", "finding": "Described as calm and pleasant; no aggression documented.", "evidence": [{"page": 7, "quote": "Pt AOx4, calm, pleasant, clear about wishes."}]},
+    {"rule_id": "OTH-2", "status": "met", "finding": "Referral form marks not a registered sex offender.", "evidence": [{"page": 12, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "OTH-3", "status": "not_applicable", "finding": "IV hydromorphone was used early in the stay but all discharge meds are oral; no IV access at discharge is mentioned.", "evidence": []},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation status is not stated; MRSA and COVID tests were negative.", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "met", "finding": "Hospice elected and visits arranged at the site, and patient and sister were told RC staff cannot give medications.", "evidence": [{"page": 6, "quote": "Hospice RN admission visit at recuperative care site 05/26/2026 at 16:00 (confirmed)"}, {"page": 6, "quote": "Discussed with patient and sister (by phone) that recuperative care staff cannot administer medications"}]},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative 05/21.", "evidence": [{"page": 10, "quote": "05/21 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "met", "finding": "COVID negative 05/25 18:00; discharge is 05/26 with the hospice visit at the site at 16:00, so arrival by 16:00 is about 22 hours after the swab (window closes 05/26 18:00).", "evidence": [{"page": 10, "quote": "05/25 18:00 SARS-CoV-2 rapid antigen: Negative"}, {"page": 9, "quote": "Stable for discharge to recuperative care today."}]},
+
+    {"rule_id": "DM-1", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-2", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-3", "status": "not_applicable", "finding": "Not diabetic; no insulin.", "evidence": []},
+    {"rule_id": "DM-4", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-5", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-Q1", "status": "not_applicable", "finding": "No insulin.", "evidence": []},
+    {"rule_id": "DM-Q2", "status": "not_applicable", "finding": "No diabetes medications.", "evidence": []},
+    {"rule_id": "DM-Q3", "status": "not_applicable", "finding": "Not diabetic; no A1c in packet.", "evidence": []},
+
+    {"rule_id": "ID-1", "status": "not_applicable", "finding": "No infection; last 5 vital sets are sent anyway and show no fever or low BP.", "evidence": []},
+    {"rule_id": "ID-2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_applicable", "finding": "No IV antibiotics.", "evidence": []},
+    {"rule_id": "ID-Q1", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-Q2", "status": "not_applicable", "finding": "No infection; no cultures needed.", "evidence": []},
+    {"rule_id": "ID-Q3", "status": "not_applicable", "finding": "No infection; see OTH-4.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "No respiratory illness; CXR 05/20 showed no acute process.", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "No respiratory illness; SpO2 96-97% on room air.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "No oxygen required.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments listed.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "not_applicable", "finding": "No cardiac diagnosis; vitals are stable without BP meds.", "evidence": []},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin in packet; no cardiac event.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "No cardiac diagnosis.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "met", "finding": "Not on chemotherapy (declined after 2 cycles in 03/2026) and no heart attack; no EF in packet.", "evidence": [{"page": 4, "quote": "declined further chemotherapy after 2 cycles (03/2026) due to toxicity"}]},
+    {"rule_id": "CARD-6", "status": "not_applicable", "finding": "No hypertension or IV BP medications.", "evidence": []},
+
+    {"rule_id": "END-E2", "status": "met", "finding": "Hypothyroidism on levothyroxine; TSH 2.1.", "evidence": [{"page": 5, "quote": "3. Hypothyroidism - continue levothyroxine"}]},
+    {"rule_id": "GI-X1", "status": "met", "finding": "Liver metastases but no ascites, no jaundice, normal bilirubin; no decompensated cirrhosis documented.", "evidence": [{"page": 5, "quote": "no obstruction, no ascites"}, {"page": 5, "quote": "Skin: no jaundice"}]},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "AOx4 and decisional; no cognitive impairment.", "evidence": [{"page": 5, "quote": "Neuro: AOx4, decisional"}]},
+    {"rule_id": "FORM-X2", "status": "met", "finding": "Independent with ADLs.", "evidence": [{"page": 7, "quote": "Pt independent with ADLs, toileting and showering per nursing and PT."}]},
+    {"rule_id": "FORM-X3", "status": "met", "finding": "Superseded by MOB-3/MOB-4; patient walks 220 ft and transfers independently.", "evidence": [{"page": 8, "quote": "Gait: 220 ft without assistive device, independent, steady; 1 seated rest due to fatigue"}]},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "No active MRSA, TB or C. diff: MRSA negative and CXR negative.", "evidence": [{"page": 10, "quote": "05/21 MRSA nares PCR: Negative"}, {"page": 10, "quote": "05/20 CXR: no acute process"}]},
+    {"rule_id": "FORM-X5", "status": "met", "finding": "No alcohol or drug use.", "evidence": [{"page": 4, "quote": "Never smoker. No EtOH/drugs."}]},
+    {"rule_id": "FORM-X6", "status": "met", "finding": "Superseded by OTH-2; form marks not a registered sex offender.", "evidence": [{"page": 12, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "FORM-X7", "status": "met", "finding": "Calm and pleasant; no aggressive behavior documented.", "evidence": [{"page": 7, "quote": "Pt AOx4, calm, pleasant, clear about wishes."}]}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "yes", "pages": [12]},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [4, 5]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [6, 9]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [11]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [8]},
+    {"doc_id": "DOC-9", "present": "no", "pages": []},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "Hospice status", "rule_ids": ["EOL-1"],
+     "sources": [{"page": 12, "quote": "Hospice: Yes [ ] No [X]"}, {"page": 3, "quote": "Hospice election: Yes - Sunrise Hospice (fictional), effective 05/25/2026"}],
+     "note": "Referral form says no hospice, chart and auth form say hospice elected 05/25 and arranged at the site. Chart wins: treat as a hospice patient under EOL-1."}
+  ],
+  "questions_for_hospital": [
+    "Can you confirm the patient will arrive at our site before 18:00 on 05/26, so the 05/25 18:00 COVID test is still within 24 hours?",
+    "Is the patient on any isolation precautions?",
+    "Does the patient have any history of conservatorship or a Full Service Partnership (FSP)?",
+    "Has the patient had any auditory or visual hallucinations?",
+    "Will the patient arrive with a 30-day supply of her self-administered medications, or is hospice supplying all of them?",
+    "Could the referral form be corrected to show Hospice: Yes (Sunrise Hospice)?"
+  ],
+  "claude_fit": {
+    "score": 88,
+    "recommendation": "approve",
+    "reason": "EOL-1 is met (hospice arranged with a confirmed site visit and med-administration education documented), and she meets ADL-1, MOB-3, COG-1/COG-2 and INF-1/INF-2. Remaining gaps are minor unknowns (MH-3, MH-5, OTH-4) and the form's wrong hospice box, which the chart overrides."
+  }
+}

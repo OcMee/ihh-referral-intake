@@ -1,0 +1,132 @@
+{
+  "packet_id": "F07",
+  "patient": {
+    "summary": "41M, admitted for acute alcohol intoxication and withdrawal, unhoused",
+    "age": "41",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused x 3 yrs, no fixed address",
+    "admit_reason": "Acute alcohol intoxication, then alcohol withdrawal (high risk, prior withdrawal seizure)",
+    "pages": [2, 3, 4, 5]
+  },
+  "key_facts": [
+    {"label": "Substance use", "text": "Patient declined residential treatment and did not commit to abstinence; no outpatient appointment was made.", "pages": [9], "quote": "go to outpatient group; did not commit to abstinence.", "quote_page": 9},
+    {"label": "Substance use", "text": "Arrived in the ED intoxicated 07/18 02:10 (BAL 312); 72 hours from arrival is 07/21 02:10, so the fax's 'hold complete' claim at 07/20 18:30 was early, but a 07/21 AM discharge would pass 72 hours.", "pages": [1, 4], "quote": "Arrival: 07/18/2026 02:10 via EMS", "quote_page": 4},
+    {"label": "Mental health", "text": "CIWA-Ar fell to 6 and 5 on 07/20 with no lorazepam since 07/20 04:00; overnight scores before discharge are not in the packet.", "pages": [7, 8], "quote": "07/20 16:00 | 5 | none | TR", "quote_page": 7},
+    {"label": "Cognition", "text": "Alert and oriented x4 with no suicidal or homicidal ideation and no psychosis.", "pages": [9], "quote": "Pt engaged, AOx4, no SI/HI, no psychosis.", "quote_page": 9},
+    {"label": "Infection", "text": "MRSA nares PCR negative 07/18; COVID rapid antigen negative 07/20 06:00, which is more than 24 hours old for any arrival after 07/21 06:00.", "pages": [10], "quote": "07/20 06:00 SARS-CoV-2 rapid antigen: Negative", "quote_page": 10},
+    {"label": "Cardiac", "text": "Untreated hypertension; amlodipine 5 mg PO was started 07/20, BP 136/84 on the last set.", "pages": [8, 11], "quote": "Started amlodipine 5 mg daily for HTN", "quote_page": 8},
+    {"label": "Mobility", "text": "Gait was ataxic on ED arrival while intoxicated; there are no PT/OT notes or later ambulation documentation.", "pages": [4], "quote": "Somnolent but arousable, ataxic gait, nystagmus.", "quote_page": 4},
+    {"label": "Other", "text": "Alcoholic ketoacidosis was ruled out (beta-hydroxybutyrate negative) and ultrasound shows fatty liver without cirrhosis or ascites.", "pages": [10], "quote": "hepatic steatosis, no cirrhotic morphology, no ascites", "quote_page": 10}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Patient is unhoused and recovering from complicated alcohol withdrawal.", "evidence": [{"page": 3, "quote": "Address: NO FIXED ADDRESS (homeless)"}, {"page": 2, "quote": "Member is experiencing homelessness [X]"}]},
+    {"rule_id": "GEN-2", "status": "not_applicable", "finding": "Patient is unhoused; GEN-1 covers him.", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Authorization request marks him at risk of re-hospitalization.", "evidence": [{"page": 2, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "met", "finding": "Authorization clinical summary states independent ADLs; the chart itself does not describe ADLs.", "evidence": [{"page": 2, "quote": "Clinical summary: detox completed, medically stable, independent ADLs."}]},
+    {"rule_id": "ADL-2", "status": "unknown", "finding": "No documentation of independent bathing/showering.", "evidence": []},
+    {"rule_id": "ADL-3", "status": "unknown", "finding": "No documentation of independent toileting.", "evidence": []},
+
+    {"rule_id": "MOB-1", "status": "unknown", "finding": "No DME is mentioned anywhere in the packet.", "evidence": []},
+    {"rule_id": "MOB-2", "status": "not_met", "finding": "No PT/OT notes are in the packet.", "evidence": []},
+    {"rule_id": "MOB-3", "status": "unknown", "finding": "Gait was ataxic in the ED while intoxicated; no later ambulation distance is documented.", "evidence": []},
+    {"rule_id": "MOB-4", "status": "not_applicable", "finding": "Nothing suggests wheelchair use; MOB-3 is the applicable mobility rule.", "evidence": []},
+
+    {"rule_id": "MH-1", "status": "met", "finding": "No psychiatric illness or psychosis documented; engaged and oriented.", "evidence": [{"page": 9, "quote": "Pt engaged, AOx4, no SI/HI, no psychosis."}]},
+    {"rule_id": "MH-2", "status": "met", "finding": "Social work documents no suicidal ideation.", "evidence": [{"page": 9, "quote": "Pt engaged, AOx4, no SI/HI, no psychosis."}]},
+    {"rule_id": "MH-3", "status": "met", "finding": "No hallucinations documented on the CIWA flowsheet or H&P.", "evidence": [{"page": 7, "quote": "No seizure activity. No hallucinations documented."}]},
+    {"rule_id": "MH-4", "status": "met", "finding": "ED arrival 07/18 02:10 so 72 hours is reached 07/21 02:10, before the requested 07/21 AM start; CIWA <8 (6, then 5) off benzodiazepines since 07/20 04:00, but overnight 07/20-07/21 scores still need confirming.", "evidence": [{"page": 4, "quote": "Arrival: 07/18/2026 02:10 via EMS"}, {"page": 7, "quote": "07/20 16:00 | 5 | none | TR"}]},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship or FSP history is not mentioned.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "unknown", "finding": "Ability to self-administer medications is not explicitly documented (no insulin).", "evidence": []},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 documented on the 07/20 progress note.", "evidence": [{"page": 8, "quote": "Fine tremor at rest, no diaphoresis. AOx4."}]},
+
+    {"rule_id": "OTH-1", "status": "unknown", "finding": "No mention of aggressive behavior either way.", "evidence": []},
+    {"rule_id": "OTH-2", "status": "unknown", "finding": "Sex offender registration status is not mentioned.", "evidence": []},
+    {"rule_id": "OTH-3", "status": "not_applicable", "finding": "All discharge medications are oral; no IV at discharge.", "evidence": []},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation status is not stated (MRSA and COVID tests negative).", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "not_applicable", "finding": "Not a hospice patient.", "evidence": []},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative on 07/18.", "evidence": [{"page": 10, "quote": "07/18 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "not_met", "finding": "COVID antigen was 07/20 06:00; for a 07/21 AM arrival after 06:00 it is more than 24 hours old, so a repeat swab is needed.", "evidence": [{"page": 10, "quote": "07/20 06:00 SARS-CoV-2 rapid antigen: Negative"}, {"page": 1, "quote": "Hoping for d/c 07/21 AM."}]},
+
+    {"rule_id": "DM-1", "status": "not_applicable", "finding": "Not diabetic (glucose 92, no diabetes in history).", "evidence": []},
+    {"rule_id": "DM-2", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-3", "status": "not_applicable", "finding": "Not on insulin.", "evidence": []},
+    {"rule_id": "DM-4", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-5", "status": "not_applicable", "finding": "Not diabetic.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_applicable", "finding": "Not on insulin.", "evidence": []},
+    {"rule_id": "DM-Q1", "status": "not_applicable", "finding": "No insulin on the discharge medication list.", "evidence": []},
+    {"rule_id": "DM-Q2", "status": "not_applicable", "finding": "No diabetes medications.", "evidence": []},
+    {"rule_id": "DM-Q3", "status": "not_applicable", "finding": "No A1C in packet; not diabetic.", "evidence": []},
+
+    {"rule_id": "ID-1", "status": "not_applicable", "finding": "No infection diagnosis; for reference the last 5 vital sets are afebrile with HR 86-98.", "evidence": []},
+    {"rule_id": "ID-2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_applicable", "finding": "No IV antibiotics.", "evidence": []},
+    {"rule_id": "ID-Q1", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-Q2", "status": "not_applicable", "finding": "No cultures needed.", "evidence": []},
+    {"rule_id": "ID-Q3", "status": "unknown", "finding": "Isolation not mentioned.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "Not a respiratory referral (a CXR was done anyway: no acute disease).", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "Not a respiratory referral; SpO2 96-97% on room air.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "On room air; no O2 required.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "Not a respiratory referral.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments listed.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "unknown", "finding": "Five vital sets were sent, but amlodipine was only started 07/20 (time not stated), so 24 hours stable on oral BP medication by a 07/21 AM arrival is not shown.", "evidence": []},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin drawn; not a cardiac admission.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "Not a cardiac admission; no EKG in packet.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation documented.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "not_applicable", "finding": "No ejection fraction concern, chemotherapy or heart attack.", "evidence": []},
+    {"rule_id": "CARD-6", "status": "unknown", "finding": "No IV BP medication appears in the packet, but the packet does not state this explicitly.", "evidence": []},
+
+    {"rule_id": "END-X2", "status": "met", "finding": "Alcoholic ketoacidosis was considered and ruled out (beta-hydroxybutyrate negative).", "evidence": [{"page": 10, "quote": "Beta-hydroxybutyrate 0.3 (neg)"}]},
+    {"rule_id": "GI-X1", "status": "met", "finding": "Ultrasound shows fatty liver without cirrhosis or ascites; bilirubin and INR normal.", "evidence": [{"page": 10, "quote": "hepatic steatosis, no cirrhotic morphology, no ascites"}]},
+    {"rule_id": "CIR-X2", "status": "unknown", "finding": "BP improved to 134-138/82-86 and amlodipine PO started 07/20; response to oral medication is too new to judge.", "evidence": []},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "Not cognitively impaired; AOx4.", "evidence": [{"page": 8, "quote": "Fine tremor at rest, no diaphoresis. AOx4."}]},
+    {"rule_id": "FORM-X2", "status": "met", "finding": "Authorization summary states independent ADLs.", "evidence": [{"page": 2, "quote": "Clinical summary: detox completed, medically stable, independent ADLs."}]},
+    {"rule_id": "FORM-X3", "status": "not_applicable", "finding": "Superseded by MOB-3/MOB-4 (MOB-3 is unknown).", "evidence": []},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "No active MRSA, TB or C. diff infection documented; MRSA PCR negative, CXR clear.", "evidence": [{"page": 10, "quote": "07/18 MRSA nares PCR: Negative"}, {"page": 10, "quote": "07/18 CXR: no acute disease"}]},
+    {"rule_id": "FORM-X5", "status": "not_met", "finding": "Patient declined residential treatment, will only 'try to cut back', and did not commit to abstinence; the outline is silent so the form's exclusion applies.", "evidence": [{"page": 9, "quote": "pt DECLINED: \"I'm not doing a program right now.\""}, {"page": 9, "quote": "go to outpatient group; did not commit to abstinence."}]},
+    {"rule_id": "FORM-X6", "status": "not_applicable", "finding": "Superseded by OTH-2 (unknown).", "evidence": []},
+    {"rule_id": "FORM-X7", "status": "unknown", "finding": "No mention of aggressive or combative behavior either way.", "evidence": []}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "no", "pages": []},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [5, 6]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [8, 9]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [11]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [7]},
+    {"doc_id": "DOC-9", "present": "no", "pages": []},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "72-hour hold timing", "rule_ids": ["MH-4"],
+     "sources": [{"page": 1, "quote": "72 hr hold complete, CIWA now <8."}, {"page": 4, "quote": "Arrival: 07/18/2026 02:10 via EMS"}],
+     "note": "Fax (sent 07/20 18:30) says the 72 hr hold is complete; chart shows ED arrival 07/18 02:10, so only about 64 hours had passed. Chart wins: 72 hours is reached 07/21 02:10, which a 07/21 AM discharge would satisfy."},
+    {"topic": "Admit date", "rule_ids": ["MH-4"],
+     "sources": [{"page": 2, "quote": "Admit Date: 07/17/2026"}, {"page": 3, "quote": "Admit Date/Time: 07/18/2026 09:45"}],
+     "note": "Authorization request says admit 07/17; face sheet and ED note say ED arrival 07/18 02:10, admit 07/18 09:45. Chart wins: 07/18."}
+  ],
+  "questions_for_hospital": [
+    "Has the patient agreed to abstain from alcohol while in recuperative care, and is he willing to engage in any treatment (IOP intake, naltrexone)? Our referral form excludes patients who refuse to abstain.",
+    "Could you please send the overnight 07/20-07/21 CIWA-Ar scores and confirm he stayed below 8 without lorazepam?",
+    "Could you please send a COVID swab taken within 24 hours of the planned arrival? The 07/20 06:00 result will be over 24 hours old.",
+    "Could you please send PT/OT notes or nursing documentation that he can walk at least 100 ft and complete bathing and toileting independently?",
+    "Can you confirm he can self-administer his medications, and send the completed IHH referral form?",
+    "What time was the first amlodipine dose given on 07/20, and will a 30-day supply of discharge medications be sent?",
+    "Is there any history of aggressive behavior, conservatorship/FSP, or sex offender registration?"
+  ],
+  "claude_fit": {
+    "score": 25,
+    "recommendation": "deny",
+    "reason": "Medically he is close (MH-4 72-hour hold passes for a 07/21 AM arrival, CIWA <8, COG-2 AOx4, INF-1 negative), but he declined residential treatment and did not commit to abstinence, which triggers FORM-X5. If the hospital confirms he will abstain, re-review with a fresh COVID swab (INF-2) and PT/OT or ambulation notes (MOB-2, MOB-3)."
+  }
+}

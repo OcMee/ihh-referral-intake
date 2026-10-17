@@ -1,0 +1,134 @@
+{
+  "packet_id": "F06",
+  "patient": {
+    "summary": "58F, uncontrolled type 2 diabetes (A1c 11.8%) without DKA, newly started on insulin glargine, unhoused",
+    "age": "58",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused x 7 months (staying in a friend's car / shelter waitlist)",
+    "admit_reason": "High blood sugar from uncontrolled type 2 diabetes, off meds for 6 months",
+    "pages": [1, 2, 4, 5]
+  },
+  "key_facts": [
+    {"label": "Diabetes", "text": "Insulin glargine first dose 06/09 21:00; planned arrival 06/10 ~15:00 is only about 18 hours later (rule needs 24 hours).", "pages": [7, 1], "quote": "Insulin glargine 10 units SC at bedtime STARTED 06/09/2026 21:00 (first dose).", "quote_page": 7},
+    {"label": "Diabetes", "text": "Patient has not yet self-injected; all insulin given by RN and teaching not started (educator session 06/10 13:00).", "pages": [8, 10], "quote": "Pt self-administration of insulin: NOT YET CONFIRMED (educator session 06/10 13:00)", "quote_page": 10},
+    {"label": "Diabetes", "text": "Glucose falling 412 to 198 over 5 readings, but two scheduled checks were missed.", "pages": [8, 7], "quote": "Glucose trend: see nursing flowsheet (some checks missed 06/09-06/10).", "quote_page": 7},
+    {"label": "Diabetes", "text": "No DKA or HHS on admission labs (BHB 0.4, pH 7.38, AG 13); A1c 11.8%.", "pages": [6], "quote": "=> Hyperglycemia WITHOUT DKA or HHS", "quote_page": 6},
+    {"label": "Diabetes", "text": "Written hypoglycemia plan and hold rule; PCP follow-up 06/16 (6 days after planned discharge).", "pages": [10], "quote": "Hold glargine if bedtime glucose <100 and call PCP", "quote_page": 10},
+    {"label": "Mobility", "text": "Walking independently in the hallway and showering independently.", "pages": [8], "quote": "Pt ambulating independently in hallway, showering independently.", "quote_page": 8},
+    {"label": "Infection", "text": "MRSA nares negative 06/08; COVID rapid antigen negative 06/10 05:00 (about 10 hours before planned 15:00 arrival).", "pages": [9], "quote": "06/10 05:00 SARS-CoV-2 rapid antigen: Negative", "quote_page": 9},
+    {"label": "Other", "text": "Referral form says no insulin and self-administers all meds; chart shows new insulin and self-injection not confirmed.", "pages": [2], "quote": "Insulin: Yes [ ] No [X]", "quote_page": 2}
+  ],
+  "rules": [
+    {"rule_id": "GEN-1", "status": "met", "finding": "Unhoused for 7 months with uncontrolled diabetes needing a place to stabilize.", "evidence": [{"page": 5, "quote": "Unhoused x 7 months."}]},
+    {"rule_id": "GEN-2", "status": "unknown", "finding": "Patient is unhoused rather than living alone; not separately assessed (GEN-1 already met).", "evidence": []},
+    {"rule_id": "GEN-3", "status": "met", "finding": "Auth form checks at risk of hospitalization/re-hospitalization.", "evidence": [{"page": 3, "quote": "Member at risk of hospitalization/re-hospitalization [X]"}]},
+
+    {"rule_id": "ADL-1", "status": "unknown", "finding": "Chart documents independent walking and showering only; full ADLs not described.", "evidence": []},
+    {"rule_id": "ADL-2", "status": "met", "finding": "Nursing documents she showers independently.", "evidence": [{"page": 8, "quote": "Pt ambulating independently in hallway, showering independently."}]},
+    {"rule_id": "ADL-3", "status": "unknown", "finding": "Toileting is not addressed in the chart (form says continent).", "evidence": []},
+
+    {"rule_id": "MOB-1", "status": "not_applicable", "finding": "No assistive device.", "evidence": []},
+    {"rule_id": "MOB-2", "status": "not_met", "finding": "No PT/OT notes in the packet; the only mobility documentation is one nursing line.", "evidence": [{"page": 8, "quote": "Pt ambulating independently in hallway, showering independently."}]},
+    {"rule_id": "MOB-3", "status": "unknown", "finding": "Walks independently in the hallway, but distance (100 ft) is not documented and there is no PT eval.", "evidence": []},
+    {"rule_id": "MOB-4", "status": "not_applicable", "finding": "Not wheelchair dependent.", "evidence": []},
+
+    {"rule_id": "MH-1", "status": "unknown", "finding": "No mental health assessment in chart; form says no mental health diagnosis.", "evidence": []},
+    {"rule_id": "MH-2", "status": "unknown", "finding": "Suicidal ideation is not addressed.", "evidence": []},
+    {"rule_id": "MH-3", "status": "unknown", "finding": "Hallucinations are not addressed.", "evidence": []},
+    {"rule_id": "MH-4", "status": "not_applicable", "finding": "No alcohol use; not admitted with intoxication.", "evidence": [{"page": 5, "quote": "No tobacco. No EtOH. No drugs."}]},
+    {"rule_id": "MH-5", "status": "unknown", "finding": "Conservatorship or FSP history is not mentioned.", "evidence": []},
+
+    {"rule_id": "COG-1", "status": "not_met", "finding": "The rule requires confirming she can self-administer insulin; the chart says this is not yet confirmed and she has not self-injected.", "evidence": [{"page": 10, "quote": "Pt self-administration of insulin: NOT YET CONFIRMED (educator session 06/10 13:00)"}, {"page": 7, "quote": "pt has not yet self-injected"}]},
+    {"rule_id": "COG-2", "status": "met", "finding": "AOx4 on H&P and 06/10 progress note.", "evidence": [{"page": 7, "quote": "SpO2 98% RA. AOx4."}]},
+
+    {"rule_id": "OTH-1", "status": "unknown", "finding": "Behavior is not described; no aggression documented, but no statement either way.", "evidence": []},
+    {"rule_id": "OTH-2", "status": "met", "finding": "Referral form marks not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "OTH-3", "status": "not_applicable", "finding": "No IV access at discharge; insulin is subcutaneous.", "evidence": []},
+    {"rule_id": "OTH-4", "status": "unknown", "finding": "Isolation status is not stated; MRSA and COVID negative.", "evidence": []},
+
+    {"rule_id": "EOL-1", "status": "not_applicable", "finding": "Not a hospice patient.", "evidence": []},
+
+    {"rule_id": "INF-1", "status": "met", "finding": "MRSA nares PCR negative 06/08.", "evidence": [{"page": 9, "quote": "06/08 MRSA nares PCR: Negative"}]},
+    {"rule_id": "INF-2", "status": "met", "finding": "COVID negative 06/10 05:00; planned arrival 06/10 ~15:00 is about 10 hours later.", "evidence": [{"page": 9, "quote": "06/10 05:00 SARS-CoV-2 rapid antigen: Negative"}, {"page": 1, "quote": "Planned d/c 06/10/2026 ~15:00."}]},
+
+    {"rule_id": "DM-1", "status": "met", "finding": "Five glucose readings sent (412, 312, 268, 241, 198) showing steady improvement, but two scheduled checks were missed and values are still high, so stabilization is borderline.", "evidence": [{"page": 8, "quote": "06/10 07:40 | 198 | lispro 2 units | MS"}, {"page": 7, "quote": "Glucose trend: see nursing flowsheet (some checks missed 06/09-06/10)."}]},
+    {"rule_id": "DM-2", "status": "met", "finding": "Came through the ED; labs document no DKA or HHS.", "evidence": [{"page": 6, "quote": "=> Hyperglycemia WITHOUT DKA or HHS"}]},
+    {"rule_id": "DM-3", "status": "not_met", "finding": "First glargine dose 06/09 21:00; planned arrival 06/10 ~15:00 is about 18 hours later, under 24 hours. She would pass this rule after 06/10 21:00.", "evidence": [{"page": 7, "quote": "Insulin glargine 10 units SC at bedtime STARTED 06/09/2026 21:00 (first dose)."}, {"page": 1, "quote": "Planned d/c 06/10/2026 ~15:00."}]},
+    {"rule_id": "DM-4", "status": "met", "finding": "Referred from observation unit, not straight from the ED, but the pieces are there: PCP 06/16 (6 days), no hypoglycemia, written hold/hypoglycemia plan. Regimen is not established (see DM-3).", "evidence": [{"page": 10, "quote": "PCP: Example Community Clinic (fictional) 06/16/2026, 555-0175"}, {"page": 10, "quote": "Hold glargine if bedtime glucose <100 and call PCP"}]},
+    {"rule_id": "DM-5", "status": "unknown", "finding": "Glucometer is new on the discharge list; no documentation that she knows how to use it.", "evidence": []},
+    {"rule_id": "DM-6", "status": "not_met", "finding": "Insulin teaching has not started and she is scared of needles.", "evidence": [{"page": 8, "quote": "Teaching not yet started."}, {"page": 8, "quote": "All insulin doses to date administered by RN."}]},
+    {"rule_id": "DM-Q1", "status": "met", "finding": "Yes, insulin glargine 10 units by pen at bedtime (new 06/09); no pump.", "evidence": [{"page": 10, "quote": "Insulin glargine (pen) 10 units SC at bedtime (NEW 06/09/2026)"}]},
+    {"rule_id": "DM-Q2", "status": "met", "finding": "Yes, metformin 500 mg twice daily (new).", "evidence": [{"page": 10, "quote": "Metformin 500 mg PO twice daily with meals (NEW)"}]},
+    {"rule_id": "DM-Q3", "status": "met", "finding": "A1c 11.8% on 06/08.", "evidence": [{"page": 9, "quote": "06/08 20:40 | HbA1c 11.8% H"}]},
+
+    {"rule_id": "ID-1", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-2", "status": "not_applicable", "finding": "No antibiotics.", "evidence": []},
+    {"rule_id": "ID-3", "status": "not_applicable", "finding": "No IV antibiotics.", "evidence": []},
+    {"rule_id": "ID-Q1", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-Q2", "status": "not_applicable", "finding": "No infection.", "evidence": []},
+    {"rule_id": "ID-Q3", "status": "not_applicable", "finding": "No infection; see OTH-4.", "evidence": []},
+
+    {"rule_id": "RESP-1", "status": "not_applicable", "finding": "No respiratory illness; CXR no acute process.", "evidence": []},
+    {"rule_id": "RESP-2", "status": "not_applicable", "finding": "No respiratory illness; SpO2 98% RA.", "evidence": []},
+    {"rule_id": "RESP-3", "status": "not_applicable", "finding": "No oxygen required.", "evidence": []},
+    {"rule_id": "RESP-4", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+    {"rule_id": "RESP-Q1", "status": "not_applicable", "finding": "No breathing treatments.", "evidence": []},
+    {"rule_id": "RESP-Q2", "status": "not_applicable", "finding": "No respiratory illness.", "evidence": []},
+
+    {"rule_id": "CARD-1", "status": "not_applicable", "finding": "No cardiac diagnosis; hypertension handled under CIR-E6. Only 3 vital sets sent.", "evidence": []},
+    {"rule_id": "CARD-2", "status": "not_applicable", "finding": "No troponin in packet.", "evidence": []},
+    {"rule_id": "CARD-3", "status": "not_applicable", "finding": "No cardiac diagnosis.", "evidence": []},
+    {"rule_id": "CARD-4", "status": "not_applicable", "finding": "No atrial fibrillation.", "evidence": []},
+    {"rule_id": "CARD-5", "status": "not_applicable", "finding": "No EF, no heart attack, no chemotherapy.", "evidence": []},
+    {"rule_id": "CARD-6", "status": "unknown", "finding": "Has hypertension; no IV BP medication is mentioned, but the packet does not state it either way.", "evidence": []},
+
+    {"rule_id": "END-E1", "status": "met", "finding": "Glucose improving over 5 readings on treatment (same caveat as DM-1: gaps, still elevated).", "evidence": [{"page": 8, "quote": "06/10 07:40 | 198 | lispro 2 units | MS"}]},
+    {"rule_id": "END-X2", "status": "met", "finding": "No alcohol use and ketones negative; no alcoholic ketoacidosis.", "evidence": [{"page": 9, "quote": "Beta-hydroxybutyrate 0.4 (ref <0.6)"}]},
+    {"rule_id": "END-X3", "status": "met", "finding": "No DKA documented.", "evidence": [{"page": 6, "quote": "=> Hyperglycemia WITHOUT DKA or HHS"}]},
+    {"rule_id": "CIR-E6", "status": "met", "finding": "BP 152/90 on admission down to 138/84 after restarting oral lisinopril.", "evidence": [{"page": 9, "quote": "06/10 08:20 | T 98.0 | HR 84 | BP 138/84"}, {"page": 7, "quote": "2. HTN - lisinopril 10 mg daily"}]},
+    {"rule_id": "CIR-X2", "status": "met", "finding": "Hypertension responding to oral medication; no IV medication or symptoms documented.", "evidence": [{"page": 9, "quote": "06/10 08:20 | T 98.0 | HR 84 | BP 138/84"}]},
+
+    {"rule_id": "FORM-X1", "status": "met", "finding": "AOx4, no confusion.", "evidence": [{"page": 6, "quote": "Gen: AOx4, dry mucous membranes"}]},
+    {"rule_id": "FORM-X2", "status": "met", "finding": "Walking and showering independently; no ADL limitation documented.", "evidence": [{"page": 8, "quote": "Pt ambulating independently in hallway, showering independently."}]},
+    {"rule_id": "FORM-X3", "status": "unknown", "finding": "Superseded by MOB-3/MOB-4; walks independently in hallway but 100 ft not documented.", "evidence": []},
+    {"rule_id": "FORM-X4", "status": "met", "finding": "No active MRSA, TB or C. diff: MRSA negative, CXR no acute process.", "evidence": [{"page": 9, "quote": "06/08 MRSA nares PCR: Negative"}, {"page": 9, "quote": "06/08 CXR: no acute process"}]},
+    {"rule_id": "FORM-X5", "status": "met", "finding": "No alcohol or drug use.", "evidence": [{"page": 5, "quote": "No tobacco. No EtOH. No drugs."}]},
+    {"rule_id": "FORM-X6", "status": "met", "finding": "Superseded by OTH-2; form marks not a registered sex offender.", "evidence": [{"page": 2, "quote": "Registered Sex Offender: Yes [ ] No [X]"}]},
+    {"rule_id": "FORM-X7", "status": "unknown", "finding": "Behavior not described in the chart.", "evidence": []}
+  ],
+  "documents": [
+    {"doc_id": "DOC-1", "present": "yes", "pages": [2]},
+    {"doc_id": "DOC-2", "present": "yes", "pages": [4]},
+    {"doc_id": "DOC-3", "present": "yes", "pages": [3]},
+    {"doc_id": "DOC-4", "present": "yes", "pages": [5, 6]},
+    {"doc_id": "DOC-5", "present": "yes", "pages": [7]},
+    {"doc_id": "DOC-6", "present": "yes", "pages": [9]},
+    {"doc_id": "DOC-7", "present": "yes", "pages": [10]},
+    {"doc_id": "DOC-8", "present": "yes", "pages": [8]},
+    {"doc_id": "DOC-9", "present": "no", "pages": []},
+    {"doc_id": "DOC-10", "present": "unknown", "pages": []}
+  ],
+  "conflicts": [
+    {"topic": "Insulin use", "rule_ids": ["DM-3", "DM-6", "DM-Q1"],
+     "sources": [{"page": 2, "quote": "Insulin: Yes [ ] No [X]"}, {"page": 10, "quote": "Insulin glargine (pen) 10 units SC at bedtime (NEW 06/09/2026)"}],
+     "note": "Form says no insulin, chart says glargine started 06/09 21:00 and is on the discharge list. Chart wins: new insulin user."},
+    {"topic": "Self-administration of meds", "rule_ids": ["COG-1", "DM-6"],
+     "sources": [{"page": 2, "quote": "Self Administer All Meds: Yes [X] No [ ]"}, {"page": 10, "quote": "Pt self-administration of insulin: NOT YET CONFIRMED (educator session 06/10 13:00)"}],
+     "note": "Form says she self-administers all meds, chart says insulin self-administration is not yet confirmed. Chart wins: not confirmed."}
+  ],
+  "questions_for_hospital": [
+    "Glargine was first given 06/09 at 21:00; could discharge move to after 21:00 on 06/10 (or the next day) so she is past 24 hours on insulin?",
+    "After the 06/10 13:00 educator session, can you send documentation that she drew up/dialed and self-injected her insulin pen correctly?",
+    "Has she shown she can use the new glucometer on her own?",
+    "Can you send the 06/10 glucose readings after 07:40, so we have 5 consecutive values that show stabilization?",
+    "Can you send PT/OT notes or a nursing note confirming she can walk at least 100 ft and is independent with toileting?",
+    "Has the patient had any suicidal ideation, hallucinations, aggressive behavior, or history of conservatorship or Full Service Partnership (FSP)?",
+    "Is the patient on any isolation precautions?"
+  ],
+  "claude_fit": {
+    "score": 20,
+    "recommendation": "deny",
+    "reason": "For the requested same-day 15:00 arrival, DM-3 is not met (first glargine dose 06/09 21:00, only about 18 hours earlier), and COG-1/DM-6 are not met because insulin self-injection is not yet confirmed, despite the form saying no insulin. She otherwise looks appropriate (DM-2, INF-1, INF-2 met), so re-refer after 06/10 21:00 once self-injection is documented."
+  }
+}

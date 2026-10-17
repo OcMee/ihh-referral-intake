@@ -1,0 +1,789 @@
+{
+  "packet_id": "F01",
+  "patient": {
+    "summary": "46F, LLE cellulitis with small shin ulcer, improving on PO abx, unhoused",
+    "age": "46",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) Medi-Cal",
+    "housing": "Unhoused (encampment, 18 months)",
+    "admit_reason": "Cellulitis of left lower leg",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Infection",
+      "text": "Cellulitis improving; afebrile 48h and switched to oral antibiotics; medically stable for discharge.",
+      "pages": [
+        8
+      ],
+      "quote": "Medically stable for d/c to recuperative care today",
+      "quote_page": 8
+    },
+    {
+      "label": "Wounds",
+      "text": "Small superficial shin ulcer (1.8 x 1.2 cm) inside the cellulitis; patient changes dressing independently.",
+      "pages": [
+        7
+      ],
+      "quote": "Pt return-demonstrated dressing change independently x2.",
+      "quote_page": 7
+    },
+    {
+      "label": "Home health",
+      "text": "Coastline Home Health RN visit scheduled 03/06 for wound check, then 2x/week.",
+      "pages": [
+        8
+      ],
+      "quote": "RN SOC visit scheduled 03/06/2026 for wound check, then 2x/week.",
+      "quote_page": 8
+    },
+    {
+      "label": "Mobility",
+      "text": "AOx4, independent with ADLs and walking with no device.",
+      "pages": [
+        8
+      ],
+      "quote": "Pt AOx4, independent with ADLs and ambulation (no device).",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA nares negative 03/03 and rapid COVID negative 03/05 06:10.",
+      "pages": [
+        10
+      ],
+      "quote": "03/05 06:10 SARS-CoV-2 rapid antigen: NEGATIVE",
+      "quote_page": 10
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "IV antibiotics stopped; oral cephalexin and TMP-SMX for 4 more days, self-administered.",
+      "pages": [
+        11
+      ],
+      "quote": "Patient able to self-administer all medications: Yes",
+      "quote_page": 11
+    },
+    {
+      "label": "Substance use",
+      "text": "Social alcohol, last drink a week before admission; denies drugs; smoker.",
+      "pages": [
+        5
+      ],
+      "quote": "EtOH: social, last drink 1 wk ago. Denies drug use.",
+      "quote_page": 5
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Homeless 18 months with LLE cellulitis needing ongoing antibiotics and wound checks.",
+      "evidence": [
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        },
+        {
+          "page": 5,
+          "quote": "46 y/o F experiencing homelessness"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "not_applicable",
+      "finding": "Patient is unhoused rather than living alone; GEN-1 applies.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Health plan authorization request marks risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "CM note documents independence with ADLs.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, independent with ADLs and ambulation (no device)."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Independent with ADLs (which include hygiene); no specific shower assessment in packet.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, independent with ADLs and ambulation (no device)."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Continent and independent with ADLs.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No DME used.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "independent with ADLs and ambulation (no device)."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT/OT notes in the 11-page packet; CM, wound and vitals notes document independent ambulation instead.",
+      "evidence": [
+        {
+          "page": 1,
+          "quote": "Pages (including cover): 11"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Ambulating halls independently without a device (distance not quantified).",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "ambulating halls independently. No fevers x 48h."
+        },
+        {
+          "page": 9,
+          "quote": "Pain 2/10 L shin. Ambulating independently."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No mental health diagnosis on form; no psychiatric history in H&P.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Mental Health DX: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "unknown",
+      "finding": "Suicidal ideation is not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations are not addressed in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Not admitted with alcohol intoxication; social drinker, last drink 1 week before admission.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "EtOH: social, last drink 1 wk ago."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship/FSP history is not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Pharmacist documents patient can self-administer all medications.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P and on day of discharge.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, independent with ADLs"
+        },
+        {
+          "page": 6,
+          "quote": "Gen: NAD, AOx4"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "unknown",
+      "finding": "No aggression documented, but behavior toward staff is not explicitly addressed; form lists no behavioral limitations.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Form states not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "IV cefazolin stopped; discharge regimen is oral only.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Cefazolin IV (inpatient only)"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "unknown",
+      "finding": "Isolation status not stated; MRSA nares negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Hospice: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 03/03.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "03/03 06:15 MRSA nares PCR: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "Rapid COVID negative 03/05 06:10; valid if arrival before 03/06 06:10 (discharge planned 03/05 PM).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "03/05 06:10 SARS-CoV-2 rapid antigen: NEGATIVE"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic; diabetes rules do not apply.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vitals afebrile with normal HR and BP; no sepsis signs.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "03/05 07:40 | 98.4 | 78 | 122/74 | 16 | 99% | RA"
+        },
+        {
+          "page": 8,
+          "quote": "No fevers x 48h."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "On oral cephalexin and TMP-SMX; can self-administer.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics no longer required; transitioned to oral.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Transition to PO cephalexin 500 mg QID + TMP-SMX DS 1 tab BID"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Left anterior shin (left lower extremity cellulitis).",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Wound #1: L anterior shin, superficial open area within cellulitis"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures x2 no growth at 72h; final pending.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "03/02 Blood culture x2: No growth at 72 hours (final pending 5 days)"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "unknown",
+      "finding": "Isolation status not stated.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness; CXR negative.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "not_applicable",
+      "finding": "No cardiac history or cardiac workup in packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with ADLs.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "independent with ADLs and ambulation (no device)."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Superseded by MOB-3/MOB-4; ambulates independently without device.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "ambulating halls independently. No fevers x 48h."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; CXR clear for TB screen; no C. diff.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "03/03 06:15 MRSA nares PCR: NEGATIVE"
+        },
+        {
+          "page": 2,
+          "quote": "Result: CXR neg - no acute process"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "met",
+      "finding": "No substance treatment issue; denies drug use, social alcohol only.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Superseded by OTH-2; not a registered sex offender.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "unknown",
+      "finding": "No aggression documented, but not explicitly addressed (same as OTH-1).",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "met",
+      "finding": "Non-purulent cellulitis now on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "46F with non-purulent cellulitis L lower leg with small superficial ulceration"
+        },
+        {
+          "page": 8,
+          "quote": "Transition to PO cephalexin 500 mg QID + TMP-SMX DS 1 tab BID"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E2",
+      "status": "met",
+      "finding": "Home health RN start of care 03/06 for wound check, then 2x/week; shin is not a hard-to-reach area.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "RN SOC visit scheduled 03/06/2026 for wound check, then 2x/week."
+        },
+        {
+          "page": 7,
+          "quote": "Change dressing every other day and PRN"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E3",
+      "status": "not_applicable",
+      "finding": "No IV antibiotics at discharge.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E4",
+      "status": "met",
+      "finding": "Small superficial ulcer within the cellulitis, improving; patient does own dressing changes.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Pt return-demonstrated dressing change independently x2."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E5",
+      "status": "not_applicable",
+      "finding": "No surgical incision.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E6",
+      "status": "not_applicable",
+      "finding": "Not a pressure ulcer.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-E7",
+      "status": "not_applicable",
+      "finding": "No burns.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INT-X1",
+      "status": "met",
+      "finding": "No grafting needed; wound granulating and shrinking.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Size: 1.8 cm L x 1.2 cm W x 0.1 cm D (improved from 2.0 x 1.5)"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "met",
+      "finding": "No abscess; no fluctuance on exam.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "minimal serous drainage, no fluctuance. No crepitus."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X3",
+      "status": "not_applicable",
+      "finding": "No burns.",
+      "evidence": []
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Wound present",
+      "rule_ids": [
+        "INT-E2",
+        "INT-E4"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Any Wounds: Yes [ ] No [X]"
+        },
+        {
+          "page": 7,
+          "quote": "Wound #1: L anterior shin, superficial open area within cellulitis"
+        }
+      ],
+      "note": "Form says no wounds, chart documents an open shin wound needing dressing changes. Chart wins; wound rules apply and home health is arranged."
+    }
+  ],
+  "questions_for_hospital": [
+    "Can you confirm she has no history of suicidal ideation, hallucinations, or aggressive behavior during this stay?",
+    "Is she on any isolation precautions, and has she ever been under a conservatorship or FSP?",
+    "Will her oral antibiotics and wound supplies be filled and sent with her at discharge?",
+    "If arrival slips past 03/06 06:10, can a repeat rapid COVID swab be done?"
+  ],
+  "claude_fit": {
+    "score": 88,
+    "recommendation": "approve",
+    "reason": "Unhoused patient with improving cellulitis on oral antibiotics, independent with ADLs and mobility, MRSA and COVID negative, and home health wound visits arranged (GEN-1, INT-E1, INT-E2, ID-1, INF-1/INF-2 met). Remaining gaps are unconfirmed mental-health/behavior items (MH-2, OTH-1) and no PT/OT notes (MOB-2), none of which look like blockers."
+  }
+}
