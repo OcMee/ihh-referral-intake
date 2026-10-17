@@ -39,6 +39,16 @@ def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=
     return out
 
 
+def small(path: Path) -> bytes:
+    """Smaller page image for the artifact, which has a 16 MB limit; the website keeps the full-size originals."""
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("L")
+    im.thumbnail((560, 760))
+    b = io.BytesIO(); im.save(b, "JPEG", quality=55, optimize=True)
+    return b.getvalue()
+
+
 def html(data: dict, artifact: bool) -> str:
     shell = (SRC / "shell.html").read_text()
     # demo history is anchored to the build time, so seeded entries never move or land after real decisions
@@ -47,7 +57,7 @@ def html(data: dict, artifact: bool) -> str:
         import base64
         pk = []
         for p in data["packets"]:
-            imgs = [f"data:image/jpeg;base64,{base64.b64encode((REPO / 'app' / p['img'].replace('{nn}', f'{n:02d}')).read_bytes()).decode()}"
+            imgs = [f"data:image/jpeg;base64,{base64.b64encode(small(REPO / 'app' / p['img'].replace('{nn}', f'{n:02d}'))).decode()}"
                     for n in range(1, p["pages"] + 1)] if p.get("img") else None
             pk.append({**p, "imgs": imgs})
         data = {**data, "packets": pk}
@@ -80,10 +90,10 @@ def public(checklist: dict, pre: str = "") -> list:
     shutil.copy(REPO / CRIT_SRC, out_dir / "ihh-admission-criteria.pdf")
     items = [(c, {"pages": p}) for c, p in ((make_demo.c1, make_demo.p1), (make_demo.c2, make_demo.p2), (make_demo.c3, make_demo.p3))]
     items += [(json.loads(f.read_text()), json.loads(f.with_name(f"{f.stem}.pages.json").read_text()))
-              for f in sorted((REPO / "demo/fictional").glob("F0?/F0?.json"))]
+              for f in sorted((REPO / "demo/fictional").glob("F[0-9][0-9]/F[0-9][0-9].json")) if not 10 <= int(f.stem[1:]) <= 27]  # to review
     # already reviewed earlier today: F10-F20 with a seeded decision record (labeled as demo history in the app)
     hist = [(json.loads(f.read_text()), json.loads(f.with_name(f"{f.stem}.pages.json").read_text()))
-            for f in sorted((REPO / "demo/fictional").glob("F[12][0-9]/F[12][0-9].json"))]
+            for f in sorted((REPO / "demo/fictional").glob("F[12][0-9]/F[12][0-9].json")) if int(f.stem[1:]) <= 27]
     intended = {a["packet_id"]: a["intended"] for a in json.loads((REPO / "demo/fictional/answers.json").read_text())}
     KIND = {"fit": "approve", "needs_info": "info", "not_fit": "deny"}
     BY = "Dr Cornel Manole (Referral coordinator)"
