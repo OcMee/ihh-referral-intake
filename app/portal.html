@@ -25,7 +25,7 @@ button:disabled { opacity: .5; cursor: wait }
 .res { border-radius: 12px; padding: 12px 14px; margin-top: 14px; font-weight: 600 } .res.ok { background: var(--ok-bg); color: var(--ok) } .res.bad { background: var(--bad-bg); color: var(--bad) }
 </style></head>
 <body>
-<header><b>OCMEE DESIGN</b><span>Referral Desk · hospital referral portal (prototype)</span></header>
+<header><b>OCMEE REFERRAL SOLUTION</b><span>hospital referral portal (prototype)</span></header>
 <main>
   <p class="note">Prototype running on this computer. Use fictional files and names only. A real portal would be hosted with logins for hospital staff.</p>
   <h1>Send a recuperative care referral</h1>
@@ -53,7 +53,7 @@ button:disabled { opacity: .5; cursor: wait }
     items = d.referral_checklist.items;
     $("#docs").innerHTML = items.map(x => `<label class="doc"><input type="checkbox" value="${x.id}"> <span>${esc(x.text)} <small>${x.id}${OPTIONAL.has(x.id) ? " · if needed" : ""}</small></span></label>`).join("");
     missing();
-  }).catch(() => { $("#docs").textContent = "Could not load IHH's checklist. Is the Referral Desk server running?" });
+  }).catch(() => { $("#docs").textContent = "Could not load IHH's checklist. Is the OCMEE Referral Solution server running?" });
   function missing() {
     const ticked = new Set([...document.querySelectorAll("#docs input:checked")].map(x => x.value));
     const miss = items.filter(x => !OPTIONAL.has(x.id) && !ticked.has(x.id));
@@ -77,7 +77,7 @@ button:disabled { opacity: .5; cursor: wait }
       const j = await r.json();
       res.innerHTML = j.id ? `<p class="res ok">Received as referral ${esc(j.id)}. The IHH referral coordinator has it now.</p>` : `<p class="res bad">${esc(j.error || "Not sent")}</p>`;
       if (j.id) { files = []; $("#list").innerHTML = "" }
-    } catch (err) { res.innerHTML = `<p class="res bad">Could not reach Referral Desk.</p>` }
+    } catch (err) { res.innerHTML = `<p class="res bad">Could not reach OCMEE Referral Solution.</p>` }
     $("#send").disabled = false;
   });
 })();

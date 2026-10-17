@@ -36,14 +36,14 @@ def make(d: dict, checklist: dict, dest: Path, fictional: bool) -> None:
     fit, cf = d["fit"], d.get("claude_fit", {})
     doc = SimpleDocTemplate(str(dest), pagesize=letter, leftMargin=0.5 * inch, rightMargin=0.5 * inch,
                             topMargin=0.5 * inch, bottomMargin=0.5 * inch,
-                            title=f"{d['packet_id']} fit checklist", author="Referral Desk", invariant=True)
+                            title=f"{d['packet_id']} fit checklist", author="OCMEE Referral Solution", invariant=True)
 
     def frame(c, _doc):
         c.setFillColor(INK); c.rect(0, letter[1] - 22, letter[0], 22, stroke=0, fill=1)
         c.setFillColor(ORANGE); c.rect(0, letter[1] - 25, letter[0], 3, stroke=0, fill=1)
-        c.setFont("Helvetica-Bold", 9); c.setFillColor(ORANGE); c.drawString(36, letter[1] - 15, "OCMEE DESIGN")
+        c.setFont("Helvetica-Bold", 9); c.setFillColor(ORANGE); c.drawString(36, letter[1] - 15, "OCMEE REFERRAL SOLUTION")
         c.setFillColor(colors.white); c.setFont("Helvetica", 8)
-        c.drawString(115, letter[1] - 15, f"Referral Desk  ·  fit checklist  ·  {d['packet_id']}")
+        c.drawString(178, letter[1] - 15, f"fit checklist  ·  {d['packet_id']}")
         c.drawRightString(letter[0] - 36, letter[1] - 15,
                           "FICTIONAL DEMO CASE" if fictional else "De-identified packet data: do not share")
         c.setFillColor(MUTE); c.setFont("Helvetica", 7)

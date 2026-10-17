@@ -388,3 +388,8 @@ main { padding-block-end: 150px }
 .who-name { font-size: 34px; font-weight: 800; line-height: 1.1; margin: 0; color: #ffffff; letter-spacing: -.01em }
 .who-role { margin: 2px 0 0; font-size: 15px; font-weight: 600; color: #faac23 }
 @media (max-width: 520px) { .who-name { font-size: 26px } }
+
+/* nav + decisions table */
+.crumb a { margin-right: 14px; color: #e6e6e6; text-decoration: none; font-weight: 600 } .crumb a.on { color: #ff860f; border-bottom: 2px solid #ff860f; padding-bottom: 2px }
+.dtable { overflow-x: auto } .mx.dec td, .mx.dec th { text-align: left; vertical-align: top } .mx.dec tr.click { cursor: pointer } .mx.dec tr.click:hover td { background: var(--surface-2) }
+.mx.dec .pt { min-width: 260px } .dd.approve b { color: var(--ok) } .dd.deny b { color: var(--bad) } .dd.info b { color: var(--warn) }

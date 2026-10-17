@@ -51,7 +51,7 @@
   async function sha256(s) { const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("") }
   function loginView() {
     return `<section class="login"><div class="login-card">
-      <p class="eyebrow">Referral Desk · Illumination Health + Home</p><h1>Sign in</h1>
+      <p class="eyebrow">OCMEE Referral Solution · Illumination Health + Home</p><h1>Sign in</h1>
       <form id="login" autocomplete="on">
         <label>Email<input id="l-email" type="email" autocomplete="username" required></label>
         <label>Password<input id="l-pass" type="password" autocomplete="current-password" required></label>
@@ -176,7 +176,7 @@
           <div class="hot"><small class="step">[03] Decide</small><span class="num">${decided}<em>/${P.length}</em></span><small>${urgent} under 30 min left</small></div>
         </div></section>
       <div class="tools">
-        <div class="seg" role="tablist">${[["open", "To review"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"], ["done", "Reviewed"], ["all", "All"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
+        <div class="seg" role="tablist">${[["open", "To review"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
         <input class="search" id="q" type="search" placeholder="Search patient, diagnosis or rule ID" value="${esc(ui.q)}" aria-label="Search">
         <select class="sort" id="sort" aria-label="Sort">${[["deadline", "Sort: deadline"], ["score", "Sort: lowest score"], ["id", "Sort: packet ID"]].map(([k, l]) => `<option value="${k}" ${ui.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select>
         ${APP.meta.real ? `<label class="toggle"><input type="checkbox" id="ihh" ${ui.showIhh ? "checked" : ""}> show IHH decision</label>` : ""}
@@ -278,6 +278,24 @@
     } catch (e) { /* server has no record yet */ }
   }
 
+  // ---------- decisions ----------
+  function decisionsView() {
+    const d = decisions(), done = P.filter(p => d[p.id]).sort((a, b) => d[b.id].at - d[a.id].at);
+    const BANDN = { fit: "Likely fit", info: "Needs info", nofit: "Not a fit" }, AGREE = { fit: "approve", info: "info", nofit: "deny" };
+    const q = (ui.dq || "").toLowerCase();
+    const rows = done.filter(p => !q || (p.id + " " + p.patient.summary + " " + d[p.id].by + " " + KIND[d[p.id].decision]).toLowerCase().includes(q));
+    return `<section class="report"><p class="eyebrow">Decisions · ${done.length} referrals decided</p><h1>Decisions</h1>
+      <p class="lbl">Every decision is on record. A revision adds an entry with its reason; the first decision is never changed.</p>
+      <input class="search" id="dq" type="search" placeholder="Search ID, patient, reviewer or decision" value="${esc(ui.dq || "")}" aria-label="Search decisions" style="margin:10px 0 12px;max-width:420px">
+      <div class="dtable"><table class="mx dec"><tr><th>Referral</th><th>Patient</th><th>Tool said</th><th>Decision</th><th>By</th><th>When</th><th>Record</th></tr>
+      ${rows.map(p => { const h = history(p.id), e = h[h.length - 1], over = AGREE[p.fit.band] !== h[0].decision;
+        return `<tr data-open="${p.id}" class="click"><td><b>${p.id}</b> ${srcTag(p)}</td><td class="pt">${esc(p.patient.summary)}</td>
+          <td><span class="pill ${p.fit.band}">${p.fit.score}</span> ${BANDN[p.fit.band]}</td>
+          <td class="dd ${e.decision}"><b>${KIND[e.decision]}</b>${over ? ` <span class="tagx" title="First decision differed from the tool">override</span>` : ""}</td>
+          <td>${esc(e.by || "")}</td><td>${new Date(e.at).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}</td>
+          <td>${h.length > 1 ? `${h.length} entries · revised` : "1 entry"}${h.some(x => x.seeded) ? ` <span class="tagx">demo history</span>` : ""}</td></tr>` }).join("") || `<tr><td colspan="7">Nothing decided yet.</td></tr>`}</table></div></section>`;
+  }
+
   // ---------- report ----------
   function report() {
     const d = decisions(), done = P.filter(p => d[p.id]), open_ = P.filter(p => !d[p.id]);
@@ -293,7 +311,7 @@
     const cell = (b, k) => done.filter(p => p.fit.band === b && first(p.id).decision === k).length;
     const quotes = P.reduce((s, p) => [s[0] + p.verification.verified, s[1] + p.verification.quotes], [0, 0]);
     return `<section class="report">
-      <p class="eyebrow">Report · built from the ${P.length} referrals in this app</p><h1>Referral desk report</h1>
+      <p class="eyebrow">Reports · built from the ${P.length} referrals in this app</p><h1>Reports</h1>
       <p class="lbl">Figures update as decisions are made. Entries marked “demo history” were seeded for the demo.</p>
       <div class="kpis">
         <div><span class="num">${P.length}</span><small>referrals received</small></div>
@@ -438,9 +456,11 @@
   function render() {
     if (!session) { $("#crumb").innerHTML = ""; $("#main").innerHTML = loginView(); $("#dock").innerHTML = ""; return }
     const id = route(), p = id && byId[id];
-    const rep = location.hash === "#/report";
-    $("#crumb").innerHTML = (p ? `<a href="#/">Inbox</a> <span>›</span> <span>${p.id}</span>` : rep ? `<a href="#/">Inbox</a>` : `<span>Inbox</span>`) + ` <span>·</span> ${rep ? "<span>Report</span>" : `<a href="#/report">Report</a>`}`;
-    if (rep) { $("#main").innerHTML = report(); $("#dock").innerHTML = ""; return }
+    const view = location.hash === "#/report" ? "report" : location.hash === "#/decisions" ? "decisions" : p ? (decisions()[p.id] ? "decisions" : "inbox") : "inbox";
+    const nav = [["inbox", "#/", "Inbox"], ["decisions", "#/decisions", "Decisions"], ["report", "#/report", "Reports"]];
+    $("#crumb").innerHTML = nav.map(([k, h, l]) => `<a href="${h}" class="${view === k ? "on" : ""}">${l}</a>`).join("") + (p ? ` <span>›</span> <span>${p.id}</span>` : "");
+    if (view === "report" && !p) { $("#main").innerHTML = report(); $("#dock").innerHTML = ""; return }
+    if (view === "decisions" && !p) { $("#main").innerHTML = decisionsView(); $("#dock").innerHTML = ""; return }
     const main = $("#main");
     if (!p) { main.innerHTML = inbox(); $("#dock").innerHTML = ""; return }
     main.innerHTML = `<div class="review ${ui.panel ? "withpanel" : ""}"><div>${review(p)}${record(p)}</div>${panel(p)}</div>`;
@@ -495,6 +515,7 @@
     if ("signout" in t.dataset) { session = null; try { sessionStorage.removeItem("referral-desk-session") } catch (e) { /* ok */ } location.hash = "#/"; return render() }
   });
   document.addEventListener("input", e => {
+    if (e.target.id === "dq") { ui.dq = e.target.value; const pos = e.target.selectionStart; render(); const q = $("#dq"); q.focus(); q.setSelectionRange(pos, pos) }
     if (e.target.id === "q") { ui.q = e.target.value; const pos = e.target.selectionStart; render(); const q = $("#q"); q.focus(); q.setSelectionRange(pos, pos) }
     if (e.target.id === "reply") ui.draftText = e.target.value;
     if (e.target.id === "reason") ui.reason = e.target.value;
@@ -508,6 +529,6 @@
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }
   });
   addEventListener("hashchange", () => { ui.panel = null; ui.drawer = null; render(); scrollTo(0, 0) });
-  setInterval(() => { if (!document.activeElement || !["q", "reply", "reason", "l-email", "l-pass", "who-name"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
+  setInterval(() => { if (!document.activeElement || !["q", "dq", "reply", "reason", "l-email", "l-pass", "who-name"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
   render();
 })();
