@@ -47,7 +47,7 @@
       ${arc(73, 0, 0.395, "var(--bad)", 3.5)}${arc(73, 0.405, 0.695, "var(--warn)", 3.5)}${arc(73, 0.705, 1, "var(--ok)", 3.5)}
       ${arc(60, 0, 1, "var(--track)", 13)}${arc(60, 0, s, BAND[band], 13, true)}
       <text x="80" y="84" text-anchor="middle" font-size="44" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text>
-      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="IBM Plex Sans, sans-serif">FIT SCORE</text></svg>`;
+      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="Montserrat, sans-serif">FIT SCORE</text></svg>`;
   }
   function dial(score, band) {
     const r = 21, c = 2 * Math.PI * r;

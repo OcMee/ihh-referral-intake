@@ -8,7 +8,7 @@
   --ok: #17734a; --ok-bg: #e4f2ea; --warn: #9a5b00; --warn-bg: #fcefd9; --bad: #b3261e; --bad-bg: #fbe8e6;
   --gray: #5f6670; --gray-bg: #ebecee; --mark: #ffd9a8; --track: #e6e3dd; --paper: #fbfaf6; --paper-ink: #2a2a2a;
   --cond: "Montserrat", "IBM Plex Sans", Arial, sans-serif;
-  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; --brand-amber: #faac23;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   --r: 8px;
 }
@@ -263,3 +263,8 @@ h1, h2, .lane header b, .title h1 { font-family: var(--cond); letter-spacing: -.
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg button.on { background: var(--brand-orange); color: var(--brand-ink) } }
 @media (max-width: 520px) { .pipe > div { border-top: 1px solid #333 } .hero2 { padding: 22px 18px } }
 @media (max-width: 640px) { .logo span { display: none } .bar .tag { display: none } }
+
+/* ocmeed.com (from the site PDFs): Montserrat throughout, orange #FF860F + amber #FAAC23 */
+body { font-size: 13.5px }
+.pipe > div:first-child { background: linear-gradient(135deg, var(--brand-orange), var(--brand-amber)); border-color: var(--brand-amber) }
+.hero2 .lede { font-weight: 400 }

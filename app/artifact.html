@@ -1,7 +1,7 @@
 <title>Referral Desk</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Montserrat:wght@300;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700;800&display=swap">
 <style>/* Referral Desk: coordinator view for recuperative care referrals.
    Layout: dark brand bar, then either the inbox list or the review screen (summary left, evidence panel right),
    with a sticky decision bar. Brand tokens from the OCMEE styleguide (2024): #1A1A1A, #FF8710, #FFFFFF. */
@@ -12,7 +12,7 @@
   --ok: #17734a; --ok-bg: #e4f2ea; --warn: #9a5b00; --warn-bg: #fcefd9; --bad: #b3261e; --bad-bg: #fbe8e6;
   --gray: #5f6670; --gray-bg: #ebecee; --mark: #ffd9a8; --track: #e6e3dd; --paper: #fbfaf6; --paper-ink: #2a2a2a;
   --cond: "Montserrat", "IBM Plex Sans", Arial, sans-serif;
-  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; --brand-amber: #faac23;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   --r: 8px;
 }
@@ -267,6 +267,11 @@ h1, h2, .lane header b, .title h1 { font-family: var(--cond); letter-spacing: -.
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg button.on { background: var(--brand-orange); color: var(--brand-ink) } }
 @media (max-width: 520px) { .pipe > div { border-top: 1px solid #333 } .hero2 { padding: 22px 18px } }
 @media (max-width: 640px) { .logo span { display: none } .bar .tag { display: none } }
+
+/* ocmeed.com (from the site PDFs): Montserrat throughout, orange #FF860F + amber #FAAC23 */
+body { font-size: 13.5px }
+.pipe > div:first-child { background: linear-gradient(135deg, var(--brand-orange), var(--brand-amber)); border-color: var(--brand-amber) }
+.hero2 .lede { font-weight: 400 }
 </style>
 <header class="bar"><div class="bar-in gutter">
   <a class="logo" href="#/" style="text-decoration:none"><b>OCMEE</b><i>DESIGN</i><span>Referral Desk for Illumination Health + Home</span></a>
@@ -333,7 +338,7 @@ h1, h2, .lane header b, .title h1 { font-family: var(--cond); letter-spacing: -.
       ${arc(73, 0, 0.395, "var(--bad)", 3.5)}${arc(73, 0.405, 0.695, "var(--warn)", 3.5)}${arc(73, 0.705, 1, "var(--ok)", 3.5)}
       ${arc(60, 0, 1, "var(--track)", 13)}${arc(60, 0, s, BAND[band], 13, true)}
       <text x="80" y="84" text-anchor="middle" font-size="44" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text>
-      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="IBM Plex Sans, sans-serif">FIT SCORE</text></svg>`;
+      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="Montserrat, sans-serif">FIT SCORE</text></svg>`;
   }
   function dial(score, band) {
     const r = 21, c = 2 * Math.PI * r;
