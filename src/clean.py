@@ -14,6 +14,7 @@ Output goes to output/<packet>/ which git ignores. Never commit it: it is packet
 import argparse
 import base64
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -240,11 +241,14 @@ def main() -> None:
     ap.add_argument("--pages-json", type=Path, help="use an existing transcript JSON")
     ap.add_argument("--skip-fix", action="store_true",
                     help="skip ocrmypdf (no Tesseract/Ghostscript needed); use pages as scanned")
+    ap.add_argument("--out", type=Path, default=Path(os.environ.get("IHH_OUTPUT", OUT_ROOT)),
+                    help="output folder (default: $IHH_OUTPUT or repo output/). "
+                         "Keep it outside OneDrive/Dropbox: it is packet data")
     args = ap.parse_args()
 
     src = args.pdf.resolve()
     packet_id = src.stem.split("-")[-1]
-    out = OUT_ROOT / packet_id
+    out = args.out / packet_id
     out.mkdir(parents=True, exist_ok=True)
 
     if args.skip_fix:
