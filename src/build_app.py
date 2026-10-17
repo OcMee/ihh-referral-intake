@@ -41,7 +41,8 @@ def pack(d: dict, pages: dict, checklist: dict, i: int, img=None, ihh=None, pdf=
 
 def html(data: dict, artifact: bool) -> str:
     shell = (SRC / "shell.html").read_text()
-    data = {**data, "meta": {**data["meta"], "artifact": artifact}}
+    # demo history is anchored to the build time, so seeded entries never move or land after real decisions
+    data = {**data, "meta": {**data["meta"], "artifact": artifact, "built": int(time.time() * 1000)}}
     if artifact and not data["meta"].get("real"):  # the artifact cannot load files: inline the fictional page images
         import base64
         pk = []
@@ -90,7 +91,7 @@ def public(checklist: dict, pre: str = "") -> list:
     for j, (check, pages) in enumerate(hist):
         d = score.score_packet(check, pages, rules)
         pid = d["packet_id"]
-        received = 560 - j * 42                      # minutes ago
+        received = 900 - j * 38                      # minutes before the build; always in the past
         took = [38, 72, 55, 104, 47, 131, 66, 29, 88, 59, 93][j % 11]   # minutes to first decision
         seed = [{"decision": KIND[intended[pid]], "min": received - took, "by": BY}]
         if pid in ("F10", "F16", "F19", "F24"):  # accepted earlier and already arrived at IHH

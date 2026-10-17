@@ -25,7 +25,7 @@
   } catch (e) { /* none */ }
   function history(id) {
     const p = byId[id];
-    const seeded = p && p.seed ? p.seed.map(s => ({ decision: s.decision, at: LOADED - s.min * 60000, by: s.by, reason: s.reason || "", seeded: true })) : [];
+    const seeded = p && p.seed ? p.seed.map(s => ({ decision: s.decision, at: (APP.meta.built || LOADED) - s.min * 60000, by: s.by, reason: s.reason || "", seeded: true })) : [];
     return [...seeded, ...(log[id] || [])].sort((a, b) => a.at - b.at).map((e, i) => ({ ...e, rev: i + 1 }));
   }
   const DEC = new Set(["approve", "info", "deny"]);
@@ -320,7 +320,8 @@
     const shortOf = id => { for (const p of P) { const r = p.rules.find(x => x.rule_id === id); if (r) return r.short } return "" };
     const bars = rows => rows.length ? rows.slice(0, 8).map(([k, n]) => `<div class="rb"><span title="${esc(k)}">${esc(k)}</span><i style="width:${Math.round(100 * n / rows[0][1])}%"></i><b>${n}</b></div>`).join("") : `<p class="lbl">None.</p>`;
     const first = id => history(id)[0];
-    const mins = done.map(p => p.received_min + (first(p.id).at - LOADED) / 60000).filter(x => x >= 0).sort((a, b) => a - b);
+    const arrivedAt = p => (p.seed ? (APP.meta.built || LOADED) : LOADED) - p.received_min * 60000;
+    const mins = done.map(p => (first(p.id).at - arrivedAt(p)) / 60000).filter(x => x >= 0).sort((a, b) => a - b);
     const med = mins.length ? Math.round(mins[Math.floor(mins.length / 2)]) : null, within = mins.filter(x => x <= 120).length;
     const overrides = done.filter(p => AGREE[p.fit.band] !== first(p.id).decision);
     const revised = P.filter(p => history(p.id).length > 1);
