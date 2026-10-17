@@ -284,3 +284,15 @@ body { font-size: 13.5px }
 
 .ringbox .proof { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line-strong) }
 .ringbox .second { margin-top: 12px }
+
+/* bigger decision bar */
+.decide-in { padding-block: 14px; gap: 12px }
+.decide .lead { font-size: 15px; color: var(--ink) }
+.decide .btn { font-size: 17px; font-weight: 700; padding: 14px 28px; border-width: 2px; border-radius: 12px; min-height: 54px }
+.decide .btn.approve { background: var(--ok-bg) } .decide .btn.info { background: var(--warn-bg) } .decide .btn.deny { background: var(--bad-bg) }
+.decide .btn.approve.on, .decide .btn.approve:hover { background: var(--ok); color: var(--surface) }
+.decide .btn.info.on, .decide .btn.info:hover { background: var(--warn); color: var(--surface) }
+.decide .btn.deny.on, .decide .btn.deny:hover { background: var(--bad); color: var(--surface) }
+.drawer textarea { font-size: 14px; min-height: 190px }
+main { padding-block-end: 150px }
+@media (max-width: 760px) { .decide-in { gap: 6px; padding-block: 10px } .decide .btn { flex: 1 1 0; padding: 10px 4px; font-size: 15px; min-height: 50px; white-space: nowrap } .decide .lead { flex-basis: 100%; font-size: 13px } }
