@@ -36,51 +36,72 @@
     `<button class="pg" data-page="${page}" data-quote="${esc(quote || "")}" title="Open page ${page}">${label || "p" + page}</button>`;
   const vmark = v => v == null ? "" : v ? '<span class="vf" title="Quote found on this page">✓</span>' : '<span class="ck" title="Quote not found on this page, read it">check</span>';
 
-  function ring(score, band) {
-    const r = 62, c = 2 * Math.PI * r;
-    return `<svg width="168" height="168" viewBox="0 0 160 160" role="img" aria-label="Fit score ${score} of 100">
-      <circle cx="80" cy="80" r="${r}" fill="none" stroke="var(--line)" stroke-width="13"/>
-      <circle cx="80" cy="80" r="${r}" fill="none" stroke="${BAND[band]}" stroke-width="13" stroke-linecap="round"
-        stroke-dasharray="${(c * score / 100).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 80 80)"/>
-      <text x="80" y="86" text-anchor="middle" font-size="42" font-weight="700" fill="var(--ink)" font-family="var(--mono)">${score}</text>
-      <text x="80" y="108" text-anchor="middle" font-size="11.5" fill="var(--mute)">fit score / 100</text></svg>`;
+  function arc(r, from, to, color, w, cap) {
+    const c = 2 * Math.PI * r;
+    return `<circle cx="80" cy="80" r="${r}" fill="none" stroke="${color}" stroke-width="${w}"${cap ? ' stroke-linecap="round"' : ""}
+      stroke-dasharray="${(c * (to - from)).toFixed(1)} ${c.toFixed(1)}" transform="rotate(${-90 + from * 360} 80 80)"/>`;
+  }
+  function ring(score, band, size = 176) {
+    const s = Math.max(0.001, score / 100);
+    return `<svg class="gauge" width="${size}" height="${size}" viewBox="0 0 160 160" role="img" aria-label="Fit score ${score} of 100, ${band}">
+      ${arc(73, 0, 0.395, "var(--bad)", 3.5)}${arc(73, 0.405, 0.695, "var(--warn)", 3.5)}${arc(73, 0.705, 1, "var(--ok)", 3.5)}
+      ${arc(60, 0, 1, "var(--track)", 13)}${arc(60, 0, s, BAND[band], 13, true)}
+      <text x="80" y="84" text-anchor="middle" font-size="44" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text>
+      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="IBM Plex Sans, sans-serif">FIT SCORE</text></svg>`;
+  }
+  function dial(score, band) {
+    const r = 21, c = 2 * Math.PI * r;
+    return `<svg class="dial" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+      <circle cx="26" cy="26" r="${r}" fill="none" stroke="var(--track)" stroke-width="5"/>
+      <circle cx="26" cy="26" r="${r}" fill="none" stroke="${BAND[band]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(c * Math.max(.01, score / 100)).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 26 26)"/>
+      <text x="26" y="31" text-anchor="middle" font-size="14" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text></svg>`;
   }
 
   // ---------- inbox ----------
+  const LANES = [["nofit", "Not a fit", "Verified hard stop found"], ["info", "Needs info", "No hard stop; open questions"], ["fit", "Likely fit", "Rules met with evidence"]];
+  function card(p) {
+    const d = decisions()[p.id], m = minsLeft(p);
+    const used = Math.min(1, Math.max(0, (SLA - m) / SLA));
+    const bl = p.fit.blockers;
+    return `<button class="card2 ${p.fit.band} ${d ? "decided" : ""}" data-open="${p.id}">
+      <span class="c-top"><span class="id">${p.id}</span>${clock(p)}</span>
+      <span class="c-main">${dial(p.fit.score, p.fit.band)}<span class="c-who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span></span>
+      <span class="c-bl">${bl.length ? bl.slice(0, 3).map(x => `<span class="tagx">${esc(x)}</span>`).join("") + (bl.length > 3 ? `<span class="tagx more">+${bl.length - 3}</span>` : "") : `<span class="calm">No hard stop</span>`}</span>
+      <span class="c-foot"><span class="sla ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="Share of the 2-hour window used"><i style="width:${(used * 100).toFixed(0)}%"></i></span>
+        <span class="num lbl">${p.pages} pp${ui.showIhh && p.ihh ? ` · IHH ${p.ihh}` : ""}</span></span>
+    </button>`;
+  }
   function inbox() {
     const d = decisions();
-    let list = P.filter(p => ui.filter === "all" || (ui.filter === "open" ? !d[p.id] : p.fit.band === ui.filter));
-    if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
+    let list = P.filter(p => ui.filter === "all" || ui.filter === "open" ? (ui.filter !== "open" || !d[p.id]) : p.fit.band === ui.filter);
+    if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + (p.patient.admit_reason || "") + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
     const sorters = { deadline: (a, b) => (d[a.id] ? 1 : 0) - (d[b.id] ? 1 : 0) || minsLeft(a) - minsLeft(b), score: (a, b) => a.fit.score - b.fit.score, id: (a, b) => a.id.localeCompare(b.id) };
     list.sort(sorters[ui.sort]);
-    const n = k => P.filter(p => p.fit.band === k).length;
     const pages = P.reduce((s, p) => s + p.pages, 0);
-    const rows = list.map(p => `<button class="row" data-open="${p.id}">
-        <span class="id">${p.id}</span>
-        <span class="score">${pill(p)}</span>
-        <span class="who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span>
-        <span class="bl ${p.fit.blockers.length ? "" : "none"}">${p.fit.blockers.length ? "⛔ " + esc(p.fit.blockers.slice(0, 4).join(", ")) + (p.fit.blockers.length > 4 ? " +" + (p.fit.blockers.length - 4) : "") : "no blockers"}</span>
-        <span class="dcol">${clock(p)}</span>
-        <span class="pgs num lbl">${p.pages} pages${ui.showIhh && p.ihh ? ` · <span class="ihh">IHH: ${p.ihh}</span>` : ""}</span>
-      </button>`).join("");
-    return `<section class="hero"><div><h1>Referral inbox</h1>
-        <p>${pages} faxed pages read and checked against IHH's admission criteria. Open a referral to see the one-page summary, the evidence, and a reply draft.</p></div>
-      <div class="stats">
-        <div class="stat"><div class="v">${P.length}</div><div class="k">referrals</div></div>
-        <div class="stat bad"><div class="v">${n("nofit")}</div><div class="k">not a fit</div></div>
-        <div class="stat warn"><div class="v">${n("info")}</div><div class="k">needs info</div></div>
-        <div class="stat ok"><div class="v">${n("fit")}</div><div class="k">likely fit</div></div>
-        <div class="stat"><div class="v">${Object.keys(d).filter(k => byId[k]).length}</div><div class="k">decided</div></div>
-      </div></section>
+    const decided = Object.keys(d).filter(k => byId[k]).length;
+    const urgent = P.filter(p => !d[p.id] && minsLeft(p) < 30).length;
+    const lanes = LANES.filter(([k]) => ["all", "open"].includes(ui.filter) || ui.filter === k).map(([k, name, sub]) => {
+      const items = list.filter(p => p.fit.band === k);
+      return `<section class="lane ${k}"><header><i></i><div><b>${name}</b><small>${sub}</small></div><span class="num">${items.length}</span></header>
+        <div class="cards">${items.map(card).join("") || `<div class="empty">Nothing here</div>`}</div></section>`;
+    }).join("");
+    return `<section class="hero2">
+        <div class="h-copy"><p class="eyebrow">Referral Desk · Illumination Health + Home</p>
+          <h1>Every referral on one page, answered inside two hours.</h1>
+          <p class="lede">Faxed packets are read page by page and checked against IHH’s admission rules. Each finding links to the page it came from.</p></div>
+        <div class="pipe">
+          <div><small class="step">[01] Read</small><span class="num">${pages}</span><small>faxed pages</small></div>
+          <div><small class="step">[02] Check</small><span class="num">${P.length}</span><small>one-page reviews</small></div>
+          <div class="hot"><small class="step">[03] Decide</small><span class="num">${decided}<em>/${P.length}</em></span><small>${urgent} under 30 min left</small></div>
+        </div></section>
       <div class="tools">
         <div class="seg" role="tablist">${[["all", "All"], ["open", "Open"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
         <input class="search" id="q" type="search" placeholder="Search patient, diagnosis or rule ID" value="${esc(ui.q)}" aria-label="Search">
         <select class="sort" id="sort" aria-label="Sort">${[["deadline", "Sort: deadline"], ["score", "Sort: lowest score"], ["id", "Sort: packet ID"]].map(([k, l]) => `<option value="${k}" ${ui.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select>
         ${APP.meta.real ? `<label class="toggle"><input type="checkbox" id="ihh" ${ui.showIhh ? "checked" : ""}> show IHH decision</label>` : ""}
       </div>
-      <div class="list"><div class="row head"><span>Packet</span><span>Fit</span><span>Patient</span><span>Blockers</span><span class="dcol">2-hour reply</span><span class="pgs">Size</span></div>
-        ${rows || `<div class="empty">No referrals match. Clear the search or pick another filter.</div>`}</div>
-      <p class="foot">Countdowns use simulated arrival times. Fit score is rule-based: a verified blocker caps it at 15; unknowns lower it. Weights were hand-tuned on IHH's 11 past decisions, so it guides the coordinator and does not decide. ${esc(APP.meta.note || "")}</p>`;
+      <div class="board">${lanes}</div>
+      <p class="foot">Countdowns use simulated arrival times. Fit score is rule-based: a verified blocker caps it at 15; unknowns lower it. Weights were hand-tuned on IHH’s 11 past decisions, so it guides the coordinator and does not decide. ${esc(APP.meta.note || "")}</p>`;
   }
 
   // ---------- review ----------
@@ -88,6 +109,10 @@
     const e = (r.evidence || [])[0];
     const pages = [...new Set((r.evidence || []).map(x => x.page))].map(x => "p" + x).join(" ");
     return `<button class="chip ${r.status}" data-rule="${r.rule_id}" title="${esc(r.rule_id + ": " + r.text + "\n\n" + (r.finding || ""))}">${ICON[r.status] || ""} <span class="rid">${r.rule_id}</span>${esc(r.short)}${pages ? ` <span class="num" style="opacity:.7">${pages}</span>` : ""}${(r.evidence || []).length && !r.verified ? ' <span class="ck">check</span>' : ""}</button>`;
+  }
+  function sbar(rs) {
+    const n = rs.length, w = k => (100 * rs.filter(r => r.status === k).length / n).toFixed(1);
+    return `<span class="sbar" aria-hidden="true"><i class="met" style="width:${w("met")}%"></i><i class="unknown" style="width:${(+w("unknown") + +w("cant_tell")).toFixed(1)}%"></i><i class="not_met" style="width:${w("not_met")}%"></i></span>`;
   }
   function criteria(p) {
     const shown = p.rules.filter(r => r.status !== "not_applicable" && !r.superseded_by);
@@ -97,7 +122,7 @@
     const rank = { not_met: 0, unknown: 1, cant_tell: 2, met: 3 };
     const c = k => shown.filter(r => r.status === k).length;
     return `<div class="card crit"><h2>Criteria check <span class="legend">✓ ${c("met")} met · ✕ ${c("not_met")} not met · ? ${c("unknown")} unknown · ⌛ ${c("cant_tell")} can't tell · ${p.rules.length - shown.length} not applicable hidden</span></h2>
-      ${secs.map(s => `<div class="sec"><div class="n">${esc(s)}</div><div class="chips">${g[s].sort((a, b) => rank[a.status] - rank[b.status]).map(chip).join("")}</div></div>`).join("")}</div>`;
+      ${secs.map(s => `<div class="sec"><div class="n">${esc(s)}${sbar(g[s])}</div><div class="chips">${g[s].sort((a, b) => rank[a.status] - rank[b.status]).map(chip).join("")}</div></div>`).join("")}</div>`;
   }
   function review(p) {
     const rules = Object.fromEntries(p.rules.map(r => [r.rule_id, r]));
@@ -113,7 +138,7 @@
     const missing = (p.documents || []).filter(d => d.present === "no").map(d => `<span>${esc(d.name || d.doc_id)}</span>`).join("") || `<span class="lbl" style="background:none">Nothing from the checklist</span>`;
     const cf = p.claude_fit || {};
     const reasons = (p.fit.reasons || []).map(r => `<li>${r.points} ${esc(r.why)}</li>`).join("");
-    return `<div class="title"><div><h1>${esc(p.id)} · ${esc(p.patient.summary)}</h1>
+    return `<div class="title band-${p.fit.band}"><div><p class="eyebrow">${esc(p.id)} · ${p.pages} faxed pages · ${esc(p.fit.label)}</p><h1>${esc(p.id)} · ${esc(p.patient.summary)}</h1>
         <div class="meta">${p.pages} pages · ${esc(p.patient.insurance || "")} · Housing: ${esc(p.patient.housing || "")} · Admitted for: ${esc(p.patient.admit_reason || "")} ${(p.patient.pages || []).map(x => pg(x)).join(" ")}</div></div>
         <div class="meta">${clock(p)} ${ui.showIhh && p.ihh ? `<span class="ihh">· IHH decided: ${p.ihh}</span>` : ""}</div></div>
       <div class="grid3">

@@ -1,7 +1,7 @@
 <title>Referral Desk</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Montserrat:wght@300;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
 <style>/* Referral Desk: coordinator view for recuperative care referrals.
    Layout: dark brand bar, then either the inbox list or the review screen (summary left, evidence panel right),
    with a sticky decision bar. Brand tokens from the OCMEE styleguide (2024): #1A1A1A, #FF8710, #FFFFFF. */
@@ -10,7 +10,8 @@
   --bg: #f3f2ef; --surface: #ffffff; --surface-2: #f8f7f4; --ink: #1a1a1a; --mute: #5c5f66; --faint: #8a8d93;
   --line: #e3e1dc; --line-strong: #cfccc4; --accent: #c25e00; --focus: #ff8710;
   --ok: #17734a; --ok-bg: #e4f2ea; --warn: #9a5b00; --warn-bg: #fcefd9; --bad: #b3261e; --bad-bg: #fbe8e6;
-  --gray: #5f6670; --gray-bg: #ebecee; --mark: #ffe1b8;
+  --gray: #5f6670; --gray-bg: #ebecee; --mark: #ffd9a8; --track: #e6e3dd; --paper: #fbfaf6; --paper-ink: #2a2a2a;
+  --cond: "Montserrat", "IBM Plex Sans", Arial, sans-serif;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   --r: 8px;
@@ -19,12 +20,12 @@
   --bg: #121212; --surface: #1b1b1c; --surface-2: #222224; --ink: #ecebe8; --mute: #a7a9ad; --faint: #7d8086;
   --line: #2e2e31; --line-strong: #3d3d41; --accent: #ff9a3d;
   --ok: #5fcf93; --ok-bg: #16301f; --warn: #f2b65a; --warn-bg: #33270f; --bad: #ff8a7a; --bad-bg: #3b1916;
-  --gray: #a5abb4; --gray-bg: #26292d; --mark: #5a3a10; color-scheme: dark } }
+  --gray: #a5abb4; --gray-bg: #26292d; --mark: #6b4210; --track: #2c2c2f; --paper: #202022; --paper-ink: #e4e2dc; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #121212; --surface: #1b1b1c; --surface-2: #222224; --ink: #ecebe8; --mute: #a7a9ad; --faint: #7d8086;
   --line: #2e2e31; --line-strong: #3d3d41; --accent: #ff9a3d;
   --ok: #5fcf93; --ok-bg: #16301f; --warn: #f2b65a; --warn-bg: #33270f; --bad: #ff8a7a; --bad-bg: #3b1916;
-  --gray: #a5abb4; --gray-bg: #26292d; --mark: #5a3a10; color-scheme: dark }
+  --gray: #a5abb4; --gray-bg: #26292d; --mark: #6b4210; --track: #2c2c2f; --paper: #202022; --paper-ink: #e4e2dc; color-scheme: dark }
 
 * { box-sizing: border-box }
 html { background: var(--bg) }
@@ -179,9 +180,96 @@ ol.qs { margin: 0; padding-left: 20px } ol.qs li { margin-bottom: 4px }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important } }
 @media print { .bar, .decide, .panel, .tools { display: none !important } body, html { background: #fff } main { padding: 0 } }
+
+
+/* ===== v2: triage board ===== */
+h1, h2, .lane header b, .title h1 { font-family: var(--cond); letter-spacing: -.005em }
+.eyebrow { font: 600 11.5px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px }
+.hero2 { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: end; margin: 8px 0 18px }
+.hero2 h1 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.05; margin: 0; font-weight: 700; text-wrap: balance; max-width: 18ch }
+.hero2 .lede { color: var(--mute); margin: 10px 0 0; max-width: 60ch; font-size: 15px }
+.pipe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--brand-ink); color: #f1efea; border-radius: 12px; overflow: hidden; border-bottom: 3px solid var(--brand-orange) }
+.pipe > div { padding: 14px 16px; border-left: 1px solid #333; display: flex; flex-direction: column; gap: 2px; min-width: 0 }
+.pipe > div:first-child { border-left: 0 }
+.pipe .step { font: 600 11px var(--mono); letter-spacing: .1em; color: var(--brand-orange); text-transform: uppercase }
+.pipe .num { font-size: 30px; font-weight: 600; line-height: 1.1 } .pipe .num em { font-style: normal; color: #8d8a84; font-size: 18px }
+.pipe small { color: #b9b5ad; font-size: 12px }
+.pipe .hot { background: #232323 }
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; align-items: start }
+.lane { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px; min-width: 0 }
+.lane header { display: flex; align-items: center; gap: 10px; padding: 4px 6px 10px }
+.lane header i { width: 10px; height: 10px; border-radius: 3px; background: var(--gray) }
+.lane.nofit header i { background: var(--bad) } .lane.info header i { background: var(--warn) } .lane.fit header i { background: var(--ok) }
+.lane header b { display: block; font-size: 17px; font-weight: 700 } .lane header small { color: var(--mute); font-size: 12px }
+.lane header .num { margin-left: auto; font-size: 13px; color: var(--mute); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px }
+.cards { display: grid; gap: 8px }
+.card2 { display: grid; gap: 9px; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--gray); border-radius: 10px; padding: 11px 12px; transition: transform .12s ease, box-shadow .12s ease }
+.card2:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(20, 20, 20, .08) }
+.card2.nofit { border-left-color: var(--bad) } .card2.info { border-left-color: var(--warn) } .card2.fit { border-left-color: var(--ok) }
+.card2.decided { opacity: .62 }
+.c-top { display: flex; justify-content: space-between; align-items: center; gap: 8px }
+.c-top .id { font: 600 12.5px var(--mono); letter-spacing: .04em }
+.c-main { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; align-items: center }
+.c-who { min-width: 0 } .c-who b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 600; line-height: 1.3 }
+.c-who small { display: block; color: var(--mute); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px }
+.c-bl { display: flex; flex-wrap: wrap; gap: 4px; min-height: 20px }
+.tagx { font: 600 10.5px var(--mono); color: var(--bad); background: var(--bad-bg); border-radius: 4px; padding: 2px 6px }
+.tagx.more { color: var(--mute); background: var(--gray-bg) }
+.calm { font-size: 12px; color: var(--ok); font-weight: 600 }
+.c-foot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center }
+.sla { height: 5px; background: var(--track); border-radius: 999px; overflow: hidden }
+.sla i { display: block; height: 100%; background: var(--ok); border-radius: 999px } .sla.soon i { background: var(--warn) } .sla.over i { background: var(--bad) }
+.lane .empty { padding: 18px; font-size: 13px }
+
+/* review */
+.title { position: relative; padding-left: 16px } .title::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 5px; border-radius: 3px; background: var(--gray) }
+.title.band-nofit::before { background: var(--bad) } .title.band-info::before { background: var(--warn) } .title.band-fit::before { background: var(--ok) }
+.title h1 { font-size: 26px; font-weight: 700 }
+.card h2 { font-family: var(--mono); font-weight: 600; letter-spacing: .12em; font-size: 10.5px }
+.gauge { display: block }
+.crit .sec .n { display: flex; flex-direction: column; gap: 6px }
+.sbar { display: flex; height: 5px; width: 100%; max-width: 110px; border-radius: 999px; overflow: hidden; background: var(--track) }
+.sbar i { display: block; height: 100% } .sbar .met { background: var(--ok) } .sbar .unknown { background: var(--warn) } .sbar .not_met { background: var(--bad) }
+.chip { transition: transform .1s ease } .chip:hover { transform: translateY(-1px) }
+
+/* evidence panel as a fax sheet */
+.panel .body { background: var(--surface-2) }
+.panel pre { background: var(--paper); color: var(--paper-ink); border: 1px solid var(--line); border-radius: 4px; padding: 22px 22px 26px; box-shadow: 0 1px 0 var(--line), 0 10px 24px rgba(0, 0, 0, .06); font-size: 12.5px }
+.panel mark { background: var(--mark); box-shadow: 0 0 0 2px var(--mark); border-radius: 2px }
+.panel .ph b { font-family: var(--mono); font-size: 12px; letter-spacing: .04em }
+
+@media (max-width: 900px) { .hero2 { grid-template-columns: minmax(0, 1fr) } }
+@media (max-width: 520px) { .pipe { grid-template-columns: minmax(0, 1fr) } .pipe > div { border-left: 0; border-top: 1px solid #333 } .pipe > div:first-child { border-top: 0 } }
+
+
+/* ===== v3: ocmeed.com look (dark hero card, orange stat tile, geometric headings) ===== */
+.logo { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--cond); color: #fff }
+.logo b { color: var(--brand-orange); font-weight: 800; letter-spacing: .18em; font-size: 17px }
+.logo i { font-style: normal; color: var(--brand-orange); font-weight: 600; letter-spacing: .32em; font-size: 10.5px }
+.logo span { font-family: var(--sans) }
+.hero2 { background: radial-gradient(120% 140% at 85% 0%, #2b2b2b 0%, var(--brand-ink) 55%); color: #f3f1ec; border-radius: 22px; padding: 28px 28px 28px 32px; margin: 14px 0 18px; align-items: center; box-shadow: 0 18px 40px rgba(0, 0, 0, .12) }
+.hero2 h1 { color: #fff; font-weight: 700; font-size: clamp(30px, 3.6vw, 48px); letter-spacing: -.01em }
+.hero2 .lede { color: #c9c5bd }
+.hero2 .eyebrow { color: var(--brand-orange) }
+.pipe { background: transparent; border: 0; border-radius: 16px; gap: 8px; overflow: visible }
+.pipe > div { background: #232323; border: 1px solid #333; border-radius: 16px; padding: 16px 18px }
+.pipe > div:first-child { background: var(--brand-orange); border-color: var(--brand-orange) }
+.pipe > div:first-child .step, .pipe > div:first-child small, .pipe > div:first-child .num { color: var(--brand-ink) }
+.pipe .num { font-family: var(--cond); font-weight: 300; font-size: 40px; letter-spacing: -.01em }
+.pipe .hot { background: #1f1f1f }
+.lane { border-radius: 18px; padding: 12px }
+.card2 { border-radius: 14px }
+.card, .list { border-radius: 16px }
+.btn.primary { background: var(--brand-orange); color: var(--brand-ink); border-color: var(--brand-orange) }
+.btn.primary:hover { filter: brightness(.95) }
+.seg button.on { background: var(--brand-ink); color: #fff }
+:root[data-theme="dark"] .seg button.on { background: var(--brand-orange); color: var(--brand-ink) }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg button.on { background: var(--brand-orange); color: var(--brand-ink) } }
+@media (max-width: 520px) { .pipe > div { border-top: 1px solid #333 } .hero2 { padding: 22px 18px } }
+@media (max-width: 640px) { .logo span { display: none } .bar .tag { display: none } }
 </style>
 <header class="bar"><div class="bar-in gutter">
-  <a class="logo" href="#/" style="color:#fff;text-decoration:none"><b>OCMEE</b> DESIGN<span>Referral Desk for Illumination Health + Home</span></a>
+  <a class="logo" href="#/" style="text-decoration:none"><b>OCMEE</b><i>DESIGN</i><span>Referral Desk for Illumination Health + Home</span></a>
   <nav class="crumb" id="crumb"></nav><span class="sp"></span>
   <span class="tag" id="mode"></span>
   <button class="iconbtn" data-reset title="Clear the decisions saved in this browser">Reset decisions</button>
@@ -234,51 +322,72 @@ ol.qs { margin: 0; padding-left: 20px } ol.qs li { margin-bottom: 4px }
     `<button class="pg" data-page="${page}" data-quote="${esc(quote || "")}" title="Open page ${page}">${label || "p" + page}</button>`;
   const vmark = v => v == null ? "" : v ? '<span class="vf" title="Quote found on this page">✓</span>' : '<span class="ck" title="Quote not found on this page, read it">check</span>';
 
-  function ring(score, band) {
-    const r = 62, c = 2 * Math.PI * r;
-    return `<svg width="168" height="168" viewBox="0 0 160 160" role="img" aria-label="Fit score ${score} of 100">
-      <circle cx="80" cy="80" r="${r}" fill="none" stroke="var(--line)" stroke-width="13"/>
-      <circle cx="80" cy="80" r="${r}" fill="none" stroke="${BAND[band]}" stroke-width="13" stroke-linecap="round"
-        stroke-dasharray="${(c * score / 100).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 80 80)"/>
-      <text x="80" y="86" text-anchor="middle" font-size="42" font-weight="700" fill="var(--ink)" font-family="var(--mono)">${score}</text>
-      <text x="80" y="108" text-anchor="middle" font-size="11.5" fill="var(--mute)">fit score / 100</text></svg>`;
+  function arc(r, from, to, color, w, cap) {
+    const c = 2 * Math.PI * r;
+    return `<circle cx="80" cy="80" r="${r}" fill="none" stroke="${color}" stroke-width="${w}"${cap ? ' stroke-linecap="round"' : ""}
+      stroke-dasharray="${(c * (to - from)).toFixed(1)} ${c.toFixed(1)}" transform="rotate(${-90 + from * 360} 80 80)"/>`;
+  }
+  function ring(score, band, size = 176) {
+    const s = Math.max(0.001, score / 100);
+    return `<svg class="gauge" width="${size}" height="${size}" viewBox="0 0 160 160" role="img" aria-label="Fit score ${score} of 100, ${band}">
+      ${arc(73, 0, 0.395, "var(--bad)", 3.5)}${arc(73, 0.405, 0.695, "var(--warn)", 3.5)}${arc(73, 0.705, 1, "var(--ok)", 3.5)}
+      ${arc(60, 0, 1, "var(--track)", 13)}${arc(60, 0, s, BAND[band], 13, true)}
+      <text x="80" y="84" text-anchor="middle" font-size="44" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text>
+      <text x="80" y="104" text-anchor="middle" font-size="10" letter-spacing="1.5" fill="var(--mute)" font-family="IBM Plex Sans, sans-serif">FIT SCORE</text></svg>`;
+  }
+  function dial(score, band) {
+    const r = 21, c = 2 * Math.PI * r;
+    return `<svg class="dial" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+      <circle cx="26" cy="26" r="${r}" fill="none" stroke="var(--track)" stroke-width="5"/>
+      <circle cx="26" cy="26" r="${r}" fill="none" stroke="${BAND[band]}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${(c * Math.max(.01, score / 100)).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 26 26)"/>
+      <text x="26" y="31" text-anchor="middle" font-size="14" font-weight="600" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${score}</text></svg>`;
   }
 
   // ---------- inbox ----------
+  const LANES = [["nofit", "Not a fit", "Verified hard stop found"], ["info", "Needs info", "No hard stop; open questions"], ["fit", "Likely fit", "Rules met with evidence"]];
+  function card(p) {
+    const d = decisions()[p.id], m = minsLeft(p);
+    const used = Math.min(1, Math.max(0, (SLA - m) / SLA));
+    const bl = p.fit.blockers;
+    return `<button class="card2 ${p.fit.band} ${d ? "decided" : ""}" data-open="${p.id}">
+      <span class="c-top"><span class="id">${p.id}</span>${clock(p)}</span>
+      <span class="c-main">${dial(p.fit.score, p.fit.band)}<span class="c-who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span></span>
+      <span class="c-bl">${bl.length ? bl.slice(0, 3).map(x => `<span class="tagx">${esc(x)}</span>`).join("") + (bl.length > 3 ? `<span class="tagx more">+${bl.length - 3}</span>` : "") : `<span class="calm">No hard stop</span>`}</span>
+      <span class="c-foot"><span class="sla ${m < 0 ? "over" : m < 30 ? "soon" : ""}" title="Share of the 2-hour window used"><i style="width:${(used * 100).toFixed(0)}%"></i></span>
+        <span class="num lbl">${p.pages} pp${ui.showIhh && p.ihh ? ` · IHH ${p.ihh}` : ""}</span></span>
+    </button>`;
+  }
   function inbox() {
     const d = decisions();
-    let list = P.filter(p => ui.filter === "all" || (ui.filter === "open" ? !d[p.id] : p.fit.band === ui.filter));
-    if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
+    let list = P.filter(p => ui.filter === "all" || ui.filter === "open" ? (ui.filter !== "open" || !d[p.id]) : p.fit.band === ui.filter);
+    if (ui.q) { const q = ui.q.toLowerCase(); list = list.filter(p => (p.id + " " + p.patient.summary + " " + (p.patient.admit_reason || "") + " " + p.fit.blockers.join(" ")).toLowerCase().includes(q)) }
     const sorters = { deadline: (a, b) => (d[a.id] ? 1 : 0) - (d[b.id] ? 1 : 0) || minsLeft(a) - minsLeft(b), score: (a, b) => a.fit.score - b.fit.score, id: (a, b) => a.id.localeCompare(b.id) };
     list.sort(sorters[ui.sort]);
-    const n = k => P.filter(p => p.fit.band === k).length;
     const pages = P.reduce((s, p) => s + p.pages, 0);
-    const rows = list.map(p => `<button class="row" data-open="${p.id}">
-        <span class="id">${p.id}</span>
-        <span class="score">${pill(p)}</span>
-        <span class="who"><b>${esc(p.patient.summary)}</b><small>${esc(p.patient.admit_reason || "")}</small></span>
-        <span class="bl ${p.fit.blockers.length ? "" : "none"}">${p.fit.blockers.length ? "⛔ " + esc(p.fit.blockers.slice(0, 4).join(", ")) + (p.fit.blockers.length > 4 ? " +" + (p.fit.blockers.length - 4) : "") : "no blockers"}</span>
-        <span class="dcol">${clock(p)}</span>
-        <span class="pgs num lbl">${p.pages} pages${ui.showIhh && p.ihh ? ` · <span class="ihh">IHH: ${p.ihh}</span>` : ""}</span>
-      </button>`).join("");
-    return `<section class="hero"><div><h1>Referral inbox</h1>
-        <p>${pages} faxed pages read and checked against IHH's admission criteria. Open a referral to see the one-page summary, the evidence, and a reply draft.</p></div>
-      <div class="stats">
-        <div class="stat"><div class="v">${P.length}</div><div class="k">referrals</div></div>
-        <div class="stat bad"><div class="v">${n("nofit")}</div><div class="k">not a fit</div></div>
-        <div class="stat warn"><div class="v">${n("info")}</div><div class="k">needs info</div></div>
-        <div class="stat ok"><div class="v">${n("fit")}</div><div class="k">likely fit</div></div>
-        <div class="stat"><div class="v">${Object.keys(d).filter(k => byId[k]).length}</div><div class="k">decided</div></div>
-      </div></section>
+    const decided = Object.keys(d).filter(k => byId[k]).length;
+    const urgent = P.filter(p => !d[p.id] && minsLeft(p) < 30).length;
+    const lanes = LANES.filter(([k]) => ["all", "open"].includes(ui.filter) || ui.filter === k).map(([k, name, sub]) => {
+      const items = list.filter(p => p.fit.band === k);
+      return `<section class="lane ${k}"><header><i></i><div><b>${name}</b><small>${sub}</small></div><span class="num">${items.length}</span></header>
+        <div class="cards">${items.map(card).join("") || `<div class="empty">Nothing here</div>`}</div></section>`;
+    }).join("");
+    return `<section class="hero2">
+        <div class="h-copy"><p class="eyebrow">Referral Desk · Illumination Health + Home</p>
+          <h1>Every referral on one page, answered inside two hours.</h1>
+          <p class="lede">Faxed packets are read page by page and checked against IHH’s admission rules. Each finding links to the page it came from.</p></div>
+        <div class="pipe">
+          <div><small class="step">[01] Read</small><span class="num">${pages}</span><small>faxed pages</small></div>
+          <div><small class="step">[02] Check</small><span class="num">${P.length}</span><small>one-page reviews</small></div>
+          <div class="hot"><small class="step">[03] Decide</small><span class="num">${decided}<em>/${P.length}</em></span><small>${urgent} under 30 min left</small></div>
+        </div></section>
       <div class="tools">
         <div class="seg" role="tablist">${[["all", "All"], ["open", "Open"], ["nofit", "Not a fit"], ["info", "Needs info"], ["fit", "Likely fit"]].map(([k, l]) => `<button data-filter="${k}" class="${ui.filter === k ? "on" : ""}">${l}</button>`).join("")}</div>
         <input class="search" id="q" type="search" placeholder="Search patient, diagnosis or rule ID" value="${esc(ui.q)}" aria-label="Search">
         <select class="sort" id="sort" aria-label="Sort">${[["deadline", "Sort: deadline"], ["score", "Sort: lowest score"], ["id", "Sort: packet ID"]].map(([k, l]) => `<option value="${k}" ${ui.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select>
         ${APP.meta.real ? `<label class="toggle"><input type="checkbox" id="ihh" ${ui.showIhh ? "checked" : ""}> show IHH decision</label>` : ""}
       </div>
-      <div class="list"><div class="row head"><span>Packet</span><span>Fit</span><span>Patient</span><span>Blockers</span><span class="dcol">2-hour reply</span><span class="pgs">Size</span></div>
-        ${rows || `<div class="empty">No referrals match. Clear the search or pick another filter.</div>`}</div>
-      <p class="foot">Countdowns use simulated arrival times. Fit score is rule-based: a verified blocker caps it at 15; unknowns lower it. Weights were hand-tuned on IHH's 11 past decisions, so it guides the coordinator and does not decide. ${esc(APP.meta.note || "")}</p>`;
+      <div class="board">${lanes}</div>
+      <p class="foot">Countdowns use simulated arrival times. Fit score is rule-based: a verified blocker caps it at 15; unknowns lower it. Weights were hand-tuned on IHH’s 11 past decisions, so it guides the coordinator and does not decide. ${esc(APP.meta.note || "")}</p>`;
   }
 
   // ---------- review ----------
@@ -286,6 +395,10 @@ ol.qs { margin: 0; padding-left: 20px } ol.qs li { margin-bottom: 4px }
     const e = (r.evidence || [])[0];
     const pages = [...new Set((r.evidence || []).map(x => x.page))].map(x => "p" + x).join(" ");
     return `<button class="chip ${r.status}" data-rule="${r.rule_id}" title="${esc(r.rule_id + ": " + r.text + "\n\n" + (r.finding || ""))}">${ICON[r.status] || ""} <span class="rid">${r.rule_id}</span>${esc(r.short)}${pages ? ` <span class="num" style="opacity:.7">${pages}</span>` : ""}${(r.evidence || []).length && !r.verified ? ' <span class="ck">check</span>' : ""}</button>`;
+  }
+  function sbar(rs) {
+    const n = rs.length, w = k => (100 * rs.filter(r => r.status === k).length / n).toFixed(1);
+    return `<span class="sbar" aria-hidden="true"><i class="met" style="width:${w("met")}%"></i><i class="unknown" style="width:${(+w("unknown") + +w("cant_tell")).toFixed(1)}%"></i><i class="not_met" style="width:${w("not_met")}%"></i></span>`;
   }
   function criteria(p) {
     const shown = p.rules.filter(r => r.status !== "not_applicable" && !r.superseded_by);
@@ -295,7 +408,7 @@ ol.qs { margin: 0; padding-left: 20px } ol.qs li { margin-bottom: 4px }
     const rank = { not_met: 0, unknown: 1, cant_tell: 2, met: 3 };
     const c = k => shown.filter(r => r.status === k).length;
     return `<div class="card crit"><h2>Criteria check <span class="legend">✓ ${c("met")} met · ✕ ${c("not_met")} not met · ? ${c("unknown")} unknown · ⌛ ${c("cant_tell")} can't tell · ${p.rules.length - shown.length} not applicable hidden</span></h2>
-      ${secs.map(s => `<div class="sec"><div class="n">${esc(s)}</div><div class="chips">${g[s].sort((a, b) => rank[a.status] - rank[b.status]).map(chip).join("")}</div></div>`).join("")}</div>`;
+      ${secs.map(s => `<div class="sec"><div class="n">${esc(s)}${sbar(g[s])}</div><div class="chips">${g[s].sort((a, b) => rank[a.status] - rank[b.status]).map(chip).join("")}</div></div>`).join("")}</div>`;
   }
   function review(p) {
     const rules = Object.fromEntries(p.rules.map(r => [r.rule_id, r]));
@@ -311,7 +424,7 @@ ol.qs { margin: 0; padding-left: 20px } ol.qs li { margin-bottom: 4px }
     const missing = (p.documents || []).filter(d => d.present === "no").map(d => `<span>${esc(d.name || d.doc_id)}</span>`).join("") || `<span class="lbl" style="background:none">Nothing from the checklist</span>`;
     const cf = p.claude_fit || {};
     const reasons = (p.fit.reasons || []).map(r => `<li>${r.points} ${esc(r.why)}</li>`).join("");
-    return `<div class="title"><div><h1>${esc(p.id)} · ${esc(p.patient.summary)}</h1>
+    return `<div class="title band-${p.fit.band}"><div><p class="eyebrow">${esc(p.id)} · ${p.pages} faxed pages · ${esc(p.fit.label)}</p><h1>${esc(p.id)} · ${esc(p.patient.summary)}</h1>
         <div class="meta">${p.pages} pages · ${esc(p.patient.insurance || "")} · Housing: ${esc(p.patient.housing || "")} · Admitted for: ${esc(p.patient.admit_reason || "")} ${(p.patient.pages || []).map(x => pg(x)).join(" ")}</div></div>
         <div class="meta">${clock(p)} ${ui.showIhh && p.ihh ? `<span class="ihh">· IHH decided: ${p.ihh}</span>` : ""}</div></div>
       <div class="grid3">
