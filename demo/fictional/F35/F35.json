@@ -1,0 +1,757 @@
+{
+  "packet_id": "F35",
+  "patient": {
+    "summary": "47M, left lower lobe pneumonia now stable on oral antibiotics, unhoused, two episodes of physical aggression toward staff",
+    "age": "47",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (sleeps in a park), no fixed address",
+    "admit_reason": "Pneumonia",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Other",
+      "text": "10/21: shoved an RN against the doorframe and swung a fist at the RN; security called.",
+      "pages": [
+        7
+      ],
+      "quote": "Pt shoved RN against the doorframe and swung a closed fist at RN",
+      "quote_page": 7
+    },
+    {
+      "label": "Other",
+      "text": "10/23: threw a meal tray at a nursing assistant and grabbed her arm; security called a second time.",
+      "pages": [
+        8
+      ],
+      "quote": "Security called to bedside 16:42 (second security call this admission).",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Referral form marks 'Aggressive or combative: No', contradicting the nursing notes.",
+      "pages": [
+        2
+      ],
+      "quote": "Other: Aggressive or combative: No",
+      "quote_page": 2
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4 with no delirium during events; denies SI/HI; declined psychiatry consult.",
+      "pages": [
+        9
+      ],
+      "quote": "Psychiatry consult declined by pt.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "Pneumonia improving on oral cefpodoxime, off oxygen, SpO2 96% room air.",
+      "pages": [
+        9
+      ],
+      "quote": "Off oxygen since 10/22.",
+      "quote_page": 9
+    },
+    {
+      "label": "Mobility",
+      "text": "Walks 300 ft without a device; independent ADLs per nursing.",
+      "pages": [
+        10
+      ],
+      "quote": "Gait: 300 ft without device, independent, steady",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and admitted for an acute illness.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "47 y/o M experiencing homelessness"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "Independent ADLs per PT screen citing nursing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Independent showering per nursing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent toileting per nursing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No assistive device.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 300 ft without device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT screen in the packet.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "PHYSICAL THERAPY SCREEN"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 300 ft independently.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 300 ft without device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "unknown",
+      "finding": "No psych diagnosis listed, but repeated aggression and he declined a psychiatry consult.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Psychiatry consult declined by pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Progress note documents denial of SI/HI.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "unknown",
+      "finding": "Hallucinations not asked about in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Denies alcohol; UDS negative.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies alcohol or drug use. UDS negative."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship or FSP history not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Med list says he can self-administer all medications.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 including during the events.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: ill-appearing, AOx4"
+        },
+        {
+          "page": 8,
+          "quote": "Pt AOx4, not intoxicated, no delirium per MD."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "not_met",
+      "finding": "Physically aggressive toward nursing staff twice, with security called both times.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Pt shoved RN against the doorframe and swung a closed fist at RN"
+        },
+        {
+          "page": 8,
+          "quote": "Security called to bedside 16:42 (second security call this admission)."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender per form.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "unknown",
+      "finding": "IV access at discharge not stated; ceftriaxone IV completed 10/23.",
+      "evidence": []
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "Standard precautions only.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 10/20.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/20 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "unknown",
+      "finding": "COVID negative 10/24 06:30; discharge time not stated, so the 24-hour window can not be confirmed.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/24 06:30 SARS-CoV-2 rapid antigen: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile and stable on room air.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/24 07:50 | 98.5 | 84 | 124/76 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Med list says he self-administers all meds including oral cefpodoxime.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "IV antibiotics completed; oral at discharge.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Ceftriaxone completed 10/23; transitioned to cefpodoxime 200 mg PO BID through 10/26."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Left lower lobe pneumonia.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "47M with CAP LLL."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures x2 no growth, final.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/19 Blood cx x2: No growth, final"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "met",
+      "finding": "Chest X-rays reported.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/23 CXR: improving LLL opacity, no effusion, no pneumothorax"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "met",
+      "finding": "Last 5 vitals sent, SpO2 95-96% on room air.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/24 07:50 | 98.5 | 84 | 124/76 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "Off oxygen since 10/22.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Off oxygen since 10/22."
+        }
+      ]
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "unknown",
+      "finding": "No respiratory therapy note in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "unknown",
+      "finding": "Breathing treatments not mentioned.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "met",
+      "finding": "On oral cefpodoxime through 10/26.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "Cefpodoxime 200 mg PO BID through 10/26/2026"
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV blood pressure medicine; BP stable.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/24 07:50 | 98.5 | 84 | 124/76 | 16 | 96% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-E1",
+      "status": "met",
+      "finding": "Pneumonia, improving.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "CAP LLL, improving."
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X1",
+      "status": "met",
+      "finding": "No pneumothorax on CXR.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/23 CXR: improving LLL opacity, no effusion, no pneumothorax"
+        }
+      ]
+    },
+    {
+      "rule_id": "RSP-X2",
+      "status": "not_applicable",
+      "finding": "No hemothorax described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X4",
+      "status": "not_applicable",
+      "finding": "No pulmonary embolism described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RSP-X5",
+      "status": "not_applicable",
+      "finding": "No BiPAP.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent ADLs per nursing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "ADLs per nursing: independent grooming, dressing, toileting, showering"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Walks 300 ft (superseded by MOB-3/MOB-4).",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Gait: 300 ft without device, independent, steady"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "MRSA negative; no TB or C. diff described.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/20 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies alcohol or drug use. UDS negative."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "not_met",
+      "finding": "Aggressive and combative toward staff twice per nursing; the form says no.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt threw the meal tray at nursing assistant and grabbed nursing assistant's arm."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Aggressive or combative",
+      "rule_ids": [
+        "OTH-1",
+        "FORM-X7"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Other: Aggressive or combative: No"
+        },
+        {
+          "page": 7,
+          "quote": "Pt shoved RN against the doorframe and swung a closed fist at RN"
+        }
+      ],
+      "note": "Form says not aggressive, nursing documents physical aggression toward staff twice with security called. Chart wins: OTH-1 exclusion applies."
+    }
+  ],
+  "questions_for_hospital": [
+    "Nursing notes from 10/21 and 10/23 describe physical aggression toward staff with security called. Have there been any further events, and is there a behavioral plan or psychiatry follow-up?",
+    "What time is discharge planned, so we can check the COVID swab is within 24 hours?"
+  ],
+  "claude_fit": {
+    "score": 10,
+    "recommendation": "deny",
+    "reason": "OTH-1 and FORM-X7 fail: nursing documents physical aggression toward staff twice with security called, which the referral form omits. He is otherwise medically stable after pneumonia."
+  }
+}

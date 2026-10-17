@@ -1,0 +1,692 @@
+{
+  "packet_id": "F34",
+  "patient": {
+    "summary": "61F, lower GI (diverticular) bleed after 2-unit transfusion, hemoglobin stable, unhoused",
+    "age": "61",
+    "sex": "F",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (shelter bed), no fixed address",
+    "admit_reason": "Rectal bleeding from diverticula with low blood count",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Other",
+      "text": "Hemoglobin stable on two checks (9.1 then 9.0) after 2 units of blood; no bleeding since 10/17.",
+      "pages": [
+        8,
+        10
+      ],
+      "quote": "Hgb 9.1 (10/20) and 9.0 (10/21), stable on two checks",
+      "quote_page": 8
+    },
+    {
+      "label": "Other",
+      "text": "Colonoscopy: diverticular bleed, self-limited, no ulcer and no varices (GI-X2 does not apply).",
+      "pages": [
+        7
+      ],
+      "quote": "Impression: Diverticular bleed, self-limited. No ulcer disease. No varices.",
+      "quote_page": 7
+    },
+    {
+      "label": "Mobility",
+      "text": "Only the referral form says she walks; no PT, OT or nursing note documents walking or distance.",
+      "pages": [
+        2
+      ],
+      "quote": "Ambulatory: Yes [X] No [ ]",
+      "quote_page": 2
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "No discharge medication list in the packet; new oral iron and home levothyroxine are mentioned only in the progress note.",
+      "pages": [
+        8
+      ],
+      "quote": "Acute blood loss anemia - start oral iron.",
+      "quote_page": 8
+    },
+    {
+      "label": "Mental health",
+      "text": "AOx4, denies SI/HI and hallucinations, no psych history, no conservatorship or FSP.",
+      "pages": [
+        9
+      ],
+      "quote": "No history of conservatorship or FSP.",
+      "quote_page": 9
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA negative 10/17; COVID negative 10/21 06:00, about 8 hours before planned 14:00 discharge.",
+      "pages": [
+        10,
+        8
+      ],
+      "quote": "10/21 06:00 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 10
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and admitted for an acute illness.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "61 y/o F experiencing homelessness"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "unknown",
+      "finding": "No PT, OT or nursing note describes ADLs.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "unknown",
+      "finding": "No note says whether she can shower or bathe herself.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "unknown",
+      "finding": "Toileting not assessed; form says continent but no chart note.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Continent of Bowel & Bladder: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "unknown",
+      "finding": "Form says no device, but no PT or nursing note confirms.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "not_met",
+      "finding": "No PT or OT note is in the packet.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "unknown",
+      "finding": "Form says ambulatory; no chart note documents walking or distance.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Ambulatory: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not described as wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history per social work.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No psychiatric history."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Social work documents denial of SI/HI.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Social work documents no hallucinations.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Denies alcohol use.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies tobacco, alcohol or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "met",
+      "finding": "Social work documents no conservatorship or FSP history.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No history of conservatorship or FSP."
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "unknown",
+      "finding": "No medication list and no note on whether she manages her own meds; only the form says yes.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Self Administer All Meds: Yes [X] No [ ]"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P and social work note.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: pale, tired, AOx4"
+        },
+        {
+          "page": 9,
+          "quote": "Pt AOx4, pleasant and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Pleasant and cooperative; no behavioral concerns.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No behavioral concerns per nursing."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender per pt.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "unknown",
+      "finding": "IV access at discharge not stated (2 large bore IVs placed on admission).",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "2 large bore IVs, transfuse 2 units PRBC"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "Standard precautions only.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Isolation: None - standard precautions"
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 10/17.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID negative 10/21 06:00; planned discharge 10/21 ~14:00, about 8 hours later.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/21 06:00 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 8,
+          "quote": "Medically stable for d/c to recuperative care today ~14:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "not_applicable",
+      "finding": "No infection.",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-3",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-4",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q1",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "RESP-Q2",
+      "status": "not_applicable",
+      "finding": "No respiratory illness (CXR clear).",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No cardiac condition.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV blood pressure medicine; BP stable.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/21 08:00 | 98.1 | 82 | 122/74 | 16 | 99% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-E3",
+      "status": "not_applicable",
+      "finding": "Diverticular bleed, not diverticulitis; GI says self-limited.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Impression: Diverticular bleed, self-limited."
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-X1",
+      "status": "not_applicable",
+      "finding": "No cirrhosis described.",
+      "evidence": []
+    },
+    {
+      "rule_id": "GI-X2",
+      "status": "met",
+      "finding": "Colonoscopy shows diverticular bleed; GI states no ulcer disease and no varices.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "No ulcer disease. No varices."
+        }
+      ]
+    },
+    {
+      "rule_id": "GI-X3",
+      "status": "unknown",
+      "finding": "C. diff testing not documented; bleeding, not diarrhea.",
+      "evidence": []
+    },
+    {
+      "rule_id": "END-E2",
+      "status": "met",
+      "finding": "Hypothyroidism on levothyroxine; TSH 2.1.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Hypothyroidism - continue home levothyroxine."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "unknown",
+      "finding": "ADLs not documented in the chart.",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "unknown",
+      "finding": "Walking not documented in the chart (superseded by MOB-3/MOB-4).",
+      "evidence": []
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No MRSA, TB or C. diff documented; MRSA negative.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "10/17 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies substance use.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Substance use: denies."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Not a registered sex offender per pt."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Pleasant and cooperative.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Pt AOx4, pleasant and cooperative."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "no",
+      "pages": []
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "unknown",
+      "pages": []
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Ambulatory with no supporting note",
+      "rule_ids": [
+        "MOB-3"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Ambulatory: Yes [X] No [ ]"
+        },
+        {
+          "page": 8,
+          "quote": "Lightheadedness resolved. Tolerating diet."
+        }
+      ],
+      "note": "Form says ambulatory, but no PT, OT or nursing note in the chart documents walking or distance. Treat MOB-3 as unknown until a note is sent."
+    }
+  ],
+  "questions_for_hospital": [
+    "Could you send the discharge medication list, and confirm whether she manages her own medications?",
+    "Could you send a PT/OT evaluation or nursing note showing how far she walks and whether she needs a device?",
+    "Could you send a nursing note on ADLs, including showering and toileting?",
+    "Will all IV lines be removed before discharge?"
+  ],
+  "claude_fit": {
+    "score": 64,
+    "recommendation": "needs_info",
+    "reason": "Medically stable with Hgb steady and GI-X2 met (diverticular, not ulcer or varices), but MOB-2 and DOC-7 are missing, leaving MOB-3, ADL-1/ADL-2 and COG-1 unknown. The form's 'Ambulatory: Yes' has no chart support."
+  }
+}

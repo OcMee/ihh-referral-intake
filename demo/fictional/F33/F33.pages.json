@@ -1,0 +1,114 @@
+{
+  "packet_id": "F33",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Medical Center (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Teresa Okafor, RN CM\nPhone: 555-0181\nDate: 10/14/2026 09:05\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n55M L ankle cellulitis, improving on PO cephalexin.\nTarget d/c 10/14 PM. H&P, progress, nursing, PT/OT, vitals, labs and med list attached.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Harbor Point Medical Center (fictional)\nDepartment/Floor: 5 South Medical\nSocial Worker/Case Manager/Nurse: Teresa Okafor, RN CM\nPhone: 555-0181\nEmail: tokafor@harborpoint.example\nNursing Station: 555-0182\nAuthorized By: Dr. R. Lindqvist\n## Patient Information\nName: Samuel Doe\nMRN: HP-0418827\nBirth Date: 03/14/1971\nGender: M\nEthnicity: Hispanic/Latino\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Cellulitis L ankle\nAdmit Date: 10/10/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/10/2026  Result: CXR no acute process\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [ ] No [X]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  cellulitis, PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Samuel Doe\nDOB: 03/14/1971\nMember ID: OCH-55103928\n## Referring Provider\nFacility: Harbor Point Medical Center (fictional)\n## Clinical\nPrimary Diagnosis: Cellulitis of left lower limb\nICD-10: L03.116\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/14/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Harbor Point Medical Center (fictional) - PATIENT FACE SHEET\nPatient: Samuel Doe\nMRN: HP-0418827\nAccount #: 99418827\nDOB: 03/14/1971\nSex: Male\nPreferred Language: English\nEthnicity: Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/10/2026 20:15\nAdmit Type: Inpatient\nUnit/Bed: 5S-512\nAttending: Rosa Lindqvist, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 10/10/2026\nAttending: Rosa Lindqvist, MD (Hospital Medicine)\n## Chief Complaint\nLeft ankle redness, swelling and pain x 4 days\n## HPI\n55 y/o M experiencing homelessness (sleeps in an encampment under an overpass x 6 months) presents with 4 days of spreading redness around the L ankle after a blister from ill-fitting shoes. Subjective fevers. Denies IVDU. In ED: T 100.8F, HR 102, WBC 13.1. Bedside US: no abscess, no fluid collection.\n## PMH\n- Hypertension\n## PSH\n- None\n## Social History\nHomeless x 6 months. Tobacco: none. Denies alcohol or drug use.\n## Allergies\nNKDA\n## Home Medications\n- Lisinopril 10 mg PO daily\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 100.8F, HR 102, BP 136/84, RR 18, SpO2 98% RA\nGen: NAD, AOx4\nCV: RRR\nLungs: CTAB\nSkin: L ankle circumferential erythema approx 10 x 8 cm, warm, tender, no fluctuance, no crepitus, no open wound\nPsych: calm, cooperative, normal mood and affect\n## Assessment / Plan\n55M with non-purulent cellulitis L ankle.\n1. Cellulitis - cefazolin 2 g IV q8h, elevate, mark borders; blood cx x2\n2. MRSA nares PCR, COVID per protocol\n3. HTN - continue lisinopril\n4. Dispo - CM consult; homeless, anticipate recuperative care referral\nDVT ppx: enoxaparin 40 mg SC daily\nIsolation: None - standard precautions\nCode status: Full\nElectronically signed: Rosa Lindqvist, MD 10/10/2026 23:10\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#4\nDate: 10/14/2026 07:40\nS: Ankle pain 2/10. No fevers x 72h. Walking in halls without device.\nO: T 98.4F HR 76 BP 126/78 RR 16 SpO2 98% RA\nL ankle erythema receding well inside marked borders, no fluctuance.\nBlood cx 10/10 x2: no growth, final.\nA/P:\n- Cellulitis L ankle, improving. Transitioned 10/12 to cephalexin 500 mg PO QID to complete 10 days total (last dose 10/20).\n- HTN - BP stable on lisinopril.\n- Medically stable for d/c to recuperative care today ~15:00.\nSigned: Rosa Lindqvist, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE\nDate: 10/13/2026 20:30\nPt AOx4, calm and cooperative. No behavioral concerns.\nMedication self-management: pt fills his own weekly pill box from bottles and takes all oral meds independently with RN observation; correctly states name, dose and schedule of cephalexin and lisinopril.\nIndependent with showering, dressing, grooming and toileting. Continent of bowel and bladder.\nIsolation: none. Standard precautions only.\nNo IV access at discharge (PIV to be removed before d/c).\nDenies SI/HI. Denies auditory or visual hallucinations.\nSigned: J. Arcenaux, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY EVALUATION\nDate: 10/12/2026 11:30\nDx: L ankle cellulitis\n## Prior Level of Function\nIndependent ambulation without device.\n## Assessment\nBed mobility: Independent\nSit<>stand: Independent\nTransfers: Independent\nGait: 200 ft independent without assistive device, steady, no rest breaks\nStairs: 8 steps with rail, independent\nBalance: static good, dynamic good\n## Plan / Recommendation\nSafe for d/c to recuperative care. No assistive device needed. No skilled PT needs after discharge.\nSigned: E. Nakashima, PT, DPT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "ot_eval",
+      "title": "Occupational therapy evaluation",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## OCCUPATIONAL THERAPY EVALUATION\nDate: 10/12/2026 14:00\n## ADLs\nGrooming: Independent\nUB dressing: Independent\nLB dressing: Independent, dons own shoes and socks\nToileting: Independent\nShower: Independent standing shower\nCognition: AOx4, follows multi-step commands\n## Recommendation\nIndependent with all ADLs. D/c to recuperative care. No further OT needs.\nSigned: M. Ferreira, OTR/L\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/13 08:00 | 98.6 | 80 | 128/80 | 16 | 98% | RA\n10/13 16:00 | 98.3 | 78 | 124/76 | 16 | 97% | RA\n10/14 00:00 | 98.0 | 72 | 120/74 | 14 | 98% | RA\n10/14 04:00 | 98.1 | 74 | 122/76 | 16 | 98% | RA\n10/14 07:40 | 98.4 | 76 | 126/78 | 16 | 98% | RA\nAfebrile since 10/11 AM.\n## LABS\n10/10 | WBC 13.1 H | Hgb 14.2 | Plt 288 | Cr 0.9\n10/13 | WBC 7.9 | Hgb 13.9 | Cr 0.8 | Glu 96\n## MICROBIOLOGY\n10/10 Blood cx x2: No growth, final\n10/11 06:00 MRSA nares PCR: Negative\n10/14 06:10 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n10/10 CXR: No acute cardiopulmonary process\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Samuel Doe  MRN: HP-0418827\n- Cephalexin 500 mg PO four times daily through 10/20/2026\n- Lisinopril 10 mg PO daily\n- Acetaminophen 650 mg PO every 6 hours PRN pain\n## Stopped\n- Cefazolin IV, enoxaparin (inpatient only)\nNo IV medications at discharge.\nPatient able to self-administer all medications: Yes\n30-day supply dispensed from outpatient pharmacy: Yes\nReviewed with patient by: K. Abernathy, PharmD 10/14/2026\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

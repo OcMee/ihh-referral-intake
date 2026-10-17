@@ -1,0 +1,723 @@
+{
+  "packet_id": "F33",
+  "patient": {
+    "summary": "55M, left ankle cellulitis improving on oral antibiotics, unhoused",
+    "age": "55",
+    "sex": "M",
+    "insurance": "Orange Coast Health Plan (fictional) - Medi-Cal",
+    "housing": "Unhoused (encampment under an overpass), no fixed address",
+    "admit_reason": "Skin infection (cellulitis) of the left ankle",
+    "pages": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "key_facts": [
+    {
+      "label": "Infection",
+      "text": "Cellulitis improving, switched to oral cephalexin through 10/20; no abscess.",
+      "pages": [
+        7,
+        5
+      ],
+      "quote": "Cellulitis L ankle, improving.",
+      "quote_page": 7
+    },
+    {
+      "label": "Meds/IV/O2",
+      "text": "Nursing: fills his own weekly pill box and takes all oral meds independently; the form says he cannot self-administer.",
+      "pages": [
+        8,
+        2
+      ],
+      "quote": "pt fills his own weekly pill box from bottles and takes all oral meds independently",
+      "quote_page": 8
+    },
+    {
+      "label": "Mobility",
+      "text": "PT: walks 200 ft independently with no assistive device.",
+      "pages": [
+        9
+      ],
+      "quote": "Gait: 200 ft independent without assistive device, steady, no rest breaks",
+      "quote_page": 9
+    },
+    {
+      "label": "Other",
+      "text": "OT: independent with all ADLs including a standing shower.",
+      "pages": [
+        10
+      ],
+      "quote": "Independent with all ADLs.",
+      "quote_page": 10
+    },
+    {
+      "label": "Cognition",
+      "text": "AOx4, calm and cooperative, denies SI/HI and hallucinations.",
+      "pages": [
+        8
+      ],
+      "quote": "Pt AOx4, calm and cooperative. No behavioral concerns.",
+      "quote_page": 8
+    },
+    {
+      "label": "Infection",
+      "text": "MRSA negative 10/11; COVID negative 10/14 06:10, about 9 hours before planned 15:00 discharge.",
+      "pages": [
+        11,
+        7
+      ],
+      "quote": "10/14 06:10 SARS-CoV-2 rapid antigen: Negative",
+      "quote_page": 11
+    },
+    {
+      "label": "Other",
+      "text": "Last 5 vital sets afebrile and stable on room air.",
+      "pages": [
+        11
+      ],
+      "quote": "10/14 07:40 | 98.4 | 76 | 126/78 | 16 | 98% | RA",
+      "quote_page": 11
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "GEN-1",
+      "status": "met",
+      "finding": "Unhoused and admitted for an acute illness.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "55 y/o M experiencing homelessness"
+        },
+        {
+          "page": 4,
+          "quote": "Address: NO FIXED ADDRESS (homeless)"
+        }
+      ]
+    },
+    {
+      "rule_id": "GEN-2",
+      "status": "unknown",
+      "finding": "Unhoused rather than living alone; not separately assessed (GEN-1 already met).",
+      "evidence": []
+    },
+    {
+      "rule_id": "GEN-3",
+      "status": "met",
+      "finding": "Auth form checks at risk of re-hospitalization.",
+      "evidence": [
+        {
+          "page": 3,
+          "quote": "Member at risk of hospitalization/re-hospitalization [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-1",
+      "status": "met",
+      "finding": "OT documents independence with all ADLs.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-2",
+      "status": "met",
+      "finding": "Showers independently standing.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Shower: Independent standing shower"
+        }
+      ]
+    },
+    {
+      "rule_id": "ADL-3",
+      "status": "met",
+      "finding": "Independent toileting; continent.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Toileting: Independent"
+        },
+        {
+          "page": 8,
+          "quote": "Continent of bowel and bladder."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-1",
+      "status": "not_applicable",
+      "finding": "No assistive device needed.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "No assistive device needed."
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-2",
+      "status": "met",
+      "finding": "PT and OT evaluations are in the packet.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "PHYSICAL THERAPY EVALUATION"
+        },
+        {
+          "page": 10,
+          "quote": "OCCUPATIONAL THERAPY EVALUATION"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-3",
+      "status": "met",
+      "finding": "Walks 200 ft independently without a device.",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 200 ft independent without assistive device, steady, no rest breaks"
+        }
+      ]
+    },
+    {
+      "rule_id": "MOB-4",
+      "status": "not_applicable",
+      "finding": "Not wheelchair dependent.",
+      "evidence": []
+    },
+    {
+      "rule_id": "MH-1",
+      "status": "met",
+      "finding": "No psychiatric history; normal mood and affect.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Psych: calm, cooperative, normal mood and affect"
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-2",
+      "status": "met",
+      "finding": "Nursing documents denial of SI/HI.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Denies SI/HI."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-3",
+      "status": "met",
+      "finding": "Nursing documents no hallucinations.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Denies auditory or visual hallucinations."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-4",
+      "status": "not_applicable",
+      "finding": "Denies alcohol use; not admitted intoxicated.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies alcohol or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "MH-5",
+      "status": "unknown",
+      "finding": "Conservatorship or FSP history not documented.",
+      "evidence": []
+    },
+    {
+      "rule_id": "COG-1",
+      "status": "met",
+      "finding": "Nursing documents he fills his own pill box and takes all oral meds independently; med list says he can self-administer.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "pt fills his own weekly pill box from bottles and takes all oral meds independently"
+        },
+        {
+          "page": 12,
+          "quote": "Patient able to self-administer all medications: Yes"
+        }
+      ]
+    },
+    {
+      "rule_id": "COG-2",
+      "status": "met",
+      "finding": "AOx4 on H&P, nursing and OT notes.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "Gen: NAD, AOx4"
+        },
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-1",
+      "status": "met",
+      "finding": "Calm and cooperative; no behavioral concerns.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative. No behavioral concerns."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-2",
+      "status": "met",
+      "finding": "Not a registered sex offender per form.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-3",
+      "status": "not_applicable",
+      "finding": "No IV access at discharge.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "No IV access at discharge (PIV to be removed before d/c)."
+        }
+      ]
+    },
+    {
+      "rule_id": "OTH-4",
+      "status": "met",
+      "finding": "Nursing documents no isolation.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "EOL-1",
+      "status": "not_applicable",
+      "finding": "Not a hospice patient.",
+      "evidence": []
+    },
+    {
+      "rule_id": "INF-1",
+      "status": "met",
+      "finding": "MRSA nares PCR negative 10/11.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/11 06:00 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "INF-2",
+      "status": "met",
+      "finding": "COVID negative 10/14 06:10; planned discharge 10/14 ~15:00, about 9 hours later.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/14 06:10 SARS-CoV-2 rapid antigen: Negative"
+        },
+        {
+          "page": 7,
+          "quote": "Medically stable for d/c to recuperative care today ~15:00."
+        }
+      ]
+    },
+    {
+      "rule_id": "DM-1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-4",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-5",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-6",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q1",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q2",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "DM-Q3",
+      "status": "not_applicable",
+      "finding": "Not diabetic.",
+      "evidence": []
+    },
+    {
+      "rule_id": "ID-1",
+      "status": "met",
+      "finding": "Last 5 vital sets sent; afebrile, HR 72-80, BP stable on room air.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/14 07:40 | 98.4 | 76 | 126/78 | 16 | 98% | RA"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-2",
+      "status": "met",
+      "finding": "Takes oral cephalexin and other oral meds independently.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "takes all oral meds independently with RN observation"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-3",
+      "status": "not_applicable",
+      "finding": "Switched to oral antibiotics; no IV antibiotics at discharge.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No IV medications at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q1",
+      "status": "met",
+      "finding": "Left ankle cellulitis.",
+      "evidence": [
+        {
+          "page": 6,
+          "quote": "55M with non-purulent cellulitis L ankle."
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q2",
+      "status": "met",
+      "finding": "Blood cultures x2 no growth, final.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/10 Blood cx x2: No growth, final"
+        }
+      ]
+    },
+    {
+      "rule_id": "ID-Q3",
+      "status": "met",
+      "finding": "Not on isolation.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Isolation: none. Standard precautions only."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-1",
+      "status": "met",
+      "finding": "Hypertension, BP stable on oral lisinopril; last 5 vitals sent.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "HTN - BP stable on lisinopril."
+        }
+      ]
+    },
+    {
+      "rule_id": "CARD-2",
+      "status": "not_applicable",
+      "finding": "No troponins.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-3",
+      "status": "not_applicable",
+      "finding": "No cardiac event.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-4",
+      "status": "not_applicable",
+      "finding": "No atrial fibrillation.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-5",
+      "status": "not_applicable",
+      "finding": "No heart failure.",
+      "evidence": []
+    },
+    {
+      "rule_id": "CARD-6",
+      "status": "met",
+      "finding": "No IV blood pressure medicine.",
+      "evidence": [
+        {
+          "page": 12,
+          "quote": "No IV medications at discharge."
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-E1",
+      "status": "met",
+      "finding": "Uncomplicated non-purulent cellulitis on oral antibiotics.",
+      "evidence": [
+        {
+          "page": 7,
+          "quote": "Transitioned 10/12 to cephalexin 500 mg PO QID to complete 10 days total"
+        }
+      ]
+    },
+    {
+      "rule_id": "INT-X2",
+      "status": "not_applicable",
+      "finding": "No abscess on ultrasound.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Bedside US: no abscess, no fluid collection."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X1",
+      "status": "met",
+      "finding": "No cognitive impairment; AOx4.",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Cognitive Impairment: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X2",
+      "status": "met",
+      "finding": "Independent with all ADLs.",
+      "evidence": [
+        {
+          "page": 10,
+          "quote": "Independent with all ADLs."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X3",
+      "status": "met",
+      "finding": "Walks 200 ft without a device (superseded by MOB-3/MOB-4).",
+      "evidence": [
+        {
+          "page": 9,
+          "quote": "Gait: 200 ft independent without assistive device, steady, no rest breaks"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X4",
+      "status": "met",
+      "finding": "No MRSA, TB or C. diff; MRSA negative.",
+      "evidence": [
+        {
+          "page": 11,
+          "quote": "10/11 06:00 MRSA nares PCR: Negative"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X5",
+      "status": "not_applicable",
+      "finding": "Denies alcohol and drug use.",
+      "evidence": [
+        {
+          "page": 5,
+          "quote": "Denies alcohol or drug use."
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X6",
+      "status": "met",
+      "finding": "Not a registered sex offender (superseded by OTH-2).",
+      "evidence": [
+        {
+          "page": 2,
+          "quote": "Registered Sex Offender: Yes [ ] No [X]"
+        }
+      ]
+    },
+    {
+      "rule_id": "FORM-X7",
+      "status": "met",
+      "finding": "Calm and cooperative.",
+      "evidence": [
+        {
+          "page": 8,
+          "quote": "Pt AOx4, calm and cooperative. No behavioral concerns."
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "doc_id": "DOC-1",
+      "present": "yes",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "doc_id": "DOC-2",
+      "present": "yes",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "doc_id": "DOC-3",
+      "present": "yes",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "doc_id": "DOC-4",
+      "present": "yes",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "doc_id": "DOC-5",
+      "present": "yes",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "doc_id": "DOC-6",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-7",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "doc_id": "DOC-8",
+      "present": "yes",
+      "pages": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "doc_id": "DOC-9",
+      "present": "yes",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "doc_id": "DOC-10",
+      "present": "yes",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Self-administers meds",
+      "rule_ids": [
+        "COG-1"
+      ],
+      "sources": [
+        {
+          "page": 2,
+          "quote": "Self Administer All Meds: Yes [ ] No [X]"
+        },
+        {
+          "page": 8,
+          "quote": "pt fills his own weekly pill box from bottles and takes all oral meds independently"
+        }
+      ],
+      "note": "Form says he cannot self-administer all meds, nursing and pharmacy say he manages his own pill box. Chart wins: he self-administers."
+    }
+  ],
+  "questions_for_hospital": [
+    "The referral form marks 'Self Administer All Meds: No', but nursing and the med list say he fills his own pill box. Can you confirm he self-administers all medications?",
+    "Is there any history of conservatorship or a Full Service Partnership (FSP)?"
+  ],
+  "claude_fit": {
+    "score": 94,
+    "recommendation": "approve",
+    "reason": "Meets ADL-1 to ADL-3, MOB-3 without a device, COG-1/COG-2, OTH-1, OTH-4, INF-1 and INF-2, with uncomplicated cellulitis on oral antibiotics (INT-E1). The only issue is the form's 'meds: No' entry, which the nursing note and med list contradict."
+  }
+}

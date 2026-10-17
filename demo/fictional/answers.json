@@ -287,5 +287,30 @@
       "Referral form says 'Any Wounds: No' while the nursing admission skin assessment documents a stage 2 sacral pressure injury present on admission.",
       "Referral form says 'Home Health Ordered: Yes' but case management says the home health referral is not yet sent and no agency is confirmed."
     ]
+  },
+  {
+    "packet_id": "F33",
+    "intended": "fit",
+    "why": "Left ankle cellulitis improving on oral cephalexin (INT-E1), afebrile with 5 stable vital sets, independent ADLs (ADL-1 to ADL-3), walks 200 ft with no device (MOB-3), AOx4, MRSA and COVID negative (INF-1/INF-2), self-administers meds (COG-1).",
+    "traps": [
+      "Referral form says 'Self Administer All Meds: No' but the nursing note documents him filling his own weekly pill box and taking all oral meds independently, and the med list says he can self-administer."
+    ]
+  },
+  {
+    "packet_id": "F34",
+    "intended": "needs_info",
+    "why": "Diverticular lower GI bleed after 2-unit transfusion, hemoglobin stable on two checks, colonoscopy shows no ulcer or varices (GI-X2 does not apply), otherwise stable. No medication list (DOC-7) and no PT/OT or nursing note (MOB-2), so MOB-3, ADLs and COG-1 are unknown.",
+    "traps": [
+      "Referral form says 'Ambulatory: Yes' with no PT, OT or nursing note to support it.",
+      "GI bleed could look like GI-X2 (bleeding ulcer/varices), but colonoscopy says diverticular, no ulcer, no varices."
+    ]
+  },
+  {
+    "packet_id": "F35",
+    "intended": "not_fit",
+    "why": "Physical aggression toward nursing staff on 10/21 and 10/23 with security called twice (OTH-1 and FORM-X7 exclusion apply), though medically stable after pneumonia.",
+    "traps": [
+      "Referral form says 'Aggressive or combative: No' but two nursing notes document physical aggression toward staff with security called."
+    ]
   }
 ]

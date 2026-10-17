@@ -1,0 +1,96 @@
+{
+  "packet_id": "F34",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Sunridge Community Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Gabriel Montoya, MSW\nPhone: 555-0186\nDate: 10/21/2026 10:20\nPages (including cover): 10\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n61F lower GI bleed s/p transfusion, Hgb stable.\nMedically ready for d/c. Requesting recuperative care.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Sunridge Community Hospital (fictional)\nDepartment/Floor: 3 North Medical\nSocial Worker/Case Manager/Nurse: Gabriel Montoya, MSW\nPhone: 555-0186\nEmail: gmontoya@sunridgecommunity.example\nNursing Station: 555-0187\nAuthorized By: Dr. A. Brandt\n## Patient Information\nName: Ruth Doe\nMRN: SR-2207461\nBirth Date: 11/02/1964\nGender: F\nEthnicity: White\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Lower GI bleed, acute blood loss anemia\nAdmit Date: 10/17/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/17/2026  Result: CXR clear\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [ ] No [X]\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: none\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Ruth Doe\nDOB: 11/02/1964\nMember ID: OCH-73318504\n## Referring Provider\nFacility: Sunridge Community Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Diverticulosis of large intestine with bleeding\nICD-10: K57.31\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/21/2026\nRequested Days: 14\nSecondary Dx: Acute posthemorrhagic anemia (D62)\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Sunridge Community Hospital (fictional) - PATIENT FACE SHEET\nPatient: Ruth Doe\nMRN: SR-2207461\nAccount #: 99207461\nDOB: 11/02/1964\nSex: Female\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/17/2026 03:40\nAdmit Type: Inpatient\nUnit/Bed: 3N-318\nAttending: Anika Brandt, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 10/17/2026\nAttending: Anika Brandt, MD (Hospital Medicine)\n## Chief Complaint\nBright red blood per rectum x 1 day, lightheaded\n## HPI\n61 y/o F experiencing homelessness (staying in a shelter bed at Example Shelter x 3 months) presents with 3 episodes of painless bright red blood per rectum and lightheadedness. Denies hematemesis or melena. Denies NSAID use. In ED: HR 112, BP 98/60, Hgb 6.8.\n## PMH\n- Diverticulosis (per pt, colonoscopy years ago)\n- Hypothyroidism\n## PSH\n- None\n## Social History\nHomeless x 3 months, shelter. Denies tobacco, alcohol or drug use.\n## Allergies\nPenicillin (rash)\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 98.2F, HR 112, BP 98/60, RR 18, SpO2 99% RA\nGen: pale, tired, AOx4\nCV: tachycardic, regular\nAbd: soft, non-tender, non-distended\nRectal: maroon and bright red blood, no masses\nPsych: calm, cooperative\n## Assessment / Plan\n61F with acute lower GI bleed, likely diverticular, with acute blood loss anemia.\n1. LGIB - 2 large bore IVs, transfuse 2 units PRBC, serial Hgb q6h, GI consult for colonoscopy\n2. Hold DVT chemoprophylaxis; SCDs\n3. MRSA nares PCR, COVID per protocol\n4. Dispo - CM consult; homeless\nIsolation: None - standard precautions\nCode status: Full\nElectronically signed: Anika Brandt, MD 10/17/2026 05:15\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "consult_note",
+      "title": "Gastroenterology consult and colonoscopy",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## GASTROENTEROLOGY CONSULT / PROCEDURE NOTE\nDate: 10/18/2026 13:30\nConsultant: Oren Takahashi, MD (Gastroenterology)\nProcedure: Colonoscopy after bowel prep\nFindings: Extensive sigmoid and descending colon diverticulosis. No active bleeding. No stigmata of recent hemorrhage requiring intervention. No masses, no colitis.\nUpper endoscopy not indicated (no hematemesis, BUN not elevated).\nImpression: Diverticular bleed, self-limited. No ulcer disease. No varices.\nRecommendations: High fiber diet. Avoid NSAIDs. Outpatient GI follow-up in 4-6 weeks. OK for discharge from GI standpoint if Hgb stable.\nSigned: Oren Takahashi, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#5\nDate: 10/21/2026 08:00\nS: No further bleeding since 10/17 PM. Lightheadedness resolved. Tolerating diet.\nO: T 98.1F HR 82 BP 122/74 RR 16 SpO2 99% RA\nHgb 9.1 (10/20) and 9.0 (10/21), stable on two checks; s/p 2 units PRBC 10/17.\nNo bowel movements with blood x 72h.\nA/P:\n- Diverticular LGIB, resolved. Hgb stable. GI follow-up 4-6 weeks.\n- Acute blood loss anemia - start oral iron.\n- Hypothyroidism - continue home levothyroxine.\n- Medically stable for d/c to recuperative care today ~14:00.\nSigned: Anika Brandt, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "social_work",
+      "title": "Case management and social work note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CASE MANAGEMENT / SOCIAL WORK NOTE\nDate: 10/21/2026 09:00\nPt AOx4, pleasant and cooperative. No behavioral concerns per nursing.\nPsychosocial screen: denies depression. Denies SI/HI. Denies auditory or visual hallucinations. No psychiatric history. No history of conservatorship or FSP.\nSubstance use: denies.\nNot a registered sex offender per pt.\nPt agreeable to recuperative care.\nGI follow-up: to be scheduled by GI clinic after d/c.\nSigned: Gabriel Montoya, MSW\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/20 08:00 | 98.4 | 86 | 120/72 | 16 | 99% | RA\n10/20 16:00 | 98.2 | 84 | 118/74 | 16 | 98% | RA\n10/21 00:00 | 98.0 | 78 | 116/70 | 14 | 99% | RA\n10/21 04:00 | 98.1 | 80 | 118/72 | 16 | 99% | RA\n10/21 08:00 | 98.1 | 82 | 122/74 | 16 | 99% | RA\n## LABS\n10/17 02:50 | Hgb 6.8 L | Plt 242 | BUN 14 | Cr 0.8 | INR 1.0\n10/18 05:00 | Hgb 8.6 L (post 2 units PRBC)\n10/20 05:00 | Hgb 9.1 L | Cr 0.7\n10/21 05:00 | Hgb 9.0 L | TSH 2.1\n## MICROBIOLOGY\n10/17 MRSA nares PCR: Negative\n10/21 06:00 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n10/17 CXR: clear lungs\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

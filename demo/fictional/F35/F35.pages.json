@@ -1,0 +1,114 @@
+{
+  "packet_id": "F35",
+  "fictional": true,
+  "pages": [
+    {
+      "page": 1,
+      "doc_type": "fax_cover",
+      "title": "Fax cover sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Pacific Vista Hospital (fictional)\nCase Management Department\n## FAX TRANSMITTAL\nTo: Illumination Health + Home - Recuperative Care Intake\nFax: 555-0199\nFrom: Lena Fairbanks, RN CM\nPhone: 555-0191\nDate: 10/24/2026 11:10\nPages (including cover): 12\nRe: Recuperative care referral\nUrgent [X]  For Review [X]  Please Reply [X]\n## Message\n47M CAP, completed IV abx, on PO, medically stable.\nPlease review for recuperative care.\n## CONFIDENTIALITY NOTICE\nThis facsimile contains confidential health information. If received in error, notify sender and destroy.\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 2,
+      "doc_type": "referral_form",
+      "title": "IHH Recuperative Care Referral Form",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## ILLUMINATION HEALTH + HOME\nRecuperative Care Referral Form (RC0725-SH)\n## Referring Party\nHospital: Pacific Vista Hospital (fictional)\nDepartment/Floor: 2 East Medical\nSocial Worker/Case Manager/Nurse: Lena Fairbanks, RN CM\nPhone: 555-0191\nEmail: lfairbanks@pacificvista.example\nNursing Station: 555-0192\nAuthorized By: Dr. T. Gallagher\n## Patient Information\nName: Victor Doe\nMRN: PV-3391052\nBirth Date: 07/19/1979\nGender: M\nEthnicity: Black/African American\nSSN (last 4): 0000\nInsurance: Orange Coast Health Plan (fictional) Medi-Cal\nPreferred Language: English\nHousing Situation:\nCurrently Unhoused [X]\n4+ episodes of homelessness in the past 3 years [ ]\n## Hospital Admission Details\nChief Complaint/Admitting Diagnosis: Community-acquired pneumonia\nAdmit Date: 10/19/2026\nAny Wounds: Yes [ ] No [X]\nNumber/Location/Size/Stage: \nIndependent with Wound Care: Yes [ ] No [ ]\nHome Health Ordered: Yes [ ] No [X]\nPPD/TB Test or Chest X-Ray: Date: 10/19/2026  Result: CXR LLL infiltrate, improving\n## History of Health & Living Situation\nO2: Yes [ ] No [X]\nSelf Administer All Meds: Yes [X] No [ ]\nContinent of Bowel & Bladder: Yes [X] No [ ]\nColostomy/Ileostomy: Yes [ ] No [X]\nFoley Catheter: Yes [ ] No [X]\nDiabetes: Yes [ ] No [X]\nInsulin: Yes [ ] No [X]\nDiabetes Oral Meds: Yes [ ] No [X]\nActive Infection: Yes [X] No [ ]  pneumonia, PO abx\nAmbulatory: Yes [X] No [ ]\nAssistive Device: Yes [ ] No [X]\nHospice: Yes [ ] No [X]\nCar: Yes [ ] No [X]\nService Animal: Yes [ ] No [X]\n## Behavioral and Mental Health Status\nAny limitations or challenges: No [X] Yes [ ]\nMental Health DX: Yes [ ] No [X]  Type: \nNon-compliant: Yes [ ] No [X]\nCognitive Impairment: Yes [ ] No [X]\nForgetful: Yes [ ] No [X]\nRegistered Sex Offender: Yes [ ] No [X]\nOther: Aggressive or combative: No\n## Length of Stay Authorized\nDays: 14\n## Illumination Staff Only\nDate Received:\nReviewed By:\nApproved: Yes [ ] No [ ]\nDate:\nAuthorization #:\nReason for Denial:\nAdmission Date/Time:\nExit Date:\nExtension Request: Yes [ ] No [ ]\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 3,
+      "doc_type": "calaim_auth",
+      "title": "CalAIM Community Supports authorization request",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## CalAIM COMMUNITY SUPPORTS - AUTHORIZATION REQUEST\nService: Recuperative Care (Medical Respite)\nHealth Plan: Orange Coast Health Plan (fictional) - Medi-Cal\n## Member\nMember Name: Victor Doe\nDOB: 07/19/1979\nMember ID: OCH-29864173\n## Referring Provider\nFacility: Pacific Vista Hospital (fictional)\n## Clinical\nPrimary Diagnosis: Pneumonia, unspecified organism\nICD-10: J18.9\nMember is experiencing homelessness [X]\nMember at risk of hospitalization/re-hospitalization [X]\nRequested Start Date: 10/24/2026\nRequested Days: 14\n## Plan Use Only\nStatus: Pending review\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 4,
+      "doc_type": "face_sheet",
+      "title": "Patient face sheet",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Pacific Vista Hospital (fictional) - PATIENT FACE SHEET\nPatient: Victor Doe\nMRN: PV-3391052\nAccount #: 99391052\nDOB: 07/19/1979\nSex: Male\nPreferred Language: English\nEthnicity: Not Hispanic or Latino\nMarital Status: Single\nAddress: NO FIXED ADDRESS (homeless)\nMailing: 1234 Example Ave, Santa Ana, CA 92700 (shelter mail drop)\nPhone: 555-0100 (message)\n## Encounter\nAdmit Date/Time: 10/19/2026 17:25\nAdmit Type: Inpatient\nUnit/Bed: 2E-204\nAttending: Thomas Gallagher, MD\n## Insurance\nPrimary: Orange Coast Health Plan (fictional) - Medi-Cal\nSubscriber: Self\n## Emergency Contact\nNone listed\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 5,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 1",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HISTORY AND PHYSICAL\nDate of Service: 10/19/2026\nAttending: Thomas Gallagher, MD (Hospital Medicine)\n## Chief Complaint\nFever, cough with yellow sputum, short of breath x 5 days\n## HPI\n47 y/o M experiencing homelessness (sleeps in a park near Example Blvd x 1 year) presents with 5 days of fever, productive cough and pleuritic L chest pain. EMS SpO2 90% RA.\n## PMH\n- None known\n## Social History\nHomeless x 1 year. Tobacco 1/2 ppd. Denies alcohol or drug use. UDS negative.\n## Allergies\nNKDA\n## Home Medications\n- None\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 6,
+      "doc_type": "h_and_p",
+      "title": "History and Physical - page 2",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## Physical Exam\nVS: T 102.1F, HR 110, BP 128/80, RR 24, SpO2 91% RA -> 95% on 2L NC\nGen: ill-appearing, AOx4\nLungs: LLL crackles, bronchial breath sounds\nCV: tachycardic, regular\n## Data\nWBC 16.4, lactate 1.4. CXR: LLL consolidation, no effusion, no pneumothorax. COVID/flu PCR negative.\n## Assessment / Plan\n47M with CAP LLL.\n1. CAP - ceftriaxone 1 g IV daily + azithromycin 500 mg PO daily; blood cx x2\n2. O2 to keep SpO2 > 92%\n3. Tobacco - nicotine patch\n4. Dispo - CM consult; homeless\nIsolation: None - standard precautions\nCode status: Full\nElectronically signed: Thomas Gallagher, MD 10/19/2026 20:40\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 7,
+      "doc_type": "nursing_note",
+      "title": "Nursing note - behavioral event",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE - BEHAVIORAL EVENT\nDate: 10/21/2026 02:15\nPt became agitated when asked to return to room after leaving the unit to smoke. Pt shoved RN against the doorframe and swung a closed fist at RN, making contact with RN's shoulder.\nSecurity called to bedside 02:18. Pt de-escalated verbally by security; no restraints used.\nCharge RN and on-call MD notified. Incident report filed.\nPt AOx4 during event; no signs of delirium. Nicotine patch offered and applied.\nSigned: D. Kowalczyk, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 8,
+      "doc_type": "nursing_note",
+      "title": "Nursing note - behavioral event",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## NURSING NOTE - BEHAVIORAL EVENT\nDate: 10/23/2026 16:40\nPt yelling at nursing staff about meal tray. Pt threw the meal tray at nursing assistant and grabbed nursing assistant's arm.\nSecurity called to bedside 16:42 (second security call this admission). Pt calmed after security arrived.\nBehavioral care plan initiated: staff to enter room in pairs.\nPt AOx4, not intoxicated, no delirium per MD.\nSigned: S. Haverford, RN\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 9,
+      "doc_type": "progress_note",
+      "title": "Hospitalist progress note",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## HOSPITALIST PROGRESS NOTE - HD#6\nDate: 10/24/2026 07:50\nS: Cough improving, no fevers x 72h. Off oxygen since 10/22.\nO: T 98.5F HR 84 BP 124/76 RR 16 SpO2 96% RA\nLungs: faint LLL crackles\nBlood cx 10/19 x2: no growth, final.\nA/P:\n- CAP LLL, improving. Ceftriaxone completed 10/23; transitioned to cefpodoxime 200 mg PO BID through 10/26. Azithromycin course complete.\n- Physical aggression toward staff x2 this admission (10/21, 10/23) with security response; behavioral care plan in place. Pt AOx4, no delirium. Denies SI/HI. Psychiatry consult declined by pt.\n- Medically stable for d/c.\nSigned: Thomas Gallagher, MD\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 10,
+      "doc_type": "pt_eval",
+      "title": "Physical therapy screen",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## PHYSICAL THERAPY SCREEN\nDate: 10/22/2026 10:00\nBed mobility, transfers, gait: Independent\nGait: 300 ft without device, independent, steady\nADLs per nursing: independent grooming, dressing, toileting, showering\nNo skilled PT needs. Sign off.\nSigned: R. Mbeki, PT\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 11,
+      "doc_type": "vitals",
+      "title": "Vitals and labs",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## VITAL SIGNS - LAST 5 SETS\nDate/Time | Temp (F) | HR | BP | RR | SpO2 | O2\n10/23 08:00 | 98.6 | 86 | 126/78 | 16 | 96% | RA\n10/23 16:00 | 98.4 | 90 | 130/80 | 18 | 95% | RA\n10/24 00:00 | 98.2 | 80 | 122/74 | 16 | 96% | RA\n10/24 04:00 | 98.1 | 78 | 120/74 | 16 | 96% | RA\n10/24 07:50 | 98.5 | 84 | 124/76 | 16 | 96% | RA\n## LABS\n10/19 | WBC 16.4 H | Hgb 14.6 | Plt 310 | Cr 1.0\n10/23 | WBC 9.2 | Hgb 14.0 | Cr 0.9\n## MICROBIOLOGY\n10/19 Blood cx x2: No growth, final\n10/20 MRSA nares PCR: Negative\n10/24 06:30 SARS-CoV-2 rapid antigen: Negative\n## IMAGING\n10/19 CXR: LLL consolidation\n10/23 CXR: improving LLL opacity, no effusion, no pneumothorax\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    },
+    {
+      "page": 12,
+      "doc_type": "med_list",
+      "title": "Discharge medication list",
+      "orientation": "normal",
+      "legibility": "good",
+      "text": "## DISCHARGE MEDICATION LIST\nPatient: Victor Doe  MRN: PV-3391052\n- Cefpodoxime 200 mg PO BID through 10/26/2026\n- Nicotine patch 14 mg/24h daily\n- Acetaminophen 650 mg PO q6h PRN fever or pain\n## Stopped\n- Ceftriaxone IV, azithromycin (course complete)\nPatient able to self-administer all medications: Yes\n\n-- FICTIONAL DEMO RECORD - not a real patient --",
+      "notes": ""
+    }
+  ]
+}

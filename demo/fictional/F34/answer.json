@@ -1,0 +1,9 @@
+{
+  "packet_id": "F34",
+  "intended": "needs_info",
+  "why": "Diverticular lower GI bleed after 2-unit transfusion, hemoglobin stable on two checks, colonoscopy shows no ulcer or varices (GI-X2 does not apply), otherwise stable. No medication list (DOC-7) and no PT/OT or nursing note (MOB-2), so MOB-3, ADLs and COG-1 are unknown.",
+  "traps": [
+    "Referral form says 'Ambulatory: Yes' with no PT, OT or nursing note to support it.",
+    "GI bleed could look like GI-X2 (bleeding ulcer/varices), but colonoscopy says diverticular, no ulcer, no varices."
+  ]
+}

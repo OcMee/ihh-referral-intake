@@ -1,0 +1,8 @@
+{
+  "packet_id": "F33",
+  "intended": "fit",
+  "why": "Left ankle cellulitis improving on oral cephalexin (INT-E1), afebrile with 5 stable vital sets, independent ADLs (ADL-1 to ADL-3), walks 200 ft with no device (MOB-3), AOx4, MRSA and COVID negative (INF-1/INF-2), self-administers meds (COG-1).",
+  "traps": [
+    "Referral form says 'Self Administer All Meds: No' but the nursing note documents him filling his own weekly pill box and taking all oral meds independently, and the med list says he can self-administer."
+  ]
+}
