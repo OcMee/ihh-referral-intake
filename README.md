@@ -11,6 +11,8 @@
 
 **Try it:** https://ocmee.github.io/ihh-referral-intake/ (12 fictional referrals, nothing to install).
 Offline copy: [app/index.html](app/index.html), download and open in a browser.
+**Demo sign-in:** `cornel@ocmeed.com` / `testihh`. A demo gate only: it runs in the browser and is not
+real security. A real deployment would use IHH's own sign-in.
 **Demo video:** [link to be added]
 
 ## The problem

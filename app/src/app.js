@@ -24,11 +24,40 @@
 
   // who is reviewing: kept in this browser only, stamped on every saved decision and reply
   const ROLES = ["Referral coordinator", "RN", "LVN", "Medical director", "Case manager"];
-  let who = { name: "Cornel", role: "Referral coordinator" };
-  try { who = { ...who, ...JSON.parse(localStorage.getItem("referral-desk-user") || "{}") } } catch (e) { /* keep default */ }
+  // Demo sign-in. The check runs in the browser, so it keeps casual viewers out and nothing more.
+  // A real deployment would use IHH's own sign-in. Passwords are stored as salted SHA-256, not in plain text.
+  const ACCOUNTS = [{ email: "cornel@ocmeed.com", name: "Dr Cornel Manole", role: "Referral coordinator", salt: "ihh-desk-demo-1",
+    hash: "039022d0783fe2c200f58e8038fbaffd1c648700f25a35290d6af7f2b20ed5e0" }];
+  let session = null;
+  try { session = JSON.parse(sessionStorage.getItem("referral-desk-session") || "null") } catch (e) { /* not signed in */ }
+  let who = session ? { name: session.name, role: session.role } : { name: "", role: "Referral coordinator" };
+  try { if (session) who = { ...who, ...JSON.parse(localStorage.getItem("referral-desk-user:" + session.email) || "{}") } } catch (e) { /* keep account default */ }
+  async function sha256(s) { const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("") }
+  function loginView() {
+    return `<section class="login"><div class="login-card">
+      <p class="eyebrow">Referral Desk · Illumination Health + Home</p><h1>Sign in</h1>
+      <form id="login" autocomplete="on">
+        <label>Email<input id="l-email" type="email" autocomplete="username" required></label>
+        <label>Password<input id="l-pass" type="password" autocomplete="current-password" required></label>
+        ${ui.loginError ? `<p class="l-err" role="alert">${esc(ui.loginError)}</p>` : ""}
+        <button class="btn primary" type="submit">Sign in</button></form>
+      <p class="lbl">Demo sign-in for the prototype: it runs in this browser and is not real security. A real deployment would use IHH’s own sign-in. Judges: the demo account is in the project README.</p></div></section>`;
+  }
+  document.addEventListener("submit", async e => {
+    if (e.target.id !== "login") return; e.preventDefault();
+    const email = $("#l-email").value.trim().toLowerCase(), pass = $("#l-pass").value;
+    const a = ACCOUNTS.find(x => x.email === email);
+    let ok = false; try { ok = !!a && await sha256(a.salt + ":" + pass) === a.hash } catch (err) { ui.loginError = "This browser cannot check the password here. Open the page over https or localhost."; return render() }
+    if (!ok) { ui.loginError = "Email or password not recognized."; return render() }
+    session = { email: a.email, name: a.name, role: a.role };
+    try { sessionStorage.setItem("referral-desk-session", JSON.stringify(session)) } catch (err) { /* keep in memory */ }
+    who = { name: a.name, role: a.role };
+    try { who = { ...who, ...JSON.parse(localStorage.getItem("referral-desk-user:" + a.email) || "{}") } } catch (err) { /* keep */ }
+    ui.loginError = null; render();
+  });
   const sign = () => `${who.name}, ${who.role}\nIllumination Health + Home`;
   function whoBar() {
-    if (!ui.editWho) return `<p class="eyebrow who">Welcome back, ${esc(who.name)} · ${esc(who.role)} <button class="who-edit" data-who>Change</button></p>`;
+    if (!ui.editWho) return `<p class="eyebrow who">Welcome back, ${esc(who.name)} · ${esc(who.role)} <button class="who-edit" data-who>Change</button><button class="who-edit" data-signout>Sign out</button></p>`;
     return `<div class="who-form"><input id="who-name" value="${esc(who.name)}" aria-label="Your name" placeholder="Your name">
       <select id="who-role" aria-label="Your role">${ROLES.map(r => `<option ${r === who.role ? "selected" : ""}>${r}</option>`).join("")}</select>
       <button class="btn primary" data-whosave>Save</button></div>`;
@@ -269,6 +298,7 @@
   // ---------- render + routing ----------
   function route() { const m = location.hash.match(/^#\/?([A-Z]\d\d)?$/); return m && m[1] && byId[m[1]] ? m[1] : null }
   function render() {
+    if (!session) { $("#crumb").innerHTML = ""; $("#main").innerHTML = loginView(); $("#dock").innerHTML = ""; return }
     const id = route(), p = id && byId[id];
     $("#crumb").innerHTML = p ? `<a href="#/">Inbox</a> <span>›</span> <span>${p.id}</span>` : `<span>Inbox</span>`;
     const main = $("#main");
@@ -310,9 +340,10 @@
     if ("who" in t.dataset) { ui.editWho = true; render(); const n = $("#who-name"); if (n) n.focus(); return }
     if ("whosave" in t.dataset) {
       who = { name: ($("#who-name").value.trim() || "Staff").slice(0, 60), role: $("#who-role").value };
-      try { localStorage.setItem("referral-desk-user", JSON.stringify(who)) } catch (e) { /* private mode: keep in memory */ }
+      try { localStorage.setItem("referral-desk-user:" + session.email, JSON.stringify(who)) } catch (e) { /* private mode: keep in memory */ }
       ui.editWho = false; return render();
     }
+    if ("signout" in t.dataset) { session = null; try { sessionStorage.removeItem("referral-desk-session") } catch (e) { /* ok */ } location.hash = "#/"; return render() }
   });
   document.addEventListener("input", e => {
     if (e.target.id === "q") { ui.q = e.target.value; const pos = e.target.selectionStart; render(); const q = $("#q"); q.focus(); q.setSelectionRange(pos, pos) }
@@ -327,6 +358,6 @@
     if (e.key === "Escape") { if (ui.drawer) ui.drawer = null; else if (ui.panel) ui.panel = null; else if (route()) location.hash = "#/"; render() }
   });
   addEventListener("hashchange", () => { ui.panel = null; ui.drawer = null; render(); scrollTo(0, 0) });
-  setInterval(() => { if (!document.activeElement || !["q", "reply"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
+  setInterval(() => { if (!document.activeElement || !["q", "reply", "l-email", "l-pass", "who-name"].includes(document.activeElement.id)) { const y = scrollY; render(); scrollTo(0, y) } }, 30000);
   render();
 })();
