@@ -9,8 +9,8 @@
 **Challenge:** 1 Referral intake
 **Built at:** Orange County | Claude Impact Lab, October 17, 2026, with Illumination Health + Home
 
-**Try it:** [Referral Desk demo](app/index.html) (download and open in a browser; 12 fictional referrals).
-Hosted copy: https://ocmee.github.io/ihh-referral-intake/ once GitHub Pages is switched on (see [Try it](#try-it)).
+**Try it:** https://ocmee.github.io/ihh-referral-intake/ (12 fictional referrals, nothing to install).
+Offline copy: [app/index.html](app/index.html), download and open in a browser.
 **Demo video:** [link to be added]
 
 ## The problem
@@ -32,6 +32,9 @@ Referral Desk has three screens.
    can't tell, missing documents, and the questions to ask the hospital.
    **Evidence panel:** click any page number or rule and that page opens beside the summary, with the
    quote highlighted (the original scan in the real build, the transcript in the public build).
+   **Proof behind the score:** next to the ring, one click opens the original PDF, the readable PDF,
+   a printable fit checklist (every IHH rule with status, finding and cited page, plus the
+   DOC-1 to DOC-10 document checklist), IHH's own admission criteria, and a Word copy.
 3. **Decide.** Approve, Ask for info or Deny drafts the reply to the hospital with page references.
    The coordinator edits it and copies it into their own fax or email. Nothing is ever sent.
 
