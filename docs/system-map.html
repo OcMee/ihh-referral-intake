@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OCMEE System Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!--
+  Interactive system map: an SVG drawn from four lists (zones, nodes, edges, steps).
+  To reuse: change the lists. Coordinates are in the 1200 x 700 viewBox.
+    zones  [x, y, w, h, label, shaded]
+    nodes  id: [x, y, w, h, title, lines, kind, file]   kind: ai | code | person | web
+    edges  id: [points, dashed, label, labelAt]
+    steps  { t, nodes, paths, b, f }   paths = chains of edge ids a dot travels along, in order
+-->
+<style>
+:root {
+  --bg: #F4F2EE; --surface: #FFFFFF; --ink: #333333; --muted: #5E5E5E; --line: #ABABAB;
+  --zone: #ECE8E1; --accent: #FF860F; --accent-ink: #B25500; --soft: #FFF1E2; --amber: #FAAC23;
+  --ai: #7A4CC2; --code: #2F7D5B; --person: #B25500; --web: #3C6E9F;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1F1F1F; --surface: #2A2A2A; --ink: #EDEDED; --muted: #BDBDBD; --line: #6A6A6A;
+    --zone: #262626; --accent: #FF9A3A; --accent-ink: #FFB066; --soft: #3A2A1A;
+    --ai: #B79AF0; --code: #6FCB9F; --person: #FFB066; --web: #8FB8E0;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1F1F1F; --surface: #2A2A2A; --ink: #EDEDED; --muted: #BDBDBD; --line: #6A6A6A;
+  --zone: #262626; --accent: #FF9A3A; --accent-ink: #FFB066; --soft: #3A2A1A;
+  --ai: #B79AF0; --code: #6FCB9F; --person: #FFB066; --web: #8FB8E0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 Montserrat, Arial, sans-serif; }
+main { max-width: 1240px; margin: 0 auto; padding: 32px 16px 48px; }
+h1 { font-size: 28px; margin: 0 0 6px; }
+.lead { color: var(--muted); margin: 0 0 20px; max-width: 760px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
+.frame { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px; overflow-x: auto; }
+svg.map { display: block; width: 100%; min-width: 760px; height: auto; }
+.zone rect { fill: var(--zone); stroke: var(--line); stroke-dasharray: 4 4; }
+.zone text { fill: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+.node { cursor: pointer; }
+.node rect.box { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; transition: fill .25s, stroke .25s; }
+.node .t { fill: var(--ink); font-size: 13px; font-weight: 700; }
+.node .s { fill: var(--muted); font-size: 10.5px; }
+.node .f { fill: var(--muted); font-size: 9.5px; font-family: ui-monospace, Consolas, monospace; }
+.node .tag { font-size: 9px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+.node.on rect.box { fill: var(--soft); stroke: var(--accent); stroke-width: 2.4; }
+.node:focus-visible rect.box { stroke: var(--accent); stroke-width: 3; }
+.node:focus { outline: none; }
+.edge { fill: none; stroke: var(--line); stroke-width: 1.4; }
+.edge.dash { stroke-dasharray: 5 4; }
+.edge.on { stroke: var(--accent); stroke-width: 2.4; }
+.elabel { fill: var(--muted); font-size: 9.5px; font-style: italic; }
+#arrow path { fill: var(--line); }
+#arrowOn path { fill: var(--accent); }
+.dot { fill: var(--accent); stroke: var(--surface); stroke-width: 2; }
+.panel { margin-top: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.count { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
+.btns { display: flex; gap: 8px; }
+button { font: 600 15px Montserrat, Arial, sans-serif; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; min-height: 44px; }
+button.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+#stepTitle { font-size: 22px; margin: 10px 0 6px; }
+#stepBody { margin: 0 0 10px; max-width: 900px; }
+#stepFiles { font: 13px ui-monospace, Consolas, monospace; color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); margin-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>How OCMEE Referral Solution is built</h1>
+  <p class="lead">One referral, from arrival to a logged decision. Press play to follow it, or click any box.
+  Claude reads and checks; plain code verifies every quote; a person decides.</p>
+  <div class="legend">
+    <span style="--c: var(--ai)">Claude (AI)</span>
+    <span style="--c: var(--code)">Plain code</span>
+    <span style="--c: var(--person)">A person</span>
+    <span style="--c: var(--web)">Public website</span>
+  </div>
+  <div class="frame">
+    <svg class="map" id="map" viewBox="0 0 1200 700" role="img" aria-labelledby="mapTitle">
+      <title id="mapTitle">System map of OCMEE Referral Solution</title>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="arrowOn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+      </defs>
+      <g id="zones"></g><g id="edges"></g><g id="nodes"></g><g id="dots"></g>
+    </svg>
+  </div>
+  <section class="panel" aria-live="polite">
+    <div class="bar">
+      <span class="count" id="stepCount"></span>
+      <div class="btns">
+        <button id="prev" aria-label="Previous step">Back</button>
+        <button id="play" class="primary">Play</button>
+        <button id="next" aria-label="Next step">Next</button>
+      </div>
+    </div>
+    <h2 id="stepTitle"></h2>
+    <p id="stepBody"></p>
+    <div id="stepFiles"></div>
+  </section>
+  <p class="note">Prototype. Every patient on the public site is invented. Real packets run only on the
+  coordinator's computer, and nothing is ever sent to a hospital.</p>
+</main>
+<script>
+(() => {
+const NS = "http://www.w3.org/2000/svg";
+const $ = id => document.getElementById(id);
+const el = (tag, attrs, parent) => {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+};
+
+const zones = [
+  [10, 40, 180, 650, "Referrals come in", true],
+  [210, 40, 730, 650, "Coordinator's computer · 127.0.0.1 only", false],
+  [960, 40, 230, 230, "The only outside call", true],
+  [960, 300, 230, 260, "Public website", true],
+];
+
+const nodes = {
+  upload:  [25, 92, 150, 44, "Drag and drop", ["PDF · Word · photos"], "web"],
+  fax:     [25, 148, 150, 44, "Fax service", ["posts each fax PDF"], "web"],
+  folder:  [25, 204, 150, 44, "Save folder", ["intake/ is watched"], "web"],
+  email:   [25, 260, 150, 44, "Email", [".eml with attachments"], "web"],
+  portal:  [25, 316, 150, 44, "Hospital portal", ["/portal · DOC checklist"], "web"],
+  coord:   [25, 524, 150, 52, "Coordinator", ["in a browser"], "person"],
+  accept:  [230, 90, 140, 260, "Accept", ["Word, photos → PDF", "duplicates refused", "one referral per", "attachment"], "code", "desk_server.py"],
+  fix:     [385, 90, 120, 100, "Straighten", ["ocrmypdf", "upright, deskew", "free, local"], "code", "clean.py"],
+  trans:   [520, 90, 130, 100, "Transcribe", ["each page image", "→ clean text"], "ai", "clean.py"],
+  check:   [665, 90, 255, 100, "Rule check", ["IHH rule IDs", "a quote and page per finding", "bad quote? asked once more"], "ai", "check.py"],
+  verify:  [665, 250, 255, 80, "Verify + score", ["every quote found on its page", "no AI in this step"], "code", "score.py"],
+  build:   [440, 250, 200, 80, "Build the desk", ["one page per referral", "fit checklist PDF"], "code", "build_app.py"],
+  inbox:   [230, 380, 200, 80, "Inbox", ["split by fit", "2-hour clock"], "code", "app.js"],
+  review:  [450, 380, 210, 80, "One-page review", ["score, blockers, proof", "original page beside it"], "code", "app.js"],
+  decide:  [680, 380, 240, 80, "A person decides", ["approve · ask · deny", "reply drafted, never sent"], "person", "app.js"],
+  record:  [230, 520, 200, 80, "Decision record", ["append-only", "revisions need a reason"], "code", "decisions.jsonl"],
+  reports: [450, 520, 210, 80, "Reports", ["time to decision", "overrides, missing docs"], "code", "app.js"],
+  evalu:   [680, 520, 240, 80, "Evaluate", ["vs IHH's 11 past decisions", "run after, never during"], "code", "evaluate.py"],
+  claude:  [980, 90, 190, 150, "Claude API", ["Opus 5.5", "reads page images", "checks the rules", "re-checks bad quotes", "never sees past decisions"], "ai", "clean.py · check.py"],
+  pages:   [980, 340, 190, 90, "GitHub Pages", ["invented patients only", "no API key, no upload"], "web", "app/index.html"],
+  drag:    [980, 450, 190, 90, "Drag and check", ["matches the demo files", "by SHA-256 fingerprint"], "web", "app.js"],
+};
+
+const edges = {
+  e_up:  [[[175, 114], [230, 114]]],
+  e_fax: [[[175, 170], [230, 170]]],
+  e_fol: [[[175, 226], [230, 226]]],
+  e_em:  [[[175, 282], [230, 282]]],
+  e_por: [[[175, 338], [230, 338]]],
+  e_af:  [[[370, 140], [385, 140]]],
+  e_ft:  [[[505, 140], [520, 140]]],
+  e_tc:  [[[585, 90], [585, 66], [1075, 66], [1075, 90]], false, "page images → text", [600, 60]],
+  e_tk:  [[[650, 140], [665, 140]]],
+  e_kc:  [[[920, 125], [980, 125]], false, "transcript", [926, 118]],
+  e_ck:  [[[980, 175], [920, 175]], false, "findings", [930, 190]],
+  e_kv:  [[[792, 190], [792, 250]]],
+  e_vb:  [[[665, 290], [640, 290]]],
+  e_bi:  [[[540, 330], [540, 362], [330, 362], [330, 380]]],
+  e_ci:  [[[175, 550], [200, 550], [200, 420], [230, 420]]],
+  e_ir:  [[[430, 420], [450, 420]]],
+  e_rd:  [[[660, 420], [680, 420]]],
+  e_dr:  [[[800, 460], [800, 492], [330, 492], [330, 520]]],
+  e_rp:  [[[430, 560], [450, 560]]],
+  e_re:  [[[660, 560], [680, 560]]],
+  e_web: [[[590, 250], [590, 232], [950, 232], [950, 385], [980, 385]], true, "invented patients only", [826, 226]],
+  e_pd:  [[[1075, 430], [1075, 450]]],
+};
+
+const steps = [
+  { t: "In", nodes: ["upload", "fax", "folder", "email", "portal", "accept"],
+    paths: [["e_up"], ["e_fax"], ["e_fol"], ["e_em"], ["e_por"]],
+    b: "A referral arrives five ways: dropped on the inbox, posted by a fax service, saved in a watched folder, as an email, or through the hospital portal. Word files and photos become a PDF. The same file twice is refused and named as a duplicate. Every card shows where it came from.",
+    f: ["desk_server.py", "simulate_intake.py", "portal.html"] },
+  { t: "Straighten", nodes: ["accept", "fix"], paths: [["e_af"]],
+    b: "Fax pages arrive sideways and crooked. ocrmypdf turns them upright and deskews them on this computer, for free, before any AI sees them.",
+    f: ["clean.py"] },
+  { t: "Transcribe", nodes: ["fix", "trans", "claude"], paths: [["e_ft", "e_tc"]],
+    b: "Claude Opus 5.5 reads each page image and returns clean text, page by page. That transcript is what every quote must match later.",
+    f: ["clean.py"] },
+  { t: "Rule check", nodes: ["trans", "check", "claude"], paths: [["e_tk", "e_kc", "e_ck"]],
+    b: "Claude checks the packet against IHH's admission criteria by rule ID. Every finding comes with a quote and the page it is on. It checks the chart, not only the referral form. Claude never sees IHH's past decisions.",
+    f: ["check.py", "admission-criteria.json"] },
+  { t: "Check and correct", nodes: ["check", "claude"], paths: [["e_kc", "e_ck"]],
+    b: "Any quote not found on the page it cites goes back to Claude once, with that page's text. Anything still not found stays and shows as \"check\" in the app.",
+    f: ["check.py"] },
+  { t: "Verify and score", nodes: ["check", "verify"], paths: [["e_kv"]],
+    b: "Plain code, no AI: every quote must be on its page. A result that is not in the packet is unknown, never normal. Rules that need a date are \"can't tell\", because dates are blacked out. The score starts at 100: 70+ likely fit, 40 to 69 needs info, under 40 likely not a fit.",
+    f: ["score.py"] },
+  { t: "Build the desk", nodes: ["verify", "build"], paths: [["e_vb"]],
+    b: "Each referral becomes one page with its proof and original pages, plus a printable fit checklist. The whole desk is one HTML file.",
+    f: ["build_app.py", "checklist_pdf.py"] },
+  { t: "Review", nodes: ["coord", "inbox", "review"], paths: [["e_bi"], ["e_ci", "e_ir"]],
+    b: "The inbox splits referrals by fit, with the 2-hour clock. The one-page review shows the score, blockers, form vs chart conflicts and what is missing. Click any quote to see the original page.",
+    f: ["app.js"] },
+  { t: "A person decides", nodes: ["review", "decide"], paths: [["e_rd"]],
+    b: "The coordinator approves, asks for information or denies. The reply to the hospital is drafted and signed, never sent. Status follows it: waiting on hospital, replied, accepted, arrived.",
+    f: ["app.js"] },
+  { t: "Record", nodes: ["decide", "record", "reports"], paths: [["e_dr", "e_rp"]],
+    b: "Every decision is appended and never rewritten. A revision needs a reason. The server keeps a copy in output/decisions.jsonl. Reports show time to decision, overrides and missing documents.",
+    f: ["app.js", "desk_server.py"] },
+  { t: "Evaluate", nodes: ["reports", "evalu"], paths: [["e_re"]],
+    b: "Only after every packet is checked, the calls are compared with IHH's 11 real decisions: all 4 denials flagged, 2 approvals wrongly flagged, 459 of 459 quotes found on their page. The score was tuned on those same 11, so a person always decides.",
+    f: ["evaluate.py"] },
+  { t: "Public website", nodes: ["build", "pages", "drag"], paths: [["e_web", "e_pd"]],
+    b: "The public build holds invented patients only, with no API key. Dropping one of the demo files on the site finds it by its SHA-256 fingerprint. Any other file is not read.",
+    f: ["build_app.py", "pages.yml"] },
+];
+
+// draw
+const kindColor = { ai: "var(--ai)", code: "var(--code)", person: "var(--person)", web: "var(--web)" };
+const kindLabel = { ai: "Claude", code: "code", person: "person", web: "" };
+
+for (const [x, y, w, h, label] of zones) {
+  const g = el("g", { class: "zone" }, $("zones"));
+  el("rect", { x, y, width: w, height: h, rx: 12 }, g);
+  el("text", { x: x + 12, y: y + 20 }, g).textContent = label;
+}
+
+const edgeEls = {};
+for (const id in edges) {
+  const [pts, dashed, label, at] = edges[id];
+  const d = "M" + pts.map(p => p.join(",")).join(" L");
+  edgeEls[id] = el("path", { d, class: "edge" + (dashed ? " dash" : ""), "marker-end": "url(#arrow)" }, $("edges"));
+  if (label) el("text", { x: at[0], y: at[1], class: "elabel" }, $("edges")).textContent = label;
+}
+
+const nodeEls = {};
+for (const id in nodes) {
+  const [x, y, w, h, title, lines, kind, file] = nodes[id];
+  const g = el("g", { class: "node", tabindex: 0, role: "button", "aria-label": title }, $("nodes"));
+  el("rect", { class: "box", x, y, width: w, height: h, rx: 10 }, g);
+  el("rect", { x, y: y + 8, width: 4, height: h - 16, rx: 2, fill: kindColor[kind] }, g);
+  el("text", { x: x + 14, y: y + 20, class: "t" }, g).textContent = title;
+  if (kindLabel[kind]) {
+    el("text", { x: x + w - 10, y: y + h - 9, class: "tag", "text-anchor": "end", fill: kindColor[kind] }, g).textContent = kindLabel[kind];
+  }
+  lines.forEach((s, i) => { el("text", { x: x + 14, y: y + 36 + i * 14, class: "s" }, g).textContent = s; });
+  if (file) el("text", { x: x + 14, y: y + h - 9, class: "f" }, g).textContent = file;
+  const jump = () => { const i = steps.findIndex(s => s.nodes.includes(id)); if (i >= 0) { stop(); show(i); } };
+  g.addEventListener("click", jump);
+  g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(); } });
+  nodeEls[id] = g;
+}
+
+// steps
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let cur = 0, timer = null, anim = null;
+
+function runDots(chains) {
+  cancelAnimationFrame(anim);
+  $("dots").replaceChildren();
+  if (reduce) return;
+  const runs = chains.map(chain => {
+    const segs = chain.map(id => edgeEls[id]).filter(Boolean);
+    const lens = segs.map(p => p.getTotalLength());
+    return { segs, lens, total: lens.reduce((a, b) => a + b, 0), dot: el("circle", { r: 6, class: "dot" }, $("dots")) };
+  });
+  const speed = 0.32; // px per ms
+  const t0 = performance.now();
+  const frame = now => {
+    for (const r of runs) {
+      let d = ((now - t0) * speed) % (r.total + 160);
+      if (d > r.total) { r.dot.setAttribute("opacity", 0); continue; }
+      r.dot.setAttribute("opacity", 1);
+      let i = 0;
+      while (i < r.lens.length - 1 && d > r.lens[i]) { d -= r.lens[i]; i++; }
+      const p = r.segs[i].getPointAtLength(Math.min(d, r.lens[i]));
+      r.dot.setAttribute("cx", p.x); r.dot.setAttribute("cy", p.y);
+    }
+    anim = requestAnimationFrame(frame);
+  };
+  anim = requestAnimationFrame(frame);
+}
+
+function show(i) {
+  cur = (i + steps.length) % steps.length;
+  const s = steps[cur];
+  const onEdges = new Set(s.paths.flat());
+  for (const id in nodeEls) nodeEls[id].classList.toggle("on", s.nodes.includes(id));
+  for (const id in edgeEls) {
+    const on = onEdges.has(id);
+    edgeEls[id].classList.toggle("on", on);
+    edgeEls[id].setAttribute("marker-end", on ? "url(#arrowOn)" : "url(#arrow)");
+  }
+  $("stepCount").textContent = `Step ${cur + 1} of ${steps.length}`;
+  $("stepTitle").textContent = s.t;
+  $("stepBody").textContent = s.b;
+  $("stepFiles").textContent = s.f.join(" · ");
+  runDots(s.paths);
+}
+
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "Play"; }
+function play() {
+  if (timer) return stop();
+  $("play").textContent = "Pause";
+  timer = setInterval(() => show(cur + 1), 7000);
+}
+
+$("prev").onclick = () => { stop(); show(cur - 1); };
+$("next").onclick = () => { stop(); show(cur + 1); };
+$("play").onclick = play;
+document.addEventListener("keydown", e => {
+  if (e.target.closest && e.target.closest(".node")) return;
+  if (e.key === "ArrowRight") { stop(); show(cur + 1); }
+  if (e.key === "ArrowLeft") { stop(); show(cur - 1); }
+});
+show(0);
+})();
+</script>
+</body>
+</html>
